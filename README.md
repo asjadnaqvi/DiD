@@ -9,7 +9,7 @@ I am not an expert on this topic but this method has a fairly universal applicat
 
 # Background
 
-In econometrics a canonical model is the difference-in-difference estimator of the following type:
+In econometrics the core model is the difference-in-difference estimator of the following type:
 
 Y(it) = b0 + b1 x Treatment(i) + b2 x Post(t) + b3 x (Treatment(i) * Post(t)) + error
 
@@ -22,4 +22,6 @@ We can see this in a table form as well:
 | Post = 0 |  b0   | b0 + b1    |  b1  |
 | Post = 1 |  b0 + b2   |  b0 + b1 + b2 + b3  |  b1 + b3   |
 | *Difference* | b2   |  b2 + b3  | b3   |
+
+A classic application of this model is the AER Card and Krueger (2000) paper titled Minimum Wages and Employment: A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania (https://davidcard.berkeley.edu/papers/njmin-aer.pdf)
 
