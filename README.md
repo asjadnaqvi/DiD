@@ -13,6 +13,6 @@ We can see this in a table form as well:
 
 | Post\Treatment | Treatment = 0 | Treatment = 1 | Difference  | 
 | ----- | ----- | ----- | -----   |
-| Year = 0 |     |    |    |
-| Year = 1 |     |    |    |
-| Difference |    |    |    |
+| Post = 0 |  b0   | b0 + b1    |  b1  |
+| Post = 1 |  b0 + b2   |  b0 + b1 + b2 + b3  |  b1 + b3   |
+| *Difference* | b2   |  b2 + b3  | b3   |
