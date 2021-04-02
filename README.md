@@ -12,6 +12,7 @@ Here the coefficient of interest is b3, which in a perfect world should be signi
 We can see this in a table form as well:
 
 | Post\Treatment | Treatment = 0 | Treatment = 1 | Difference  | 
-| Year = 0 |  |  |  |
-| Year = 1 |  |  |  |
-| Difference |  |  |  |
+| ----- | ----- | ----- | -----   |
+| Year = 0 |     |    |    |
+| Year = 1 |     |    |    |
+| Difference |    |    |    |
