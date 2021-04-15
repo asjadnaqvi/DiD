@@ -11,7 +11,7 @@ I am not an expert on this topic but this method has a fairly universal applicat
 
 In econometrics the core model is the difference-in-difference estimator of the following type:
 
-Y(it) = b0 + b1 x T(i) + b2 x T(t) + b3 x (T(i) * P(t)) + error
+Y(it) = b0 + b1 P(i) + b2 T(t) + b3 (P(i) T(t)) + error
 
 where T = Treatment, and P = Post treatment. Here the coefficient of interest is b3, which in a perfect world should be significant and in the right direction. The other two coefficients should be zero to full-fill the pre-trend requirements.
 
@@ -35,7 +35,9 @@ This methdology has also evolved over time to include multiple treatments (T1, T
 ## The triple difference estimator (DDD)
 The triple difference estimator essential takes two DDs, one with the target unit of analysis with a treated and an untreated group. This is compared to another similar group in the pre and post-treatment period. Fo effectively there are two treatments. One where an actual treatment on the desired group is tested, and a placebo camparison group, on which the same intervention is also applied.
 
-Y(ijt) = b0 + b1 x T(i) + b2 x T(t) + b3 x (T(i) * P(t)) + error
+Y(it) = b0 + b1 P(i) + b2 C(j) + b3 T(t) + b4 (P T)(it) + b5 (C T)(jt) + b6 (P C)(ij) + b7(P C T)(ijt) + error
+
+
 
 
 
