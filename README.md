@@ -7,7 +7,7 @@ I am not an expert on this topic but this method has a fairly universal applicat
 
 
 
-# Background
+## The canonical 2x2 model
 
 In econometrics the core model is the difference-in-difference estimator of the following type:
 
@@ -25,14 +25,17 @@ We can see this in a table form as well:
 
 One can find more on this in the classic Woolridge (XXX) book.
 
-This core setup has been used a lot. A canonical application of this model is the AER Card and Krueger (2000) [Minimum Wages and Employment: A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania](https://davidcard.berkeley.edu/papers/njmin-aer.pdf) that has resulted in quite some debate over the years. Regardless of which side of the minimum wage debate you are on, the DiD method persits through the analysis.
+This core setup has been used a lot. A canonical application of this model is the AER Card and Krueger (2000) [Minimum Wages and Employment: A Case Study of the Fast-Food Industry in New Jersey and Pennsylvania](https://davidcard.berkeley.edu/papers/njmin-aer.pdf) that has resulted in quite some debate over the years. Regardless of which side of the minimum wage debate you are on, the DD method persits as the tool of choice for analysis throughout the years.
 ADD PAPERS.
 
 
 This methdology has also evolved over time to include multiple treatments (T1, T2) and triple differences (DDD). The multiple treatments part simply examples the combinations of above 2x2 matrix. For example with two treatments, this would become a 3x3 matrix. The cofficient of interest would be the triple interaction term the some combination of the differences between this and other terms.
 
 
-The triple difference estimator essential takes two 
+## The triple difference estimator (DDD)
+The triple difference estimator essential takes two DDs, one with the target unit of analysis with a treated and an untreated group. This is compared to another similar group in the pre and post-treatment period. Fo effectively there are two treatments. One where an actual treatment on the desired group is tested, and a placebo camparison group, on which the same intervention is also applied.
+
+Y(ijt) = b0 + b1 x T(i) + b2 x T(t) + b3 x (T(i) * P(t)) + error
 
 
 
