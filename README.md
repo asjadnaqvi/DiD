@@ -23,7 +23,7 @@ TODOS:
 | --- | --- | --- |   --- | 
 | `bacondecomp` | `ssc install bacondecomp, replace` | Andrew Goodman-Bacon <br><br> Thomas Goldring <br><br> Austin Nichols |   Andrew Goodman-Bacon (2021). [Difference-in-differences with variation in treatment timing](https://www.sciencedirect.com/science/article/abs/pii/S0304407621001445). Journal of Econometrics | 
 | `eventstudyinteract` |   | Liyang Sun |   Liyang Sun, Sarah Abraham (2020). [Estimating dynamic treatment effects in event studies with heterogeneous treatment effects](https://www.sciencedirect.com/science/article/abs/pii/S030440762030378X). Journal of Econometrics. | 
-| `did_multiplegt` | `ssc install did_multiplegt, replace` |   Clément de Chaisemartin <br><br> Xavier D'Haultfoeuille  | Clément de Chaisemartin, Xavier D'Haultfoeuille (2020). [Two-Way Fixed Effects Estimators with Heterogeneous Treatment Effects](https://www.aeaweb.org/articles?id=10.1257/aer.20181169). American Economic Review. <br><br>  Clément de Chaisemartin, Xavier D'Haultfoeuille (2020). [Two-way fixed effects regressions with several treatments](https://arxiv.org/abs/2012.10077).  <br><br>  Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Difference-in-Differences Estimators of Inter-temporal Treatment Effects](https://arxiv.org/abs/2007.04267). |
+| `did_multiplegt` | `ssc install did_multiplegt, replace` |   Clément de Chaisemartin <br><br> Xavier D'Haultfoeuille  | Clément de Chaisemartin, Xavier D'Haultfoeuille (2020). [Two-Way Fixed Effects Estimators with Heterogeneous Treatment Effects](https://www.aeaweb.org/articles?id=10.1257/aer.20181169). American Economic Review. <br><br>  Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Two-way fixed effects regressions with several treatments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3751060).  <br><br>  Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Difference-in-Differences Estimators of Inter-temporal Treatment Effects](https://arxiv.org/abs/2007.04267). |
 | `did_imputation` | `ssc install did_imputation, replace` |  Kirill Borusyak <br><br> Xavier Jaravel <br><br> Jann Spiess  |   Kirill Borusyak, Xavier Jaravel, Jann Spiess (2021). [Revisiting Event Study Designs: Robust and Efficient Estimation](https://www.google.com/url?q=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fy92mmyndlbkufo1%2FDraft_RobustAndEfficient.pdf%3Fraw%3D1&sa=D&sntz=1&usg=AFQjCNGGDRt4xPz3hCXhTWxchHJWh-1m_Q) | 
 | `drdid`   |     | Fernando Rios-Avila <br><br> Asjad Naqvi   |  Pedro H.C. Sant'Anna, Jun Zhao (2020). [Doubly robust difference-in-differences estimators](https://www.sciencedirect.com/science/article/abs/pii/S0304407620301901), Journal of Econometrics.  |
 | `csdid`   |      | Fernando Rios-Avila   |  Brantly Callaway, Pedro H.C. Sant'Anna (2020). [Difference-in-Differences with multiple time periods](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948), Journal of Econometrics.  |
@@ -43,7 +43,7 @@ Here are people who are actively involved in curating information on the latest 
 
 
 ## Blogs
-[Scott Cunningham](https://www.scunning.com/): This Substack is THE goto place for an easy-to-digest explanation of the latest metric-heavy DiD papers: https://causalinf.substack.com/.
+[Scott Cunningham](https://www.scunning.com/): This Substack is the goto place for an easy-to-digest explanation of the latest metric-heavy DiD papers: https://causalinf.substack.com/.
 
 
 ## Events and Videos
