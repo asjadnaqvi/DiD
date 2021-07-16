@@ -1,16 +1,16 @@
 
 
-Last updated: 16 July 2021.
+Last updated: 17 July 2021.
 
 # Notes
 
-This repository tracks the recent developments in the Difference-in-Difference (DiD) literature. Currently, it is just a dump from different websites, Twitter, YouTube etc. This will be sorted out over time as the literature converges to some consensus. But this might still take a while.
+This repository tracks the recent developments in the Difference-in-Difference (DiD) literature. Currently, it is just a dump from different websites including Twitter, GitHub, YouTube etc. This will be sorted out over time as the literature converges to some consensus. But this might still take a while.
 
 This is a working document, if you want to contribute, just message.
 
 TODO:
-* Dump the information
-* Add key literature
+* Dump the info.
+* Add key lit.
 * Port to a proper website.
 
 
