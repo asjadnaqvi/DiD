@@ -47,7 +47,7 @@ Here are people who are actively involved in curating information on the latest 
 
 
 ## Blogs
-[Scott Cunningham](https://www.scunning.com/): Scott's [Substack](https://causalinf.substack.com/) is the goto place for an easy-to-digest explanation of the latest metric-heavy DiD papers.
+[Scott Cunningham](https://www.scunning.com/)[<img width="20px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): Scott's [Substack](https://causalinf.substack.com/) is the goto place for an easy-to-digest explanation of the latest metric-heavy DiD papers.
 
 
 ## Events and Videos
