@@ -3,8 +3,10 @@
 
 This repository tracks the developments in the Difference-in-Difference literature. Currently, it is just a dump from websites, Twitter, YouTube etc. This will be sorted out over time as the literature converges to some consensus. But this might still take a while.
 
+This is a working document, if you want to contribute, just message.
 
-This is a working document, if you want to contribute to help make it grow, just message.
+
+
 
 
 TODOS:
@@ -28,18 +30,20 @@ TODOS:
 | `flexpaneldid` |   |   |    | Eva Dettmann, Alexander Giebler, Antje Weyh (2020). [Flexpaneldid: A Stata Toolbox for Causal Analysis with Varying Treatment Time and Duration](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3692458). IWH Discussion Papers No. 3/2020 |
 | `xtevent` |   |   | Simon Freyaldenhoven <br><br> Christian Hansen <br><br> Jorge Perez Perez <br><br>  Jesse M. Shapiro  | Simon Freyaldenhoven, Christian Hansen, Jesse M. Shapiro (2019). [Pre-event Trends in the Panel Event-Study Design](https://www.aeaweb.org/articles?id=10.1257/aer.20180609). American Economic Review. |
 
-Note: GitHub installations are messing up the table due to line length. This will be sorted out soon.
+Note: Package installation paths from GitHub are messing up the table due to line length. Will sort this out.
 
 
 
 
 
 # DiD knowledge curation
+MORE TO BE ADDED
+
 Here are people who are actively involved in curating information on the latest DiD developments. This includes blogs, lecture series, tweets.
 
 
 ## Blogs
-[Scott Cunningham](https://www.scunning.com/): This Substack is the go to place for an easy-to-digest explanation of the latest metric-heavy DiD papers: https://causalinf.substack.com/.
+[Scott Cunningham](https://www.scunning.com/): This Substack is THE goto place for an easy-to-digest explanation of the latest metric-heavy DiD papers: https://causalinf.substack.com/.
 
 
 ## Events and Videos
@@ -67,10 +71,13 @@ MORE TOO BE ADDED
 
 
 ## Literature
+MORE TO BE ADDED
+
 [Christine Cai](https://christinecai.github.io/) has a working document which lists recent papers by several methods including DiDs: https://christinecai.github.io/PublicGoods/applied_micro_methods.pdf.
 
 ## Tweets
-TO BE SORTED. These are from my bookmarks:
+TO BE SORTED. 
+These are from my bookmarks:
 
 https://twitter.com/pedrohcgs/status/1366976343657902082
 
