@@ -47,16 +47,16 @@ Here are people who are actively involved in curating information on the latest 
 
 
 ## Blogs
-[Scott Cunningham](https://www.scunning.com/) [<img width="10px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): Scott's [Substack](https://causalinf.substack.com/) is the goto place for an easy-to-digest explanation of the latest metric-heavy DiD papers.
+[Scott Cunningham](https://www.scunning.com/) [<img width="14px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): Scott's [Substack](https://causalinf.substack.com/) is the goto place for an easy-to-digest explanation of the latest metric-heavy DiD papers.
 
 
 ## Events and Videos
 
-[Scott Cunningham](https://www.scunning.com/): [CodeChella](https://causalinf.substack.com/p/codechella-announcement) the ultimate DiD event **Workshop 1: Friday July 16th, 2021** and **Workshop 2: Friday July 23, 2021** which will be live on [Twitch](https://www.twitch.tv/causalinf_did). Will post links if recordings are up somewhere.
+[Scott Cunningham](https://www.scunning.com/) [<img width="14px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): [CodeChella](https://causalinf.substack.com/p/codechella-announcement) the ultimate DiD event **Workshop 1: Friday July 16th, 2021** and **Workshop 2: Friday July 23, 2021** which will be live on [Twitch](https://www.twitch.tv/causalinf_did). Will post links if recordings are up somewhere.
 
-[Chloe East](https://www.chloeneast.com/) organizes an online [DiD reading group](https://www.chloeneast.com/metrics-discussions.html).
+[Chloe East](https://www.chloeneast.com/) [<img width="14px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ChloeEast2) organizes an online [DiD reading group](https://www.chloeneast.com/metrics-discussions.html).
 
-[Taylor J. Wright](https://taylorjwright.github.io/) organizes an online [DiD reading group](https://taylorjwright.github.io/did-reading-group/). The lecture recordings can also be viewed on [YouTube](https://www.youtube.com/channel/UCA7Idy0MfpP-uAjOebsFVuA/videos).
+[Taylor J. Wright](https://taylorjwright.github.io/) [<img width="14px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/taylor_wright) organizes an online [DiD reading group](https://taylorjwright.github.io/did-reading-group/). The lecture recordings can also be viewed on [YouTube](https://www.youtube.com/channel/UCA7Idy0MfpP-uAjOebsFVuA/videos).
 
 
 
