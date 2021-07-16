@@ -42,11 +42,11 @@ Here are people who are actively involved in curating information on the latest 
 ## Events and Videos
 MORE TO BE ADDED
 
-[Scott Cunningham](https://www.scunning.com/): [CodeChella](https://causalinf.substack.com/p/codechella-announcement) the ultimate DiD event **Workshop 1: Friday July 16th, 2021** and **Workshop 2: Friday July 23, 2021**. Will post links if recordings are up.
+[Scott Cunningham](https://www.scunning.com/): [CodeChella](https://causalinf.substack.com/p/codechella-announcement) the ultimate DiD event **Workshop 1: Friday July 16th, 2021** and **Workshop 2: Friday July 23, 2021** which will be live on [Twitch](https://www.twitch.tv/causalinf_did). Will post links if recordings are up somewhere.
 
 [Taylor J. Wright](https://taylorjwright.github.io/) organizes a [DiD reading group](https://taylorjwright.github.io/did-reading-group/). The lectures series can be viewed on [YouTube](https://www.youtube.com/channel/UCA7Idy0MfpP-uAjOebsFVuA/videos)
 
-[Chloe East](https://www.chloeneast.com/): https://www.chloeneast.com/metrics-discussions.html
+[Chloe East](https://www.chloeneast.com/) also organizes a [DiD reading group](https://www.chloeneast.com/metrics-discussions.html)
 
 
 
@@ -58,7 +58,7 @@ MORE TOO BE ADDED
 
 [Nick Huntington-Klein](https://nickchk.com/) (2021). [The Effect](Nick Huntington-Klein)
 
-[Paul Goldsmith-Pinkham](https://paulgp.github.io/) (Yale School of Management). Paul has a brilliant set of [lectures on empirical methods including DiD on GitHub](https://github.com/paulgp/applied-methods-phd) that are also supplemented with [YouTube videos](https://www.youtube.com/playlist?list=PLWWcL1M3lLlojLTSVf2gGYQ_9TlPyPbiJ). 
+[Paul Goldsmith-Pinkham](https://paulgp.github.io/) has a brilliant set of [lectures on empirical methods including DiD on GitHub](https://github.com/paulgp/applied-methods-phd). These are also supplemented with [YouTube videos](https://www.youtube.com/playlist?list=PLWWcL1M3lLlojLTSVf2gGYQ_9TlPyPbiJ). 
 
 
 ## Literature
