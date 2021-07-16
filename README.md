@@ -73,7 +73,7 @@ MORE TOO BE ADDED
 
 [Nick Huntington-Klein](https://nickchk.com/) (2021). [The Effect](https://theeffectbook.net/).
 
-[Paul Goldsmith-Pinkham](https://paulgp.github.io/) has a brilliant set of [lectures on empirical methods including DiD on GitHub](https://github.com/paulgp/applied-methods-phd). These are also supplemented with [YouTube videos](https://www.youtube.com/playlist?list=PLWWcL1M3lLlojLTSVf2gGYQ_9TlPyPbiJ). 
+[Paul Goldsmith-Pinkham](https://paulgp.github.io/) has a brilliant set of [lectures on empirical methods including DiD on GitHub](https://github.com/paulgp/applied-methods-phd). These are also supplemented by [YouTube videos](https://www.youtube.com/playlist?list=PLWWcL1M3lLlojLTSVf2gGYQ_9TlPyPbiJ). 
 
 
 ## Literature
