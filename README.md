@@ -61,7 +61,7 @@ MORE TOO BE ADDED
 
 [Scott Cunningham](https://www.scunning.com/) (2020). [The Mix Tape](https://mixtape.scunning.com/).
 
-[Nick Huntington-Klein](https://nickchk.com/) (2021). [The Effect](Nick Huntington-Klein).
+[Nick Huntington-Klein](https://nickchk.com/) (2021). [The Effect](https://theeffectbook.net/).
 
 [Paul Goldsmith-Pinkham](https://paulgp.github.io/) has a brilliant set of [lectures on empirical methods including DiD on GitHub](https://github.com/paulgp/applied-methods-phd). These are also supplemented with [YouTube videos](https://www.youtube.com/playlist?list=PLWWcL1M3lLlojLTSVf2gGYQ_9TlPyPbiJ). 
 
