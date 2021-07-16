@@ -1,15 +1,14 @@
 
+
+Last updated: 16 July 2021.
+
 # Notes
 
-This repository tracks the developments in the Difference-in-Difference literature. Currently, it is just a dump from websites, Twitter, YouTube etc. This will be sorted out over time as the literature converges to some consensus. But this might still take a while.
+This repository tracks the recent developments in the Difference-in-Difference (DiD) literature. Currently, it is just a dump from different websites, Twitter, YouTube etc. This will be sorted out over time as the literature converges to some consensus. But this might still take a while.
 
 This is a working document, if you want to contribute, just message.
 
-
-
-
-
-TODOS:
+TODO:
 * Keep dumping and sorting stuff out
 * Add list of authors
 * Add key literature
@@ -31,29 +30,27 @@ TODOS:
 | `flexpaneldid` |    | Eva Dettmann <br><br> Alexander Giebler <br><br> Antje Weyh   | Eva Dettmann, Alexander Giebler, Antje Weyh (2020). [Flexpaneldid: A Stata Toolbox for Causal Analysis with Varying Treatment Time and Duration](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3692458). IWH Discussion Papers No. 3/2020 |
 | `xtevent` |    | Simon Freyaldenhoven <br><br> Christian Hansen <br><br> Jorge Perez Perez <br><br>  Jesse M. Shapiro  | Simon Freyaldenhoven, Christian Hansen, Jesse M. Shapiro (2019). [Pre-event Trends in the Panel Event-Study Design](https://www.aeaweb.org/articles?id=10.1257/aer.20180609). American Economic Review. |
 | `did2s` |       |  Kyle Butts | Charles Gardner (2021). [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf). |
-| `stackedev` |     | Joshua Bleiberg |     |
+| `stackedev` |     | Joshua Bleiberg | Doruk Cengiz, Arindrajit Dube, Attila Lindner, Ben Zipperer (2019). [The effect of minimum wages on low-wage jobs](https://academic.oup.com/qje/article/134/3/1405/5484905). The Quarterly Journal of Economics.    |
 
 Note: The length of the installation paths from GitHub are messing up the table. Will sort this out.
 
 
 ## How to use these packages?
 
-COMING SOON!
+COMING SOON
 
 
 
 # DiD knowledge curation
-MORE TO BE ADDED
 
 Here are people who are actively involved in curating information on the latest DiD developments. This includes blogs, lecture series, tweets.
 
 
 ## Blogs
-[Scott Cunningham](https://www.scunning.com/): This Substack is the goto place for an easy-to-digest explanation of the latest metric-heavy DiD papers: https://causalinf.substack.com/.
+[Scott Cunningham](https://www.scunning.com/): Scott's [Substack](https://causalinf.substack.com/) is the goto place for an easy-to-digest explanation of the latest metric-heavy DiD papers.
 
 
 ## Events and Videos
-MORE TO BE ADDED
 
 [Scott Cunningham](https://www.scunning.com/): [CodeChella](https://causalinf.substack.com/p/codechella-announcement) the ultimate DiD event **Workshop 1: Friday July 16th, 2021** and **Workshop 2: Friday July 23, 2021** which will be live on [Twitch](https://www.twitch.tv/causalinf_did). Will post links if recordings are up somewhere.
 
@@ -65,9 +62,7 @@ MORE TO BE ADDED
 
 
 
-## Books and Lecture notes
-MORE TOO BE ADDED
-
+## Books, Lectures, and Notes
 
 [Scott Cunningham](https://www.scunning.com/) (2020). [The Mix Tape](https://mixtape.scunning.com/).
 
@@ -75,15 +70,14 @@ MORE TOO BE ADDED
 
 [Paul Goldsmith-Pinkham](https://paulgp.github.io/) has a brilliant set of [lectures on empirical methods including DiD on GitHub](https://github.com/paulgp/applied-methods-phd). These are also supplemented by [YouTube videos](https://www.youtube.com/playlist?list=PLWWcL1M3lLlojLTSVf2gGYQ_9TlPyPbiJ). 
 
+[Andrew C. Baker](https://andrewcbaker.netlify.app/). Notes on [Difference-in-Differences Methodology](https://andrewcbaker.netlify.app/2019/09/25/difference-in-differences-methodology/) with supporting material on [GitHub](https://github.com/andrewchbaker).
 
 ## Literature
-MORE TO BE ADDED
 
 [Christine Cai](https://christinecai.github.io/) has a working document which lists recent papers by several methods including DiDs: https://christinecai.github.io/PublicGoods/applied_micro_methods.pdf.
 
 ## Tweets
-TO BE SORTED. 
-These are from my bookmarks:
+TO BE SORTED. These are from my bookmarks:
 
 https://twitter.com/pedrohcgs/status/1366976343657902082
 
