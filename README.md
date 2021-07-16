@@ -9,11 +9,9 @@ This repository tracks the recent developments in the Difference-in-Difference (
 This is a working document, if you want to contribute, just message.
 
 TODO:
-* Keep dumping and sorting stuff out
-* Add list of authors
+* Dump the information
 * Add key literature
-* Link profiles to websites + Twitter
-* Set up a proper website
+* Port to a proper website.
 
 
 
@@ -21,18 +19,18 @@ TODO:
 
 | Name | Installation |  Package by | Literature | 
 | --- | --- | --- |   --- | 
-| `bacondecomp` | `ssc install bacondecomp, replace` <br><br> `net install ddtiming, from(https://tgoldring.com/code/)` | [Andrew Goodman-Bacon](http://goodman-bacon.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/agoodmanbacon) <br><br> [Thomas Goldring](https://tgoldring.com/) <br><br> Austin Nichols |   Andrew Goodman-Bacon (2021). [Difference-in-differences with variation in treatment timing](https://www.sciencedirect.com/science/article/abs/pii/S0304407621001445). Journal of Econometrics | 
-| `eventstudyinteract` |   | [Liyang Sun](http://economics.mit.edu/grad/lsun20) |   Liyang Sun, Sarah Abraham (2020). [Estimating dynamic treatment effects in event studies with heterogeneous treatment effects](https://www.sciencedirect.com/science/article/abs/pii/S030440762030378X). Journal of Econometrics. | 
+| `bacondecomp` | `ssc install bacondecomp, replace` <br><br> `net install ddtiming, from(https://tgoldring.com/code/)` | [Andrew Goodman-Bacon](http://goodman-bacon.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/agoodmanbacon) <br><br> [Thomas Goldring](https://tgoldring.com/) <br><br> Austin Nichols [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/AustnNchols) |   Andrew Goodman-Bacon (2021). [Difference-in-differences with variation in treatment timing](https://www.sciencedirect.com/science/article/abs/pii/S0304407621001445). Journal of Econometrics | 
+| `eventstudyinteract` |   | [Liyang Sun](http://economics.mit.edu/grad/lsun20) |   Liyang Sun, [Sarah Abraham](https://www.cornerstone.com/Staff/Sarah-Abraham#) (2020). [Estimating dynamic treatment effects in event studies with heterogeneous treatment effects](https://www.sciencedirect.com/science/article/abs/pii/S030440762030378X). Journal of Econometrics. | 
 | `did_multiplegt` | `ssc install did_multiplegt, replace` |   [Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin) <br><br> [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/)  | Clément de Chaisemartin, Xavier D'Haultfoeuille (2020). [Two-Way Fixed Effects Estimators with Heterogeneous Treatment Effects](https://www.aeaweb.org/articles?id=10.1257/aer.20181169). American Economic Review. <br><br>  Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Two-way fixed effects regressions with several treatments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3751060).  <br><br>  Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Difference-in-Differences Estimators of Inter-temporal Treatment Effects](https://arxiv.org/abs/2007.04267). |
 | `did_imputation` | `ssc install did_imputation, replace` |  [Kirill Borusyak](https://sites.google.com/view/borusyak/home) <br><br> [Xavier Jaravel](https://www.lse.ac.uk/economics/people/faculty/xavier-jaravel) <br><br> [Jann Spiess](https://www.gsb.stanford.edu/faculty-research/faculty/jann-spiess)  |   Kirill Borusyak, Xavier Jaravel, Jann Spiess (2021). [Revisiting Event Study Designs: Robust and Efficient Estimation](https://www.google.com/url?q=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fy92mmyndlbkufo1%2FDraft_RobustAndEfficient.pdf%3Fraw%3D1&sa=D&sntz=1&usg=AFQjCNGGDRt4xPz3hCXhTWxchHJWh-1m_Q) | 
-| `drdid`   |     | [Fernando Rios-Avila](http://www.levyinstitute.org/scholars/fernando-rios-avila) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/friosavila) <br><br> [Asjad Naqvi](https://github.com/asjadnaqvi) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/asjadnaqvi) <br><br> [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) |  Pedro H.C. Sant'Anna, Jun Zhao (2020). [Doubly robust difference-in-differences estimators](https://www.sciencedirect.com/science/article/abs/pii/S0304407620301901), Journal of Econometrics.  |
-| `csdid`   |      | Fernando Rios-Avila   |  Brantly Callaway, Pedro H.C. Sant'Anna (2020). [Difference-in-Differences with multiple time periods](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948), Journal of Econometrics.  |
+| `drdid`   |     | [Fernando Rios-Avila](https://friosavila.github.io/playingwithstata/index.html) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/friosavila) <br><br> [Asjad Naqvi](https://github.com/asjadnaqvi) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/asjadnaqvi) <br><br> [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) |  Pedro H.C. Sant'Anna, [Jun Zhao](https://www.junbeanzhao.com/) (2020). [Doubly robust difference-in-differences estimators](https://www.sciencedirect.com/science/article/abs/pii/S0304407620301901), Journal of Econometrics.  |
+| `csdid`   |      | [Fernando Rios-Avila](https://friosavila.github.io/playingwithstata/index.html)   |  [Brantly Callaway](https://bcallaway11.github.io/), Pedro H.C. Sant'Anna (2020). [Difference-in-Differences with multiple time periods](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948), Journal of Econometrics.  |
 | `flexpaneldid` |    | Eva Dettmann <br><br> Alexander Giebler <br><br> Antje Weyh   | Eva Dettmann, Alexander Giebler, Antje Weyh (2020). [Flexpaneldid: A Stata Toolbox for Causal Analysis with Varying Treatment Time and Duration](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3692458). IWH Discussion Papers No. 3/2020 |
 | `xtevent` |    | Simon Freyaldenhoven <br><br> Christian Hansen <br><br> Jorge Perez Perez <br><br>  Jesse M. Shapiro  | Simon Freyaldenhoven, Christian Hansen, Jesse M. Shapiro (2019). [Pre-event Trends in the Panel Event-Study Design](https://www.aeaweb.org/articles?id=10.1257/aer.20180609). American Economic Review. |
 | `did2s` |       |  [Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts) | [John Gardner](https://jrgcmu.github.io/) (2021). [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf). |
 | `stackedev` |     | [Joshua Bleiberg](https://sites.google.com/view/joshbleiberg) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/JoshBleiberg) | Doruk Cengiz, Arindrajit Dube, Attila Lindner, Ben Zipperer (2019). [The effect of minimum wages on low-wage jobs](https://academic.oup.com/qje/article/134/3/1405/5484905). The Quarterly Journal of Economics.    |
 
-Note: The length of the installation paths from GitHub are messing up the table. Will sort this out.
+Note: The length of the installation paths from GitHub repositories is messing up the table. Will sort this out.
 
 
 ## How to use these packages?
@@ -46,10 +44,6 @@ COMING SOON
 Here are people who are actively involved in curating information on the latest DiD developments. This includes blogs, lecture series, tweets.
 
 
-## Blogs
-[Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): Scott's [Substack](https://causalinf.substack.com/) is the goto place for an easy-to-digest explanation of the latest metric-heavy DiD papers.
-
-
 ## Events and Videos
 
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): [CodeChella](https://causalinf.substack.com/p/codechella-announcement) the ultimate DiD event **Workshop 1: Friday July 16th, 2021** and **Workshop 2: Friday July 23, 2021** which will be live on [Twitch](https://www.twitch.tv/causalinf_did). Will post links if recordings are up somewhere.
@@ -59,116 +53,29 @@ Here are people who are actively involved in curating information on the latest 
 [Taylor J. Wright](https://taylorjwright.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/taylor_wright) organizes an online [DiD reading group](https://taylorjwright.github.io/did-reading-group/). The lecture recordings can also be viewed on [YouTube](https://www.youtube.com/channel/UCA7Idy0MfpP-uAjOebsFVuA/videos).
 
 
+## Blogs
+[Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): Scott's [Substack](https://causalinf.substack.com/) is the goto place for an easy-to-digest explanation of the latest metric-heavy DiD papers.
+
+[Andrew C. Baker](https://andrewcbaker.netlify.app/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/Andrew___Baker) has notes on [Difference-in-Differences Methodology](https://andrewcbaker.netlify.app/2019/09/25/difference-in-differences-methodology/) with supporting material on [GitHub](https://github.com/andrewchbaker).
 
 
 
-## Books, Lectures, and Notes
+## Books
 
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf) (2020). [Causal Inference: The Mix Tape](https://mixtape.scunning.com/).
 
 [Nick Huntington-Klein](https://nickchk.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/nickchk) (2021). [The Effect](https://theeffectbook.net/).
 
+## Lectures
+
 [Paul Goldsmith-Pinkham](https://paulgp.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/paulgp) has a brilliant set of [lectures on empirical methods including DiD on GitHub](https://github.com/paulgp/applied-methods-phd). These are also supplemented by [YouTube videos](https://www.youtube.com/playlist?list=PLWWcL1M3lLlojLTSVf2gGYQ_9TlPyPbiJ). 
 
-[Andrew C. Baker](https://andrewcbaker.netlify.app/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/Andrew___Baker) has notes on [Difference-in-Differences Methodology](https://andrewcbaker.netlify.app/2019/09/25/difference-in-differences-methodology/) with supporting material on [GitHub](https://github.com/andrewchbaker).
 
-## Literature
+## Notes
 
-[Christine Cai](https://christinecai.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/Christine_Cai27) has a working document which lists recent papers by several methods including DiDs: https://christinecai.github.io/PublicGoods/applied_micro_methods.pdf.
+Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jmwooldridge) has made several notes on DiD which are shared on his [Dropbox](https://www.dropbox.com/sh/zj91darudf2fica/AADj_jaf5ZuS1muobgsnxS6Za?dl=0) including Stata dofiles.
 
-## Tweets
-TO BE SORTED. These are from my bookmarks:
 
-https://twitter.com/pedrohcgs/status/1366976343657902082
+[Christine Cai](https://christinecai.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/Christine_Cai27) has a [working document](https://christinecai.github.io/PublicGoods/applied_micro_methods.pdf) which lists papers by different methods including DiDs.
 
-https://twitter.com/Edmund_Schuster/status/1366827343659085830
 
-https://twitter.com/borusyak/status/1367467017075372032
-
-https://twitter.com/arindube/status/1370219537392496640
-
-https://twitter.com/causalinf/status/1370391516456292352
-
-https://twitter.com/arindube/status/1372653923945738240
-
-https://twitter.com/arindube/status/1375922505576222728
-
-https://twitter.com/hhsievertsen/status/1375508386041622531
-
-https://twitter.com/p_ganong/status/1377293911186669572
-
-https://twitter.com/adamn_roberts/status/1376370277827887104
-
-https://twitter.com/nickchk/status/1378430760852590595
-
-https://twitter.com/jmwooldridge/status/1379846201286275073
-
-https://twitter.com/causalinf/status/1382358621787361281
-
-https://twitter.com/causalinf/status/1382373075845410818
-
-https://twitter.com/causalinf/status/1382376071463505928
-
-https://twitter.com/agoodmanbacon/status/1382680781856727048
-
-https://twitter.com/causalinf/status/1383261296817180677
-
-https://twitter.com/ainesmccarthy/status/1383151286003011589
-
-https://twitter.com/causalinf/status/1383453467633610761
-
-https://twitter.com/jmarcus_econ/status/1268861896813355008
-
-https://twitter.com/causalinf/status/1385318997424365575
-
-https://twitter.com/paulgp/status/1383039518060785665
-
-https://twitter.com/causalinf/status/1387016183065583618
-
-https://twitter.com/grant_mcdermott/status/1387895352364130305
-
-https://twitter.com/davidfromterra/status/1390649644418584579
-
-https://twitter.com/kylefbutts/status/1392133465072541699
-
-https://twitter.com/BassoliElena/status/1410886808607547393
-
-https://twitter.com/pedrohcgs/status/1412865772771106820
-
-https://twitter.com/ChloeEast2/status/1414643853034807298
-
-https://twitter.com/borusyak/status/1415727542858825734
-
-https://twitter.com/kylefbutts/status/1415771724415655936
-
-https://twitter.com/UofLEcon/status/1410657161718517763
-
-https://twitter.com/NoahHaber/status/1303332846602522625
-
-https://twitter.com/ArkhangelskyD/status/1410547598172250113
-
-https://twitter.com/ShanHuang_ec/status/1272928307441475585
-
-https://twitter.com/pedrohcgs/status/1409375667284627460
-
-https://twitter.com/grant_mcdermott/status/1409158265292824577
-
-https://twitter.com/causalinf/status/1408828058950320132
-
-https://twitter.com/causalinf/status/1408814312114823169
-
-https://twitter.com/MatthewAKraft/status/1408147332164640769
-
-https://twitter.com/jondr44/status/1408120156102938625
-
-https://twitter.com/VC31415/status/1405668395392057348
-
-https://twitter.com/stephkestelman/status/1405249186648502274
-
-https://twitter.com/causalinf/status/1403412806888742913
-
-https://twitter.com/borusyak/status/1402312618828763142
-
-https://twitter.com/causalinf/status/1400082832660307969
-
-https://twitter.com/pedrohcgs/status/1415915759960690696
