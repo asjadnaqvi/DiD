@@ -29,8 +29,10 @@ TODOS:
 | `csdid`   |      | Fernando Rios-Avila   |  Brantly Callaway, Pedro H.C. Sant'Anna (2020). [Difference-in-Differences with multiple time periods](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948), Journal of Econometrics.  |
 | `flexpaneldid` |    | Eva Dettmann <br><br> Alexander Giebler <br><br> Antje Weyh   | Eva Dettmann, Alexander Giebler, Antje Weyh (2020). [Flexpaneldid: A Stata Toolbox for Causal Analysis with Varying Treatment Time and Duration](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3692458). IWH Discussion Papers No. 3/2020 |
 | `xtevent` |    | Simon Freyaldenhoven <br><br> Christian Hansen <br><br> Jorge Perez Perez <br><br>  Jesse M. Shapiro  | Simon Freyaldenhoven, Christian Hansen, Jesse M. Shapiro (2019). [Pre-event Trends in the Panel Event-Study Design](https://www.aeaweb.org/articles?id=10.1257/aer.20180609). American Economic Review. |
+| `did2s` |       |  Kyle Butts | Charles Gardner (2021). [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf) |
+| `stackedev` |     | Joshua Bleiberg |     |
 
-Note: Package installation paths from GitHub are messing up the table due to line length. Will sort this out.
+Note: The length of the installation paths from GitHub are messing up the table. Will sort this out.
 
 
 
