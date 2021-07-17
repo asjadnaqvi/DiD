@@ -105,8 +105,8 @@ Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 [Christine Cai](https://christinecai.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/Christine_Cai27) has a [working document](https://christinecai.github.io/PublicGoods/applied_micro_methods.pdf) which lists recent papers using different methods including DiDs.
 
 
-## Interactive R-Shiny dashboards
-These are great (related) dash boards which showcase how TWFE models give wrong estimates.
+## Interactive dashboards
+These (related) interactive R-Shiny dashboards showcase how TWFE models give wrong estimates.
 
 [Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts): https://kyle-butts.shinyapps.io/did_twfe/
 
