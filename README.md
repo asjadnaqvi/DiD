@@ -41,9 +41,10 @@ TO BE ADDED
 *Note*: The length of the installation paths from GitHub repositories is messing up the table. Till this is sorted out, links are here:
 
 * `bacondecomp` alternative: `net install ddtiming, from(https://tgoldring.com/code/)`
+* `drdid`: `net install drdid, from ("https://raw.githubusercontent.com/friosavila/csdid_drdid/v0.1/code") replace`
 * `csdid`: `net install csdid, from ("https://raw.githubusercontent.com/friosavila/csdid_drdid/main/code/") replace`
 * `eventstudyinteract`  : `net install eventstudyinteract, from("https://raw.githubusercontent.com/lsun20/EventStudyInteract/main/") replace`
-* `xtevent`   : Manually download and install from here `https://simonfreyaldenhoven.github.io/software/`
+* `xtevent`   : Manually download and install from `https://simonfreyaldenhoven.github.io/software/`
 * `stackedev`: `net install stackedev, from("https://raw.githubusercontent.com/joshbleiberg/stackedev/main/")`
 
 
