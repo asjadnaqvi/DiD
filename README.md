@@ -1,18 +1,26 @@
 
 
+
 Last updated: 17 July 2021.
+
+
+
 
 # Notes
 
-This repository tracks the recent developments in the Difference-in-Difference (DiD) literature. Currently, it is just a dump from different websites including Twitter, GitHub, YouTube etc. This will be sorted out over time as the literature converges to some consensus. But this might still take a while.
+This repository tracks the recent developments in the Difference-in-Difference (DiD) literature. Currently, it is just a dump of my bookmarks from different websites including Twitter, GitHub, YouTube etc. This will be sorted out over time as the literature converges to some consensus. But this might still take a while.
 
-This is a working document, if you want to contribute, just message.
+This is a working document, if you want to contribute, just message, or open an issue on GitHub. Let's make this the most epic DiD repository ever! 
 
 TODO:
 * Dump the info.
 * Add key lit.
 * Port to a proper website.
 
+
+# Why do DiD?
+
+TO BE ADDED
 
 
 # Stata packages
@@ -87,7 +95,7 @@ Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 ## Tweets
 
-Twitter threads that summarize the DiD literature. In order to render these properly, you need to view them on the [Jekyll website](https://asjadnaqvi.github.io/Diff-in-Diff-Notes/)
+Twitter threads that summarize the DiD literature. In order to render these properly, you need to view them on the [Jekyll website](https://asjadnaqvi.github.io/Diff-in-Diff-Notes/).
 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Navigating the DiD revolution from one applied researcher&#39;s perspective. <br><br>A LONG 🧵 on what I&#39;ve learned &amp; what I&#39;m still trying to figure out. Advice/insights welcome!<br><br>My <a href="https://twitter.com/michaelpollan?ref_src=twsrc%5Etfw">@michaelpollan</a> 🥦🍅🥕🫑 inspired TL;DR take:<br><br>&quot;Apply DiD in context, not every 2x2, mostly event studies&quot; <a href="https://t.co/CWmwyo1Btp">pic.twitter.com/CWmwyo1Btp</a></p>&mdash; Matthew A. Kraft (@MatthewAKraft) <a href="https://twitter.com/MatthewAKraft/status/1408147332164640769?ref_src=twsrc%5Etfw">June 24, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
