@@ -104,8 +104,14 @@ Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 Twitter threads that summarize the DiD literature. In order to render these properly, you need to view them on the [Jekyll website](https://asjadnaqvi.github.io/Diff-in-Diff-Notes/).
 
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I spent this past week catching up with the DiD literature. Here is my list🧵:<br>1. Read (if you haven&#39;t) Andrew Goodman-Bacon&#39;s &quot;Difference-in-Differences with Variation in Treatment Timing.&quot; The paper that started all for me (there are others before).Link: <a href="https://t.co/GBFjBnHDcj">https://t.co/GBFjBnHDcj</a></p>&mdash; Jesús Villero (@jotavillero) <a href="https://twitter.com/jotavillero/status/1393957055514529803?ref_src=twsrc%5Etfw">May 16, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Navigating the DiD revolution from one applied researcher&#39;s perspective. <br><br>A LONG 🧵 on what I&#39;ve learned &amp; what I&#39;m still trying to figure out. Advice/insights welcome!<br><br>My <a href="https://twitter.com/michaelpollan?ref_src=twsrc%5Etfw">@michaelpollan</a> 🥦🍅🥕🫑 inspired TL;DR take:<br><br>&quot;Apply DiD in context, not every 2x2, mostly event studies&quot; <a href="https://t.co/CWmwyo1Btp">pic.twitter.com/CWmwyo1Btp</a></p>&mdash; Matthew A. Kraft (@MatthewAKraft) <a href="https://twitter.com/MatthewAKraft/status/1408147332164640769?ref_src=twsrc%5Etfw">June 24, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 
 <br>
 
