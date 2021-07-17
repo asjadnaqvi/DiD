@@ -25,7 +25,7 @@ TO BE ADDED
 
 # Stata packages
 
-| Name | Installation |  Package by | Literature | 
+| Name | Installation |  Package by | Reference paper | 
 | --- | --- | --- |   --- | 
 | `bacondecomp` | `ssc install bacondecomp, replace` <br><br>  | [Andrew Goodman-Bacon](http://goodman-bacon.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/agoodmanbacon) <br><br> [Thomas Goldring](https://tgoldring.com/) <br><br> Austin Nichols [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/AustnNchols) |   Andrew Goodman-Bacon (2021). [Difference-in-differences with variation in treatment timing](https://www.sciencedirect.com/science/article/abs/pii/S0304407621001445). Journal of Econometrics | 
 | `eventstudyinteract` |   | [Liyang Sun](http://economics.mit.edu/grad/lsun20) |   Liyang Sun, [Sarah Abraham](https://www.cornerstone.com/Staff/Sarah-Abraham#) (2020). [Estimating dynamic treatment effects in event studies with heterogeneous treatment effects](https://www.sciencedirect.com/science/article/abs/pii/S030440762030378X). Journal of Econometrics. | 
@@ -33,25 +33,31 @@ TO BE ADDED
 | `did_imputation` | `ssc install did_imputation, replace` |  [Kirill Borusyak](https://sites.google.com/view/borusyak/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/borusyak) <br><br> [Xavier Jaravel](https://www.lse.ac.uk/economics/people/faculty/xavier-jaravel) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/XJaravel) <br><br> [Jann Spiess](https://www.gsb.stanford.edu/faculty-research/faculty/jann-spiess) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jannspiess)  |   Kirill Borusyak, Xavier Jaravel, Jann Spiess (2021). [Revisiting Event Study Designs: Robust and Efficient Estimation](https://www.google.com/url?q=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fy92mmyndlbkufo1%2FDraft_RobustAndEfficient.pdf%3Fraw%3D1&sa=D&sntz=1&usg=AFQjCNGGDRt4xPz3hCXhTWxchHJWh-1m_Q) | 
 | `drdid`   |     | [Fernando Rios-Avila](https://friosavila.github.io/playingwithstata/index.html) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/friosavila) <br><br> [Asjad Naqvi](https://github.com/asjadnaqvi) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/asjadnaqvi) <br><br> [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) |  Pedro H.C. Sant'Anna, [Jun Zhao](https://www.junbeanzhao.com/) (2020). [Doubly robust difference-in-differences estimators](https://www.sciencedirect.com/science/article/abs/pii/S0304407620301901), Journal of Econometrics.  |
 | `csdid`   |      | [Fernando Rios-Avila](https://friosavila.github.io/playingwithstata/index.html)   |  [Brantly Callaway](https://bcallaway11.github.io/), Pedro H.C. Sant'Anna (2020). [Difference-in-Differences with multiple time periods](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948), Journal of Econometrics.  |
-| `flexpaneldid` | `ssc install flexpaneldid, replace`   | Eva Dettmann <br><br> Alexander Giebler <br><br> Antje Weyh   | Eva Dettmann, Alexander Giebler, Antje Weyh (2020). [Flexpaneldid: A Stata Toolbox for Causal Analysis with Varying Treatment Time and Duration](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3692458). IWH Discussion Papers No. 3/2020 |
-| `xtevent` |    | Simon Freyaldenhoven <br><br> Christian Hansen <br><br> Jorge Perez Perez <br><br>  Jesse M. Shapiro  | Simon Freyaldenhoven, Christian Hansen, Jesse M. Shapiro (2019). [Pre-event Trends in the Panel Event-Study Design](https://www.aeaweb.org/articles?id=10.1257/aer.20180609). American Economic Review. |
+| `flexpaneldid` | `ssc install flexpaneldid, replace`   | [Eva Dettmann](https://www.iwh-halle.de/en/about-the-iwh/team/detail/eva-dettmann/) <br><br> Alexander Giebler <br><br> [Antje Weyh](https://www.iab.de/754/section.aspx/Mitarbeiter/359)   | Eva Dettmann, Alexander Giebler, Antje Weyh (2020). [Flexpaneldid: A Stata Toolbox for Causal Analysis with Varying Treatment Time and Duration](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3692458). IWH Discussion Papers No. 3/2020 |
+| `xtevent` |    | [Simon Freyaldenhoven](https://simonfreyaldenhoven.github.io/) <br><br> [Christian Hansen](https://voices.uchicago.edu/christianhansen/) <br><br> [Jorge Perez Perez](https://jorgeperezperez.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jorpppp) <br><br>  [Jesse M. Shapiro](https://www.brown.edu/Research/Shapiro/)  | Simon Freyaldenhoven, Christian Hansen, Jesse M. Shapiro (2019). [Pre-event Trends in the Panel Event-Study Design](https://www.aeaweb.org/articles?id=10.1257/aer.20180609). American Economic Review. |
 | `did2s` |  `ssc install did2s, replace`     |  [Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts) | [John Gardner](https://jrgcmu.github.io/) (2021). [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf). |
-| `stackedev` |     | [Joshua Bleiberg](https://sites.google.com/view/joshbleiberg) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/JoshBleiberg) | Doruk Cengiz, Arindrajit Dube, Attila Lindner, Ben Zipperer (2019). [The effect of minimum wages on low-wage jobs](https://academic.oup.com/qje/article/134/3/1405/5484905). The Quarterly Journal of Economics.    |
+| `stackedev` |     | [Joshua Bleiberg](https://sites.google.com/view/joshbleiberg) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/JoshBleiberg) | [Doruk Cengiz](https://dorukcengiz.netlify.app/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/dcdorukcengiz), [Arindrajit Dube](https://arindube.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/arindube), [Attila Lindner](https://sites.google.com/site/attilalindner/), [Ben Zipperer](https://www.epi.org/people/ben-zipperer/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/benzipperer) (2019). [The effect of minimum wages on low-wage jobs](https://academic.oup.com/qje/article/134/3/1405/5484905). The Quarterly Journal of Economics.    |
 
-*Note*: The length of the installation paths from GitHub repositories is messing up the table. Till this is sorted out, links here:
+*Note*: The length of the installation paths from GitHub repositories is messing up the table. Till this is sorted out, links are here:
 
-* `bacondecomp` alternative: ```net install ddtiming, from(https://tgoldring.com/code/)```
-* `csdid`: ```net install csdid, from ("https://raw.githubusercontent.com/friosavila/csdid_drdid/main/code/") replace```
-* `eventstudyinteract`  : ```net install eventstudyinteract, from("https://raw.githubusercontent.com/lsun20/EventStudyInteract/main/") replace```
-* `xtevent`   : Manual install from here `https://simonfreyaldenhoven.github.io/software/`
-* `stackedev`: ```net install stackedev, from("https://raw.githubusercontent.com/joshbleiberg/stackedev/main/")```
+* `bacondecomp` alternative: `net install ddtiming, from(https://tgoldring.com/code/)`
+* `csdid`: `net install csdid, from ("https://raw.githubusercontent.com/friosavila/csdid_drdid/main/code/") replace`
+* `eventstudyinteract`  : `net install eventstudyinteract, from("https://raw.githubusercontent.com/lsun20/EventStudyInteract/main/") replace`
+* `xtevent`   : Manually download and install from here `https://simonfreyaldenhoven.github.io/software/`
+* `stackedev`: `net install stackedev, from("https://raw.githubusercontent.com/joshbleiberg/stackedev/main/")`
 
 
 
 ## How to use these packages?
 
-COMING SOON
+TO BE ADDED.
 
+
+# Literature
+
+A list of must read papers.
+
+TO BE ADDED.
 
 
 # DiD knowledge curation
