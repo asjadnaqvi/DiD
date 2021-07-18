@@ -85,7 +85,7 @@ Brantly Callaway, Pedro H.C. Sant'Anna (2020). [Difference-in-Differences with m
 
 Clément de Chaisemartin, Xavier D'Haultfoeuille (2020). [Two-Way Fixed Effects Estimators with Heterogeneous Treatment Effects](https://www.aeaweb.org/articles?id=10.1257/aer.20181169). American Economic Review.
 
-Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). Two-way fixed effects regressions with several treatments.
+Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Two-way fixed effects regressions with several treatments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3751060).
 
 Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Difference-in-Differences Estimators of Inter-temporal Treatment Effects](https://arxiv.org/abs/2007.04267).
 
