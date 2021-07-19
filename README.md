@@ -51,7 +51,15 @@ TO BE ADDED
 
 ## How to use these packages?
 
-TO BE ADDED.
+For individual packages, check their helpfiles for example code. 
+
+For using and plotting multiple DiD packages in Stata, the `event_plot` command (`ssc install event_plot, replace`) by [Kirill Borusyak](https://sites.google.com/view/borusyak/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/borusyak) is highly recommended. It estimates and combines results from [five different estimators](https://github.com/borusyak/did_imputation/blob/main/five_estimators_example.png). Example of how to do event study plots using different packages is given in the [five_estimators_example.do](https://github.com/borusyak/did_imputation/blob/main/five_estimators_example.do) dofile on this [GitHub](https://github.com/borusyak/did_imputation) repository.
+
+The `event_plot` command has been modified and extended twice:
+
+* First by [David Burgherr](https://www.lse.ac.uk/International-Inequalities/People/David-Burgherr) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/d_burgherr) who has a sample dofile on [Dropbox](https://www.dropbox.com/s/p5i94ryf4h9o335/five_estimators_example_adapted.do?dl=0).
+
+* Second by [Pietro Santoleri](https://pietrosantoleri.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/santpietro) where he extends the event_plot to accomodate [seven different estimators](https://github.com/pietrosantoleri/staggered_did/blob/main/output/seven_estimators_example_allt.png). The code is available on his [GitHub page](https://github.com/pietrosantoleri/staggered_did).
 
 
 # R packages
