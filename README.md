@@ -53,7 +53,7 @@ TO BE ADDED
 
 For individual packages, check their helpfiles for example code. 
 
-For using and plotting multiple DiD packages in Stata, the `event_plot` command (`ssc install event_plot, replace`) by [Kirill Borusyak](https://sites.google.com/view/borusyak/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/borusyak) is highly recommended. It estimates and combines results from [five different estimators](https://github.com/borusyak/did_imputation/blob/main/five_estimators_example.png). Example of how to do event study plots using different packages is given in the [five_estimators_example.do](https://github.com/borusyak/did_imputation/blob/main/five_estimators_example.do) dofile on his [GitHub](https://github.com/borusyak/did_imputation) repository.
+For using and plotting multiple DiD packages in Stata, the `event_plot` command (`ssc install event_plot, replace`) by [Kirill Borusyak](https://sites.google.com/view/borusyak/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/borusyak) is highly recommended. It estimates and combines results from [five different estimators](https://github.com/borusyak/did_imputation/blob/main/five_estimators_example.png). Example of how to do event study plots using five different packages is given in the [five_estimators_example.do](https://github.com/borusyak/did_imputation/blob/main/five_estimators_example.do) dofile on [GitHub](https://github.com/borusyak/did_imputation).
 
 The `event_plot` usage example has been extended twice:
 
