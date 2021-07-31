@@ -1,21 +1,14 @@
 
 
 
-Last updated: 17 July 2021.
-
-
+*Last updated: 31 July 2021:* New paper Arkhangelsky et. al. (2021) added.
 
 
 # Notes
 
 This repository tracks the recent developments in the Difference-in-Difference (DiD) literature. Currently, it is just a dump of my bookmarks from different websites including Twitter, GitHub, YouTube etc. This will be sorted out over time as the literature converges to some consensus. But this might still take a while.
 
-This is a working document, if you want to contribute, just message, or open an issue on GitHub. Let's make this the most epic DiD repository ever! 
-
-TODO:
-* Dump the info.
-* Add key lit.
-* Port to a proper website.
+This is a working document, if you want to contribute, just message, or open an issue on GitHub. 
 
 
 # Why do DiD?
@@ -81,9 +74,10 @@ The `event_plot` usage example has been extended twice:
 
 ## Papers
 
-SORTABLE TABLE TO BE ADDED. In alphabetical order by last name.
+SORTABLE TABLE TO BE ADDED. 
+In alphabetical order by last name. Papers without journals are working papers. Please click on links for details and bibliography information.
 
-
+Dmitry Arkhangelsky, Guido W. Imbens, Lihua Lei, Xiaoman Luo (2021). [Double-Robust Two-Way-Fixed-Effects Regression For Panel Data](https://arxiv.org/abs/2107.13737).
 
 [Kirill Borusyak](https://sites.google.com/view/borusyak/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/borusyak), [Xavier Jaravel](https://www.lse.ac.uk/economics/people/faculty/xavier-jaravel) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/XJaravel), [Jann Spiess](https://www.gsb.stanford.edu/faculty-research/faculty/jann-spiess) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jannspiess) (2021). [Revisiting Event Study Designs: Robust and Efficient Estimation](https://www.google.com/url?q=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fy92mmyndlbkufo1%2FDraft_RobustAndEfficient.pdf%3Fraw%3D1&sa=D&sntz=1&usg=AFQjCNGGDRt4xPz3hCXhTWxchHJWh-1m_Q).
 
