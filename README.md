@@ -77,9 +77,9 @@ Packages installation paths have been split across lines to preverse table forma
 
 ## Papers
 
-SORTABLE TABLE TO BE ADDED. 
 
-Papers are in alphabetical order by last name. Papers without journals are pre-prints. Please click on paper links for details.
+Papers are in alphabetical order by last name. Papers without journals are pre-prints. Please click on paper links for details. SORTABLE TABLE TO BE ADDED. 
+
 
 [Dmitry Arkhangelsky](https://sites.google.com/view/dmitry-arkhangelsky/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ArkhangelskyD), [Guido Imbens](https://www.gsb.stanford.edu/faculty-research/faculty/guido-w-imbens), [Lihua Lei](https://lihualei71.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/lihua_lei_stat), [Xiaoman Luo](https://xiaomanluo.github.io/) (2021). [Double-Robust Two-Way-Fixed-Effects Regression For Panel Data](https://arxiv.org/abs/2107.13737).
 
