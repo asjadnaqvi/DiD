@@ -74,7 +74,7 @@ Packages installation paths have been split across lines to preverse table forma
 
 # Julia packages
 
-This is still being updated. See links below for details. There is also a [DiffinDiff GitHub](https://github.com/JuliaDiffinDiffs) group for various DiD packages.
+This is still being updated. See links below for details. There is also a [Julia DiffinDiff](https://github.com/JuliaDiffinDiffs) group on GitHub which contains various packages.
 
 
 | Name | Installation |  Package by | Reference paper | 
