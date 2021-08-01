@@ -161,7 +161,7 @@ These (related) interactive R-Shiny dashboards showcase how TWFE models give wro
 
 ## Tweets
 
-Some interesting Twitter threads. In order to render these properly, you need to view them on the [Jekyll website](https://asjadnaqvi.github.io/Diff-in-Diff-Notes/).
+Some interesting Twitter threads in no particular sequence. In order to render these properly, you need to view them on the [Jekyll website](https://asjadnaqvi.github.io/Diff-in-Diff-Notes/).
 
 <br>
 
@@ -181,3 +181,10 @@ Some interesting Twitter threads. In order to render these properly, you need to
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The diff-in-diff literature is plagued with the notion that more controls are always better (as long as the treatment effect has 2 stars). Someone please write a version of this <a href="https://twitter.com/yudapearl?ref_src=twsrc%5Etfw">@yudapearl</a> paper aimed at the assumptions &amp; examples of DiD. <a href="https://twitter.com/hashtag/EconTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#EconTwitter</a> <a href="https://t.co/JfxQHGlxgw">https://t.co/JfxQHGlxgw</a></p>&mdash; Arthur Lewbel (@lewbel) <a href="https://twitter.com/lewbel/status/1420725923922468866?ref_src=twsrc%5Etfw">July 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This is a really interesting discussion of using potential outcomes to define causal effects. Not sure I agree with the critiques, but they&#39;re thought-provoking<br><br>key quote: &quot;I don’t like the idea of types defined by something that happens in the future..&quot;<a href="https://t.co/AWRK9Qgj4W">https://t.co/AWRK9Qgj4W</a> <a href="https://t.co/a1J8pDxfXK">pic.twitter.com/a1J8pDxfXK</a></p>&mdash; Peter Hull (@instrumenthull) <a href="https://twitter.com/instrumenthull/status/1419652224565878785?ref_src=twsrc%5Etfw">July 26, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">As I was re-reading this paper recently, I wanted to draw attention to the fact that this paper by Gardner (2021) derives (in appendix B)( the event-specific weights for each event in a &quot;stacked regression&quot; used in Cengiz et al (2019).<br><br>1/<a href="https://t.co/ucvjcNtq3Q">https://t.co/ucvjcNtq3Q</a> <a href="https://t.co/drVnoE1xHb">pic.twitter.com/drVnoE1xHb</a></p>&mdash; Arindrajit Dube (@arindube) <a href="https://twitter.com/arindube/status/1417972575980883970?ref_src=twsrc%5Etfw">July 21, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
