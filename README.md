@@ -113,7 +113,7 @@ Simon Freyaldenhoven, Christian Hansen, Jesse M. Shapiro (2019). [Pre-event Tren
 
 [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44), Pedro H.C. Sant'Anna (2021). [Efficient Estimation for Staggered Rollout Designs](https://arxiv.org/pdf/2102.01291.pdf).
 
-Pedro H.C. Sant'Anna, [Jun Zhao](https://www.junbeanzhao.com/) (2020). [Doubly robust difference-in-differences estimators](https://www.sciencedirect.com/science/article/abs/pii/S0304407620301901), Journal of Econometrics.
+[Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs), [Jun Zhao](https://www.junbeanzhao.com/) (2020). [Doubly robust difference-in-differences estimators](https://www.sciencedirect.com/science/article/abs/pii/S0304407620301901), Journal of Econometrics.
 
 [Liyang Sun](http://economics.mit.edu/grad/lsun20), [Sarah Abraham](https://www.cornerstone.com/Staff/Sarah-Abraham#) (2020). [Estimating dynamic treatment effects in event studies with heterogeneous treatment effects](https://www.sciencedirect.com/science/article/abs/pii/S030440762030378X). Journal of Econometrics.
 
@@ -134,7 +134,9 @@ Here are people who are actively involved in curating information on the latest 
 
 ## Events and Videos
 
-[Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): [CodeChella](https://causalinf.substack.com/p/codechella-announcement) the ultimate DiD event **Workshop 1: Friday July 16th, 2021** and **Workshop 2: Friday July 23, 2021** which will be live on [Twitch](https://www.twitch.tv/causalinf_did). The videos from the first workshop are now up on [YouTube](https://www.youtube.com/user/scunning/videos).
+[Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs). [Seminar on DiD](https://statisticalhorizons.com/seminars/public-seminars/difference-in-differences) on 24-27 August, 2021 organized by [Statistical Horizons](https://statisticalhorizons.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/StatHorizons)
+
+[Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): [CodeChella](https://causalinf.substack.com/p/codechella-announcement) the ultimate DiD event **Workshop 1: Friday July 16th, 2021** and **Workshop 2: Friday July 23, 2021** which will be live on [Twitch](https://www.twitch.tv/causalinf_did). The videos from the workshop are now up on [YouTube](https://www.youtube.com/user/scunning/videos).
 
 [Chloe East](https://www.chloeneast.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ChloeEast2) organizes an online [DiD reading group](https://www.chloeneast.com/metrics-discussions.html).
 
