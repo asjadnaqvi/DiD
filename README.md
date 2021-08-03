@@ -45,7 +45,7 @@ Intervention intensity changes over time:
 
 # Stata packages
 
-Some package paths have been split across lines to keep table formatting intact. Just make sure they are in one line when copying them in the Stata window or dofile.
+Some package paths have been split across lines but adding spaces to keep table formatting intact. Just make sure they are in one line when copying them in the Stata window or dofile.
 
 | Name | Installation |  Package by | Reference paper | 
 | --- | --- | --- |   --- | 
@@ -59,15 +59,6 @@ Some package paths have been split across lines to keep table formatting intact.
 | `xtevent` | Manually download and install from `https://simonfreyaldenhoven.github.io/ software/`   | [Simon Freyaldenhoven](https://simonfreyaldenhoven.github.io/) <br><br> [Christian Hansen](https://voices.uchicago.edu/christianhansen/) <br><br> [Jorge Perez Perez](https://jorgeperezperez.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jorpppp) <br><br>  [Jesse M. Shapiro](https://www.brown.edu/Research/Shapiro/)  | Simon Freyaldenhoven, Christian Hansen, Jesse M. Shapiro (2019). [Pre-event Trends in the Panel Event-Study Design](https://www.aeaweb.org/articles?id=10.1257/aer.20180609). American Economic Review. |
 | `did2s` |  `ssc install did2s, replace`     |  [Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts) | [John Gardner](https://jrgcmu.github.io/) (2021). [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf). |
 | `stackedev` | `net install stackedev, from ("https://raw.githubusercontent.com/ joshbleiberg/stackedev/main/")`    | [Joshua Bleiberg](https://sites.google.com/view/joshbleiberg) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/JoshBleiberg) | [Doruk Cengiz](https://dorukcengiz.netlify.app/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/dcdorukcengiz), [Arindrajit Dube](https://arindube.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/arindube), [Attila Lindner](https://sites.google.com/site/attilalindner/), [Ben Zipperer](https://www.epi.org/people/ben-zipperer/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/benzipperer) (2019). [The effect of minimum wages on low-wage jobs](https://academic.oup.com/qje/article/134/3/1405/5484905). The Quarterly Journal of Economics.    |
-
-*Note*: The length of the installation paths from GitHub repositories is messing up the table. Till this is sorted out, links are here:
-
-* `bacondecomp` alternative: `net install ddtiming, from(https://tgoldring.com/code/)`
-* `drdid`: `net install drdid, from ("https://raw.githubusercontent.com/friosavila/csdid_drdid/v0.1/code") replace`
-* `csdid`: `net install csdid, from ("https://raw.githubusercontent.com/friosavila/csdid_drdid/main/code/") replace`
-* `eventstudyinteract`  : `net install eventstudyinteract, from("https://raw.githubusercontent.com/lsun20/EventStudyInteract/main/") replace`
-* `xtevent`   : Manually download and install from `https://simonfreyaldenhoven.github.io/software/`
-* `stackedev`: `net install stackedev, from("https://raw.githubusercontent.com/joshbleiberg/stackedev/main/")`
 
 
 
