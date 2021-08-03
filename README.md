@@ -42,7 +42,7 @@ Intervention intensity changes over time:
 
 ## Covariates
 
-
+## The new DiD models
 
 # Stata packages
 
