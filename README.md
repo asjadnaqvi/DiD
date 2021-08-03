@@ -25,11 +25,11 @@ Treatments across different units can occur in various configurations. The figur
 
 All interventions take place at the same point in time:
 
-<img src="./figures/heatplot1.png" width="300" title="All intervention at the same point in time">
+<img src="./figures/heatplot1.png" width="300" title="Interventions at the same point in time">
 
 Interventions take place at different points in time:
 
-<img src="./figures/heatplot2.png" width="300" title="All intervention at different points in time">
+<img src="./figures/heatplot2.png" width="300" title="Interventions at different points in time">
 
 Units move in and out of intervention:
 
