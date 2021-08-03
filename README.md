@@ -75,6 +75,8 @@ The `event_plot` usage example has been extended twice:
 * [Pietro Santoleri](https://pietrosantoleri.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/santpietro) has a dofile on [GitHub](https://github.com/pietrosantoleri/staggered_did) that plots [seven different estimators](https://github.com/pietrosantoleri/staggered_did/blob/main/output/seven_estimators_example_allt.png).
 
 
+[Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf) has sample dofiles as part of the [CodeChella](https://github.com/scunning1975/codechella) DiD event. 
+
 # R packages
 
 Packages installation paths have been split across lines to preverse table formatting in Markdown.
