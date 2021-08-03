@@ -8,7 +8,7 @@
 
 This repository tracks the recent developments in the Difference-in-Difference (DiD) literature. Currently, it is just a dump of my bookmarks from different websites including Twitter, GitHub, YouTube etc. This will be sorted out over time as the literature converges to some consensus. But this might still take a while.
 
-This is a working document, if you want to contribute, just e-mail, open an [issue](https://github.com/AsjadNaqvi/Diff-in-Diff-Notes/issues) or [start a discussion](https://github.com/AsjadNaqvi/Diff-in-Diff-Notes/discussions) on GitHub.
+This is a working document, if you want to contribute, just e-mail, [open an issue](https://github.com/AsjadNaqvi/Diff-in-Diff-Notes/issues) or [start a discussion](https://github.com/AsjadNaqvi/Diff-in-Diff-Notes/discussions) on GitHub.
 
 # Why do DiD?
 
