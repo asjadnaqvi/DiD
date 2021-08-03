@@ -8,8 +8,7 @@
 
 This repository tracks the recent developments in the Difference-in-Difference (DiD) literature. Currently, it is just a dump of my bookmarks from different websites including Twitter, GitHub, YouTube etc. This will be sorted out over time as the literature converges to some consensus. But this might still take a while.
 
-This is a working document, if you want to contribute, just message, or open an issue on GitHub. 
-
+This is a working document, if you want to contribute, just e-mail, open an [issue](https://github.com/AsjadNaqvi/Diff-in-Diff-Notes/issues) or [start a discussion](https://github.com/AsjadNaqvi/Diff-in-Diff-Notes/discussions) on GitHub.
 
 # Why do DiD?
 
@@ -194,7 +193,6 @@ These (related) interactive R-Shiny dashboards showcase how TWFE models give wro
 [Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts): https://kyle-butts.shinyapps.io/did_twfe/
 
 [Hans Henrik Sievertsen](https://hhsievertsen.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/hhsievertsen): https://hhsievertsen.shinyapps.io/kylebutts_did_eventstudy/
-
 
 
 
