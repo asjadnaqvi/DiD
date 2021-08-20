@@ -21,23 +21,15 @@ TO BE ADDED...
 
 ## Interventions
 
-Treatments across different units can occur in various configurations. The figures below some of the most common treatment types. Here the x-axis represents the time scale, the y-axis the different groups (panel IDs) and the orange represents the time periods in which the units are treated.
+Treatments across different units can occur in various configurations. The figures below some of the most common treatment types. Here the x-axis represents the time scale, the y-axis the different groups (panel IDs) and the orange represents the time periods in which the units are treated. The figures below show types of differential treatment timings:
 
-All interventions take place at the same point in time:
 
-<img src="./figures/heatplot1.png" width="300" title="Interventions at the same point in time">
+<img src="./figures/heatplot1.png" width="300" title="Interventions at the same point in time"><img src="./figures/heatplot2.png" width="300" title="Interventions at different points in time">
 
-Interventions take place at different points in time:
+<img src="./figures/heatplot3.png" width="300" title="In and out of interventions"><img src="./figures/heatplot4.png" width="300" title="Continuously increasing interventions">
 
-<img src="./figures/heatplot2.png" width="300" title="Interventions at different points in time">
 
-Units move in and out of intervention:
 
-<img src="./figures/heatplot3.png" width="300" title="In and out of interventions">
-
-Intervention intensity changes over time:
-
-<img src="./figures/heatplot4.png" width="300" title="Continuously increasing interventions">
 
 
 ## Covariates
