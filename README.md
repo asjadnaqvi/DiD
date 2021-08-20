@@ -1,7 +1,7 @@
 
 
 
-*Last updated: 05 August 2021*
+*Last updated: 20 August 2021*
 
 
 # Notes
@@ -12,6 +12,7 @@ This is a working document, if you want to contribute, just e-mail, [open an iss
 
 # Why do DiD?
 
+TO BE ADDED...
 
 
 ## The classic DiD or the TWFE model
@@ -59,7 +60,7 @@ Some package paths have been split across lines but adding spaces to keep table 
 | `xtevent` | Manually download and install from `https://simonfreyaldenhoven.github.io/ software/`   | [Simon Freyaldenhoven](https://simonfreyaldenhoven.github.io/) <br><br> [Christian Hansen](https://voices.uchicago.edu/christianhansen/) <br><br> [Jorge Perez Perez](https://jorgeperezperez.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jorpppp) <br><br>  [Jesse M. Shapiro](https://www.brown.edu/Research/Shapiro/)  | [Simon Freyaldenhoven](https://simonfreyaldenhoven.github.io/), [Christian Hansen](https://voices.uchicago.edu/christianhansen/), [Jesse M. Shapiro](https://www.brown.edu/Research/Shapiro/) (2019). [Pre-event Trends in the Panel Event-Study Design](https://www.aeaweb.org/articles?id=10.1257/aer.20180609). American Economic Review. |
 | `did2s` |  `ssc install did2s, replace`     |  [Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts) | [John Gardner](https://jrgcmu.github.io/) (2021). [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf). |
 | `stackedev` | `net install stackedev, from ("https://raw.githubusercontent.com/ joshbleiberg/stackedev/main/")`    | [Joshua Bleiberg](https://sites.google.com/view/joshbleiberg) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/JoshBleiberg) | [Doruk Cengiz](https://dorukcengiz.netlify.app/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/dcdorukcengiz), [Arindrajit Dube](https://arindube.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/arindube), [Attila Lindner](https://sites.google.com/site/attilalindner/), [Ben Zipperer](https://www.epi.org/people/ben-zipperer/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/benzipperer) (2019). [The effect of minimum wages on low-wage jobs](https://academic.oup.com/qje/article/134/3/1405/5484905). The Quarterly Journal of Economics.    |
-
+| `eventdd`  | `ssc install eventdd, replace` | Damian Clarke <br><br> Kathya Tapia | [Damian Clarke](http://www.damianclarke.net/), Kathya Tapia (2020). [Implementing the Panel Event Study](http://ftp.iza.org/dp13524.pdf) |
 
 
 ## How to use these packages?
@@ -92,6 +93,7 @@ Packages installation paths have been split across lines to preverse table forma
 |	`staggered`	|	`devtools::install_github` `("jonathandroth/staggered")`		|	[Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44) <br><br>  [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs)  |	[Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44), [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) (2021). [Efficient Estimation for Staggered Rollout Designs](https://arxiv.org/pdf/2102.01291.pdf)	|
 | `didimputation`    | `devtools::install_github` `("kylebutts/didimputation")`    | [Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts)     |  [Kirill Borusyak](https://sites.google.com/view/borusyak/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/borusyak), [Xavier Jaravel](https://www.lse.ac.uk/economics/people/faculty/xavier-jaravel) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/XJaravel), [Jann Spiess](https://www.gsb.stanford.edu/faculty-research/faculty/jann-spiess) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jannspiess) (2021). [Revisiting Event Study Designs: Robust and Efficient Estimation](https://www.google.com/url?q=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fy92mmyndlbkufo1%2FDraft_RobustAndEfficient.pdf%3Fraw%3D1&sa=D&sntz=1&usg=AFQjCNGGDRt4xPz3hCXhTWxchHJWh-1m_Q).        |
 | `did2s` |  `devtools::install_github` `("kylebutts/did2s")`     |  [Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts) | [John Gardner](https://jrgcmu.github.io/) (2021). [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf). <br><br> [Kirill Borusyak](https://sites.google.com/view/borusyak/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/borusyak), [Xavier Jaravel](https://www.lse.ac.uk/economics/people/faculty/xavier-jaravel) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/XJaravel), [Jann Spiess](https://www.gsb.stanford.edu/faculty-research/faculty/jann-spiess) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jannspiess) (2021). [Revisiting Event Study Designs: Robust and Efficient Estimation](https://www.google.com/url?q=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fy92mmyndlbkufo1%2FDraft_RobustAndEfficient.pdf%3Fraw%3D1&sa=D&sntz=1&usg=AFQjCNGGDRt4xPz3hCXhTWxchHJWh-1m_Q) <br><br> Liyang Sun, Sarah Abraham (2020). [Estimating dynamic treatment effects in event studies with heterogeneous treatment effects](https://www.sciencedirect.com/science/article/abs/pii/S030440762030378X). Journal of Econometrics. <br><br> Brantly Callaway, [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) (2020). [Difference-in-Differences with multiple time periods](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948), Journal of Econometrics. <br><br> [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44), [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) (2021). [Efficient Estimation for Staggered Rollout Designs](https://arxiv.org/pdf/2102.01291.pdf). |
+| `HonestDiD`   | `remotes::install_github("asheshrambachan/HonestDiD")`  | [Ashesh Rambachan](https://asheshrambachan.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/asheshrambachan) <br><br> [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44)     | [Ashesh Rambachan](https://asheshrambachan.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/asheshrambachan), [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44) (2021). [An Honest Approach to Parallel Trends](https://asheshrambachan.github.io/assets/files/hpt-draft.pdf).         |
 
 
 # Julia packages
@@ -115,17 +117,27 @@ Papers are in alphabetical order by last name. Papers without journals are pre-p
 
 [Dmitry Arkhangelsky](https://sites.google.com/view/dmitry-arkhangelsky/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ArkhangelskyD), [Guido Imbens](https://www.gsb.stanford.edu/faculty-research/faculty/guido-w-imbens), [Lihua Lei](https://lihualei71.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/lihua_lei_stat), [Xiaoman Luo](https://xiaomanluo.github.io/) (2021). [Double-Robust Two-Way-Fixed-Effects Regression For Panel Data](https://arxiv.org/abs/2107.13737).
 
+Susan Athey, Guido Imbens (2006). [Identification and inference in nonlinear difference-indifferences models](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2006.00668.x). Econometrica.
+
 [Kirill Borusyak](https://sites.google.com/view/borusyak/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/borusyak), [Xavier Jaravel](https://www.lse.ac.uk/economics/people/faculty/xavier-jaravel) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/XJaravel), [Jann Spiess](https://www.gsb.stanford.edu/faculty-research/faculty/jann-spiess) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jannspiess) (2021). [Revisiting Event Study Designs: Robust and Efficient Estimation](https://www.google.com/url?q=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fy92mmyndlbkufo1%2FDraft_RobustAndEfficient.pdf%3Fraw%3D1&sa=D&sntz=1&usg=AFQjCNGGDRt4xPz3hCXhTWxchHJWh-1m_Q).
 
-Brantly Callaway, Andrew Goodman-Bacon, Pedro H.C. Sant'Anna. [Difference-in-Differences with a Continuous Treatment](https://arxiv.org/pdf/2107.02637.pdf).
+Brantly Callaway, Andrew Goodman-Bacon, Pedro H.C. Sant'Anna (2021). [Difference-in-Differences with a Continuous Treatment](https://arxiv.org/pdf/2107.02637.pdf).
 
 Brantly Callaway, Pedro H.C. Sant'Anna (2020). [Difference-in-Differences with multiple time periods](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948), Journal of Econometrics.
+
+Clément de Chaisemartin, Xavier D'Haultfoeuille (2018). [Fuzzy differences-in-differences](https://academic.oup.com/restud/article-abstract/85/2/999/4096388). The Review of Economic Studies.
 
 Clément de Chaisemartin, Xavier D'Haultfoeuille (2020). [Two-Way Fixed Effects Estimators with Heterogeneous Treatment Effects](https://www.aeaweb.org/articles?id=10.1257/aer.20181169). American Economic Review.
 
 Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Two-way fixed effects regressions with several treatments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3751060).
 
 Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Difference-in-Differences Estimators of Inter-temporal Treatment Effects](https://arxiv.org/abs/2007.04267).
+
+Hans Fricke (2017). [Identification based on difference-in-differences approaches with multiple treatments](https://onlinelibrary.wiley.com/doi/abs/10.1111/obes.12178). Oxford Bulletin of Economics and Statistics.
+
+Xavier D’Haultfoeuille, Stefan Hoderlein, Yuya Sasaki (2013). [Nonlinear difference-indifferences in repeated cross sections with continuous treatments](https://www.econstor.eu/bitstream/10419/97404/1/766176037.pdf).
+
+Xavier D’Haultfoeuille, Stefan Hoderlein, Yuya Sasaki (2021). [Nonparametric Difference-in-Differences in Repeated Cross-Sections with Continuous Treatments](https://arxiv.org/abs/2104.14458).
 
 [Bruno Ferman](https://sites.google.com/site/brunoferman/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/bruno_ferman), Cristine Pinto (2021). [Synthetic Controls with Imperfect Pre-Treatment Fit](https://qeconomics.org/ojs/forth/1596/1596-3.pdf). Quantitative Economics.
 
@@ -134,6 +146,8 @@ Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Difference-in-Differen
 [John Gardner](https://jrgcmu.github.io/) (2021). [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf).
 
 [Andrew Goodman-Bacon](http://goodman-bacon.com/) (2021). [Difference-in-differences with variation in treatment timing](https://www.sciencedirect.com/science/article/abs/pii/S0304407621001445). Journal of Econometrics.
+
+[Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44) (2021). [Pre-test with Caution: Event-study Estimates After Testing for Parallel Trends](https://jonathandroth.github.io/assets/files/roth_pretrends_testing.pdf).
 
 [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44), [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) (2021). [Efficient Estimation for Staggered Rollout Designs](https://arxiv.org/pdf/2102.01291.pdf).
 
@@ -196,6 +210,30 @@ These (related) interactive R-Shiny dashboards showcase how TWFE models give wro
 ## Tweets
 
 Some interesting Twitter threads in no particular sequence. In order to render these properly, you need to view them on the [Jekyll website](https://asjadnaqvi.github.io/Diff-in-Diff-Notes/).
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The diff-in-diff literature is plagued with the notion that more controls are always better (as long as the treatment effect has 2 stars). Someone please write a version of this <a href="https://twitter.com/yudapearl?ref_src=twsrc%5Etfw">@yudapearl</a> paper aimed at the assumptions &amp; examples of DiD. <a href="https://twitter.com/hashtag/EconTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#EconTwitter</a> <a href="https://t.co/JfxQHGlxgw">https://t.co/JfxQHGlxgw</a></p>&mdash; Arthur Lewbel (@lewbel) <a href="https://twitter.com/lewbel/status/1420725923922468866?ref_src=twsrc%5Etfw">July 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🚨Hello <a href="https://twitter.com/hashtag/EconTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#EconTwitter</a>! I am very happy that my paper with Brantly Callaway, &quot;Difference-in-Differences with multiple time periods&quot;, is now forthcoming at the Journal of Econometrics. <a href="https://t.co/zoNxNY9ugq">https://t.co/zoNxNY9ugq</a><br><br>What are the main take aways? I will ask my daughter to help me out.<br><br>1/n <a href="https://t.co/DNj3Cpxxlu">pic.twitter.com/DNj3Cpxxlu</a></p>&mdash; Pedro H. C. Sant&#39;Anna (@pedrohcgs) <a href="https://twitter.com/pedrohcgs/status/1340006487456964608?ref_src=twsrc%5Etfw">December 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I finally got my TWFE/Mundlak/DID paper in good enough shape to make it an official working paper. I&#39;ll put it in other places but it&#39;s currently here:<a href="https://t.co/D4iQETUSlX">https://t.co/D4iQETUSlX</a><br><br>Also, the Stata stuff is still with the Dropbox link:<a href="https://t.co/q1AnkhEF97">https://t.co/q1AnkhEF97</a><a href="https://twitter.com/hashtag/metricstotheface?src=hash&amp;ref_src=twsrc%5Etfw">#metricstotheface</a></p>&mdash; Jeffrey Wooldridge (@jmwooldridge) <a href="https://twitter.com/jmwooldridge/status/1427472491367305219?ref_src=twsrc%5Etfw">August 17, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">In preparing a DID course, I discovered some other neat stuff. When you impose PT and allow flexible interactions with covariates the way I do, the POLS estimator is numerically identical to the comparable imputation estimator in Borusyak, Jaravel, Spiess (2021). <a href="https://twitter.com/borusyak?ref_src=twsrc%5Etfw">@borusyak</a></p>&mdash; Jeffrey Wooldridge (@jmwooldridge) <a href="https://twitter.com/jmwooldridge/status/1427472503467872259?ref_src=twsrc%5Etfw">August 17, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">More DID stuff, re: parallel trends. If you have two pre-treatment periods there are various equiv ways to test for pre-trends. Here are three (no controls):<br>1. Regress cy2 = y2 - y1 on 1, d using t = 2; obtain t test on d.<br>This is a standard placebo test.<a href="https://twitter.com/hashtag/metricstotheface?src=hash&amp;ref_src=twsrc%5Etfw">#metricstotheface</a></p>&mdash; Jeffrey Wooldridge (@jmwooldridge) <a href="https://twitter.com/jmwooldridge/status/1428101550539517963?ref_src=twsrc%5Etfw">August 18, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">In my career I have spent a lot of time assessing parallel trends in dif-in-dif models and visualizing those; this one is on top of my current list... and developing this was a team effort!<br><br>Show placebo estimates for a whole set of placebo dates, each w dynamic treatment effects <a href="https://t.co/lxSfekefkY">https://t.co/lxSfekefkY</a></p>&mdash; Arindrajit Dube (@arindube) <a href="https://twitter.com/arindube/status/1428814968040865795?ref_src=twsrc%5Etfw">August 20, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br>
 
