@@ -240,9 +240,6 @@ Some interesting Twitter threads in no particular sequence. In order to render t
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;ve been catching up on staggered diff-in-diff/two-way fixed effects recently. Simulating helped me see how bad TWFE performs with dynamic treatment effects (see those pre-trends). I also tried implementing Sun &amp; Abraham (2020)&#39;s interaction-weighted estimator in Stata <a href="https://t.co/FQBCQi0m7d">pic.twitter.com/FQBCQi0m7d</a></p>&mdash; Shan Huang (@ShanHuang_ec) <a href="https://twitter.com/ShanHuang_ec/status/1272928307441475585?ref_src=twsrc%5Etfw">June 16, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<br>
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🚨Hello <a href="https://twitter.com/hashtag/EconTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#EconTwitter</a>! I am very happy that my paper with Brantly Callaway, &quot;Difference-in-Differences with multiple time periods&quot;, is now forthcoming at the Journal of Econometrics. <a href="https://t.co/zoNxNY9ugq">https://t.co/zoNxNY9ugq</a><br><br>What are the main take aways? I will ask my daughter to help me out.<br><br>1/n <a href="https://t.co/DNj3Cpxxlu">pic.twitter.com/DNj3Cpxxlu</a></p>&mdash; Pedro H. C. Sant&#39;Anna (@pedrohcgs) <a href="https://twitter.com/pedrohcgs/status/1340006487456964608?ref_src=twsrc%5Etfw">December 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 <br>
