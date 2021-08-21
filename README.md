@@ -201,7 +201,7 @@ These (related) interactive R-Shiny dashboards showcase how TWFE models give wro
 
 ## Tweets
 
-Some interesting Twitter threads in no particular sequence. In order to render these properly, you need to view them on the [Jekyll website](https://asjadnaqvi.github.io/Diff-in-Diff-Notes/).
+Some interesting Twitter threads in no particular sequence. In order to render these properly, you need to view them on the [Jekyll website](https://asjadnaqvi.github.io/DiD/).
 
 <br>
 
