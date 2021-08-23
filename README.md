@@ -183,6 +183,8 @@ Here are people who are actively involved in curating information on the latest 
 
 [Paul Goldsmith-Pinkham](https://paulgp.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/paulgp) has a brilliant set of [lectures on empirical methods including DiD on GitHub](https://github.com/paulgp/applied-methods-phd). These are also supplemented by [YouTube videos](https://www.youtube.com/playlist?list=PLWWcL1M3lLlojLTSVf2gGYQ_9TlPyPbiJ). 
 
+Notes by [Brantly Callaway](https://bcallaway11.github.io/) and [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) on [Introduction to DiD with Multiple Time Periods](https://cran.r-project.org/web/packages/did/vignettes/multi-period-did.html).
+
 Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jmwooldridge) has made several notes on DiD which are shared on his [Dropbox](https://www.dropbox.com/sh/zj91darudf2fica/AADj_jaf5ZuS1muobgsnxS6Za?dl=0) including Stata dofiles.
 
 [Fernando Rios-Avila](https://friosavila.github.io/playingwithstata/index.html) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/friosavila) has a great explainer for the Callaway and Sant'Anna (2020) CS-DID logic on his [blog](https://friosavila.github.io/playingwithstata/main_csdid.html).
