@@ -207,6 +207,10 @@ Some interesting Twitter threads in no particular sequence. In order to render t
 
 <br>
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Hi <a href="https://twitter.com/pedrohcgs?ref_src=twsrc%5Etfw">@pedrohcgs</a> I have a question about <a href="https://twitter.com/jmwooldridge?ref_src=twsrc%5Etfw">@jmwooldridge</a> two way mundlak paper, &quot;As the number of pre-treatment periods increases, POLS will become even more efficient compared with CS (2021)&quot; Why your estimation is more less efficient? I&#39;m a few confused, sorry <br>All the best. Thks</p>&mdash; Oscar Andres Martinez (@oscand_martinez) <a href="https://twitter.com/oscand_martinez/status/1429915875369443341?ref_src=twsrc%5Etfw">August 23, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The diff-in-diff literature is plagued with the notion that more controls are always better (as long as the treatment effect has 2 stars). Someone please write a version of this <a href="https://twitter.com/yudapearl?ref_src=twsrc%5Etfw">@yudapearl</a> paper aimed at the assumptions &amp; examples of DiD. <a href="https://twitter.com/hashtag/EconTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#EconTwitter</a> <a href="https://t.co/JfxQHGlxgw">https://t.co/JfxQHGlxgw</a></p>&mdash; Arthur Lewbel (@lewbel) <a href="https://twitter.com/lewbel/status/1420725923922468866?ref_src=twsrc%5Etfw">July 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br>
