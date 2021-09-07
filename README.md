@@ -38,7 +38,7 @@ Treatments across different units can occur in various configurations. The figur
 
 # Stata packages
 
-Some package paths have been split across lines but adding spaces to keep table formatting intact. Just make sure they are in one line when copying them in the Stata window or dofile.
+Some package paths have been split across lines but adding spaces to keep table formatting intact. Just make sure they are in one line with spaces removed when copying them in Stata. To install packages from GitHub, get the `github` package: `net install github, from("https://haghish.github.io/github/")`.
 
 | Name | Installation |  Package by | Reference paper |
 | --- | --- | --- |   --- |
@@ -53,6 +53,7 @@ Some package paths have been split across lines but adding spaces to keep table 
 | `did2s` |  `ssc install did2s, replace`     |  [Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts) | [John Gardner](https://jrgcmu.github.io/) (2021). [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf). |
 | `stackedev` | `net install stackedev, from ("https://raw.githubusercontent.com/ joshbleiberg/stackedev/main/")`    | [Joshua Bleiberg](https://sites.google.com/view/joshbleiberg) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/JoshBleiberg) | [Doruk Cengiz](https://dorukcengiz.netlify.app/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/dcdorukcengiz), [Arindrajit Dube](https://arindube.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/arindube), [Attila Lindner](https://sites.google.com/site/attilalindner/), [Ben Zipperer](https://www.epi.org/people/ben-zipperer/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/benzipperer) (2019). [The effect of minimum wages on low-wage jobs](https://academic.oup.com/qje/article/134/3/1405/5484905). The Quarterly Journal of Economics.    |
 | `eventdd`  | `ssc install eventdd, replace` | Damian Clarke <br><br> Kathya Tapia | [Damian Clarke](http://www.damianclarke.net/), Kathya Tapia (2020). [Implementing the Panel Event Study](http://ftp.iza.org/dp13524.pdf). |
+| `staggered_stata`  | `github install jonathandroth/staggered_stata`   | [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44)   | [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44), [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) (2021). [Efficient Estimation for Staggered Rollout Designs](https://arxiv.org/pdf/2102.01291.pdf)    |
 
 
 ## How to use these packages?
@@ -176,7 +177,17 @@ Here are people who are actively involved in curating information on the latest 
 
 [Chloe East](https://www.chloeneast.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ChloeEast2) organizes an online [DiD reading group](https://www.chloeneast.com/metrics-discussions.html).
 
-[Taylor J. Wright](https://taylorjwright.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/taylor_wright) organizes an online [DiD reading group](https://taylorjwright.github.io/did-reading-group/). The lecture recordings can also be viewed on [YouTube](https://www.youtube.com/channel/UCA7Idy0MfpP-uAjOebsFVuA/videos).
+[Taylor J. Wright](https://taylorjwright.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/taylor_wright) organizes an online [DiD reading group](https://taylorjwright.github.io/did-reading-group/). The lectures can be viewed on [YouTube](https://www.youtube.com/channel/UCA7Idy0MfpP-uAjOebsFVuA/videos). Here is a playlist in the order they appear:
+
+* Andrew Goodman-Bacon: [Difference-in-Differences with Variation in Treatment Timing](https://www.youtube.com/watch?v=m1xSMNTKoMs&list=PLVObvb_htcuBt8mV9yNagt7hK9FL5KXeE). Posted on 27 April 2021
+* Jonathan Roth: [Testing and Sensitivity Analysis for Parallel Trends](https://www.youtube.com/watch?v=F8C1xaPoRvM&list=PLVObvb_htcuBt8mV9yNagt7hK9FL5KXeE&index=2). Posted on 10 May 2021.
+* Pedro H.C. Sant'Anna: [Difference-in-Differences with Multiple Time Periods](https://www.youtube.com/watch?v=VLviaylakAo&list=PLVObvb_htcuBt8mV9yNagt7hK9FL5KXeE&index=3). Posted on 15 May 2021.
+* Akash Issar: [Two-way fixed effects estimators with heterogeneous treatment effects](https://www.youtube.com/watch?v=xA8dmXfucoE&list=PLVObvb_htcuBt8mV9yNagt7hK9FL5KXeE&index=4). posted on 11 June 2021.
+* Kirill Borusyak: [Revisiting Event Study Designs: Robust and Efficient Estimation](https://www.youtube.com/watch?v=rdfTxWnudt4&list=PLVObvb_htcuBt8mV9yNagt7hK9FL5KXeE&index=5). Posted on 13 June 2021.
+* Kyle Butts: [Difference-in-Differences with Spatial Spillovers](https://www.youtube.com/watch?v=nZrsaqG9FI4&list=PLVObvb_htcuBt8mV9yNagt7hK9FL5KXeE&index=6). Posted on 29 June 2021.
+* John Gardner: [Two-stage differences in differences](https://www.youtube.com/watch?v=6mVfQkmpghY&list=PLVObvb_htcuBt8mV9yNagt7hK9FL5KXeE&index=7). Posted on 11 July 2021.
+* Brantly Callaway: [Difference-in-Differences with a Continuous Treatment](https://www.youtube.com/watch?v=mbEJuCFCgXo&list=PLVObvb_htcuBt8mV9yNagt7hK9FL5KXeE&index=8). Posted on 6 August 2021.
+* Clément de Chaisemartin: [Two-way Fixed Effects Regressions with Several Treatments](https://www.youtube.com/watch?v=UHeJoc27qEM&list=PLVObvb_htcuBt8mV9yNagt7hK9FL5KXeE&index=9). Posted on 4 September 2021.
 
 
 ## Blogs
