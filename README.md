@@ -1,40 +1,15 @@
 
-
-
-*Last updated: 07 September 2021*
+*Last updated: 14 September 2021*
 
 
 # Notes
 
 This repository tracks the recent developments in the Difference-in-Difference (DiD) literature. Currently, it is just a dump of my bookmarks from different websites including Twitter, GitHub, YouTube etc. This will be sorted out over time as the literature converges to some consensus. But this might still take a while.
 
-This is a working document. If you want to report errors or contribute, just [open an issue](https://github.com/AsjadNaqvi/DiD/issues) on GitHub or e-mail at asjadnaqvi@gmail.com. Since paths and links are also subject to change, please report them to keep this repository as up-to-date as possible.
-
-# Why do DiD?
-
-TO BE ADDED...
+This is a working document. If you want to report errors or contribute, just [open an issue](https://github.com/AsjadNaqvi/DiD/issues), [start a discussion](https://github.com/asjadnaqvi/DiD/discussions), or e-mail at asjadnaqvi@gmail.com. Since paths and links are also subject to change, please report them to keep this repository as up-to-date as possible.
 
 
-## The classic DiD or the TWFE model
-
-## Parallel trends
-
-## Interventions
-
-Treatments across different units can occur in various configurations. The figures below some of the most common treatment types. Here the x-axis represents the time scale, the y-axis the different groups (panel IDs) and the orange represents the time periods in which the units are treated. The figures below show types of differential treatment timings:
-
-
-<img src="./figures/heatplot1.png" width="300" title="Interventions at the same point in time"><img src="./figures/heatplot2.png" width="300" title="Interventions at different points in time">
-
-<img src="./figures/heatplot3.png" width="300" title="In and out of interventions"><img src="./figures/heatplot4.png" width="300" title="Continuously increasing interventions">
-
-
-
-
-
-## Covariates
-
-## The new DiD models
+The website will slowly port to a dedciated website where I want to add some Stata code. Again this is to help me navigate the literature and find the commands easily that are currently split across several dofiles.
 
 # Stata packages
 
@@ -56,7 +31,7 @@ Some package paths have been split across lines but adding spaces to keep table 
 | `staggered_stata`  | `github install jonathandroth/staggered_stata`   | [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44)   | [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44), [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) (2021). [Efficient Estimation for Staggered Rollout Designs](https://arxiv.org/pdf/2102.01291.pdf)    |
 
 
-## How to use these packages?
+## How to use Stata packages?
 
 For individual packages, check their helpfiles for example code.
 
@@ -87,6 +62,10 @@ Packages installation paths have been split across lines to preverse table forma
 | `didimputation`    | `devtools::install_github` `("kylebutts/didimputation")`    | [Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts)     |  [Kirill Borusyak](https://sites.google.com/view/borusyak/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/borusyak), [Xavier Jaravel](https://www.lse.ac.uk/economics/people/faculty/xavier-jaravel) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/XJaravel), [Jann Spiess](https://www.gsb.stanford.edu/faculty-research/faculty/jann-spiess) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jannspiess) (2021). [Revisiting Event Study Designs: Robust and Efficient Estimation](https://www.google.com/url?q=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fy92mmyndlbkufo1%2FDraft_RobustAndEfficient.pdf%3Fraw%3D1&sa=D&sntz=1&usg=AFQjCNGGDRt4xPz3hCXhTWxchHJWh-1m_Q).        |
 | `did2s` |  `devtools::install_github` `("kylebutts/did2s")`     |  [Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts) | [John Gardner](https://jrgcmu.github.io/) (2021). [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf). <br><br> [Kirill Borusyak](https://sites.google.com/view/borusyak/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/borusyak), [Xavier Jaravel](https://www.lse.ac.uk/economics/people/faculty/xavier-jaravel) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/XJaravel), [Jann Spiess](https://www.gsb.stanford.edu/faculty-research/faculty/jann-spiess) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jannspiess) (2021). [Revisiting Event Study Designs: Robust and Efficient Estimation](https://www.google.com/url?q=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fy92mmyndlbkufo1%2FDraft_RobustAndEfficient.pdf%3Fraw%3D1&sa=D&sntz=1&usg=AFQjCNGGDRt4xPz3hCXhTWxchHJWh-1m_Q) <br><br> Liyang Sun, Sarah Abraham (2020). [Estimating dynamic treatment effects in event studies with heterogeneous treatment effects](https://www.sciencedirect.com/science/article/abs/pii/S030440762030378X). Journal of Econometrics. <br><br> Brantly Callaway, [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) (2020). [Difference-in-Differences with multiple time periods](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948), Journal of Econometrics. <br><br> [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44), [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) (2021). [Efficient Estimation for Staggered Rollout Designs](https://arxiv.org/pdf/2102.01291.pdf). |
 | `HonestDiD`   | `remotes::install_github` `("asheshrambachan/HonestDiD")`  | [Ashesh Rambachan](https://asheshrambachan.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/asheshrambachan) <br><br> [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44)     | [Ashesh Rambachan](https://asheshrambachan.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/asheshrambachan), [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44) (2021). [An Honest Approach to Parallel Trends](https://asheshrambachan.github.io/assets/files/hpt-draft.pdf).         |
+
+## How to use R packages?
+
+[Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts) has an R [event study](https://kylebutts.com/did2s/reference/event_study.html) package that plots multiple estimators.
 
 
 # Julia packages
