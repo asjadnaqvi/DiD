@@ -3,7 +3,7 @@
 
 # DiD literature
 
-##NOTE 
+## NOTE 
 
 This page has been ported to 
 
