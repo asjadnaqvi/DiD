@@ -1,19 +1,20 @@
 ---
 layout: default
+title: Reading material
 nav_order: 5
 ---
 
 # Reading material
+
 This section contains a miscellaneous collection of lecture notes, videos, papers etc. Please feel free to suggest additional references.
 
 ## Books
+
 The books below are the ones that discuss the new DiD literature. There are of course many other great books!
 
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf) (2020). [Causal Inference: The Mix Tape](https://mixtape.scunning.com/).
 
 [Nick Huntington-Klein](https://nickchk.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/nickchk) (2021). [The Effect](https://theeffectbook.net/).
-
-
 
 
 ## Events and Videos

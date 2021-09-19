@@ -24,7 +24,7 @@ last_edit_timestamp: true # show or hide edit time - page must have `last_modifi
 last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 
 # Footer "Edit this page on GitHub" link text
-gh_edit_link: true # show or hide edit this page link
+gh_edit_link: false # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub."
 gh_edit_repository: "https://github.com/asjadnaqvi/DiD" # the github URL for your repo
 gh_edit_branch: "master" # the branch that your docs is served from

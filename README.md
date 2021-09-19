@@ -13,7 +13,7 @@ This is a working document. If you want to report errors or contribute, just [op
 
 I will slowly build up this website with some Stata code. This is to help me (and you) navigate the literature and figure out the code structure for different packages.
 
-**NOTE**: This page has been ported to https://asjadnaqvi.github.io/DiD/. Please update your links and bookmarks accordingly. This readme will just be used as a landing page for this GitHub repository.
+**NOTE**: This page has been ported to [https://asjadnaqvi.github.io/DiD/](https://asjadnaqvi.github.io/DiD/). Please update your links and bookmarks accordingly. This readme will just be used as a landing page for this GitHub repository.
 
 
 ## Table of contents

@@ -1,6 +1,7 @@
 
 ---
 layout: default
+title: Julia packages
 nav_order: 4
 ---
 

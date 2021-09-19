@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Stata packages
 nav_order: 2
 ---
 
