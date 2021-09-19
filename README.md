@@ -5,7 +5,7 @@
 
 ## :dart: NOTE
 
-This page has been ported to 
+The contents of this page are now on a dedicated website:
 
 [**https://asjadnaqvi.github.io/DiD/**](https://asjadnaqvi.github.io/DiD/) 
 
