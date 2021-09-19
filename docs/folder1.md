@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Stata packages
-nav_order: 2
+nav_order: 1
 ---
 
 # Stata packages
