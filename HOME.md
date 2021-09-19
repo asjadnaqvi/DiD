@@ -2,6 +2,8 @@
 layout: default
 title: Welcome
 nav_order: 1
+description: "Welcome to the DiD repository"
+permalink: /
 ---
 
 
