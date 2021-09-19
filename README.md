@@ -3,7 +3,7 @@
 
 # DiD literature
 
-## :exclamation: NOTE :exclamation:
+## :dart: NOTE
 
 This page has been ported to 
 
