@@ -5,7 +5,7 @@ remote_theme: pmarsceill/just-the-docs
 
 
 title: DiD
-description: Following the latest developments in the DiD literature
+description: Follow the latest developments in the DiD literature.
 #baseurl: "/DiD" # the subpath of your site, e.g. /blog
 #url: "https://asjadnaqvi.github.io/DiD/" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -15,12 +15,11 @@ back_to_top: true
 back_to_top_text: "Back to top"
 
 # Footer content
-# appears at the bottom of every page's main content
-# Note: The footer_content option is deprecated and will be removed in a future major release. Please use `_includes/footer_custom.html` for more robust markup / liquid-based content.
+
 footer_content: "Content by Asjad Naqvi (2020-2021). Distributed under an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
 
 # Footer last edited timestamp
-last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
+last_edit_timestamp: true 
 last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https://ruby-doc.org/stdlib-2.7.0/libdoc/time/rdoc/Time.html
 
 # Footer "Edit this page on GitHub" link text
