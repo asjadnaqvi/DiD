@@ -1,6 +1,10 @@
+---
+layout: default
+nav_order: 5
+---
+
 # Reading material
-
-
+This section contains a miscellaneous collection of lecture notes, videos, papers etc. Please feel free to suggest additional references.
 
 ## Books
 The books below are the ones that discuss the new DiD literature. There are of course many other great books!

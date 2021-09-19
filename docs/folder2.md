@@ -1,3 +1,9 @@
+
+---
+layout: default
+nav_order: 3
+---
+
 # R packages
 
 Packages installation paths have been split across lines to preverse table formatting in Markdown.

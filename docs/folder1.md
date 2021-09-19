@@ -1,3 +1,8 @@
+---
+layout: default
+nav_order: 2
+---
+
 # Stata packages
 
 Some package paths have been split across lines but adding spaces to keep table formatting intact. Just make sure they are in one line with spaces removed when copying them in Stata. To install packages from GitHub, get the `github` package: `net install github, from("https://haghish.github.io/github/")`.

@@ -1,4 +1,9 @@
 
+---
+layout: default
+nav_order: 4
+---
+
 # Julia packages
 
 This is still being updated. See links below for details. There is also a [Julia DiffinDiff](https://github.com/JuliaDiffinDiffs) group on GitHub which contains various packages.
