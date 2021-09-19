@@ -5,6 +5,7 @@ nav_order: 1
 ---
 
 # Welcome
+{: .no_toc }
 
 This repository tracks the recent developments in the Difference-in-Difference (DiD) literature. Currently, it is just a dump of my bookmarks from different websites including Twitter, GitHub, YouTube etc. This will be sorted out over time as the literature converges to some consensus. But this might still take a while.
 
@@ -12,4 +13,11 @@ This is a working document. If you want to report errors or contribute, just [op
 
 I will slowly build up this website with some Stata code. This is to help me (and you) navigate the literature and figure out the code structure for different packages.
 
-**NOTE**: This page has been ported to https://asjadnaqvi.github.io/DiD/. Please update your links and bookmarks accordingly. This readme will just be used as a landing page for this GitHub repository. 
+**NOTE**: This page has been ported to https://asjadnaqvi.github.io/DiD/. Please update your links and bookmarks accordingly. This readme will just be used as a landing page for this GitHub repository.
+
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc} 
