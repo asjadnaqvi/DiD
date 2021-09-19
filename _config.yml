@@ -7,7 +7,7 @@ remote_theme: pmarsceill/just-the-docs
 title: DiD
 description: Following the latest developments in the DiD literature
 #baseurl: "/DiD" # the subpath of your site, e.g. /blog
-#url: "https://github.com/asjadnaqvi" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://asjadnaqvi.github.io/DiD/" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # Back to top link
@@ -34,15 +34,16 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 # Change to dark mode here: color_scheme: dark
 
 permalink: pretty
-include: ["docs"]
 exlcude: ["README.md"]
+include: ["docs"]
+
 
 # Enable or disable heading anchors
 heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "DiD on GitHub":
+  "View on GitHub":
     - "//github.com/asjadnaqvi/DiD" 
     
 # Makes Aux links open in a new tab. Default is false
