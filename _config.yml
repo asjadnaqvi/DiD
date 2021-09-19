@@ -7,7 +7,7 @@ remote_theme: pmarsceill/just-the-docs
 title: DiD
 description: Following the latest developments in the DiD literature
 #baseurl: "/DiD" # the subpath of your site, e.g. /blog
-url: "https://asjadnaqvi.github.io/DiD/" # the base hostname & protocol for your site, e.g. http://example.com
+#url: "https://asjadnaqvi.github.io/DiD/" # the base hostname & protocol for your site, e.g. http://example.com
 
 
 # Back to top link
