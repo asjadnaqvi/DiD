@@ -33,7 +33,9 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 
 # Change to dark mode here: color_scheme: dark
 
+permalink: pretty
 include: ["docs"]
+exlcude: ["README.md"]
 
 # Enable or disable heading anchors
 heading_anchors: true
