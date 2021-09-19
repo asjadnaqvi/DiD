@@ -1,7 +1,7 @@
 ---
 layout: default
 title: R packages
-nav_order: 2
+nav_order: 3
 ---
 
 # R packages

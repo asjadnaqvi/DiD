@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Reading material
-nav_order: 4
+nav_order: 5
 ---
 
 # Reading material
