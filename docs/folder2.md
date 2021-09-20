@@ -6,7 +6,7 @@ nav_order: 3
 
 # R packages
 
-Packages installation paths have been split across lines to preverse table formatting in Markdown.
+Some installation paths have been split across lines to preserve table formatting in Markdown. Also a big thanks to [Taylor Wright](https://github.com/taylorjwright) for helping set this up. 
 
 | Name | Installation |  Package by | Reference paper |
 | --- | --- | --- |   --- |
