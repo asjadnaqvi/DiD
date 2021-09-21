@@ -6,9 +6,9 @@ nav_order: 5
 ---
 
 
-## Tweets
+# Tweets
 
-Some interesting Twitter threads in no particular sequence or order of importance. Sometimes, really important exchanges take place online that provide some insights about the thinking process. These views are of course subject to change or become formalized later in journal articles etc.
+*Some interesting Twitter threads in no particular sequence or order of importance. Sometimes, really important exchanges take place online that provide some insights about the thinking process. These views are of course subject to change or become formalized later in journal articles etc.*
 
 <br>
 

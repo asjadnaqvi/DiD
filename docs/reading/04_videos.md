@@ -1,4 +1,3 @@
-
 ---
 layout: default
 title: Events and videos
@@ -7,7 +6,7 @@ nav_order: 3
 ---
 
 
-## Events and Videos
+# Events and Videos
 
 <!---
 [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs). [Seminar on DiD](https://statisticalhorizons.com/seminars/public-seminars/difference-in-differences) on **24-27 August, 2021** organized by [Statistical Horizons](https://statisticalhorizons.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/StatHorizons) is now open for registeration. --->

@@ -5,7 +5,9 @@ parent: Readings
 nav_order: 1
 ---
 
-Papers are in alphabetical order by last name. Papers without journals are pre-prints. 
+# Papers
+
+*Papers are in alphabetical order by last name. Papers without journals are pre-prints.* 
 
 Dmitry Arkhangelsky, Susan Athey, David A. Hirshberg, Guido W. Imbens, Stefan Wager (2021). [Synthetic Difference in Differences](https://www.aeaweb.org/articles?id=10.1257/aer.20190159). American Economic Review.
 
