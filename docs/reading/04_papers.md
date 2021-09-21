@@ -5,7 +5,7 @@ parent: Readings
 nav_order: 1
 ---
 
-# Papers
+## Papers
 
 *Papers are in alphabetical order by last name. Papers without journals are pre-prints.* 
 

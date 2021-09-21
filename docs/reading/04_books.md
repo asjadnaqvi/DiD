@@ -5,7 +5,7 @@ parent: Readings
 nav_order: 2
 ---
 
-# Books
+## Books
 
 *The books below are the ones that discuss the new DiD literature. There are of course many other great econometric books!*
 
