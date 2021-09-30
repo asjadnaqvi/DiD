@@ -21,9 +21,9 @@ In a very simple form, a two by two (2x2) model can be explained using the follo
 
 | Post\Treatment | Treatment = 0 | Treatment = 1 | *Difference*  | 
 | ----- | ----- | ----- | -----   |
-| Post = 0 |  $$ \beta_0 $$   | $$ \beta_0 + \beta_1 $$    |  $$ \beta_1 $$  |
-| Post = 1 |  $$\beta_0 + \beta_2 $$   |  $$ \beta_0 + \beta_1 + \beta_2 + \beta_3 $$  |  $$ \beta_1 + \beta_3 $$   |
-| *Difference* | $$ \beta_2 $$   |  $$ \beta_2 + \beta_3 $$  | $$ \beta_3 $$   |
+| **Post = 0** |  $$ \beta_0 $$   | $$ \beta_0 + \beta_1 $$    |  $$ \beta_1 $$  |
+| **Post = 1** |  $$\beta_0 + \beta_2 $$   |  $$ \beta_0 + \beta_1 + \beta_2 + \beta_3 $$  |  $$ \beta_1 + \beta_3 $$   |
+| ** *Difference* ** | $$ \beta_2 $$   |  $$ \beta_2 + \beta_3 $$  | $$ \beta_3 $$   |
 
 
 
@@ -32,7 +32,7 @@ In a very simple form, a two by two (2x2) model can be explained using the follo
 
 The triple difference estimator essential takes two DDs, one with the target unit of analysis with a treated and an untreated group. This is compared to another similar group in the pre and post-treatment period. Fo effectively there are two treatments. One where an actual treatment on the desired group is tested, and a placebo comparison group, on which the same intervention is also applied.
 
-$$ Y_{it} = \beta_0 + \beta_1 P_{i} + \beta_2 C_{j} + \beta_3 T_t + \beta_4 (P_i T_t) + \beta_5 (C_j T_t) + \beta_6 (P_i C_j) + \bm{\beta_7} (P_i C_j T_t) + \epsilon_{it} $$
+$$ Y_{it} = \beta_0 + \beta_1 P_{i} + \beta_2 C_{j} + \beta_3 T_t + \beta_4 (P_i T_t) + \beta_5 (C_j T_t) + \beta_6 (P_i C_j) + \beta_7 (P_i C_j T_t) + \epsilon_{it} $$
 
 
 
@@ -44,17 +44,17 @@ Main group (C = 0):
 
 |          | T = 0 | T = 1 | *Diff*  | 
 | -------- | ----- | ----- | -----   |
-| P = 0 |  b0   | b0 + b3    |  b3  |
-| P = 1 |  b0 + b1   |  b0 + b1 + b3 + b4  |  b3 + b4   |
-| *Diff* | b3   |  b3 + b4  | b4   |
+| **P = 0** |  b0   | b0 + b3    |  b3  |
+| **P = 1** |  b0 + b1   |  b0 + b1 + b3 + b4  |  b3 + b4   |
+|** *Diff* ** | b3   |  b3 + b4  | b4   |
 
 Comparison group (C = 1):
 
 |          | T = 0 | T = 1 | *Diff*  | 
 | -------- | ----- | ----- | -----   |
-| P = 0 |  b0 + b2   | b0 + b2 + b3 + b5    | b3 + b5  |
-| P = 1 |  b0 + b1 + b2 + b6  |  b0 + b1 + b2 + b3 + b4 + b5 + b6 + b7  |  b3 + b4 + b5 + b7   |
-| *Diff* | b1 + b6    |  b1 + b4 + b6 + b7  | b4 + b7   |
+| **P = 0** |  b0 + b2   | b0 + b2 + b3 + b5    | b3 + b5  |
+| **P = 1** |  b0 + b1 + b2 + b6  |  b0 + b1 + b2 + b3 + b4 + b5 + b6 + b7  |  b3 + b4 + b5 + b7   |
+| ** *Diff* ** | b1 + b6    |  b1 + b4 + b6 + b7  | b4 + b7   |
 
 
 Let's take the difference between the two matrices or (C = 1) - (C = 0):
@@ -62,9 +62,9 @@ Let's take the difference between the two matrices or (C = 1) - (C = 0):
 
 |          | T = 0 | T = 1 | *Diff*  | 
 | -------- | ----- | ----- | -----   |
-| P = 0 |  b2   | b2 + b5    | b5  |
-| P = 1 |  b2 + b6  |  b2 + b5 + b6 + b7  |  b6 + b7   |
-| *Diff* | b6    |  b6 + b7  | **b7**   |
+| **P = 0** |  b2   | b2 + b5    | b5  |
+| **P = 1** |  b2 + b6  |  b2 + b5 + b6 + b7  |  b6 + b7   |
+| ** *Diff* ** | b6    |  b6 + b7  | **b7**   |
 
 where we end up with the main difference of $$ \beta_7 $$. Note that this table logic is also far simpler than having a long list of expectations defined for each combination.
 
@@ -73,7 +73,7 @@ where we end up with the main difference of $$ \beta_7 $$. Note that this table 
 
 Let us generate a simple 2x2 example in Stata:
 
-```js
+```cpp
 
 clear
 local units = 2
