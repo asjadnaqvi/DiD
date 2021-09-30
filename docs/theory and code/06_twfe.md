@@ -6,6 +6,8 @@ nav_order: 1
 mathjax: true
 ---
 
+Since you clicked, here is a preview of what is going on behind the scenes:
+
 # The classic 2x2 DiD or the Twoway Fixed Effects Model (TWFE)
 
 Let us start with the classic Twoway Fixed Effects (TWFE) model:
@@ -42,36 +44,40 @@ where we have 3x3 combinations: P = {0,1}, T={0,1}, C={0,1}. As is the case with
 Main group (C = 0):
 
 
-|          | T = 0 | T = 1 | *Diff*  | 
+|          | T = 0 | T = 1 | Difference  | 
 | -------- | ----- | ----- | -----   |
 | **P = 0** | $$ \beta_0 $$  | $$ \beta_0 + \beta_3 $$   | $$ \beta_3 $$ |
 | **P = 1** | $$ \beta_0 + \beta_1 $$ | $$ \beta_0 + \beta_1 + \beta_3 + \beta_4 $$  | $$ \beta_3 + \beta_4 $$  |
-|** _Diff ** | $$ \beta_3 $$  | $$ \beta_3 + \beta_4 $$  | $$ \beta_4 $$  |
+| Difference | $$ \beta_3 $$  | $$ \beta_3 + \beta_4 $$  | $$ \beta_4 $$  |
 
 Comparison group (C = 1):
 
-|          | T = 0 | T = 1 | *Diff*  | 
+|          | T = 0 | T = 1 | Difference | 
 | -------- | ----- | ----- | -----   |
 | **P = 0** | $$ \beta_0 + \beta_2 $$  | $$ \beta_0 + \beta_2 + \beta_3 + \beta_5  $$  | $$ \beta_3 + \beta_5 $$  |
 | **P = 1** | $$ \beta_0 + \beta_1 + \beta_2 + \beta_6  $$ | $$ \beta_0 + \beta_1 + \beta_2 + \beta_3 + \beta_4 + \beta_5 + \beta_6 + \beta_7 $$  | $$ \beta_3 + \beta_4 + \beta_5 + \beta_7  $$ |
-| ** _Diff ** | $$ \beta_1 + \beta_6  $$  | $$ \beta_1 + \beta_4 + \beta_6 + \beta_7 $$ | $$ \beta_4 + \beta_7 $$  |
+| Difference | $$ \beta_1 + \beta_6  $$  | $$ \beta_1 + \beta_4 + \beta_6 + \beta_7 $$ | $$ \beta_4 + \beta_7 $$  |
 
 
 Let's take the difference between the two matrices or (C = 1) - (C = 0):
 
 
-|          | T = 0 | T = 1 | *Diff*  | 
+|          | T = 0 | T = 1 | Difference  | 
 | -------- | ----- | ----- | -----   |
 | **P = 0** | $$ \beta_2  $$ | $$ \beta_2 + \beta_5 $$   |  $$ \beta_5 $$ |
 | **P = 1** | $$ \beta_2 + \beta_6 $$ | $$ \beta_2 + \beta_5 + \beta_6 + \beta_7 $$ | $$ \beta_6 + \beta_7 $$  |
-| ** _Diff ** |  $$ \beta_6 $$   | $$ \beta_6 + \beta_7 $$ | $$ \beta_7 $$   |
+| Difference |  $$ \beta_6 $$   | $$ \beta_6 + \beta_7 $$ | $$ \beta_7 $$   |
 
 where we end up with the main difference of $$ \beta_7 $$. Note that this table logic is also far simpler than having a long list of expectations defined for each combination.
+
+## The generic TWFE functional form:
+
+$$ y_{it} = \alpha_{i} + \alpha_t + \beta D_{it} + \epsilon_{it} $$
 
 
 ## Code
 
-Let us generate a simple 2x2 example in Stata:
+Let us generate a simple 2x2 example in Stata. First step define the panel structure. Since it is a 2x2, we just need two units and two time periods:
 
 ```r
 
@@ -93,8 +99,11 @@ xtset id t
 
 lab var id "Panel variable"
 lab var t  "Time  variable"
+```
 
+Next we define the treatment group and a generic TWFE model without adding any variation or error terms:
 
+```r
 gen D = id==2 & t==2
 
 gen btrue = cond(D==1, 2, 0) 		
@@ -102,7 +111,6 @@ gen btrue = cond(D==1, 2, 0)
 
 gen Y = id + 3*t + btrue*D 
 
-
 ```
 
-
+According to the last line, the treatment effect should have an impact of 2 units on Y in the post group.

@@ -9,7 +9,7 @@ mathjax: true
 
 # Theory and Stata code
 
-*This page is currently under construction. Don't use it!*
+*This page is currently under construction. Don't click on the links below!*
 
 This section aims to cover the papers with some discussion of the theory but mostly a deep dive into the Stata code.
 
