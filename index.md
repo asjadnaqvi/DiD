@@ -8,7 +8,7 @@ permalink: /
 ---
 
 
-# Welcome to this page
+# Welcome!
 
 This repository tracks the recent developments in the **Difference-in-Difference (DiD)** literature. It serves two purposes. First, it is an organized dump of my bookmarks from Twitter, GitHub, YouTube etc. The aim here is to keep track of the DiD updates. The second is to make sense of the different packages from an end-user perspective. This part has to do with how to apply these methods in our research work. On the theory side, several really useful notes already exist (see the [Readings](https://asjadnaqvi.github.io/DiD/docs/reading) section).
 
