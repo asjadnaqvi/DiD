@@ -6,7 +6,7 @@ nav_order: 1
 mathjax: true
 ---
 
-# The classic 2x2 Difference-in-Difference or the The Twoway Fixed Effects Model (TWFE)
+# The classic 2x2 DiD or the Twoway Fixed Effects Model (TWFE)
 
 Let us start with the classic Twoway Fixed Effects (TWFE) model:
 
@@ -44,17 +44,17 @@ Main group (C = 0):
 
 |          | T = 0 | T = 1 | *Diff*  | 
 | -------- | ----- | ----- | -----   |
-| **P = 0** |  b0   | b0 + b3    |  b3  |
-| **P = 1** |  b0 + b1   |  b0 + b1 + b3 + b4  |  b3 + b4   |
-|** *Diff* ** | b3   |  b3 + b4  | b4   |
+| **P = 0** | $$ \beta_0 $$  | $$ \beta_0 + \beta_3 $$   | $$ \beta_3 $$ |
+| **P = 1** | $$ \beta_0 + \beta_1 $$ | $$ \beta_0 + \beta_1 + \beta_3 + \beta_4 $$  | $$ \beta_3 + \beta_4 $$  |
+|** _Diff ** | $$ \beta_3 $$  | $$ \beta_3 + \beta_4 $$  | $$ \beta_4 $$  |
 
 Comparison group (C = 1):
 
 |          | T = 0 | T = 1 | *Diff*  | 
 | -------- | ----- | ----- | -----   |
-| **P = 0** |  b0 + b2   | b0 + b2 + b3 + b5    | b3 + b5  |
-| **P = 1** |  b0 + b1 + b2 + b6  |  b0 + b1 + b2 + b3 + b4 + b5 + b6 + b7  |  b3 + b4 + b5 + b7   |
-| ** *Diff* ** | b1 + b6    |  b1 + b4 + b6 + b7  | b4 + b7   |
+| **P = 0** | $$ \beta_0 + \beta_2 $$  | $$ \beta_0 + \beta_2 + \beta_3 + \beta_5  $$  | $$ \beta_3 + \beta_5 $$  |
+| **P = 1** | $$ \beta_0 + \beta_1 + \beta_2 + \beta_6  $$ | $$ \beta_0 + \beta_1 + \beta_2 + \beta_3 + \beta_4 + \beta_5 + \beta_6 + \beta_7 $$  | $$ \beta_3 + \beta_4 + \beta_5 + \beta_7  $$ |
+| ** _Diff ** | $$ \beta_1 + \beta_6  $$  | $$ \beta_1 + \beta_4 + \beta_6 + \beta_7 $$ | $$ \beta_4 + \beta_7 $$  |
 
 
 Let's take the difference between the two matrices or (C = 1) - (C = 0):
@@ -62,9 +62,9 @@ Let's take the difference between the two matrices or (C = 1) - (C = 0):
 
 |          | T = 0 | T = 1 | *Diff*  | 
 | -------- | ----- | ----- | -----   |
-| **P = 0** |  b2   | b2 + b5    | b5  |
-| **P = 1** |  b2 + b6  |  b2 + b5 + b6 + b7  |  b6 + b7   |
-| ** *Diff* ** | b6    |  b6 + b7  | **b7**   |
+| **P = 0** | $$ \beta_2  $$ | $$ \beta_2 + \beta_5 $$   |  $$ \beta_5 $$ |
+| **P = 1** | $$ \beta_2 + \beta_6 $$ | $$ \beta_2 + \beta_5 + \beta_6 + \beta_7 $$ | $$ \beta_6 + \beta_7 $$  |
+| ** _Diff ** |  $$ \beta_6 $$   | $$ \beta_6 + \beta_7 $$ | $$ \beta_7 $$   |
 
 where we end up with the main difference of $$ \beta_7 $$. Note that this table logic is also far simpler than having a long list of expectations defined for each combination.
 
