@@ -3,6 +3,7 @@ layout: default
 title: Theory and code
 nav_order: 6
 permalink: /docs/code
+mathjax: true
 ---
 
 # Theory and Stata code
