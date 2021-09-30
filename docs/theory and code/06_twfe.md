@@ -83,7 +83,7 @@ Let us generate a simple 2x2 example in Stata. First step define the panel struc
 clear
 local units = 2
 local start = 1
-local end 	= 2
+local end   = 2
 
 local time = `end' - `start' + 1
 local obsv = `units' * `time'
