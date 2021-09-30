@@ -111,19 +111,22 @@ gen btrue = cond(D==1, 2, 0)
 According to the last line, the treatment effect should have an impact of 3 units on Y in the post group. We can check this by plotting the data:
 
 ```r
+lab de prepost 1 "Pre" 2 "Post"
+lab val t prepost
+
 twoway ///
 	(connected Y t if id==1) ///
 	(connected Y t if id==2) ///
 		,	///
 		legend(order(1 "id=1" 2 "id=2")) ///
-		xlabel(1 2) ylabel(4(1)10)
+		xlabel(1 2, valuelabel) ylabel(4(1)10)
 ```
 
 which gives us:
 
 [](../../../assets/images/twfe1.png)
 
-<img src="../../../assets/images/twfe1.png" height="400" title="TWFE">
+<img src="../../../assets/images/twfe1.png" height="300" title="TWFE">
 
 where we can see that the difference between the blue and the orange line is 3 in the post period, and 1 in the pre-period, making it a net gain of 2 units. Which also equals the treatment amount we specified.
 
@@ -132,11 +135,66 @@ We can also recover this from a simple panel regression:
 
 ```r
 xtset id t
-xtreg Y D i.t, fe
+xtreg Y D t, fe
+```
 
+In the regression, you will see that the coefficient of D equals 2, as expected. An alternative way of doing this is to use the `reghdfe` package, which we will also call in later examples:
+
+```
 reghdfe Y D, absorb(id t)
 ```
 
-In both the regressions, you will see that the coefficient of D equals 2, as expected.
+which again gives us the same result for the D coefficient.
+
+## Adding more time periods
+
+Now that we are confortable with the 2x2 example, let's add more time periods. How about 10 per unit:
+
+```r
+clear
+local units = 2
+local start = 1
+local end 	= 10
+
+local time = `end' - `start' + 1
+local obsv = `units' * `time'
+set obs `obsv'
+
+egen id	   = seq(), b(`time')  
+egen t 	   = seq(), f(`start') t(`end') 	
+
+sort  id t
+xtset id t
+
+lab var id "Panel variable"
+lab var t  "Time  variable"
+```
+
+And we just do a simple treatment where id=2 increases by 3 units at time period 5 and stays there:
+
+```r
+gen D = id==2 & t>=5
+lab var D "Treated"
+
+gen btrue = cond(D==1, 3, 0) 		
+
+gen Y = id + t +  btrue*D 
+lab var Y "Outcome variable"
+```
+
+We can also visualize this as follows:
+
+[](../../../assets/images/twfe2.png)
+
+and we can also run the Stata code:
+
+```r
+xtreg Y D t, fe
+reghdfe Y D, absorb(id t)   
+```
+
+The `xtreg` option shows that $$ t $$ on average increases by 1 unit, which is what we expect. The intercept equals 1.5, which is the average of the blue and orange lines if they are extrapolated to $$ t = 0 $$ point. And $$ D = 3 $$, the true value of the intervention effect.
+
+
 
 
