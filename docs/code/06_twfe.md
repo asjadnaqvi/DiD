@@ -124,9 +124,9 @@ twoway ///
 
 which gives us:
 
-[](../../../assets/images/twfe1.png)
 
-<img src="../../../assets/images/twfe1.png" height="300" title="TWFE">
+
+<img src="../../../assets/images/twfe1.png" height="300">
 
 where we can see that the difference between the blue and the orange line is 3 in the post period, and 1 in the pre-period, making it a net gain of 2 units. Which also equals the treatment amount we specified.
 
@@ -184,7 +184,7 @@ lab var Y "Outcome variable"
 
 We can also visualize this as follows:
 
-[](../../../assets/images/twfe2.png)
+<img src="../../../assets/images/twfe2.png" height="300">
 
 and we can also run the Stata code:
 
