@@ -73,7 +73,7 @@ where we end up with the main difference of $$ \beta_7 $$. Note that this table 
 
 Let us generate a simple 2x2 example in Stata:
 
-```cpp
+```r
 
 clear
 local units = 2
