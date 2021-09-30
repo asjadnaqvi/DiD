@@ -121,6 +121,6 @@ twoway ///
 
 which gives us:
 
-[](/assets/images/twfe.png)
+[](../../assets/images/twfe1.png)
 
-<img src="../../assets/images/twfe.png" height="400" title="TWFE">
+<img src="../../assets/images/twfe1.png" height="400" title="TWFE">
