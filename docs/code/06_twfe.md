@@ -121,6 +121,22 @@ twoway ///
 
 which gives us:
 
-[](../../assets/images/twfe1.png)
+[](../../../assets/images/twfe1.png)
 
-<img src="../../assets/images/twfe1.png" height="400" title="TWFE">
+<img src="../../../assets/images/twfe1.png" height="400" title="TWFE">
+
+where we can see that the difference between the blue and the orange line is 3 in the post period, and 1 in the pre-period, making it a net gain of 2 units. Which also equals the treatment amount we specified.
+
+
+We can also recover this from a simple panel regression:
+
+```r
+xtset id t
+xtreg Y D i.t, fe
+
+reghdfe Y D, absorb(id t)
+```
+
+In both the regressions, you will see that the coefficient of D equals 2, as expected.
+
+
