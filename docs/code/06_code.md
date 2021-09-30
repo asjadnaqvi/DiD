@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Theory and code
+title: Code
 nav_order: 6
 permalink: /docs/code
 has_children: true
