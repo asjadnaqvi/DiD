@@ -80,7 +80,6 @@ $$ y_{it} = \alpha_{i} + \alpha_t + \beta D_{it} + \epsilon_{it} $$
 Let us generate a simple 2x2 example in Stata. First step define the panel structure. Since it is a 2x2, we just need two units and two time periods:
 
 ```r
-
 clear
 local units = 2
 local start = 1
@@ -96,7 +95,6 @@ egen t 	   = seq(), f(`start') t(`end')
 sort id t
 xtset id t
 
-
 lab var id "Panel variable"
 lab var t  "Time  variable"
 ```
@@ -107,10 +105,22 @@ Next we define the treatment group and a generic TWFE model without adding any v
 gen D = id==2 & t==2
 
 gen btrue = cond(D==1, 2, 0) 		
-	
-
-gen Y = id + 3*t + btrue*D 
-
+	gen Y = id + 3*t + btrue*D 
 ```
 
-According to the last line, the treatment effect should have an impact of 2 units on Y in the post group.
+According to the last line, the treatment effect should have an impact of 3 units on Y in the post group. We can check this by plotting the data:
+
+```r
+twoway ///
+	(connected Y t if id==1) ///
+	(connected Y t if id==2) ///
+		,	///
+		legend(order(1 "id=1" 2 "id=2")) ///
+		xlabel(1 2) ylabel(4(1)10)
+```
+
+which gives us:
+
+[](../../assets/images/twfe.png)
+
+<img src="../../assets/images/twfe.png" height="400" title="TWFE">
