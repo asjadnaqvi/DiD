@@ -6,7 +6,8 @@ nav_order: 1
 mathjax: true
 ---
 
-*under construction*. Todo: homogenize symbols, add regression outputs, streamline code.
+*Under construction*. 
+*To do: homogenize symbols, add regression outputs, streamline code blocks*
 
 # The classic 2x2 DiD or the Twoway Fixed Effects Model (TWFE)
 
@@ -34,14 +35,14 @@ In a very simple form, a two by two (2x2) model can be explained using the follo
 
 The triple difference estimator essential takes two DDs, one with the target unit of analysis with a treated and an untreated group. This is compared to another similar group in the pre and post-treatment period. Fo effectively there are two treatments. One where an actual treatment on the desired group is tested, and a placebo comparison group, on which the same intervention is also applied.
 
-$$ Y_{it} = \beta_0 + \beta_1 P_{i} + \beta_2 C_{j} + \beta_3 T_t + \beta_4 (P_i T_t) + \beta_5 (C_j T_t) + \beta_6 (P_i C_j) + \beta_7 (P_i C_j T_t) + \epsilon_{it} $$
+$$ y_{it} = \beta_0 + \beta_1 P_{i} + \beta_2 C_{j} + \beta_3 T_t + \beta_4 (P_i T_t) + \beta_5 (C_j T_t) + \beta_6 (P_i C_j) + \beta_7 (P_i C_j T_t) + \epsilon_{it} $$
 
 
 
 where we have 3x3 combinations: P = {0,1}, T={0,1}, C={0,1}. As is the case with the 2x2 DD, here the coefficient of interest is $$ \beta_7 $$. This can also be broken down in a table form. But rather than create one big table, the results are usually presented for C = 0, or the main treatment group, and for C = 1, or the main comparison group. The difference between the two boils down to $$ \beta_7 $$. Let's see this here:
 
 
-Main group (C = 0):
+Main group ($$ C = 0 $$):
 
 
 |          | T = 0 | T = 1 | Difference  | 
@@ -50,7 +51,7 @@ Main group (C = 0):
 | **P = 1** | $$ \beta_0 + \beta_1 $$ | $$ \beta_0 + \beta_1 + \beta_3 + \beta_4 $$  | $$ \beta_3 + \beta_4 $$  |
 | Difference | $$ \beta_1 $$  | $$ \beta_1 + \beta_4 $$  | $$ \beta_4 $$  |
 
-Comparison group (C = 1):
+Comparison group ($$ C = 1 $$):
 
 |          | T = 0 | T = 1 | Difference | 
 | -------- | ----- | ----- | -----   |
@@ -323,5 +324,5 @@ reg Y D i.id 	 // only panel fixed effects
 reg Y D i.t i.id // panel and time fixed effects (correct!)
 ```
 
-
+## More units, differential treatment time, different treatment effects
 
