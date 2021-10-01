@@ -6,7 +6,7 @@ nav_order: 1
 mathjax: true
 ---
 
-Since you clicked, here is a preview of what is going on behind the scenes:
+*under construction*. Todo: homogenize symbols, add regression outputs, streamline code.
 
 # The classic 2x2 DiD or the Twoway Fixed Effects Model (TWFE)
 
@@ -48,7 +48,7 @@ Main group (C = 0):
 | -------- | ----- | ----- | -----   |
 | **P = 0** | $$ \beta_0 $$  | $$ \beta_0 + \beta_3 $$   | $$ \beta_3 $$ |
 | **P = 1** | $$ \beta_0 + \beta_1 $$ | $$ \beta_0 + \beta_1 + \beta_3 + \beta_4 $$  | $$ \beta_3 + \beta_4 $$  |
-| Difference | $$ \beta_3 $$  | $$ \beta_3 + \beta_4 $$  | $$ \beta_4 $$  |
+| Difference | $$ \beta_1 $$  | $$ \beta_1 + \beta_4 $$  | $$ \beta_4 $$  |
 
 Comparison group (C = 1):
 
@@ -148,7 +148,7 @@ which again gives us the same result for the D coefficient.
 
 ## Adding more time periods
 
-Now that we are confortable with the 2x2 example, let's add more time periods. How about 10 per unit:
+Now that we are comfortable with the 2x2 example, let's add more time periods. How about 10 per unit:
 
 ```r
 clear
@@ -195,6 +195,133 @@ reghdfe Y D, absorb(id t)
 
 The `xtreg` option shows that $$ t $$ on average increases by 1 unit, which is what we expect. The intercept equals 1.5, which is the average of the blue and orange lines if they are extrapolated to $$ t = 0 $$ point. And $$ D = 3 $$, the true value of the intervention effect.
 
+
+## More units, same treatment time, different treatment effects
+
+Let's start with a very case where we have one control group, two treatment groups. The two T groups recieve treatment at the same time but with treatment intensities:
+
+
+```r
+clear
+local units = 3
+local start = 1
+local end 	= 10
+
+local time = `end' - `start' + 1
+local obsv = `units' * `time'
+set obs `obsv'
+
+egen id	   = seq(), b(`time')  
+egen t 	   = seq(), f(`start') t(`end') 	
+
+lab var id "Panel variable"
+lab var t  "Time  variable"
+
+sort  id t
+xtset id t
+
+
+gen D = 0
+replace D = 1 if id>=2 & t>=5
+lab var D "Treated"
+
+cap drop Y
+gen Y = 0
+replace Y = cond(D==1, 2, 0) if id==2
+replace Y = cond(D==1, 4, 0) if id==3
+
+lab var Y "Outcome variable"	
+```
+
+and plot it:
+
+```r
+twoway ///
+	(connected Y t if id==1) ///
+	(connected Y t if id==2) ///
+	(connected Y t if id==3) ///
+		,	///
+		xline(4.5) ///
+		xlabel(1(1)10) ///
+		legend(order(1 "id=1" 2 "id=2" 3 "id=3"))	
+```
+
+from which we get:
+
+<img src="../../../assets/images/twfe3.png" height="300">
+
+Here we can see that the post treatement has an average effect of 2 on id=2 and 4 on id=3. This implies that the ATT equals 3, which we can also check by recovering the coefficients:
+
+```r
+xtreg Y D t, fe 
+```
+
+While it is easy to check here the average treatment effect, since they are no time or panel fixed effects, we can basically visually see how the outcomes are changing. But if we add controls, it gets a bit more complicated. Let's just generate the code in one go:
+
+```r
+
+clear
+local units = 3
+local start = 1
+local end 	= 10
+
+local time = `end' - `start' + 1
+local obsv = `units' * `time'
+set obs `obsv'
+
+egen id	   = seq(), b(`time')  
+egen t 	   = seq(), f(`start') t(`end') 	
+
+sort  id t
+xtset id t
+
+
+lab var id "Panel variable"
+lab var t  "Time  variable"
+
+
+gen D = 0
+replace D = 1 if id>=2 & t>=5
+lab var D "Treated"
+
+cap drop Y
+gen Y = 0
+replace Y = id + t + cond(D==1, 0, 0) if id==1
+replace Y = id + t + cond(D==1, 2, 0) if id==2
+replace Y = id + t + cond(D==1, 4, 0) if id==3
+
+lab var Y "Outcome variable"		
+
+
+
+twoway ///
+	(connected Y t if id==1) ///
+	(connected Y t if id==2) ///
+	(connected Y t if id==3) ///
+		,	///
+		xline(4.5) ///
+		xlabel(1(1)10) ///
+		legend(order(1 "id=1" 2 "id=2" 3 "id=3"))	
+```
+
+<img src="../../../assets/images/twfe4.png" height="300">
+
+From the earlier example, we know that the ATT equals 3, but from the graphs we can cannot see this so clearly. This is because we need to get rid of panel and id time trends. While we can also do this partialling out by hand (but we won't), we can use our regression specification:
+
+```r
+xtreg Y D t, fe 
+```
+
+which gives the ATT=3, which is the average of the two treatment variables.
+
+Here, I would like to add that parallel trend assumptions are controlled for in the above regression specification. If these are not accounted for, then we basically end up with the wrong ATTs. We can see the D coefficients in the follow regressions:
+
+```r
+reg Y D  		 // not controlling for any effects
+reg Y D i.t 	 // only time fixed effects
+reg Y D i.id 	 // only panel fixed effects
+reg Y D i.t i.id // panel and time fixed effects (correct!)
+```
 
 
 
