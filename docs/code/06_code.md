@@ -14,11 +14,7 @@ mathjax: true
 This section aims to cover the papers with some discussion of the theory but mostly a deep dive into the Stata code.
 
 
-
-{: .fs-6 .fw-300 }
-
-
-before we start, I would like to add a glossary, since variable names, and definitions, vary across the papers and it quickly becomes intractable to follow what is going on across the different papers:
+Before we start, I would like to add a glossary, since variable names, and definitions, vary across the papers and it quickly becomes intractable to follow what is going on across the different papers:
 
 | Symbol | Meaning | 
 | $$ i $$ | panel id |
@@ -27,3 +23,17 @@ before we start, I would like to add a glossary, since variable names, and defin
 | $$ P $$ | =1 if post treatment period |
 | $$ D $$ | =1 if treated observation |
 | $$ \epsilon $$ | error term |
+
+
+{: .fs-6 .fw-300 }
+
+
+
+
+
+
+
+
+
+
+
