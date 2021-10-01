@@ -7,7 +7,7 @@ mathjax: true
 ---
 
 *Under construction*. 
-*To do: homogenize symbols, add regression outputs, streamline code blocks*
+*To do: homogenize symbols, add regression outputs, streamline code blocks, add Stata 17 did command option, fix Stata/Rogue integration.*
 
 # The classic 2x2 DiD or the Twoway Fixed Effects Model (TWFE)
 
@@ -22,11 +22,11 @@ In a very simple form, a two by two (2x2) model can be explained using the follo
 
 
 
-| Post\Treatment | Treatment = 0 | Treatment = 1 | *Difference*  | 
+|  | Treatment = 0 | Treatment = 1 | *Difference*  | 
 | ----- | ----- | ----- | -----   |
 | **Post = 0** |  $$ \beta_0 $$   | $$ \beta_0 + \beta_1 $$    |  $$ \beta_1 $$  |
 | **Post = 1** |  $$\beta_0 + \beta_2 $$   |  $$ \beta_0 + \beta_1 + \beta_2 + \beta_3 $$  |  $$ \beta_1 + \beta_3 $$   |
-| ** *Difference* ** | $$ \beta_2 $$   |  $$ \beta_2 + \beta_3 $$  | $$ \beta_3 $$   |
+| Difference | $$ \beta_2 $$   |  $$ \beta_2 + \beta_3 $$  | $$ \beta_3 $$   |
 
 
 
@@ -73,6 +73,8 @@ where we end up with the main difference of $$ \beta_7 $$. Note that this table 
 
 ## The generic TWFE functional form:
 
+If we have multiple time periods and treatment units, the classic 2x2 DiD can be extended to the following generic functional form:
+
 $$ y_{it} = \alpha_{i} + \alpha_t + \beta D_{it} + \epsilon_{it} $$
 
 
@@ -80,7 +82,7 @@ $$ y_{it} = \alpha_{i} + \alpha_t + \beta D_{it} + \epsilon_{it} $$
 
 Let us generate a simple 2x2 example in Stata. First step define the panel structure. Since it is a 2x2, we just need two units and two time periods:
 
-```r
+```applescript
 clear
 local units = 2
 local start = 1
@@ -102,7 +104,7 @@ lab var t  "Time  variable"
 
 Next we define the treatment group and a generic TWFE model without adding any variation or error terms:
 
-```r
+```applescript
 gen D = id==2 & t==2
 
 gen btrue = cond(D==1, 2, 0) 		
@@ -111,7 +113,7 @@ gen btrue = cond(D==1, 2, 0)
 
 According to the last line, the treatment effect should have an impact of 3 units on Y in the post group. We can check this by plotting the data:
 
-```r
+```applescript
 lab de prepost 1 "Pre" 2 "Post"
 lab val t prepost
 
@@ -134,7 +136,7 @@ where we can see that the difference between the blue and the orange line is 3 i
 
 We can also recover this from a simple panel regression:
 
-```r
+```applescript
 xtset id t
 xtreg Y D t, fe
 ```
@@ -151,7 +153,7 @@ which again gives us the same result for the D coefficient.
 
 Now that we are comfortable with the 2x2 example, let's add more time periods. How about 10 per unit:
 
-```r
+```applescript
 clear
 local units = 2
 local start = 1
@@ -173,7 +175,7 @@ lab var t  "Time  variable"
 
 And we just do a simple treatment where id=2 increases by 3 units at time period 5 and stays there:
 
-```r
+```applescript
 gen D = id==2 & t>=5
 lab var D "Treated"
 
@@ -189,7 +191,7 @@ We can also visualize this as follows:
 
 and we can also run the Stata code:
 
-```r
+```applescript
 xtreg Y D t, fe
 reghdfe Y D, absorb(id t)   
 ```
@@ -202,7 +204,7 @@ The `xtreg` option shows that $$ t $$ on average increases by 1 unit, which is w
 Let's start with a very case where we have one control group, two treatment groups. The two T groups recieve treatment at the same time but with treatment intensities:
 
 
-```r
+```applescript
 clear
 local units = 3
 local start = 1
@@ -236,7 +238,7 @@ lab var Y "Outcome variable"
 
 and plot it:
 
-```r
+```applescript
 twoway ///
 	(connected Y t if id==1) ///
 	(connected Y t if id==2) ///
@@ -259,8 +261,7 @@ xtreg Y D t, fe
 
 While it is easy to check here the average treatment effect, since they are no time or panel fixed effects, we can basically visually see how the outcomes are changing. But if we add controls, it gets a bit more complicated. Let's just generate the code in one go:
 
-```r
-
+```applescript
 clear
 local units = 3
 local start = 1
@@ -276,10 +277,8 @@ egen t 	   = seq(), f(`start') t(`end')
 sort  id t
 xtset id t
 
-
 lab var id "Panel variable"
 lab var t  "Time  variable"
-
 
 gen D = 0
 replace D = 1 if id>=2 & t>=5
@@ -292,8 +291,6 @@ replace Y = id + t + cond(D==1, 2, 0) if id==2
 replace Y = id + t + cond(D==1, 4, 0) if id==3
 
 lab var Y "Outcome variable"		
-
-
 
 twoway ///
 	(connected Y t if id==1) ///
@@ -309,7 +306,7 @@ twoway ///
 
 From the earlier example, we know that the ATT equals 3, but from the graphs we can cannot see this so clearly. This is because we need to get rid of panel and id time trends. While we can also do this partialling out by hand (but we won't), we can use our regression specification:
 
-```r
+```applescript
 xtreg Y D t, fe 
 ```
 
@@ -317,7 +314,7 @@ which gives the ATT=3, which is the average of the two treatment variables.
 
 Here, I would like to add that parallel trend assumptions are controlled for in the above regression specification. If these are not accounted for, then we basically end up with the wrong ATTs. We can see the D coefficients in the follow regressions:
 
-```r
+```applescript
 reg Y D  		 // not controlling for any effects
 reg Y D i.t 	 // only time fixed effects
 reg Y D i.id 	 // only panel fixed effects
