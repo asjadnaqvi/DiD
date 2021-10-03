@@ -62,7 +62,7 @@ reghdfe Y D, absorb(id t)
 
 gives us an ATT of $$ \beta^{TWFE} $$ = 2.91. 
 
-What Bacon decomposition does, is that it unpacks this coefficient into three components. These are: 
+What Bacon decomposition does, is that it unpacks this coefficient into three cohorts. These are: 
 
 
 1. **treated ($$ T $$)** versus **never treated ($$ U $$)**
@@ -70,20 +70,63 @@ What Bacon decomposition does, is that it unpacks this coefficient into three co
 3. **late treated ($$ T^l $$)** versus **early treated ($$ T^e $$)**
 
 
-This terminology is still a bit confusing. In our example above, we have two treated groups, id=2 (early treated) and id=3 (late treated). So the first component can be further divided into two sub-components: early treated vs never treated ($$ T^e $$ vs $$ U $$) and late treated vs never treated ($$ T^l $$ vs $$ U $$). So in total four components are calculated.
+This terminology is still a bit confusing. In our example above, we have two treated groups, id=2 (early treated) and id=3 (late treated). So the first cohort can be further divided into two sub-cohorts: early treated vs never treated ($$ T^e $$ vs $$ U $$) and late treated vs never treated ($$ T^l $$ vs $$ U $$). So in total four components are estimated.
 
 So what do we do we with these components? Each component is essentially a vanilla 2x2 TWFE model, from which we recover two values:
 
 1.  the TWFE parameter ($$ \beta^{TWFE} $$)
 2.  the **weight** of this component as determined by its *relative size* in the data
 
+We go back to these later. But first, let's see what the `bacondecomp` command gives us. In the absence of controls, this is the only option we can use:
 
 
+```applescript
+bacondecomp Y D, ddetail
+```
+
+which gives us this figure:
+
+<img src="../../../assets/images/bacon1.png" height="300">
+
+The figure shows four points for the three cohorts in our example. The treated versus never treated ($$ T $$ vs $$ U $$) are triangles. Since we have an early treated (id=2) and late treated (id=3) groups, we can see that the y-axis gives us the correct beta values of 2 and 4 respectively. The x-axis gives the weights. The crosses represent the late versus early, and early versus late groups. Since these also have values of 2 and 4, the y-axis is the same while the x-axis gives us the weights.
+
+The figure above is summarized in this table that also pops up in the output window in Stata:
+
+```bpf
+Calculating treatment times...
+Calculating weights...
+Estimating 2x2 diff-in-diff regressions...
+
+Diff-in-diff estimate: 2.909    
+
+DD Comparison              Weight      Avg DD Est
+-------------------------------------------------
+Earlier T vs. Later C       0.182           2.000
+Later T vs. Earlier C       0.136           4.000
+T vs. Never treated         0.682           2.933
+-------------------------------------------------
+T = Treatment; C = Control
+```
+
+Here we get our weights and the TWFE $$ \beta $$ components. The table tells us that ($$ T $$ vs $$ U $$), which is the sum of the late and early treated versus never treated, has the largest weight, followed by early vs late treated, and lastly, late vs early treated.
+
+If we do the weighted sum of these components:
+
+```applescript
+ereturn list
+
+display e(dd_avg_e)*e(wt_sum_e) + e(dd_avg_l)*e(wt_sum_l) + e(dd_avg_u)*e(wt_sum_u)
+```
+
+we recover the original TWFE $\beta$ estimator.
 
 
+## The logic of the weights
+
+In this section, we will learn to recover the weights manually for our example.
 
 
-
+COMING SOON!
 
 
 
