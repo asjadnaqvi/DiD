@@ -382,7 +382,7 @@ reg Y D i.id		// only panel fixed effects
 reg Y D i.t i.id	// panel and time fixed effects (correct!)
 ```
 
-The last regression gives us the correct ATT which is $$ D $$ = 2.91. This is, infact, the average increase in $$ y_{it} $$ after averaging out for panel and time variables.
+The last regression gives us the correct ATT which is $$ D $$ = 2.91. This is, in fact, the average increase in $$ y_{it} $$ after averaging out for panel and time variables.
 
 We can also recover this using the standard commands:
 
