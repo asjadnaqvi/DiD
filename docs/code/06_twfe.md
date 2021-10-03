@@ -315,11 +315,73 @@ which gives the ATT=3, which is the average of the two treatment variables.
 Here, I would like to add that parallel trend assumptions are controlled for in the above regression specification. If these are not accounted for, then we basically end up with the wrong ATTs. We can see the D coefficients in the follow regressions:
 
 ```applescript
-reg Y D  		 // not controlling for any effects
-reg Y D i.t 	 // only time fixed effects
-reg Y D i.id 	 // only panel fixed effects
-reg Y D i.t i.id // panel and time fixed effects (correct!)
+reg Y D				// not controlling for any effects
+reg Y D i.t			// only time fixed effects
+reg Y D i.id		// only panel fixed effects
+reg Y D i.t i.id	// panel and time fixed effects (correct!)
 ```
 
 ## More units, differential treatment time, different treatment effects
+
+Now let's move on to the final part: treatments with differential timings. Here we again generate a dummy dataset but get rid of panel and time fixed effects for now. As we have seen above, the regressions isolate the panel fixed effects and we recover the coefficient of interest on the the $$ D $$ term.
+
+```applescript
+
+clear
+local units = 3
+local start = 1
+local end 	= 10
+
+local time = `end' - `start' + 1
+local obsv = `units' * `time'
+set obs `obsv'
+
+egen id	   = seq(), b(`time')  
+egen t 	   = seq(), f(`start') t(`end') 	
+
+sort  id t
+xtset id t
+
+
+lab var id "Panel variable"
+lab var t  "Time  variable"
+
+
+gen D = 0
+replace D = 1 if id==2 & t>=5
+replace D = 1 if id==3 & t>=8
+lab var D "Treated"
+
+
+gen Y = 0
+replace Y = D * 2 if id==2 & t>=5
+replace Y = D * 4 if id==3 & t>=8
+
+lab var Y "Outcome variable"
+
+```
+
+
+which gives us this figure:
+
+
+<img src="../../../assets/images/twfe5.png" height="300">
+
+The figure shows that the group id=2 gets the intervention at t=5 and stays treated, while the group id=3 gets the intervention at 
+t=8 and stays treated. So what is the ATT here?
+
+Unlike the previous examples, were we could derive the ATT, just by looking at the graph, it is not so trivial here. Even though there are no time and panel fixed effects, differentials in treatment time does make changes over panel and time relevant. Without going into the maths, to recover the actual ATT, we need to average out time and panel effects for treated and non-treated observations.
+
+
+We can do these regressions to see the outcomes:
+
+```applescript
+reg Y D				// not controlling for any effects
+reg Y D i.t			// only time fixed effects
+reg Y D i.id		// only panel fixed effects
+reg Y D i.t i.id	// panel and time fixed effects (correct!)
+```
+
+The last regression gives us the correct ATT = 2.91. This is, infact, the average increase in $$ y_{it} $$ after weighting for panel and time variables.
+
 
