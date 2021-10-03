@@ -382,6 +382,23 @@ reg Y D i.id		// only panel fixed effects
 reg Y D i.t i.id	// panel and time fixed effects (correct!)
 ```
 
-The last regression gives us the correct ATT = 2.91. This is, infact, the average increase in $$ y_{it} $$ after weighting for panel and time variables.
+The last regression gives us the correct ATT which is $$ D $$ = 2.91. This is, infact, the average increase in $$ y_{it} $$ after averaging out for panel and time variables.
+
+We can also recover this using the standard commands:
+
+```applescript
+xtreg Y D i.t, fe 
+reghdfe Y D, absorb(id t)   
+```
+
+which gives us the same answer of $$ D $$ = 2.91. 
+
+Let's think about this number for a bit. We have two treatments happening at different times with different treatment effects. Therefore the definition of pre and post is not clear anymore. Niether is untreated versus treated. if we look at the interval $$ 5\leq t < 8 $$, only id=2 is changing, and the other two variables are constant. But in the last interval where $$ t \geq 8, then only id=3 is showing a change, while the other two panel variables are constant in this interval (even through id=2 is treated here).
+
+It is these combinations that are unraveled in the Bacon decomposition, which is why, it is important understand the decompostion carefully.
+
+
+LINK TO NEXT SECTION. 
+
 
 
