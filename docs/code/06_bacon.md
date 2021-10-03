@@ -60,7 +60,7 @@ xtreg Y D i.t, fe
 reghdfe Y D, absorb(id t)   
 ```
 
-gives us an ATT of $$ \beta^TWFE $$ = 2.91. 
+gives us an ATT of $$ \beta^{TWFE} $$ = 2.91. 
 
 What Bacon decomposition does, is that it unpacks this coefficient into three components. These are: 
 
@@ -74,7 +74,7 @@ This terminology is still a bit confusing. In our example above, we have two tre
 
 So what do we do we with these components? Each component is essentially a vanilla 2x2 TWFE model, from which we recover two values:
 
-1.  the TWFE parameter ($$ \beta^TWFE $$)
+1.  the TWFE parameter ($$ \beta^{TWFE} $$)
 2.  the **weight** of this component as determined by its *relative size* in the data
 
 
