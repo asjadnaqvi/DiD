@@ -9,9 +9,9 @@ mathjax: true
 
 # What is Bacon decomposition?
 
-As stated in the last example of the TWFE section, if we have different treatment timings with different outcomes, then it is not clear what is pre and post, and what is treated and not treated.
+As stated in the last example of the TWFE section, if we have different treatment timings with different treatment effects, it is not clear what is pre and post, and what is treated and not treated.
 
-Let us start from the example again:
+Let us state this example again:
 
 ```applescript
 clear
@@ -60,17 +60,17 @@ xtreg Y D i.t, fe
 reghdfe Y D, absorb(id t)   
 ```
 
-gives us an ATT of $$ D $$ = 2.91. 
+gives us an ATT of $$ \beta^TWFE $$ = 2.91. 
 
 What Bacon decomposition does, is that it unpacks this coefficient into three components. These are: 
 
 
 1. **treated ($$ T $$)** versus **never treated ($$ U $$)**
 2. **early treated ($$ T^e $$)** versus **late treated ($$ T^l $$)**
-3. **late treated ($$ T^l $$)** versus **early treated ($$ T^e $$**
+3. **late treated ($$ T^l $$)** versus **early treated ($$ T^e $$)**
 
 
-This terminology is still a bit confusing. In our example above, we have two treated groups, id=2 (early treated) and id=3 (late treated). So the first component can be further divided into two sub-components: early treated vs never treated ($$ T^e vs U $$) and late treated vs never treated ($$ T^l vs U $$). So in total four components are calculated.
+This terminology is still a bit confusing. In our example above, we have two treated groups, id=2 (early treated) and id=3 (late treated). So the first component can be further divided into two sub-components: early treated vs never treated ($$ T^e $$ vs $$ U $$) and late treated vs never treated ($$ T^l $$ vs $$ U $$). So in total four components are calculated.
 
 So what do we do we with these components? Each component is essentially a vanilla 2x2 TWFE model, from which we recover two values:
 

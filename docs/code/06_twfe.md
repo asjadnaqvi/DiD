@@ -75,7 +75,7 @@ where we end up with the main difference of $$ \beta_7 $$. Note that this table 
 
 If we have multiple time periods and treatment units, the classic 2x2 DiD can be extended to the following generic functional form:
 
-$$ y_{it} = \alpha_{i} + \alpha_t + \beta D_{it} + \epsilon_{it} $$
+$$ y_{it} = \alpha_{i} + \alpha_t + \beta^{TWFE} D_{it} + \epsilon_{it} $$
 
 
 ## Code
@@ -141,7 +141,7 @@ xtset id t
 xtreg Y D t, fe
 ```
 
-In the regression, you will see that the coefficient of D equals 2, as expected. An alternative way of doing this is to use the `reghdfe` package, which we will also call in later examples:
+In the regression, you will see that the coefficient of D, $$ \beta^{TWFE} $$ = 2, as expected. An alternative way of doing this is to use the `reghdfe` package, which we will also call in later examples:
 
 ```
 reghdfe Y D, absorb(id t)
@@ -196,7 +196,7 @@ xtreg Y D t, fe
 reghdfe Y D, absorb(id t)   
 ```
 
-The `xtreg` option shows that $$ t $$ on average increases by 1 unit, which is what we expect. The intercept equals 1.5, which is the average of the blue and orange lines if they are extrapolated to $$ t = 0 $$ point. And $$ D = 3 $$, the true value of the intervention effect.
+The `xtreg` option shows that $$ t $$ on average increases by 1 unit, which is what we expect. The intercept equals 1.5, which is the average of the blue and orange lines if they are extrapolated to $$ t = 0 $$ point. And $$ $$ \beta^{TWFE} $$ = 3 $$, the true value of the intervention effect.
 
 
 ## More units, same treatment time, different treatment effects
@@ -253,7 +253,7 @@ from which we get:
 
 <img src="../../../assets/images/twfe3.png" height="300">
 
-Here we can see that the post treatement has an average effect of 2 on id=2 and 4 on id=3. This implies that the ATT equals 3, which we can also check by recovering the coefficients:
+Here we can see that the post treatement has an average effect of 2 on id=2 and 4 on id=3. This implies that the ATT equals $$ \beta^{TWFE} $$=3, which we can also check by recovering the coefficients:
 
 ```r
 xtreg Y D t, fe 
@@ -304,7 +304,7 @@ twoway ///
 
 <img src="../../../assets/images/twfe4.png" height="300">
 
-From the earlier example, we know that the ATT equals 3, but from the graphs we can cannot see this so clearly. This is because we need to get rid of panel and id time trends. While we can also do this partialling out by hand (but we won't), we can use our regression specification:
+From the earlier example, we know that the ATT equals $$ \beta^{TWFE} $$=3, but from the graphs we can cannot see this so clearly. This is because we need to get rid of panel and id time trends. While we can also do this partialling out by hand (but we won't), we can use our regression specification:
 
 ```applescript
 xtreg Y D t, fe 
@@ -323,7 +323,7 @@ reg Y D i.t i.id	// panel and time fixed effects (correct!)
 
 ## More units, differential treatment time, different treatment effects
 
-Now let's move on to the final part: treatments with differential timings. Here we again generate a dummy dataset but get rid of panel and time fixed effects for now. As we have seen above, the regressions isolate the panel fixed effects and we recover the coefficient of interest on the the $$ D $$ term.
+Now let's move on to the final part: treatments with differential timings. Here we again generate a dummy dataset but get rid of panel and time fixed effects for now. As we have seen above, the regressions isolate the panel fixed effects and we recover the coefficient of interest $$ \beta^{TWFE} $$.
 
 ```applescript
 
@@ -382,7 +382,7 @@ reg Y D i.id		// only panel fixed effects
 reg Y D i.t i.id	// panel and time fixed effects (correct!)
 ```
 
-The last regression gives us the correct ATT which is $$ D $$ = 2.91. This is, in fact, the average increase in $$ y_{it} $$ after averaging out for panel and time variables.
+The last regression gives us the correct ATT which is $$ \beta^{TWFE} $$ = 2.91. This is, in fact, the average increase in $$ y_{it} $$ after averaging out for panel and time variables.
 
 We can also recover this using the standard commands:
 
@@ -391,11 +391,11 @@ xtreg Y D i.t, fe
 reghdfe Y D, absorb(id t)   
 ```
 
-which gives us the same answer of $$ D $$ = 2.91. 
+which gives us the same answer of $$ \beta^{TWFE} $$ = 2.91. 
 
-Let's think about this number for a bit. We have two treatments happening at different times with different treatment effects. Therefore the definition of pre and post is not clear anymore. Niether is untreated versus treated. if we look at the interval $$ 5\leq t < 8 $$, only id=2 is changing, and the other two variables are constant. But in the last interval where $$ t \geq 8, then only id=3 is showing a change, while the other two panel variables are constant in this interval (even through id=2 is treated here).
+Let's think about this number for a bit. We have two treatments happening at different times with different treatment effects. Therefore the definition of pre and post is not clear anymore. Neither is untreated versus treated. if we look at the interval $$ 5\leq t < 8 $$, only id=2 is changing, and the other two variables are constant. But in the last interval where $$ t \geq 8, then only id=3 is showing a change, while the other two panel variables are constant in this interval (even through id=2 is treated here).
 
-It is these combinations that are unraveled in the Bacon decomposition, which is why, it is important understand the decompostion carefully.
+It is these combinations that are unraveled in the Bacon decomposition, which is why, it is important understand the decomposition carefully.
 
 
 LINK TO NEXT SECTION. 
