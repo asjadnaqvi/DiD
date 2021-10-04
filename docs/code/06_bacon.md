@@ -144,6 +144,7 @@ If you cannot access it, there are working paper versions floating around the in
 Let us start with equation 3 in the paper which states that: 
 
 $$ \hat{\beta}^{DD} = \frac{\hat{C}(y_{it},\tilde{D}_{it})}{\hat{V}^D} $$ 
+
 $$ \hat{\beta}^{DD} = \frac{\frac{1}{NT} \sum_i{\sum_t{y_{it}\tilde{D}_{it}}{\frac{1}{NT} \sum_i{\sum_t{\tilde{D}^2_{it}}  $$ 
 
 which is basically the standard panel regression with fixed effects. But a lot is going on in terms of symbols which we need to carefully define. Let's start with the easy ones:
