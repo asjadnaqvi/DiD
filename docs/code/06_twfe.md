@@ -326,7 +326,6 @@ reg Y D i.t i.id	// panel and time fixed effects (correct!)
 Now let's move on to the final part: treatments with differential timings. Here we again generate a dummy dataset but get rid of panel and time fixed effects for now. As we have seen above, the regressions isolate the panel fixed effects and we recover the coefficient of interest $$ \beta^{TWFE} $$.
 
 ```applescript
-
 clear
 local units = 3
 local start = 1
@@ -342,22 +341,29 @@ egen t 	   = seq(), f(`start') t(`end')
 sort  id t
 xtset id t
 
-
 lab var id "Panel variable"
 lab var t  "Time  variable"
-
 
 gen D = 0
 replace D = 1 if id==2 & t>=5
 replace D = 1 if id==3 & t>=8
 lab var D "Treated"
 
-
 gen Y = 0
 replace Y = D * 2 if id==2 & t>=5
 replace Y = D * 4 if id==3 & t>=8
 
 lab var Y "Outcome variable"
+
+
+twoway ///
+	(connected Y t if id==1) ///
+	(connected Y t if id==2) ///
+	(connected Y t if id==3) ///
+		,	///
+		xline(4.5 7.5) ///
+		xlabel(1(1)10) ///
+		legend(order(1 "id=1" 2 "id=2" 3 "id=3"))		
 
 ```
 

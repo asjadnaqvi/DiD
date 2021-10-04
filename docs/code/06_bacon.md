@@ -29,16 +29,13 @@ egen t 	   = seq(), f(`start') t(`end')
 sort  id t
 xtset id t
 
-
 lab var id "Panel variable"
 lab var t  "Time  variable"
-
 
 gen D = 0
 replace D = 1 if id==2 & t>=5
 replace D = 1 if id==3 & t>=8
 lab var D "Treated"
-
 
 gen Y = 0
 replace Y = D * 2 if id==2 & t>=5
@@ -48,7 +45,21 @@ lab var Y "Outcome variable"
 ```
 
 
-If we plot this, we get:
+If we plot this:
+
+```applescript
+twoway ///
+	(connected Y t if id==1) ///
+	(connected Y t if id==2) ///
+	(connected Y t if id==3) ///
+		,	///
+		xline(4.5 7.5) ///
+		xlabel(1(1)10) ///
+		legend(order(1 "id=1" 2 "id=2" 3 "id=3"))		
+
+```
+
+we get:
 
 <img src="../../../assets/images/twfe5.png" height="300">
 
@@ -118,7 +129,7 @@ ereturn list
 display e(dd_avg_e)*e(wt_sum_e) + e(dd_avg_l)*e(wt_sum_l) + e(dd_avg_u)*e(wt_sum_u)
 ```
 
-we recover the original TWFE $\beta$ estimator.
+from which we recover the original TWFE $$ \beta $$ estimate of 2.91.
 
 
 ## The logic of the weights
