@@ -129,7 +129,7 @@ ereturn list
 display e(dd_avg_e)*e(wt_sum_e) + e(dd_avg_l)*e(wt_sum_l) + e(dd_avg_u)*e(wt_sum_u)
 ```
 
-from which we recover the original TWFE $$ \beta $$ estimate of 2.91.
+we recover the original TWFE $$ \beta $$ estimate of 2.91.
 
 
 ## The logic of the weights
