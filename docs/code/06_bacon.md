@@ -73,17 +73,17 @@ reghdfe Y D, absorb(id t)
 
 gives us an ATT of $$ \beta^{TWFE} $$ = 2.91. 
 
-What Bacon decomposition does, is that it unpacks this coefficient into three cohorts. These are: 
+What Bacon decomposition does, is that it unpacks this coefficient into three groups. These are: 
 
 
 1. **treated ($$ T $$)** versus **never treated ($$ U $$)**
-2. **early treated ($$ T^e $$)** versus **late treated ($$ T^l $$)**
-3. **late treated ($$ T^l $$)** versus **early treated ($$ T^e $$)**
+2. **early treated ($$ T^e $$)** versus **late control ($$ T^l $$)**
+3. **late treated ($$ T^l $$)** versus **early control ($$ T^e $$)**
 
 
-This terminology is still a bit confusing. In our example above, we have two treated groups, id=2 (early treated) and id=3 (late treated). So the first cohort can be further divided into two sub-cohorts: early treated vs never treated ($$ T^e $$ vs $$ U $$) and late treated vs never treated ($$ T^l $$ vs $$ U $$). So in total four components are estimated.
+This terminology is still a bit confusing. In our example above, we have two treated groups, id=2 (early treated) and id=3 (late treated). So the first cohort can be further divided into two sub-groups: early treated vs never treated ($$ T^e $$ vs $$ U $$) and late treated vs never treated ($$ T^l $$ vs $$ U $$). In total, four set of values are estimated.
 
-So what do we do we with these components? Each component is essentially a vanilla 2x2 TWFE model, from which we recover two values:
+So what do we do we with these components? Each group is essentially a basic 2x2 TWFE model, from which we recover two values:
 
 1.  the TWFE parameter ($$ \beta^{TWFE} $$)
 2.  the **weight** of this component as determined by its *relative size* in the data
@@ -143,9 +143,7 @@ If you cannot access it, there are working paper versions floating around the in
 
 Let us start with equation 3 in the paper which states that: 
 
-$$ \hat{\beta}^{DD} = \frac{\hat{C}(y_{it},\tilde{D}_{it})}{\hat{V}^D} $$ 
-
-$$ \hat{\beta}^{DD} = \frac{ \frac{1}{NT} \sum_i{\sum_t{y_{it}\tilde{D}_{it}}}}{ \frac{1}{NT} \sum_i{\sum_t{\tilde{D}^2_{it}}}}  $$ 
+$$ \hat{\beta}^{DD} = \frac{\hat{C}(y_{it},\tilde{D}_{it})}{\hat{V}^D} = \frac{ \frac{1}{NT} \sum_i{\sum_t{y_{it}\tilde{D}_{it}}}}{ \frac{1}{NT} \sum_i{\sum_t{\tilde{D}^2_{it}}}}  $$ 
 
 which is basically the standard panel regression with fixed effects. But a lot is going on in terms of symbols which we need to carefully define. Let's start with the easy ones:
 
@@ -217,5 +215,30 @@ While we can do this manually with our small example, we can just recover $$ \ha
 
 where we can view the value by typing `display VD`. Here we should also get 0.0733.
 
-Now that we have spent time on $$ \hat{V}^D $$, which is not so trivial, and also not discussed in detail in the materials, it is time to move on the next part. In the paper, three formulas are provided 
+Now that we have spent time on $$ \hat{V}^D $$, which is not discussed in detail in the materials, it is time to move on the next part. In the paper, three formulas are provided for dealing with the three groups in our example: (late and early) treated vs untreated, early treated vesus late control, late treated versus early control.
+
+These are defined as follows in the set of equation 10 in the paper:
+
+1. Treated versus untreated ($$ T $$ vs $$ U $$): 
+
+$$  s_{jU} = \frac{ (n_j + n_U)^2 n_{jU} (1 - n_{jU}) \bar{D}_k (1 - \bar{D}_k)}{\hat{V}^D}  $$
+
+where $$ j = {e,l} $$ or early and late. 
+
+
+2. Early treatment versus late control ($$ T^e $$ vs $$ C^l $$)
+
+$$  s_{el} = \frac{ ((n_e + n_l)(1 - \bar{D}_l))^2  n_{el} (1 - n_{el}) \frac{\bar{D}_e - \bar{D}_l}{1 - \bar{D}_l} \frac{1 - \bar{D}_e}{1 - \bar{D}_l}  }{\hat{V}^D}  $$
+
+
+3. Late treatment versus early control ($$ T^l $$ vs $$ C^e $$)
+
+$$  s_{le} = \frac{ ((n_e + n_l)\bar{D}_e))^2  n_{el} (1 - n_{el}) \frac{\bar{D}_l}{\bar{D}_e} \frac{\bar{D}_e - \bar{D}_l}{1 - \bar{D}_e}  }{\hat{V}^D}  $$
+
+
+There are basically the weights that the command `bacondecomp` recovers, that are also displayed in the table. And since each coefficient is also associated with a 2x2 $$ \hat{\beta}^{TWFE} $$, the weights have two properties:
+
+First, the add up to one. And second, the true $$ \beta^DD $$ is a weighted sum of the 2x2 $$ \hat{\beta} $$ of each group, which is also what we see in the equation above.
+
+
 
