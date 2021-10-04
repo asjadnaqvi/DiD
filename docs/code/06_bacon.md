@@ -162,11 +162,62 @@ $$ \bar{\bar{D}} = \frac{\sum_i{\sum_t{x_{it}}}}{NT}  $$
 
 which is just the mean of all the observations. This specification is used to demean variables in order to run panel regressions `xtreg` with just the `reg` command in Stata. There is also some discussion on this in Greene's Econometrics book if you want a reference.
 
+So if we go to the $$ \hat{\beta}^{DD} $$ equation, we can see that $$ \hat{V}^D $$ is bascially defined as the variance of $$ D_{it} $$. For our example, we can calculate it manually:
 
-So if we go to the $$ \hat{\beta}^{DD} $$ equation, we can see that $$ \hat{V}^D $$ is bascially defined as the variable of $$ D_{it} $$.
+| $$ i $$ | $$ t $$ | $$ y $$ | $$ D $$ | $$ \bar{D}_i $$ | $$ \bar{D}_t $$ | $$ \bar{\bar{D}} $$ | $$ \tilde{D}_{it} $$ | $$ \tilde{D}^2_{it} $$ |
+| - | -- | - | ----- | ------- | ------- | ------- | ---------- | ----------- |
+| 1 | 1  | 0 | 0     | 0       | 0       | 0.3     | 0.3        | 0.09        |
+| 1 | 2  | 0 | 0     | 0       | 0       | 0.3     | 0.3        | 0.09        |
+| 1 | 3  | 0 | 0     | 0       | 0       | 0.3     | 0.3        | 0.09        |
+| 1 | 4  | 0 | 0     | 0       | 0       | 0.3     | 0.3        | 0.09        |
+| 1 | 5  | 0 | 0     | 0       | 0.33    | 0.3     | \-0.03     | 0.0009      |
+| 1 | 6  | 0 | 0     | 0       | 0.33    | 0.3     | \-0.03     | 0.0009      |
+| 1 | 7  | 0 | 0     | 0       | 0.33    | 0.3     | \-0.03     | 0.0009      |
+| 1 | 8  | 0 | 0     | 0       | 0.67    | 0.3     | \-0.37     | 0.1369      |
+| 1 | 9  | 0 | 0     | 0       | 0.67    | 0.3     | \-0.37     | 0.1369      |
+| 1 | 10 | 0 | 0     | 0       | 0.67    | 0.3     | \-0.37     | 0.1369      |
+| 2 | 1  | 0 | 0     | 0.6     | 0       | 0.3     | \-0.3      | 0.09        |
+| 2 | 2  | 0 | 0     | 0.6     | 0       | 0.3     | \-0.3      | 0.09        |
+| 2 | 3  | 0 | 0     | 0.6     | 0       | 0.3     | \-0.3      | 0.09        |
+| 2 | 4  | 0 | 0     | 0.6     | 0       | 0.3     | \-0.3      | 0.09        |
+| 2 | 5  | 2 | 1     | 0.6     | 0.33    | 0.3     | 0.37       | 0.1369      |
+| 2 | 6  | 2 | 1     | 0.6     | 0.33    | 0.3     | 0.37       | 0.1369      |
+| 2 | 7  | 2 | 1     | 0.6     | 0.33    | 0.3     | 0.37       | 0.1369      |
+| 2 | 8  | 2 | 1     | 0.6     | 0.67    | 0.3     | 0.03       | 0.0009      |
+| 2 | 9  | 2 | 1     | 0.6     | 0.67    | 0.3     | 0.03       | 0.0009      |
+| 2 | 10 | 2 | 1     | 0.6     | 0.67    | 0.3     | 0.03       | 0.0009      |
+| 3 | 1  | 0 | 0     | 0.3     | 0       | 0.3     | 0          | 0           |
+| 3 | 2  | 0 | 0     | 0.3     | 0       | 0.3     | 0          | 0           |
+| 3 | 3  | 0 | 0     | 0.3     | 0       | 0.3     | 0          | 0           |
+| 3 | 4  | 0 | 0     | 0.3     | 0       | 0.3     | 0          | 0           |
+| 3 | 5  | 0 | 0     | 0.3     | 0.33    | 0.3     | \-0.33     | 0.1089      |
+| 3 | 6  | 0 | 0     | 0.3     | 0.33    | 0.3     | \-0.33     | 0.1089      |
+| 3 | 7  | 0 | 0     | 0.3     | 0.33    | 0.3     | \-0.33     | 0.1089      |
+| 3 | 8  | 4 | 1     | 0.3     | 0.67    | 0.3     | 0.33       | 0.1089      |
+| 3 | 9  | 4 | 1     | 0.3     | 0.67    | 0.3     | 0.33       | 0.1089      |
+| 3 | 10 | 4 | 1     | 0.3     | 0.67    | 0.3     | 0.33       | 0.1089      |
+|   |    |   |       |         |         |         |            |             |
+|   |    |   |       |         |         |         | Sum        | 2.2002      |
+|   |    |   |       |         |         |         | Variance   | 0.07334     |
 
 
+Here the sum of the last column equals 2.20 which divided by $$ NT $$ or 3 x 10 equals 0.0733, which is the variance $$ \hat{V}^D $$.
 
+
+While we can do this manually with our small example, we can just recover $$ \hat{V}^D $$ as follows
+
+
+```applescript
+ xtreg D i.t , fe 
+ 
+ cap drop Dtilde
+ predict double Dtilde, e
+ 
+ sum Dtilde
+ scalar VD = (( r(N) - 1) / r(N) ) * r(Var) 
+```
+
+where we can view the value by typing `display VD`. Here we should also get 0.07333.
 
 
 
