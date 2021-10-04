@@ -16,10 +16,7 @@ Let us start with the classic Twoway Fixed Effects (TWFE) model:
 $$ y_{it} = \beta_0 + \beta_1 Treat_i + \beta_2 Post_t + \beta_3 Treat_i Post_t + \epsilon_{it}  $$
 
 
-where $$ y_{it} $$ is the outcome variable of interest, $$ \alpha_i $$ is the treatment variable, $$ \alpha_t $$ is the post variable, and $$ \beta $$ is the coefficient of interest.
-
-In a very simple form, a two by two (2x2) model can be explained using the following table:
-
+The above two by two (2x2) model can be explained using the following table:
 
 
 |  | Treatment = 0 | Treatment = 1 | *Difference*  | 
