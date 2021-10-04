@@ -364,3 +364,50 @@ xtreg Y D i.tel if (t2==1 | t3==1), fe robust
 ```
 
 which gives us a value of 0.182 and a coefficient of 2. Again this values can be compared with the `bacondecomp` table above.
+
+
+** Treated versus not treated **
+
+Next we compare the two treated groups (early and late) with the not treated group:
+
+<img src="../../../assets/images/bacon4.png" height="300"><img src="../../../assets/images/bacon5.png" height="300">
+
+
+
+
+We can recover the coefficients as follows:
+
+```
+xtreg Y D i.t if (t1==1 | t2==1), fe robust  // early 
+xtreg Y D i.t if (t1==1 | t3==1), fe robust  // late
+```
+
+which gives us 2 and 4 for early and late respectively. And we get the shares as follows:
+
+```
+scalar Dl  = 3/10  // share of late treated in all sample
+scalar De  = 6/10  // share of early treated in all sample
+
+scalar ne = 1/3    // relative group size of late
+scalar nl = 1/3    // relative group size of late
+scalar nU = 1/3    // relative group size of early		
+
+scalar nlU = 3/10   // share of treatment periods in group sample.
+scalar neU = 6/10   // share of treatment periods in group sample.
+
+display "weight_eU = " ((ne + nU)^2 * (neU * (1 - neU)) * (De * (1 - De))) / VD
+display "weight_lU = " ((nl + nU)^2 * (nlU * (1 - nlU)) * (Dl * (1 - Dl))) / VD
+```
+
+where the shares equal 0.349 and 0.267 respectively. If we add these up, they come out to 0.616. This number is not exactly the same as the one shown in the `bacondecomp` table (this needs double checking in the formulas), but here we can see that this group has the highest weight as expected.
+
+
+## Testing Bacon decomposition
+
+COMING SOON!
+
+
+
+
+
+
