@@ -134,12 +134,34 @@ we recover the original TWFE $$ \beta $$ estimate of 2.91.
 
 ## The logic of the weights
 
-In this section, we will learn to recover the weights manually for our example.
+In this section, we will learn to recover the weights manually for our example. In order to do this we need to go through the equations defined in this paper:
+
+[Goodman-Bacon, A. (2021). Difference-in-differences with variation in treatment timing. Journal of Econometrics.](https://www.sciencedirect.com/science/article/pii/S0304407621001445)
 
 
-COMING SOON!
+If you cannot access it, there are working paper versions floating around the internet (e.g. [one here on NBER](https://www.nber.org/papers/w25018)) plus there is also a video available on [YouTube here](https://www.youtube.com/watch?v=m1xSMNTKoMs).
+
+Let us start with equation 3 in the paper which states that: 
+
+$$ \hat{\beta}^{DD} = \frac{\hat{C}(y_{it},\tilde{D}_{it})}{\hat{V}^D} = \frac{\frac{1}{NT} \sum_i{\sum_t{y_{it}\tilde{D}_{it}}{\frac{1}{NT} \sum_i{\sum_t{\tilde{D}^2_{it}}  $$ 
+
+which is basically the standard panel regression with fixed effects. But a lot is going on in terms of symbols which we need to carefully define. Let's start with the easy ones:
+
+*  $$ N $$ = total panels because $$ i = 1\dots N $$
+*  $$ T $$ = total time periods because $$ t = 1\dots T $$
+
+The symbol $$ \tilde{D}_{it} $$ is the demeaned value of $$ D_{it} $$ which is basically a dummy variable which equals one for the treatment observation. The $$ \tilde $$ symbol is basically telling us to demean by time and panel means. In order words:
+
+$$ \tilde{D}_{it} = (D_{it} - D_i) - (D_{t} - \bar{\bar{D}})  $$ 
+
+where 
+
+$$ \bar{\bar{D}} = \frac{\sum_i{\sum_t{x_{it}}}}{NT}  $$
+
+which is just the mean of all the observations. This specification is used to demean variables in order to run panel regressions `xtreg` with just the `reg` command in Stata. There is also some discussion on this in Greene's Econometrics book if you want a reference.
 
 
+So if we go to the $$ \hat{\beta}^{DD} $$ equation, we can see that $$ \hat{V}^D $$ is bascially defined as the variable of $$ D_{it} $$.
 
 
 
