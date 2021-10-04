@@ -402,7 +402,7 @@ display "weight_lU = " ((nl + nU)^2 * (nlU * (1 - nlU)) * (Dl * (1 - Dl))) / VD
 where the shares equal 0.349 and 0.267 respectively. If we add these up, they come out to 0.616. This number is not exactly the same as the one shown in the `bacondecomp` table (this needs double checking in the formulas), but here we can see that this group has the highest weight as expected.
 
 
-## Testing Bacon decomposition
+## Some more testing with more serious examples
 
 COMING SOON!
 
