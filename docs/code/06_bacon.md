@@ -271,9 +271,96 @@ From the share formulas above, we can see that it is all about accouting for all
 
 
 
-## Manual recovery of weights
+## Manual recovery of weights [this needs double checking]
 
+Let's start with the manual recovery process. First to control graphs, we just create dummies for each panel variable:
 
+```
+gen t1 = 1 if id==1 // never treated
+gen t2 = 1 if id==2 // early treated
+gen t3 = 1 if id==3 // late  treated
+```
 
+**Late treatment vs early control**
+
+In order to visualize late treated versus early control, we generate the following control and draw the graph:
+
+```
+cap drop tle
+gen tle = .
+replace tle = 0 if t>=5
+replace tle = 1 if t>=8 & id==3
+
+twoway ///
+	(line Y t if id==1, lc(gs12)) ///
+	(line Y t if id==2, lc(gs12)) ///
+	(line Y t if id==3, lc(gs12)) ///
+	(line Y t if t3==1 & tle!=.) ///
+	(line Y t if t2==1 & tle!=.) ///
+		,	///
+		xline(4.5 7.5) ///
+		xlabel(1(1)10) ///
+		legend(order(4 "Late treatment" 5 "Early control"))	
+```
+
+and we get this figure:
+
+<img src="../../../assets/images/bacon2.png" height="300">
+
+So what is happening in this figure? We see that the id=2 variable which was treated earlier is flat, while the id=3 variable gets a treatment. Here we are saying that rather than calculate the TWFE estimator over the whole sample, we generate it for just id=3 and use id=2 as the control since it is stable in the $$ t $$ = 5 to 10 interval.
+
+ Since we know from above, that the formula for this setting is:
  
+ $$  s_{le} = \frac{ ((n_e + n_l)\bar{D}_e))^2  n_{el} (1 - n_{el}) \frac{\bar{D}_l}{\bar{D}_e} \frac{\bar{D}_e - \bar{D}_l}{1 - \bar{D}_e}  }{\hat{V}^D}  $$
 
+we can define the values manually as follows:
+
+```
+scalar De  = 6/10  // share of early treated in all sample
+scalar Dl  = 3/10  // share of late treated in all sample
+scalar nl = 1/3    // relative group size of late
+scalar ne = 1/3    // relative group size of early
+scalar nel = 3/6   // share of treatment periods in group sample
+```
+
+where the last scalar `nel` is the share of treatment which is 3 periods in the total group time horizon of 6 time periods. Here we can recover the weights as follows:
+
+```
+display "weight_le = " (((ne + nl) * (De))^2 * nel * (1 - nel) * (Dl / De) * ((De - Dl)/(De)) ) / VD
+```
+
+which gives us a value of 0.136. 
+
+Since we already have the sample defined, we can also recover the 2x2 TWFE parameter:
+
+```
+xtreg Y D i.tle if (t2==1 | t3==1), fe robust
+```
+
+which gives us a value of $$ D $$ = 4. Since we don't have time or panel fixed effects or gaussian errors, we can also see from the figure that the change in id=3 is 4 units, while id=2 stays constant so the change is 0.
+
+Compare these values to the `bacondecomp` table shown above and you will that these values exactly match the table values. 
+
+
+**Early treatment vs late control**
+
+Now let's flip this situation. Where we take the late treated variable as the control for the early treated group. From the original figure, we can see that this falls in this range:
+
+<img src="../../../assets/images/bacon3.png" height="300">
+
+and we recover the weights for the share:
+
+```
+scalar De  = 6/10  // share of late treated in all sample
+scalar Dl  = 3/10  // share of early treated in all sample
+
+scalar nl = 1/3    // relative group size of late
+scalar ne = 1/3    // relative group size of early		
+scalar nle = 3/6   // share of treatment periods in group sample. why is it 3/6 and not 3/7?		
+		
+display "weight_el = " (((ne + nl) * (1 - Dl))^2 * (nle * (1 - nle)) * ((De - Dl)/(1 - Dl)) * ((1 - De)/(1 - Dl))) / VD
+
+xtreg Y D i.tel if (t2==1 | t3==1), fe robust
+```
+
+which gives us a value of 0.182 and a coefficient of 2. Again this values can be compared with the `bacondecomp` table above.
