@@ -246,12 +246,34 @@ $$ \sum_j{s_{jU}} + \sum_{e \neq U}{\sum_{l>e}{s_{el} + s_{le}}} = 1  $$
 
 *   Second, any $$ \beta^{DD} $$ can be fully decomposed into all combinations of $$ \beta^{TWFE} $$ parameters. 
 
-$$  \hat{\beta^{DD}} = \sum_j{s_{jU} \hat{\beta}_{jU}} + \sum_{e \neq U}{\sum_{l>e}{\left( s_{el} \hat{\beta}_{el} + s_{le} \hat{\beta}_{le}} \right)} $$
+$$  \hat{\beta^{DD}} = \sum_j{s_{jU} \hat{\beta}_{jU}} + \sum_{e \neq U}{\sum_{l>e}{ ( s_{el} \hat{\beta}_{el} + s_{le} \hat{\beta}_{le}} ) } $$
 
 
-## Manual recovery
-
-So let's try and recover all of this manually.
 
 
+Next step, we need to understand all the new symbols. But before we define the symbols, we need to get the logic straight. And for this, we start with the original visual:
+
+
+<img src="../../../assets/images/twfe5.png" height="300">
+
+
+Here we can see that the never treat group, $$ U $$, which is basically id=1, runs for 10 periods and gets treatment in zero periods. The early treated group (id=2), $$ T^e $$, runs for six periods starting at 5 and ending at 10, while the late treated group (id=3),  $$ T^l $$ runs for 3 periods from 8 till 10. These numbers tell us how many time periods a group stays treated. The share of these values out of the total observations $$ T $$ gives us $$ D^e = 6/10 $$ and $$ De = 3/10 $$ values. This basically tells how much weight each panel group exerts in the total sample. A group that stays treated for longer will (or should) have a larger influence on the ATT.
+
+The next set of values are $$ n_e $$, $$ n_l $$, and  $$ n_U $$, which are the sample size of the groups in the total sample. Since our panel is balanced, and there are three groups, these values basically equal $$ n_e = n_l = n_U = 1/3 $$. Since each 2x2 contains a pair of the $$ \{e,l,U\} $$ group, the share $$ s $$ essentially weights by the relative size of the two groups in the sample.
+
+The last unknown value is of the form $$ n_{ab} $$ which is the share of the time of treatment units in a group time, or 
+
+$$ n_{ab} = \frac{n_a}{n_a + n_b} $$ 
+
+The aim of this value is to weight the relative share of treatment within each group. If a treatment takes place in a small fraction of the time, then its weight in the overall $$ \hat{\beta}^{DD} $$ will be reduced.
+
+From the share formulas above, we can see that it is all about accouting for all sorts of weights that are then applied to the recovered 2x2 $\hat{beta}$ of each group.
+
+
+
+## Manual recovery of weights
+
+
+
+ 
 
