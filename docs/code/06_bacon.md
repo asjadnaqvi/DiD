@@ -246,7 +246,7 @@ $$ \sum_j{s_{jU}} + \sum_{e \neq U}{\sum_{l>e}{s_{el} + s_{le}}} = 1  $$
 
 *   Second, any $$ \beta^{DD} $$ can be fully decomposed into all combinations of $$ \beta^{TWFE} $$ parameters. 
 
-$$  \hat{\beta^{DD}} = \sum_j{s_{jU} \hat{\beta}_{jU}} + \sum_{e \neq U}{\sum_{l>e}{s_{el} \hat{\beta}_{el} + s_{le} \hat{\beta}_{le}}} $$
+$$  \hat{\beta^{DD}} = \sum_j{s_{jU} \hat{\beta}_{jU}} + \sum_{e \neq U}{\sum_{l>e}{\left( s_{el} \hat{\beta}_{el} + s_{le} \hat{\beta}_{le}} \right)} $$
 
 
 ## Manual recovery
