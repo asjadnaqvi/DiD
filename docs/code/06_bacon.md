@@ -145,7 +145,7 @@ Let us start with equation 3 in the paper which states that:
 
 $$ \hat{\beta}^{DD} = \frac{\hat{C}(y_{it},\tilde{D}_{it})}{\hat{V}^D} $$ 
 
-$$ \hat{\beta}^{DD} = \frac{\frac{1}{NT} \sum_i{\sum_t{y_{it}\tilde{D}_{it}}{\frac{1}{NT} \sum_i{\sum_t{\tilde{D}^2_{it}}  $$ 
+$$ \hat{\beta}^{DD} = \frac{ \frac{1}{NT} \sum_i{\sum_t{y_{it}\tilde{D}_{it}}{ \frac{1}{NT} \sum_i{\sum_t{\tilde{D}^2_{it}}  $$ 
 
 which is basically the standard panel regression with fixed effects. But a lot is going on in terms of symbols which we need to carefully define. Let's start with the easy ones:
 
@@ -165,7 +165,7 @@ which is just the mean of all the observations. This specification is used to de
 So if we go to the $$ \hat{\beta}^{DD} $$ equation, we can see that $$ \hat{V}^D $$ is bascially defined as the variance of $$ D_{it} $$. For our example, we can calculate it manually:
 
 | $$ i $$ | $$ t $$ | $$ y $$ | $$ D $$ | $$ \bar{D}_i $$ | $$ \bar{D}_t $$ | $$ \bar{\bar{D}} $$ | $$ \tilde{D}_{it} $$ | $$ \tilde{D}^2_{it} $$ |
-| - | -- | - | ----- | ------- | ------- | ------- | ---------- | ----------- |
+| - | - | - | - | -| - | - | - | - |
 | 1 | 1  | 0 | 0     | 0       | 0       | 0.3     | 0.3        | 0.09        |
 | 1 | 2  | 0 | 0     | 0       | 0       | 0.3     | 0.3        | 0.09        |
 | 1 | 3  | 0 | 0     | 0       | 0       | 0.3     | 0.3        | 0.09        |
@@ -196,9 +196,7 @@ So if we go to the $$ \hat{\beta}^{DD} $$ equation, we can see that $$ \hat{V}^D
 | 3 | 8  | 4 | 1     | 0.3     | 0.67    | 0.3     | 0.33       | 0.1089      |
 | 3 | 9  | 4 | 1     | 0.3     | 0.67    | 0.3     | 0.33       | 0.1089      |
 | 3 | 10 | 4 | 1     | 0.3     | 0.67    | 0.3     | 0.33       | 0.1089      |
-|   |    |   |       |         |         |         |            |             |
-|   |    |   |       |         |         |         | Sum        | 2.2002      |
-|   |    |   |       |         |         |         | Variance   | 0.07334     |
+
 
 
 Here the sum of the last column equals 2.20 which divided by $$ NT $$ or 3 x 10 equals 0.0733, which is the variance $$ \hat{V}^D $$.
