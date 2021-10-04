@@ -145,7 +145,7 @@ Let us start with equation 3 in the paper which states that:
 
 $$ \hat{\beta}^{DD} = \frac{\hat{C}(y_{it},\tilde{D}_{it})}{\hat{V}^D} $$ 
 
-$$ \hat{\beta}^{DD} = \frac{ \frac{1}{NT} \sum_i{\sum_t{y_{it}\tilde{D}_{it}}{ \frac{1}{NT} \sum_i{\sum_t{\tilde{D}^2_{it}}  $$ 
+$$ \hat{\beta}^{DD} = \frac{ \frac{1}{NT} \sum_i{\sum_t{y_{it}\tilde{D}_{it}}}}{ \frac{1}{NT} \sum_i{\sum_t{\tilde{D}^2_{it}}}}  $$ 
 
 which is basically the standard panel regression with fixed effects. But a lot is going on in terms of symbols which we need to carefully define. Let's start with the easy ones:
 
@@ -199,7 +199,7 @@ So if we go to the $$ \hat{\beta}^{DD} $$ equation, we can see that $$ \hat{V}^D
 
 
 
-Here the sum of the last column equals 2.20 which divided by $$ NT $$ or 3 x 10 equals 0.0733, which is the variance $$ \hat{V}^D $$.
+Here the sum of the last column equals 2.20 which divided by $$ NT $$, or 3 x 10, equals 0.0733, which is the variance $$ \hat{V}^D $$.
 
 
 While we can do this manually with our small example, we can just recover $$ \hat{V}^D $$ as follows
@@ -215,7 +215,7 @@ While we can do this manually with our small example, we can just recover $$ \ha
  scalar VD = (( r(N) - 1) / r(N) ) * r(Var) 
 ```
 
-where we can view the value by typing `display VD`. Here we should also get 0.07333.
+where we can view the value by typing `display VD`. Here we should also get 0.0733.
 
-
+Now that we have spent time on $$ \hat{V}^D $$, which is not so trivial, and also not discussed in detail in the materials, it is time to move on the next part. In the paper, three formulas are provided 
 
