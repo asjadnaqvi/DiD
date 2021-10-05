@@ -66,7 +66,7 @@ We can also run a simple TWFE specification:
 
 ```applescript
 xtreg Y D i.t, fe 
-reghdfe Y D, absorb(id t)   
+reghdfe Y D, absorb(id t)   // alternative specification
 ```
 
 which gives us an ATT of $$ \beta^{TWFE} $$ = 2.91. What Bacon decomposition does, is that it unpacks this coefficient as a weighted average of three ditinct groups. These are: 
@@ -82,8 +82,8 @@ In our simple example, we have two treated panel ids: id=2 (early treated $$ T^e
 
 Each set of values is essentially a basic 2x2 TWFE model, from which we recover two thing:
 
-1.  A 2x2 ($$ \hat{\beta} $$) parameter using classic TWFE.
-2.  The **weight** of this parameter on the overall($$ \hat{\beta}^{DD} $$) as determined by its *relative size* in the data
+*  A 2x2 ($$ \hat{\beta} $$) parameter using classic TWFE.
+*  The **weight** of this parameter on the overall ($$ \hat{\beta}^{DD} $$) as determined by its *relative size* in the data
 
 We go back to these later. But first, let's see what the `bacondecomp` command gives us: 
 
