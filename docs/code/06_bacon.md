@@ -242,8 +242,7 @@ $$ \sum_j{s_{jU}} + \sum_{e \neq U}{\sum_{l>e}{s_{el} + s_{le}}} = 1  $$
 $$  \hat{\beta^{DD}} = \sum_j{s_{jU} \hat{\beta}_{jU}} + \sum_{e \neq U}{\sum_{l>e}{ ( s_{el} \hat{\beta}_{el} + s_{le} \hat{\beta}_{le}} ) } $$
 
 
-
-Next step, we need to understand all the new symbols. But before we define the symbols, we need to get the logic straight. And for this, we start with the original visual:
+Next step, we need to define all the new symbols. But before we do that, we need to get the logic straight. And for this, we start with the original visual:
 
 
 <img src="../../../assets/images/twfe5.png" height="300">
@@ -251,7 +250,7 @@ Next step, we need to understand all the new symbols. But before we define the s
 
 Here we can see that the never treat group, $$ U $$, which is basically id=1, runs for 10 periods and gets treatment in zero periods. The early treated group (id=2), $$ T^e $$, runs for six periods starting at 5 and ending at 10, while the late treated group (id=3),  $$ T^l $$ runs for 3 periods from 8 till 10. These numbers tell us how many time periods a group stays treated. The share of these values out of the total observations $$ T $$ gives us $$ D^e = 6/10 $$ and $$ De = 3/10 $$ values. This basically tells how much weight each panel group exerts in the total sample. A group that stays treated for longer will (or should) have a larger influence on the ATT.
 
-The next set of values are $$ n_e $$, $$ n_l $$, and  $$ n_U $$, which are the sample size of the groups in the total time periods. Since our panel is balanced, and there are three groups, these values basically equal $$ n_e = n_l = n_U = 1/3 $$. Since each 2x2 contains a pair of the $$ \{e,l,U\} $$ group, the share $$ s $$ essentially weights by the relative size of the two groups in the sample.
+The next set of values are $$ n_e $$, $$ n_l $$, and  $$ n_U $$, which are the sample size of the groups in the total time periods. Since our panel is fully balanced, and there are three groups, these values basically equal $$ n_e = n_l = n_U = 1/3 $$ [check this claim]. Each 2x2 contains a pair of the $$ \{e,l,U\} $$ group, the sum of $$ n $$ shares essentially weigh the relative size of the two panel ids in the group sample in the total observations.
 
 The last unknown value is of the form $$ n_{ab} $$ which is the share of the time of treatment units in a group time, or 
 
@@ -265,19 +264,13 @@ From the share formulas above, we can see that it is all about accouting for all
 
 ## Manual recovery of weights [this needs double checking]
 
-Let's start with the manual recovery process. First to control graphs, we just create dummies for each panel variable:
-
-```
-gen t1 = 1 if id==1 // never treated
-gen t2 = 1 if id==2 // early treated
-gen t3 = 1 if id==3 // late  treated
-```
+Let's start with the manual recovery process. 
 
 **Late treatment vs early control**
 
 In order to visualize late treated versus early control, we generate the following control and draw the graph:
 
-```
+```applescript
 cap drop tle
 gen tle = .
 replace tle = 0 if t>=5
@@ -287,12 +280,12 @@ twoway ///
 	(line Y t if id==1, lc(gs12)) ///
 	(line Y t if id==2, lc(gs12)) ///
 	(line Y t if id==3, lc(gs12)) ///
-	(line Y t if t3==1 & tle!=.) ///
-	(line Y t if t2==1 & tle!=.) ///
+	(line Y t if id==3 & tle!=.) ///
+	(line Y t if id==2 & tle!=.) ///
 		,	///
 		xline(4.5 7.5) ///
 		xlabel(1(1)10) ///
-		legend(order(4 "Late treatment" 5 "Early control"))	
+		legend(order(4 "Late treated" 5 "Early control"))	
 ```
 
 and we get this figure:
@@ -307,7 +300,7 @@ So what is happening in this figure? We see that the id=2 variable which was tre
 
 we can define the values manually as follows:
 
-```
+```applescript
 scalar De  = 6/10  // share of early treated in all sample
 scalar Dl  = 3/10  // share of late treated in all sample
 scalar nl = 1/3    // relative group size of late
@@ -317,7 +310,7 @@ scalar nel = 3/6   // share of treatment periods in group sample
 
 where the last scalar `nel` is the share of treatment which is 3 periods in the total group time horizon of 6 time periods. Here we can recover the weights as follows:
 
-```
+```applescript
 display "weight_le = " (((ne + nl) * (De))^2 * nel * (1 - nel) * (Dl / De) * ((De - Dl)/(De)) ) / VD
 ```
 
@@ -326,7 +319,7 @@ which gives us a value of 0.136.
 Since we already have the sample defined, we can also recover the 2x2 TWFE parameter:
 
 ```
-xtreg Y D i.tle if (t2==1 | t3==1), fe robust
+xtreg Y D i.tle if (id==2 | id==3), fe robust
 ```
 
 which gives us a value of $$ D $$ = 4. Since we don't have time or panel fixed effects or gaussian errors, we can also see from the figure that the change in id=3 is 4 units, while id=2 stays constant so the change is 0.
@@ -336,13 +329,29 @@ Compare these values to the `bacondecomp` table shown above and you will that th
 
 **Early treatment vs late control**
 
-Now let's flip this situation. Where we take the late treated variable as the control for the early treated group. From the original figure, we can see that this falls in this range:
+Now let's flip this situation. Where we take the late treated variable as the control for the early treated group. 
+
+```applescript
+twoway ///
+	(line Y t if id==1, lc(gs12)) ///
+	(line Y t if id==2, lc(gs12)) ///
+	(line Y t if id==3, lc(gs12)) ///
+	(line Y t if id==3 & tel!=.) ///
+	(line Y t if id==2 & tel!=.) ///
+		,	///
+		xline(4.5 7.5) ///
+		xlabel(1(1)10) ///
+		legend(order(4 "Early treated" 5 "Late control"))
+```
+
+
+From the figure, we can see that this falls in this range:
 
 <img src="../../../assets/images/bacon3.png" height="300">
 
 and we recover the weights for the share:
 
-```
+```applescript
 scalar De  = 6/10  // share of late treated in all sample
 scalar Dl  = 3/10  // share of early treated in all sample
 
@@ -352,15 +361,51 @@ scalar nle = 3/6   // share of treatment periods in group sample. why is it 3/6 
 		
 display "weight_el = " (((ne + nl) * (1 - Dl))^2 * (nle * (1 - nle)) * ((De - Dl)/(1 - Dl)) * ((1 - De)/(1 - Dl))) / VD
 
-xtreg Y D i.tel if (t2==1 | t3==1), fe robust
+xtreg Y D i.tel if (id==2 | id==3), fe robust
 ```
 
-which gives us a value of 0.182 and a coefficient of 2. Again this values can be compared with the `bacondecomp` table above.
+which gives us a value of 0.182 and a $$ \beta $$coefficient of 2. Again this values can be compared with the `bacondecomp` table above.
 
 
-** Treated versus not treated **
+** Treated versus not treated **  [fix this section]
 
 Next we compare the two treated groups (early and late) with the not treated group:
+
+
+```applescript
+cap drop ten
+gen ten = .
+replace ten = 0 if id==1 
+replace ten = 1 if id==2
+
+twoway ///
+	(line Y t if id==1, lc(gs12)) ///
+	(line Y t if id==2, lc(gs12)) ///
+	(line Y t if id==3, lc(gs12)) ///
+	(line Y t if id==2 & ten!=.) ///
+	(line Y t if id==1 & ten!=.) ///
+		,	///
+		xline(4.5 7.5) ///
+		xlabel(1(1)10) ///
+		legend(order(4 "Early treated" 5 "Never treated"))
+		
+cap drop tln
+gen tln = .
+replace tln = 0 if id==1 
+replace tln = 1 if id==3
+
+twoway ///
+	(line Y t if id==1, lc(gs12)) ///
+	(line Y t if id==2, lc(gs12)) ///
+	(line Y t if id==3, lc(gs12)) ///
+	(line Y t if id==3 & tln!=.) ///
+	(line Y t if id==1 & tln!=.) ///
+		,	///
+		xline(4.5 7.5) ///
+		xlabel(1(1)10) ///
+		legend(order(4 "Late treated" 5 "Never treated"))
+```
+
 
 <img src="../../../assets/images/bacon4.png" height="300"><img src="../../../assets/images/bacon5.png" height="300">
 
@@ -369,9 +414,9 @@ Next we compare the two treated groups (early and late) with the not treated gro
 
 We can recover the coefficients as follows:
 
-```
-xtreg Y D i.t if (t1==1 | t2==1), fe robust  // early 
-xtreg Y D i.t if (t1==1 | t3==1), fe robust  // late
+```applescript
+xtreg Y D i.t if (id==1 | id==2), fe robust		// early
+xtreg Y D i.t if (id==1 | id==3), fe robust		// late
 ```
 
 which gives us 2 and 4 for early and late respectively. And we get the shares as follows:
