@@ -58,7 +58,7 @@ twoway ///
 
 ```
 
-and if we plot this we get:
+we get:
 
 <img src="../../../assets/images/twfe5.png" height="300">
 
