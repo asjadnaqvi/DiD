@@ -408,7 +408,7 @@ twoway ///
 ```
 
 
-<img src="../../../assets/images/bacon4.png" height="300"><img src="../../../assets/images/bacon5.png" height="300">
+<img src="../../../assets/images/bacon4.png" height="100"><img src="../../../assets/images/bacon5.png" height="100">
 
 
 
