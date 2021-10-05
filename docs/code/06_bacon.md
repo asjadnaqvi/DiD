@@ -132,7 +132,7 @@ we recover the original TWFE $$ \beta $$ estimate of 2.91. While the aim of Baco
 
 In this section, we will learn to recover the weights manually for our example. In order to do this we need to go through the equations defined in this paper:
 
-[Goodman-Bacon, A. (2021). Difference-in-differences with variation in treatment timing. Journal of Econometrics.](https://www.sciencedirect.com/science/article/pii/S0304407621001445)
+[Goodman-Bacon, A. (2021). Difference-in-differences with variation in treatment timing](https://www.sciencedirect.com/science/article/pii/S0304407621001445). Journal of Econometrics.
 
 
 If you cannot access it, there are working paper versions floating around the internet (e.g. [one here on NBER](https://www.nber.org/papers/w25018)) plus there are also videos available on YouTube, for example, [one here](https://www.youtube.com/watch?v=m1xSMNTKoMs).
@@ -250,7 +250,7 @@ Next step, we need to define all the new symbols. But before we do that, we need
 
 Here we can see that the never treat group, $$ U $$, which is basically id=1, runs for 10 periods and gets treatment in zero periods. The early treated group (id=2), $$ T^e $$, runs for six periods starting at 5 and ending at 10, while the late treated group (id=3),  $$ T^l $$ runs for 3 periods from 8 till 10. These numbers tell us how many time periods a group stays treated. The share of these values out of the total observations $$ T $$ gives us $$ D^e = 6/10 $$ and $$ De = 3/10 $$ values. This basically tells how much weight each panel group exerts in the total sample. A group that stays treated for longer will (or should) have a larger influence on the ATT.
 
-The next set of values are $$ n_e $$, $$ n_l $$, and  $$ n_U $$, which are the sample size of the groups in the total time periods. Since our panel is fully balanced, and there are three groups, these values basically equal $$ n_e = n_l = n_U = 1/3 $$ [check this claim]. Each 2x2 contains a pair of the $$ \{e,l,U\} $$ group, the sum of $$ n $$ shares essentially weigh the relative size of the two panel ids in the group sample in the total observations.
+The next set of values are $$ n_e $$, $$ n_l $$, and  $$ n_U $$, which are the sample size of the groups in the total time periods. Since our panel is fully balanced, and there are three groups, these values basically equal $$ n_e = n_l = n_U = 1/3 $$ (check this claim). Each 2x2 contains a pair of the $$ \{e,l,U\} $$ group, the sum of $$ n $$ shares essentially weigh the relative size of the two panel ids in the group sample in the total observations.
 
 The last unknown value is of the form $$ n_{ab} $$ which is the share of the time of treatment units in a group time, or 
 
@@ -318,7 +318,7 @@ which gives us a value of 0.136.
 
 Since we already have the sample defined, we can also recover the 2x2 TWFE parameter:
 
-```
+```applescript
 xtreg Y D i.tle if (id==2 | id==3), fe robust
 ```
 
@@ -422,7 +422,7 @@ xtreg Y D i.t if (id==1 | id==3), fe robust		// late
 
 which gives us 2 and 4 for early and late respectively. And we get the shares as follows:
 
-```
+```applescript
 scalar Dl  = 3/10  // share of late treated in all sample
 scalar De  = 6/10  // share of early treated in all sample
 
