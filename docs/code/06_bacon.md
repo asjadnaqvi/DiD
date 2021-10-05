@@ -4,6 +4,7 @@ title: Bacon decomposition
 parent: Code
 nav_order: 2
 mathjax: true
+image: "../../../assets/images/DiD.jpg"
 ---
 
 

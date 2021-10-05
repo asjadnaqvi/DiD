@@ -4,6 +4,7 @@ title: TWFE
 parent: Code
 nav_order: 1
 mathjax: true
+image: "../../../assets/images/DiD.jpg"
 ---
 
 *Under construction*. 
