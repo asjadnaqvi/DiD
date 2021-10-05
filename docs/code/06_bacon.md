@@ -69,17 +69,17 @@ xtreg Y D i.t, fe
 reghdfe Y D, absorb(id t)   // alternative specification
 ```
 
-which gives us an ATT of $$ \beta^{TWFE} $$ = 2.91. 
+which gives us an ATT of $$ \hat{\beta} $$ = 2.91. 
 
 
-This type of relative grouping of treated and not treated and early and late treated is part of most of the new DiD packages and Bacon decomposition tells us why this is the case. What Bacon decomposition does, is that it unpacks this coefficient as a weighted average of three ditinct groups which are: 
+This type of relative grouping of treated and not treated, and early and late treated, is part of the new DiD papers, and Bacon decomposition tells us why this is the case. What Bacon decomposition does, is that it unpacks the $$ \hat{\beta} $$ coefficient as a weighted average $$ \beta $$s estimated from three distinct 2x2 groups: 
 
 
 1. **treated ($$ T $$)** versus **never treated ($$ U $$)**
 2. **early treated ($$ T^e $$)** versus **late control ($$ C^l $$)**
 3. **late treated ($$ T^l $$)** versus **early control ($$ C^e $$)**
 
-In other words, all the observations are broken down into different cohorts based on the timing of the first treatment for each panel id. The more the groups and the treatment timings, the more the combinatios.
+In other words, the panel ids are split into different timing cohorts based on when the first treatment takes place and where it lies in relation to the treatment of other panel ids. The more the panel ids and differential treatment timings, the more the combinations of the above groups.
 
 In our simple example, we have two treated panel ids: id=2 (early treated $$ T^e $$) and id=3 (late treated $$ T^l $$). The treated versus never treated can be further divided into early treated vs never treated ($$ T^e $$ vs $$ U $$) and late treated vs never treated ($$ T^l $$ vs $$ U $$). In total, four sets of values are estimated if there are three groups. Goodman-Bacon also uses a similar example in the paper.
 
