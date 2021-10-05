@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you want to cite this repository, you can use the following syntax:"
+authors:
+  - family-names: Naqvi
+    given-names: Asjad
+    orcid: https://orcid.org/0000-0002-0986-6009
+title: "Notes on the DiD literature"
+version: 1.0
+date-released: 2021-08-11
