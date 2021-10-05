@@ -368,7 +368,9 @@ xtreg Y D i.tel if (id==2 | id==3), fe robust
 which gives us a value of 0.182 and a $$ \beta $$coefficient of 2. Again this values can be compared with the `bacondecomp` table above.
 
 
-** Treated versus not treated **  (fix this section)
+** Treated versus not treated **  
+
+(fix this section. There is an error in the weights calculation.)
 
 
 Next we compare the two treated groups (early and late) with the not treated group:
