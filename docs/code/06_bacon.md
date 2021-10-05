@@ -62,14 +62,17 @@ we get:
 
 <img src="../../../assets/images/twfe5.png" height="300">
 
-We can also run a simple TWFE specification:
+In the figure we can see that there are two treatments at different points in time. The treatment to id=2 happens at $$ t $$=5, while the treatment to id=3 happens at $$ t $$=8. When the second treatment takes place, id=2 is already treated and is basically constant. So for id=3, id=2 is also part of the pre-group especially if we just consider the time range $$ 5 \leq t \leq 10 $$. It is also not clear what the ATT in this case should be from just looking at the figure. We can also run a simple TWFE specification to estimate this:
 
 ```applescript
 xtreg Y D i.t, fe 
 reghdfe Y D, absorb(id t)   // alternative specification
 ```
 
-which gives us an ATT of $$ \beta^{TWFE} $$ = 2.91. What Bacon decomposition does, is that it unpacks this coefficient as a weighted average of three ditinct groups. These are: 
+which gives us an ATT of $$ \beta^{TWFE} $$ = 2.91. 
+
+
+This type of relative grouping of treated and not treated and early and late treated is part of most of the new DiD packages and Bacon decomposition tells us why this is the case. What Bacon decomposition does, is that it unpacks this coefficient as a weighted average of three ditinct groups which are: 
 
 
 1. **treated ($$ T $$)** versus **never treated ($$ U $$)**
