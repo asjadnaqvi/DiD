@@ -193,7 +193,7 @@ So if we go to the $$ \hat{\beta}^{DD} $$ equation, we can see that $$ \hat{V}^D
 | 3 | 10 | 4 | 1     | 0.3     | 0.67    | 0.3     | 0.33       | 0.1089      |
 
 
-where $$ D $$ = 1 if treated, $$ \bar{D}_i $$ is the average of $$ D $$ for each panel id $$ i $$, $$ \bar{D}_t $$ is the average of $$ D $$ for each $$ t $$, and \bar{\bar{D}} is the mean of the $$ D $$ column. $$ \tilde{D}_{it} $$ is calculated using the formula stated above and $$ \tilde{D}^2_{it} $$ is just its square term. Here the sum of the $$ \tilde{D}^2_{it} $$ column equals 2.20 which divided by $$ NT $$, or 3 x 10, equals 0.0733, which is the variance $$ \hat{V}^D $$.
+where $$ D $$ = 1 if treated, $$ \bar{D}_i $$ is the average of $$ D $$ for each panel id $$ i $$, $$ \bar{D}_t $$ is the average of $$ D $$ for each $$ t $$, and $$ \bar{\bar{D}} $$ is the mean of the $$ D $$ column. $$ \tilde{D}_{it} $$ is calculated using the formula stated above and $$ \tilde{D}^2_{it} $$ is just its square term. Here the sum of the $$ \tilde{D}^2_{it} $$ column equals 2.20 which divided by $$ NT $$, or 3 x 10, equals 0.0733, which is the variance $$ \hat{V}^D $$.
 
 
 We can also recover $$ \hat{V}^D $$ as follows in Stata:
