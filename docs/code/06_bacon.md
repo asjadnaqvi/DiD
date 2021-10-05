@@ -10,7 +10,7 @@ image: "../../../assets/images/DiD.jpg"
 
 # What is Bacon decomposition?
 
-As stated in the last example of the TWFE section, if we have different treatment timings with different treatment effects, it is not so obvious what pre and post are. Let us state this example again:
+As discussed in the last example of the TWFE section, if we have different treatment timings with different treatment effects, it is not so obvious what pre and post are. Let us state this example again:
 
 ```applescript
 clear
@@ -62,17 +62,17 @@ we get:
 
 <img src="../../../assets/images/twfe5.png" height="300">
 
-In the figure we can see that there are two treatments at different points in time. The treatment to id=2 happens at $$ t $$=5, while the treatment to id=3 happens at $$ t $$=8. When the second treatment takes place, id=2 is already treated and is basically constant. So for id=3, id=2 is also part of the pre-group especially if we just consider the time range $$ 5 \leq t \leq 10 $$. It is also not clear what the ATT in this case should be from just looking at the figure. We can also run a simple TWFE specification to estimate this:
+In the figure we can see that treatments occurs at two different points. The treatment to id=2 happens at $$ t $$=5, while the treatment to id=3 happens at $$ t $$=8. When the second treatment takes place, id=2 is already treated and is basically constant. So for id=3, id=2 is also part of the pre-treatment group especially if we just consider the time range $$ 5 \leq t \leq 10 $$. It is also not clear what the ATT in this case should be from just looking at the figure since we can no longer average out the treatment sizes as was the case with simpler examples discussed in section TWFE section. In order to recover this, we can run a simple specification:
 
 ```applescript
 xtreg Y D i.t, fe 
 reghdfe Y D, absorb(id t)   // alternative specification
 ```
 
-which gives us an ATT of $$ \hat{\beta} $$ = 2.91. 
+which gives us an ATT of $$ \hat{\beta} $$ = 2.91. In summary this is the average treatment size after accounting for time and panel fixed effects.
 
 
-This type of relative grouping of treated and not treated, and early and late treated, is part of the new DiD papers, and Bacon decomposition tells us why this is the case. What Bacon decomposition does, is that it unpacks the $$ \hat{\beta} $$ coefficient as a weighted average $$ \beta $$s estimated from three distinct 2x2 groups: 
+Going back to the figure, this type of relative grouping of treated and not treated, and early and late treated, is part of the new DiD papers, and Bacon decomposition tells us why we need to do this. What Bacon decomposition does, is that it unpacks the $$ \hat{\beta} $$ coefficient as a weighted average $$ \beta $$s estimated from three distinct 2x2 groups: 
 
 
 1. **treated ($$ T $$)** versus **never treated ($$ U $$)**
@@ -99,7 +99,7 @@ In the absence of controls, this is the only option we can use for running `baco
 
 <img src="../../../assets/images/bacon1.png" height="300">
 
-The figure shows four points for the three groups in our example. The treated versus never treated ($$ T $$ vs $$ U $$) are triangles. Since we have an early treated (id=2) and a late treated (id=3) panel variable, the y-axis gives us beta values of 2 and 4 respectively. These values are also obvious from the simple plot of the panel variables where id=2 increases by 2 and id=3 increases by 4 over the not treated id=1. The crosses represent the late teatment versus early control ($$ T^l $$ vs $$ C^e $$), and early treatment versus late control  ($$ T^e $$ vs $$ C^l $$) groups. Since these also have values of 2 and 4, their $\hat{\beta}$ values on the y-axis are the same. The x-axis gives us the weights of each parameter which we will come to later. 
+The figure shows four points for the three groups in our example. The treated versus never treated ($$ T $$ vs $$ U $$) are triangles. Since we have an early treated (id=2) and a late treated (id=3) panel variable, the y-axis gives us beta values of 2 and 4 respectively. These values are also obvious from the simple plot of the panel variables where id=2 increases by 2 and id=3 increases by 4 over the not treated id=1. The crosses represent the late teatment versus early control ($$ T^l $$ vs $$ C^e $$), and early treatment versus late control  ($$ T^e $$ vs $$ C^l $$) groups. Since these also have values of 2 and 4, their $$ \hat{\beta} $$ values on the y-axis are the same. The x-axis gives us the weights of each parameter which we will come to later. 
 
 The figure above is summarized in this table that also pops up in the output window in Stata:
 
