@@ -214,17 +214,17 @@ where we can view the value by typing `display VD`. Here we should also get 0.07
 Now that we have spent some time on $$ \hat{V}^D $$, which is not discussed in detail in the paper, we can now move on the next parts. In the paper, three formulas are provided for dealing with the three groups in our example. These are defined as follows in the set of equation 10 in the paper:
 
 
-1. Early treatment versus late control ($$ T^e $$ vs $$ C^l $$)
+*   Early treatment versus late control ($$ T^e $$ vs $$ C^l $$)
 
 $$  s_{el} = \frac{ ((n_e + n_l)(1 - \bar{D}_l))^2  n_{el} (1 - n_{el}) \frac{\bar{D}_e - \bar{D}_l}{1 - \bar{D}_l} \frac{1 - \bar{D}_e}{1 - \bar{D}_l}  }{\hat{V}^D}  $$
 
 
-2. Late treatment versus early control ($$ T^l $$ vs $$ C^e $$)
+*   Late treatment versus early control ($$ T^l $$ vs $$ C^e $$)
 
 $$  s_{le} = \frac{ ((n_e + n_l)\bar{D}_e))^2  n_{el} (1 - n_{el}) \frac{\bar{D}_l}{\bar{D}_e} \frac{\bar{D}_e - \bar{D}_l}{1 - \bar{D}_e}  }{\hat{V}^D}  $$
 
 
-3. Treated versus untreated ($$ T $$ vs $$ U $$): 
+*   Treated versus untreated ($$ T $$ vs $$ U $$): 
 
 $$  s_{jU} = \frac{ (n_j + n_U)^2 n_{jU} (1 - n_{jU}) \bar{D}_k (1 - \bar{D}_k)}{\hat{V}^D}  $$
 
@@ -233,12 +233,12 @@ where $$ j = \{e,l\} $$ or early and late treatment groups.
 
 The $$ s $$ are basically the weights that the command `bacondecomp` recovers, that are also displayed in the table. And since there is also a 2x2 $$ \hat{\beta} $$ coefficient associated with each 2x2 group, the weights have two properties:
 
-1.  They add up to one or:
+*    They add up to one or:
 
 $$ \sum_j{s_{jU}} + \sum_{e \neq U}{\sum_{l>e}{s_{el} + s_{le}}} = 1  $$
 
 
-2.  The overall $$ \hat{\beta}^{DD} $$ is a weighted sum of the 2x2 $$ \hat{\beta} $$ parameters: 
+*    The overall $$ \hat{\beta}^{DD} $$ is a weighted sum of the 2x2 $$ \hat{\beta} $$ parameters: 
 
 $$  \hat{\beta^{DD}} = \sum_j{s_{jU} \hat{\beta}_{jU}} + \sum_{e \neq U}{\sum_{l>e}{ ( s_{el} \hat{\beta}_{el} + s_{le} \hat{\beta}_{le}} ) } $$
 
