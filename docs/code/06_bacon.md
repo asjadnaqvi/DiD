@@ -10,6 +10,8 @@ image: "../../../assets/images/DiD.jpg"
 
 # What is Bacon decomposition?
 
+*This section still needs refining in some parts. These are highlighted.*
+
 As discussed in the last example of the TWFE section, if we have different treatment timings with different treatment effects, it is not so obvious what pre and post are. Let us state this example again:
 
 ```applescript
@@ -72,7 +74,7 @@ reghdfe Y D, absorb(id t)   // alternative specification
 which gives us an ATT of $$ \hat{\beta} $$ = 2.91. In summary this is the average treatment size after accounting for time and panel fixed effects.
 
 
-Going back to the figure, this type of relative grouping of treated and not treated, and early and late treated, is part of the new DiD papers, and Bacon decomposition tells us why we need to do this. What Bacon decomposition does, is that it unpacks the $$ \hat{\beta} $$ coefficient as a weighted average $$ \beta $$s estimated from three distinct 2x2 groups: 
+Going back to the figure, this type of relative grouping of treated and not treated, and early and late treated, is part of the new DiD papers, just because each of these combinations plays its own role on the overall average $$ \hat{\beta} $$. This is exactly what Bacon decomposition tell us. It unpacks the $$ \hat{\beta} $$ coefficient as a weighted average $$ \hat{\beta} $$s coefficients estimated from three distinct 2x2 groups: 
 
 
 1. **treated ($$ T $$)** versus **never treated ($$ U $$)**
@@ -99,7 +101,7 @@ In the absence of controls, this is the only option we can use for running `baco
 
 <img src="../../../assets/images/bacon1.png" height="300">
 
-The figure shows four points for the three groups in our example. The treated versus never treated ($$ T $$ vs $$ U $$) are triangles. Since we have an early treated (id=2) and a late treated (id=3) panel variable, the y-axis gives us beta values of 2 and 4 respectively. These values are also obvious from the simple plot of the panel variables where id=2 increases by 2 and id=3 increases by 4 over the not treated id=1. The crosses represent the late teatment versus early control ($$ T^l $$ vs $$ C^e $$), and early treatment versus late control  ($$ T^e $$ vs $$ C^l $$) groups. Since these also have values of 2 and 4, their $$ \hat{\beta} $$ values on the y-axis are the same. The x-axis gives us the weights of each parameter which we will come to later. 
+The figure shows four points for the three groups in our example. The treated versus never treated ($$ T $$ vs $$ U $$) are triangles. Since we have an early treated (id=2) and a late treated (id=3) panel variable, the y-axis gives us beta values of 2 and 4 respectively. These values are also obvious from the simple plot of the panel variables where id=2 increases by 2 and id=3 increases by 4 over the not treated id=1. The crosses represent the late treatment versus early control ($$ T^l $$ vs $$ C^e $$), and early treatment versus late control ($$ T^e $$ vs $$ C^l $$) groups. Since these also have values of 2 and 4, their $$ \hat{\beta} $$ values on the y-axis are the same. The x-axis gives us the weights of each parameter which we will come to later. 
 
 The figure above is summarized in this table that also pops up in the output window in Stata:
 
@@ -129,7 +131,7 @@ ereturn list
 display e(dd_avg_e)*e(wt_sum_e) + e(dd_avg_l)*e(wt_sum_l) + e(dd_avg_u)*e(wt_sum_u)
 ```
 
-we recover the original TWFE $$ \beta $$ estimate of 2.91. While the aim of Bacon decomposition is to show how TWFE effects can be wrong (a case we will come to later), in this case, the values are exactly the same. Even so, it is still interesting to find out which group is actually pulling the most weight in the overall value.
+we recover the original TWFE $$ \beta $$ estimate of 2.91. This table basically summarizies the contribution of Bacon decomposition, which is estimating the relative weight on each group on the overall $$ \hat{\beta} $$. 
 
 
 ## The logic of the weights
@@ -141,7 +143,7 @@ In this section, we will learn to recover the weights manually for our example. 
 
 If you cannot access it, there are working paper versions floating around the internet (e.g. [one here on NBER](https://www.nber.org/papers/w25018)) plus there are also videos available on YouTube, for example, [one here](https://www.youtube.com/watch?v=m1xSMNTKoMs).
 
-Let us start with equation 3 in the paper which states the key equation of the $$ \hat{\beta}^{DD} $$ parameter: 
+Let us start with Equation 3 in the paper which states that: 
 
 $$ \hat{\beta}^{DD} = \frac{\hat{C}(y_{it},\tilde{D}_{it})}{\hat{V}^D} = \frac{ \frac{1}{NT} \sum_i{\sum_t{y_{it}\tilde{D}_{it}}}}{ \frac{1}{NT} \sum_i{\sum_t{\tilde{D}^2_{it}}}}  $$ 
 
@@ -150,7 +152,7 @@ This is basically a standard panel regression with fixed effects (see Greene or 
 *  $$ N $$ = total panels because $$ i = 1\dots N $$
 *  $$ T $$ = total time periods because $$ t = 1\dots T $$
 
-The symbol $$ \tilde{D}_{it} $$ is the demeaned value of $$ D_{it} $$ which is basically a dummy variable which equals one for the treatment observation. The ~ symbol is basically telling us to demean by time and panel means. In order words:
+The symbol $$ \tilde{D}_{it} $$ is the demeaned value of $$ D_{it} $$ which is a dummy variable that equals one for the treated observations and zero otherwise. The ~ symbol is telling us to demean by time and panel means. In order words:
 
 $$ \tilde{D}_{it} = (D_{it} - D_i) - (D_{t} - \bar{\bar{D}})  $$ 
 
@@ -158,9 +160,9 @@ where
 
 $$ \bar{\bar{D}} = \frac{\sum_i{\sum_t{D_{it}}}}{NT}  $$
 
-which is just the mean of all the observations. This specification is used to demean variables (to incorporate fixed effects). If we do demean or center the data, we can also recover the panel estimates using the standard `reg` command in Stata. In other words, `xtreg y i.t, fe` is equivalent to `reg tildey` [check assertion]. There is also discussion on this in Greene's book.
+which is just the mean of all the observations. This specification is used to demean variables (to incorporate fixed effects). If we do demean or center the data, we can also recover the panel estimates using the standard `reg` command in Stata. In terms of syntax, this implies that, `xtreg y i.t, fe` is equivalent to `reg tildey` [check] (see Greene or Wooldridge). 
 
-So if we go to the $$ \hat{\beta}^{DD} $$ equation, we can see that $$ \hat{V}^D $$ is bascially defined as the variance of $$ D_{it} $$. For our basic example, we can calculate it manually:
+So if we go to the $$ \hat{\beta}^{DD} $$ equation, $$ \hat{V}^D $$ is essentially the variance of $$ D_{it} $$. For our basic example, we can calculate it manually:
 
 | $$ i $$ | $$ t $$ | $$ y $$ | $$ D $$ | $$ \bar{D}_i $$ | $$ \bar{D}_t $$ | $$ \bar{\bar{D}} $$ | $$ \tilde{D}_{it} $$ | $$ \tilde{D}^2_{it} $$ |
 | - | - | - | - | -| - | - | - | - |
@@ -212,9 +214,9 @@ We can also recover $$ \hat{V}^D $$ as follows in Stata:
  scalar VD = (( r(N) - 1) / r(N) ) * r(Var) 
 ```
 
-where we can view the value by typing `display VD`. Here we should also get 0.0733.
+where we can view the value by typing `display VD`. Here we should get 0.0733 as expected.
 
-Now that we have spent some time on $$ \hat{V}^D $$, which is not discussed in detail in the paper, we can now move on the next parts. In the paper, three formulas are provided for dealing with the three groups in our example. These are defined as follows in the set of equation 10 in the paper:
+In the paper, three additional formulas are provided for dealing with the three groups in our example. These are defined as follows in Equation 10:
 
 
 *   Early treatment versus late control ($$ T^e $$ vs $$ C^l $$)
@@ -252,15 +254,15 @@ Next step, we need to define all the new symbols. But before we do that, we need
 <img src="../../../assets/images/twfe5.png" height="300">
 
 
-Here we can see that the never treat group, $$ U $$, which is basically id=1, runs for 10 periods and gets treatment in zero periods. The early treated group (id=2), $$ T^e $$, runs for six periods starting at 5 and ending at 10, while the late treated group (id=3),  $$ T^l $$ runs for 3 periods from 8 till 10. These numbers tell us how many time periods a group stays treated. The share of these values out of the total observations $$ T $$ gives us $$ D^e = 6/10 $$ and $$ De = 3/10 $$ values. This basically tells how much weight each panel group exerts in the total sample. A group that stays treated for longer will (or should) have a larger influence on the ATT.
+Here we can see that the never treat group, $$ U $$, which is id=1, runs for 10 periods and gets treatment in zero periods. The early treated group (id=2), $$ T^e $$, runs for six periods starting at 5 and ending at 10, while the late treated group (id=3), $$ T^l $$ runs for 3 periods from 8 till 10. These numbers tell us how many time periods a group stays treated. The share of these values out of the total observations $$ T $$ gives us $$ D^e = 6/10 $$ and $$ De = 3/10 $$ values. This tells us how much weight each panel group exerts in the total observations. A group that stays treated for longer will (and should) have a larger influence on the ATT.
 
-The next set of values are $$ n_e $$, $$ n_l $$, and  $$ n_U $$, which are the sample size of the groups in the total time periods. Since our panel is fully balanced, and there are three groups, these values basically equal $$ n_e = n_l = n_U = 1/3 $$ (check this claim). Each 2x2 contains a pair of the $$ \{e,l,U\} $$ group, the sum of $$ n $$ shares essentially weigh the relative size of the two panel ids in the group sample in the total observations.
+The next set of values are $$ n_e $$, $$ n_l $$, and  $$ n_U $$, which are the sample size of the groups in the total time periods. Since our panel is fully balanced, and there are three groups, these values equal $$ n_e = n_l = n_U = 1/3 $$ (*check this*). Each 2x2 contains a pair of the $$ \{e,l,U\} $$ group, the sum of $$ n $$ shares essentially weigh the relative size of the two panel ids in the group sample in the total observations.
 
 The last unknown value is of the form $$ n_{ab} $$ which is the share of the time of treatment units in a group time, or 
 
 $$ n_{ab} = \frac{n_a}{n_a + n_b} $$ 
 
-The aim of this value is to weight the relative share of treatment within each group. If a treatment takes place in a small fraction of the time, or a very large fraction of the time, then its weight in the overall $$ \hat{\beta}^{DD} $$ will be reduced. In other words, more evenly spaced treatments in each group are given more preference.
+The aim of this value is to weight the relative share of treatment within each group. If a treatment takes place in a very small fraction of the time, or a very large fraction of the time, then its weight in the overall $$ \hat{\beta} $$ will be reduced. In other words, more evenly spaced treatments in each group are given a higher preference.
 
 From the share formulas above, we can see that it is all about accouting for all sorts of weights that are then applied to the recovered 2x2 $\hat{beta}$ of each group.
 
