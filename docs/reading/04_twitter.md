@@ -16,6 +16,10 @@ nav_order: 5
 
 <br>
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">If you signed up because you were interested in attending one of my online zoom-slack workshops this coming year (see link for info), I just sent an email. If you don’t get one, it may mean the email you sent me was wrong fyi. <a href="https://t.co/bR2hdOTJAK">https://t.co/bR2hdOTJAK</a></p>&mdash; scott cunningham (@causalinf) <a href="https://twitter.com/causalinf/status/1450861835150925833?ref_src=twsrc%5Etfw">October 20, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m having trouble understanding when it is OK to estimate a DID model using TWFE when you have time-varying controls. I&#39;ve read <a href="https://twitter.com/causalinf?ref_src=twsrc%5Etfw">@causalinf</a>&#39;s Mixtape and substack, <a href="https://twitter.com/pedrohcgs?ref_src=twsrc%5Etfw">@pedrohcgs</a> and Zhao&#39;s DR DID paper (SZ), and <a href="https://twitter.com/jmwooldridge?ref_src=twsrc%5Etfw">@jmwooldridge</a>&#39;s new WP (JW), and I could use some help. (1/4)</p>&mdash; Cody Orr (@cody_orr) <a href="https://twitter.com/cody_orr/status/1450126505485475843?ref_src=twsrc%5Etfw">October 18, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br>

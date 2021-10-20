@@ -6,12 +6,22 @@ nav_order: 3
 ---
 
 
-## Events and Videos
+## Events and Workshops
 
-<!---
-[Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs). [Seminar on DiD](https://statisticalhorizons.com/seminars/public-seminars/difference-in-differences) on **24-27 August, 2021** organized by [Statistical Horizons](https://statisticalhorizons.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/StatHorizons) is now open for registeration. --->
+
+[Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs). [Seminar on DiD](https://statisticalhorizons.com/seminars/public-seminars/difference-in-differences) on **24-27 August, 2021** organized by [Statistical Horizons](https://statisticalhorizons.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/StatHorizons) is now open for registration.
+
+[Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf) is now regularly organizing DiD workshops. You can find [more information on this page](https://causalinf.substack.com/p/upcoming-workshops-on-causal-inference).
+
+[Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs). intermittently offers intensive workshops organized by [Statistical Horizons](https://statisticalhorizons.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/StatHorizons). Check their page for upcoming seminars.
 
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): [CodeChella](https://causalinf.substack.com/p/codechella-announcement) the ultimate DiD event **Workshop 1: Friday July 16th, 2021** and **Workshop 2: Friday July 23, 2021** was live on [Twitch](https://www.twitch.tv/causalinf_did). The videos from the workshop are now on [YouTube](https://www.youtube.com/user/scunning/videos).
+
+
+[Stata UK](https://www.stata-uk.com/) sometimes offers DiD workshops usually featuring Prof. Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jmwooldridge). Check their website for more details.
+
+
+## Past events, reading groups, and videos
 
 [Chloe East](https://www.chloeneast.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ChloeEast2) organizes an online [DiD reading group](https://www.chloeneast.com/metrics-discussions.html).
 
