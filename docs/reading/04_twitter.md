@@ -8,8 +8,11 @@ nav_order: 5
 
 ## Tweets
 
-*Some interesting Twitter threads chronologically sorted and in no particular order of importance. Sometimes, really important exchanges take place online that provide great insights. These views are of course subject to change or become formalized later in journal articles etc. So go through these with caution or just take them as archives of the DiD Twitter development process.*
+*Some interesting Twitter threads chronologically sorted and in no particular order of importance. Sometimes, really important exchanges take place online that provide great insights. These views are of course subject to change or become formalized later in journal articles etc. So go through these with caution or just take them as archives of the DiD development on Twitter.*
 
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Applied economists be like <a href="https://t.co/VvrR0kecOE">pic.twitter.com/VvrR0kecOE</a></p>&mdash; Khoa Vu (@KhoaVuUmn) <a href="https://twitter.com/KhoaVuUmn/status/1445595873858101253?ref_src=twsrc%5Etfw">October 6, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br>
 
@@ -145,8 +148,3 @@ nav_order: 5
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">🚨Hello <a href="https://twitter.com/hashtag/EconTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#EconTwitter</a>! I am very happy that my paper with Brantly Callaway, &quot;Difference-in-Differences with multiple time periods&quot;, is now forthcoming at the Journal of Econometrics. <a href="https://t.co/zoNxNY9ugq">https://t.co/zoNxNY9ugq</a><br><br>What are the main take aways? I will ask my daughter to help me out.<br><br>1/n <a href="https://t.co/DNj3Cpxxlu">pic.twitter.com/DNj3Cpxxlu</a></p>&mdash; Pedro H. C. Sant&#39;Anna (@pedrohcgs) <a href="https://twitter.com/pedrohcgs/status/1340006487456964608?ref_src=twsrc%5Etfw">December 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<br>
-
-Just for fun:
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Applied economists be like <a href="https://t.co/VvrR0kecOE">pic.twitter.com/VvrR0kecOE</a></p>&mdash; Khoa Vu (@KhoaVuUmn) <a href="https://twitter.com/KhoaVuUmn/status/1445595873858101253?ref_src=twsrc%5Etfw">October 6, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
