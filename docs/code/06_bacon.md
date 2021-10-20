@@ -448,13 +448,13 @@ display "weight_lU = " ((nl + nU)^2 * (nlU * (1 - nlU)) * (Dl * (1 - Dl))) / VD
 where the shares equal 0.349 and 0.267 respectively. If we add these up, they come out to 0.616. This number is not exactly the same number shown in the `bacondecomp` table *(double check the formula and fix this)*, but here we can see that this group has the highest weight as expected.
 
 
-## So where does TWFE go wrong?
+## So where do TWFE regressions go wrong?
 
-Up till now, we have looked at examples, where we have a discrete jump in the treatment. The regressions we run give us the correct estimates based on what we deduced from the examples we have used. Bacon decomposition then tells us how the $$\beta$$ coefficient is a weighted sum of various treated and untreated groups.
+Up till now, we have looked at examples, where we have a discrete jump in the treatment. In our very simple example, we ran some regressions to estimate treatment effects on afew observations that we could also recovery manually. We also went through the Bacon decomposition which told us how the $$\hat{\beta}$$ coefficient is a weighted sum of various 2x2 treated and untreated groups.
 
-But where does the TWFE model give us wrong estimates? Here we need to change the treatment effects a bit. Rather than discrete jumps, we allow treatments to take place across cohorts of units at some point in time. But rather than discrete jumps, we let the treatment effects increase over time.
+But where does the TWFE model go wrong? Here we need to change the treatment effects a bit. Rather than discrete jumps, we allow treatments to take place across cohorts of units at some point in time and we let th treatment effects gradually increase over time.
 
-Rather than using our simple example, let's scale up the problem set a bit by adding multiple ids.
+Rather than using our simple example, let's scale up the problem set a bit by adding multiple panel ids.
 
 ```applescript
 clear
@@ -505,7 +505,7 @@ gen timing = .					// when the treatment happens for each cohort
 
 First we need to define the cohorts. These are groups of $$i$$s that get treatment at the same time. Think, for example, US states where some states are given treatment simultaneously, then another cohort and so on.
 
-What we do here, is that we randomly assign a cohort. We can have as many cohorts (< $$i$$) as we want. But we add a cohort=0, that we will later use as the cohort that is never treated (we won't do this now). Let's say we want to generate 5 cohorts:
+What we do here, is that we randomly assign a cohort. We can have as many cohorts (< $$i$$) as we want. But we add a cohort=0, that we will later use as the cohort that is never treated (we won't do this now). Let's say we want to generate five cohorts:
 
 ```applescript
 levelsof id, local(lvls)
@@ -559,11 +559,9 @@ forval x = 1/`r(r)' {
 	
 	qui summ cohort if id==`x'
 	local color = `r(mean)' + 1
-	
 	colorpalette tableau, nograph
 		
 	local lines `lines' (line Y t if id==`x', lc("`r(p`color')'") lw(vthin))	||
-	
 }
 
 twoway ///
@@ -665,7 +663,6 @@ foreach x of local lvls {
 	local eff = runiformint(2,10)
 		replace effect = `eff' if cohort==`x'
 		
-		
 	local timing = runiformint(`start' + 5,`end' - 5)	
 	replace timing = `timing' if cohort==`x'
 		replace D = 1 if cohort==`x' & t>= `timing' 
@@ -681,9 +678,7 @@ and generate the graph:
 ```applescript
 levelsof cohort
 local items = `r(r)'
-
 local lines
-
 levelsof id
 
 forval x = 1/`r(r)' {
