@@ -538,7 +538,7 @@ foreach x of local lvls {
 
 Here we generate a effect size for each cohort as a random integer between 2 and 10. Could be any number range which can also be on the continuous range.
 
-The timing for each cohort is also randomly generated in the interval t=5 and t=55. This is just to make sure treatment cohorts are not very dominant, or happen for a couple of periods. As we saw from the Bacon decomposition, this is possible but their weight in the overall regression will be negligible.
+The timing for each cohort is also randomly generated in the interval t=5 and t=55. This is just to make sure treatment cohorts are not very dominant, only exist for a couple of periods.
 
 Last step, generate the outcome effects:
 
