@@ -10,7 +10,7 @@ image: "../../../assets/images/DiD.jpg"
 
 # What is Bacon decomposition?
 
-*This section still needs refining in some parts. These are highlighted.*
+*This section still needs refining/corrections in some parts. These are highlighted.*
 
 As discussed in the last example of the TWFE section, if we have different treatment timings with different treatment effects, it is not so obvious what pre and post are. Let us state this example again:
 
@@ -448,9 +448,334 @@ display "weight_lU = " ((nl + nU)^2 * (nlU * (1 - nlU)) * (Dl * (1 - Dl))) / VD
 where the shares equal 0.349 and 0.267 respectively. If we add these up, they come out to 0.616. This number is not exactly the same number shown in the `bacondecomp` table *(double check the formula and fix this)*, but here we can see that this group has the highest weight as expected.
 
 
-## Some more testing with more serious examples
+## So where does TWFE go wrong?
 
-COMING SOON!
+Up till now, we have looked at examples, where we have a discrete jump in the treatment. The regressions we run give us the correct estimates based on what we deduced from the examples we have used. Bacon decomposition then tells us how the $$\beta$$ coefficient is a weighted sum of various treated and untreated groups.
+
+But where does the TWFE model give us wrong estimates? Here we need to change the treatment effects a bit. Rather than discrete jumps, we allow treatments to take place across cohorts of units at some point in time. But rather than discrete jumps, we let the treatment effects increase over time.
+
+Rather than using our simple example, let's scale up the problem set a bit by adding multiple ids.
+
+```applescript
+clear
+local units = 30
+local start = 1
+local end 	= 60
+
+local time = `end' - `start' + 1
+local obsv = `units' * `time'
+set obs `obsv'
+
+egen id	   = seq(), b(`time')  
+egen t 	   = seq(), f(`start') t(`end') 	
+
+sort  id t
+xtset id t
+
+lab var id "Panel variable"
+lab var t  "Time  variable"
+
+```
+
+Here we have 30 units ($$i$$) and 60 time periods ($$t$$). You can increase these to which ever mangnitude. We will also do this later for testing.
+
+We can also fix the seed in case you want replicate exactly what we have here:
+
+```applescript
+set seed 13082021
+```
+
+You can of course don't need to do this but it helps some people following the code and the scripts. We will remove this later for testing as well.
+
+Let's now generate some dummy variables:
+
+```applescript
+cap drop Y
+cap drop D
+cap drop cohort
+cap drop effect
+cap drop timing
+
+gen Y 	   = 0					// outcome variable	
+gen D 	   = 0					// intervention variable
+gen cohort = .  				// total treatment variables
+gen effect = .					// treatment effect size
+gen timing = .					// when the treatment happens for each cohort
+```
+
+First we need to define the cohorts. These are groups of $$i$$s that get treatment at the same time. Think, for example, US states where some states are given treatment simultaneously, then another cohort and so on.
+
+What we do here, is that we randomly assign a cohort. We can have as many cohorts (< $$i$$) as we want. But we add a cohort=0, that we will later use as the cohort that is never treated (we won't do this now). Let's say we want to generate 5 cohorts:
+
+```applescript
+levelsof id, local(lvls)
+foreach x of local lvls {
+	local chrt = runiformint(0,5)	
+	replace cohort = `chrt' if id==`x'
+}
+```
+
+Now we need to define two things for each cohort: (a), what is the treatment "effect" size, and (b), when the treatment happens, or the "timing" variable.
+
+Let's automate this:
+
+```applescript
+levelsof cohort , local(lvls)  //  let all cohorts be treated for now
+foreach x of local lvls {
+	
+	// (a) effect
+	
+	local eff = runiformint(2,10)
+		replace effect = `eff' if cohort==`x'
+		
+	// (b) timing	
+	
+	local timing = runiformint(`start' + 5,`end' - 5)	
+	replace timing = `timing' if cohort==`x'
+		replace D = 1 if cohort==`x' & t>= `timing' 
+}
+```
+
+Here we generate a effect size for each cohort as a random integer between 2 and 10. Could be any number range which can also be on the continuous range.
+
+The timing for each cohort is also randomly generated in the interval t=5 and t=55. This is just to make sure treatment cohorts are not very dominant, or happen for a couple of periods. As we saw from the Bacon decomposition, this is possible but their weight in the overall regression will be negligible.
+
+Last step, generate the outcome effects:
+
+```applescript
+replace Y = id + t + cond(D==1, effect * (t - timing), 0)
+```
+
+Let's graph it and see what the data looks like:
+
+```applescript
+levelsof cohort
+local items = `r(r)'
+
+local lines
+levelsof id
+
+forval x = 1/`r(r)' {
+	
+	qui summ cohort if id==`x'
+	local color = `r(mean)' + 1
+	
+	colorpalette tableau, nograph
+		
+	local lines `lines' (line Y t if id==`x', lc("`r(p`color')'") lw(vthin))	||
+	
+}
+
+twoway ///
+	`lines'	///
+		,	legend(off)
+```
+
+which gives us:
+
+<img src="../../../assets/images/TWFE_bashing1.png" height="300">
+
+Each cohort is given a different color. This is passed on to the line graph via the `colorpalette` package. 
+
+In the figure we see that the green cohort gets treated early and contains a lot of ids. Orange is next but has few ids. Simiarly red and purple at the last ones to get treated. Regardless being later or early treated, the effect of the treatment is positive, albeit of different magnitudes across the different cohorts. But what happens, when we run a TWFE regression?
+
+```applescript
+xtreg Y i.t D, fe
+```
+
+Check the D coefficient. It is negative! We can also run it as follows using the `reghdfe` package:
+
+```applescript
+reghdfe Y D, absorb(id t)  
+```
+
+I have pasted the `reghdfe` regression output below (`xtreg` output was too large):
+
+```bpf
+HDFE Linear regression                            Number of obs   =      1,800
+Absorbing 2 HDFE groups                           F(   1,   1710) =      59.04
+                                                  Prob > F        =     0.0000
+                                                  R-squared       =     0.8359
+                                                  Adj R-squared   =     0.8273
+                                                  Within R-sq.    =     0.0334
+                                                  Root MSE        =    39.7334
+
+------------------------------------------------------------------------------
+           Y | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+           D |  -25.93176   3.374793    -7.68   0.000    -32.55092    -19.3126
+       _cons |   114.9349   1.997427    57.54   0.000     111.0172    118.8525
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+          id |        30           0          30     |
+           t |        60           1          59     |
+-----------------------------------------------------+
+```
+
+This is obviously wrong since we know for sure that the treatments are positive. So what is going on? Let's check using the Bacon decomposition:
+
+
+```applescript
+bacondecomp Y D, ddetail nograph
+```
+
+which gives us this graph:
+
+<img src="../../../assets/images/TWFE_bashing2.png" height="300">
+
+and spits out this table:
+
+```bpf
+Calculating treatment times...
+Calculating weights...
+Estimating 2x2 diff-in-diff regressions...
+
+Diff-in-diff estimate: -25.932  
+
+DD Comparison              Weight      Avg DD Est
+-------------------------------------------------
+Earlier T vs. Later C       0.447          56.530
+Later T vs. Earlier C       0.553         -92.545
+-------------------------------------------------
+T = Treatment; C = Control
+```
+
+Since we do not have a never treated group, we can only do "early versus late" or "later versus early" comparisons. The late versus early treatment groups are pulling the average down, right into the negative zone. They estimate negative 2x2 DiD effects have a larger weight.
+
+In this case it is obvious that the TWFE model is wrong. But it gets complicated if we have the never treated group in there as well. Let's rerun the script, but now we allow cohort=0 to be never treated:
+
+```applescript
+cap drop Y
+cap drop D
+cap drop effect
+cap drop timing
+
+gen Y 	   = 0					// outcome variable	
+gen D 	   = 0					// intervention variable
+gen effect = .					// treatment effect size
+gen timing = .					// when the treatment happens for each cohort
+
+levelsof cohort if cohort!=0, local(lvls)  //   skip cohort 0 (never treated)
+foreach x of local lvls {
+	
+	local eff = runiformint(2,10)
+		replace effect = `eff' if cohort==`x'
+		
+		
+	local timing = runiformint(`start' + 5,`end' - 5)	
+	replace timing = `timing' if cohort==`x'
+		replace D = 1 if cohort==`x' & t>= `timing' 
+}
+
+
+// generate the outcome variable
+replace Y = id + t + cond(D==1, effect * (t - timing), 0)
+```
+
+and generate the graph:
+
+```applescript
+levelsof cohort
+local items = `r(r)'
+
+local lines
+
+levelsof id
+
+forval x = 1/`r(r)' {
+	
+	qui summ cohort if id==`x'
+	local color = `r(mean)' + 1
+	
+	colorpalette tableau, nograph
+	local lines `lines' (line Y t if id==`x', lc("`r(p`color')'") lw(vthin))	||	
+}
+
+twoway ///
+	`lines'	///
+		,	legend(off)
+```
+
+which gives us:
+
+<img src="../../../assets/images/TWFE_bashing3.png" height="300">
+
+Here we see the cohort that is not treated in the blue color. The TWFE model:
+
+```applescript
+reghdfe Y D, absorb(id t)   
+```
+
+give us:
+
+```bpf
+HDFE Linear regression                            Number of obs   =      1,800
+Absorbing 2 HDFE groups                           F(   1,   1710) =     215.19
+                                                  Prob > F        =     0.0000
+                                                  R-squared       =     0.8204
+                                                  Adj R-squared   =     0.8110
+                                                  Within R-sq.    =     0.1118
+                                                  Root MSE        =    40.6805
+
+------------------------------------------------------------------------------
+           Y | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+           D |   52.36467   3.569625    14.67   0.000     45.36337    59.36596
+       _cons |   72.89326   1.628907    44.75   0.000      69.6984    76.08812
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+          id |        30           0          30     |
+           t |        60           1          59     |
+-----------------------------------------------------+
+```
+
+Or the average treatement effect of $$D=52$$. A positive value, that would not seem wrong at first glance. Let's see what the Bacon decomposition would look like:
+
+```applescript
+bacondecomp Y D, ddetail nograph
+```
+
+<img src="../../../assets/images/TWFE_bashing4.png" height="300">
+
+This graph tells us that the treated versus never treated is positive and exerts the highest weights as compared to the other two groups. But look at the Early versus Late and Late versus Early. Only very 2x2 estimates are positive. All the rest are negative.
+
+If we look at the table:
+
+```bpf
+Calculating treatment times...
+Calculating weights...
+Estimating 2x2 diff-in-diff regressions...
+
+Diff-in-diff estimate: 52.365   
+
+DD Comparison              Weight      Avg DD Est
+-------------------------------------------------
+Earlier T vs. Later C       0.247          60.451
+Later T vs. Earlier C       0.246         -78.899
+T vs. Never treated         0.506         112.204
+-------------------------------------------------
+T = Treatment; C = Control
+```
+
+We can see the interplay between the three groups. The Treated versus Never Treated group has the heighest weight. Remember from above, that this group tends to have the largest weight since it covers all the observations. But look at the Late versus early group, it is a huge negative average effect and contributes a forth to the overall estimate. And here is where the problem usually lies. TWFE models might look like they are working, since ATT are positive, but the underlying cohort weights distribution and 2x2 DiD estimates are likely diluting the actual estimates. While in this example, the average TWFE $$\hat{\beta}$$ was positive, if you remove the seeding the rerun it, you can see that in some TWFE estimates, the $$\hat{\beta}$$ values are very small and close to zero, and in very rare cases, might even time of the zero line.
+
+
+So how do we correct the $$\hat{\beta}$$? This is where the packages come in. They will be covered separately in other sections.
+
+STAY TUNED! 
+
+
+
+
+
 
 
 
