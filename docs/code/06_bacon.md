@@ -18,7 +18,7 @@ As discussed in the last example of the TWFE section, if we have different treat
 clear
 local units = 3
 local start = 1
-local end 	= 10
+local end	= 10
 
 local time = `end' - `start' + 1
 local obsv = `units' * `time'
