@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Workshops and lectures
-parent: Readings
+parent: Resources
 nav_order: 3
 ---
 
