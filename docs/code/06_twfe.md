@@ -7,10 +7,23 @@ mathjax: true
 image: "../../../assets/images/DiD.jpg"
 ---
 
+# Twoway Fixed Effects (TWFE) model
+{: .no_toc }
+
 *Under construction*. 
 *To do: homogenize symbols, add regression outputs, streamline code blocks, add Stata 17 did command option, fix Stata/Rogue integration.*
 
-# The classic 2x2 DiD or the Twoway Fixed Effects Model (TWFE)
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+## The classic 2x2 DiD or the Twoway Fixed Effects Model (TWFE)
+
+*incomplete*
 
 Let us start with the classic Twoway Fixed Effects (TWFE) model:
 
@@ -29,7 +42,11 @@ The above two by two (2x2) model can be explained using the following table:
 
 
 
-# The triple difference estimator (DDD)
+---
+
+## The triple difference estimator (DDD)
+
+*incomplete*
 
 The triple difference estimator essential takes two DDs, one with the target unit of analysis with a treated and an untreated group. This is compared to another similar group in the pre and post-treatment period. Fo effectively there are two treatments. One where an actual treatment on the desired group is tested, and a placebo comparison group, on which the same intervention is also applied.
 
@@ -71,12 +88,16 @@ where we end up with the main difference of $$ \beta_7 $$. Note that this table 
 
 ## The generic TWFE functional form:
 
+*incomplete*
+
 If we have multiple time periods and treatment units, the classic 2x2 DiD can be extended to the following generic functional form:
 
 $$ y_{it} = \alpha_{i} + \alpha_t + \beta^{TWFE} D_{it} + \epsilon_{it} $$
 
 
-## Code
+---
+
+## Stata Code
 
 Let us generate a simple 2x2 example in Stata. First step define the panel structure. Since it is a 2x2, we just need two units and two time periods:
 
@@ -125,8 +146,6 @@ twoway ///
 
 which gives us:
 
-
-
 <img src="../../../assets/images/twfe1.png" height="300">
 
 where we can see that the difference between the blue and the orange line is 3 in the post period, and 1 in the pre-period, making it a net gain of 2 units. Which also equals the treatment amount we specified.
@@ -146,6 +165,8 @@ reghdfe Y D, absorb(id t)
 ```
 
 which again gives us the same result for the D coefficient.
+
+---
 
 ## Adding more time periods
 
@@ -196,6 +217,7 @@ reghdfe Y D, absorb(id t)
 
 The `xtreg` option shows that $$ t $$ on average increases by 1 unit, which is what we expect. The intercept equals 1.5, which is the average of the blue and orange lines if they are extrapolated to $$ t = 0 $$ point. And $$ $$ \beta^{TWFE} $$ = 3 $$, the true value of the intervention effect.
 
+---
 
 ## More units, same treatment time, different treatment effects
 
@@ -319,6 +341,8 @@ reg Y D i.id		// only panel fixed effects
 reg Y D i.t i.id	// panel and time fixed effects (correct!)
 ```
 
+---
+
 ## More units, differential treatment time, different treatment effects
 
 Now let's move on to the final part: treatments with differential timings. Here we again generate a dummy dataset but get rid of panel and time fixed effects for now. As we have seen above, the regressions isolate the panel fixed effects and we recover the coefficient of interest $$ \beta^{TWFE} $$.
@@ -362,9 +386,7 @@ twoway ///
 		xline(4.5 7.5) ///
 		xlabel(1(1)10) ///
 		legend(order(1 "id=1" 2 "id=2" 3 "id=3"))		
-
 ```
-
 
 which gives us this figure:
 
@@ -399,10 +421,10 @@ which gives us the same answer of $$ \beta^{TWFE} $$ = 2.91.
 
 Let's think about this number for a bit. We have two treatments happening at different times with different treatment effects. Therefore the definition of pre and post is not clear anymore. Neither is untreated versus treated. if we look at the interval $$ 5\leq t < 8 $$, only id=2 is changing, and the other two variables are constant. But in the last interval where $$ t \geq 8, then only id=3 is showing a change, while the other two panel variables are constant in this interval (even through id=2 is treated here).
 
-It is these combinations that are unraveled in the Bacon decomposition, which is why, it is important understand the decomposition carefully.
+It is these combinations that are unraveled in the section on [Bacon decomposition](https://asjadnaqvi.github.io/DiD/docs/code/06_bacon/), which is why, it is important understand the decomposition carefully.
 
 
-LINK TO NEXT SECTION. 
+
 
 
 

@@ -7,8 +7,18 @@ mathjax: true
 image: "../../../assets/images/DiD.jpg"
 ---
 
+# Bacon decomposition
+{: .no_toc }
 
-# What is Bacon decomposition?
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+## What is Bacon decomposition?
 
 *This section still needs refining/corrections in some parts. These are highlighted.*
 
@@ -133,6 +143,7 @@ display e(dd_avg_e)*e(wt_sum_e) + e(dd_avg_l)*e(wt_sum_l) + e(dd_avg_u)*e(wt_sum
 
 we recover the original TWFE $$ \beta $$ estimate of 2.91. This table basically summarizies the contribution of Bacon decomposition, which is estimating the relative weight on each group on the overall $$ \hat{\beta} $$. 
 
+---
 
 ## The logic of the weights
 
@@ -267,6 +278,7 @@ The aim of this value is to weight the relative share of treatment within each g
 From the share formulas above, we can see that it is all about accouting for all sorts of weights that are then applied to the recovered 2x2 $\hat{beta}$ of each group.
 
 
+---
 
 ## Manual recovery of weights [this needs double checking]
 
@@ -447,6 +459,7 @@ display "weight_lU = " ((nl + nU)^2 * (nlU * (1 - nlU)) * (Dl * (1 - Dl))) / VD
 
 where the shares equal 0.349 and 0.267 respectively. If we add these up, they come out to 0.616. This number is not exactly the same number shown in the `bacondecomp` table *(double check the formula and fix this)*, but here we can see that this group has the highest weight as expected.
 
+---
 
 ## So where do TWFE regressions go wrong?
 
@@ -761,7 +774,6 @@ T = Treatment; C = Control
 ```
 
 We can see the interplay between the three groups. The Treated versus Never Treated group has the heighest weight. Remember from above, that this group tends to have the largest weight since it covers all the observations. But look at the Late versus early group, it is a huge negative average effect and contributes a forth to the overall estimate. And here is where the problem usually lies. TWFE models might look like they are working, since ATT are positive, but the underlying cohort weights distribution and 2x2 DiD estimates are likely diluting the actual estimates. While in this example, the average TWFE $$\hat{\beta}$$ was positive, if you remove the seeding the rerun it, you can see that in some TWFE estimates, the $$\hat{\beta}$$ values are very small and close to zero, and in very rare cases, might even time of the zero line.
-
 
 So how do we correct the $$\hat{\beta}$$? This is where the packages come in. They will be covered separately in other sections.
 
