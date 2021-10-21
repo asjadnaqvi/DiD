@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Readings
+title: Resources
 nav_order: 5
 has_children: true
-permalink: /docs/reading
+permalink: /docs/resources
 ---
 
 # Reading material

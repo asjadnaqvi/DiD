@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Books
-parent: Readings
+parent: Resources
 nav_order: 2
 ---
 

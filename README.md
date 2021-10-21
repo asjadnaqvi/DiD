@@ -9,7 +9,7 @@ The contents of this page are now on a dedicated website:
 
 [**https://asjadnaqvi.github.io/DiD/**](https://asjadnaqvi.github.io/DiD/) 
 
-Please update your links and bookmarks accordingly. This readme will just be used as a landing page for this GitHub repository.
+Please update your links and bookmarks accordingly. This README will just be used as a landing page for this GitHub repository.
 
 ## :bookmark_tabs: What's inside?
 This repository tracks the recent developments in the Difference-in-Difference (DiD) literature. Currently, it is just a dump of my bookmarks from different websites including Twitter, GitHub, YouTube etc. This will be sorted out over time as the literature converges to some consensus. But this might still take a while.

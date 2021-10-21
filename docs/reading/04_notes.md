@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Notes
-parent: Readings
+parent: Resources
 nav_order: 4
 ---
 

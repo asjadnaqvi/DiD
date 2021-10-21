@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Twitter
-parent: Readings
+parent: Resources
 nav_order: 5
 ---
 

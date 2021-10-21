@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Papers
-parent: Readings
+parent: Resources
 nav_order: 1
 ---
 
