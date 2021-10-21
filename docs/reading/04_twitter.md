@@ -2,7 +2,7 @@
 layout: default
 title: Twitter
 parent: Resources
-nav_order: 5
+nav_order: 4
 ---
 
 
