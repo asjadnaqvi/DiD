@@ -7,7 +7,7 @@ mathjax: true
 image: "../../../assets/images/DiD.jpg"
 ---
 
-# Twoway Fixed Effects (TWFE) model
+# The Twoway Fixed Effects (TWFE) model
 {: .no_toc }
 
 *Under construction*. 
@@ -38,7 +38,6 @@ The above two by two (2x2) model can be explained using the following table:
 | **Post = 0** |  $$ \beta_0 $$   | $$ \beta_0 + \beta_1 $$    |  $$ \beta_1 $$  |
 | **Post = 1** |  $$\beta_0 + \beta_2 $$   |  $$ \beta_0 + \beta_1 + \beta_2 + \beta_3 $$  |  $$ \beta_1 + \beta_3 $$   |
 | Difference | $$ \beta_2 $$   |  $$ \beta_2 + \beta_3 $$  | $$ \beta_3 $$   |
-
 
 
 
