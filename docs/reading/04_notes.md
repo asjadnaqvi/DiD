@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Notes
+title: Blogs, notes, and videos
 parent: Resources
 nav_order: 3
 ---
@@ -15,6 +15,8 @@ nav_order: 3
 {:toc}
 
 ---
+
+## Blogs and notes
 
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): Scott's [Substack](https://causalinf.substack.com/) is the goto place for an easy-to-digest explanation of the latest metric-heavy DiD papers.
 

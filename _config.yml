@@ -16,7 +16,6 @@ back_to_top: true
 back_to_top_text: "Back to top"
 
 # Footer content
-
 footer_content: "Content by Asjad Naqvi (2020-2021). Distributed under an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
 
 # Footer last edited timestamp
