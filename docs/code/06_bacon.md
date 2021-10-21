@@ -4,7 +4,7 @@ title: Bacon decomposition
 parent: Code
 nav_order: 2
 mathjax: true
-image: "../../../assets/images/DiD.jpg"
+image: "../../../assets/images/DiD.png"
 ---
 
 # Bacon decomposition
@@ -427,11 +427,7 @@ twoway ///
 		legend(order(4 "Late treated" 5 "Never treated"))
 ```
 
-
 <img src="../../../assets/images/bacon4.png" height="100"><img src="../../../assets/images/bacon5.png" height="100">
-
-
-
 
 We can recover the coefficients as follows:
 
