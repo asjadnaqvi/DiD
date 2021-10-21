@@ -6,7 +6,8 @@ nav_order: 4
 ---
 
 
-## Tweets
+
+# Twitter
 
 *Some interesting Twitter threads chronologically sorted and in no particular order of importance. Sometimes, really important exchanges take place online that provide great insights. These views are of course subject to change or become formalized later in journal articles etc. So go through these with caution or just take them as archives of the DiD development on Twitter.*
 

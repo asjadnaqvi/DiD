@@ -5,6 +5,16 @@ parent: Resources
 nav_order: 2
 ---
 
+# Workshops and lectures
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
 
 ## Events and Workshops
 
@@ -14,6 +24,7 @@ nav_order: 2
 
 [Stata UK](https://www.stata-uk.com/) sometimes offers DiD workshops usually featuring Prof. Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jmwooldridge). Check their website for more details.
 
+---
 
 ## Past events, reading groups, and videos
 
