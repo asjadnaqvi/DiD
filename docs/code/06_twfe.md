@@ -86,7 +86,7 @@ Let's take the difference between the two matrices or (C = 1) - (C = 0):
 
 where we end up with the main difference of $$ \beta_7 $$. Note that this table logic is also far simpler than having a long list of expectations defined for each combination.
 
-## The generic TWFE functional form:
+## The generic TWFE functional form
 
 *incomplete*
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Code
+title: Notes and Stata code
 nav_order: 6
 permalink: /docs/code
 has_children: true
@@ -8,7 +8,7 @@ mathjax: true
 image: "../../../assets/images/DiD.jpg"
 ---
 
-# Theory and Stata code
+# Notes and Stata code
 
 *This page is currently under construction, and is being live updated, so things are moving around. Use the material at your own risk!*
 
