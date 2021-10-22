@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Workshops and lectures
+title: Workshops and videos
 parent: Resources
 nav_order: 2
 ---

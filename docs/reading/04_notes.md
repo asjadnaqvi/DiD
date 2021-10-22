@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Blogs, notes, and videos
+title: Blogs and notes
 parent: Resources
 nav_order: 3
 ---
