@@ -63,10 +63,6 @@ nav_order: 4
 
 <br>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Clarified in my substack what I *think* <a href="https://twitter.com/Andrew___Baker?ref_src=twsrc%5Etfw">@Andrew___Baker</a> et al mean by controlling for &quot;cohort-by-state fixed effects&quot; (or at least, that is what <a href="https://twitter.com/jeffreypclemens?ref_src=twsrc%5Etfw">@jeffreypclemens</a> and <a href="https://twitter.com/MichaelRStrain?ref_src=twsrc%5Etfw">@MichaelRStrain</a> call it). Imagine you have 10 groups. You center group 1 and include all untreated controls</p>&mdash; scott cunningham (@causalinf) <a href="https://twitter.com/causalinf/status/1441770373306060800?ref_src=twsrc%5Etfw">September 25, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<br>
-
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">My substack on Cengiz, <a href="https://twitter.com/arindube?ref_src=twsrc%5Etfw">@arindube</a> and <a href="https://twitter.com/benzipperer?ref_src=twsrc%5Etfw">@benzipperer</a> (2019), <a href="https://twitter.com/jeffreypclemens?ref_src=twsrc%5Etfw">@jeffreypclemens</a> and Strain (2021) and Callaway and <a href="https://twitter.com/pedrohcgs?ref_src=twsrc%5Etfw">@pedrohcgs</a> (2020) regarding the minimum wage is up. Apologies it&#39;s so long. I bit off a lot to chew. <a href="https://t.co/gQ6MMauQyW">https://t.co/gQ6MMauQyW</a></p>&mdash; scott cunningham (@causalinf) <a href="https://twitter.com/causalinf/status/1441400918499643396?ref_src=twsrc%5Etfw">September 24, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br>
@@ -123,9 +119,6 @@ nav_order: 4
 
 <br>
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The diff-in-diff literature is plagued with the notion that more controls are always better (as long as the treatment effect has 2 stars). Someone please write a version of this <a href="https://twitter.com/yudapearl?ref_src=twsrc%5Etfw">@yudapearl</a> paper aimed at the assumptions &amp; examples of DiD. <a href="https://twitter.com/hashtag/EconTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#EconTwitter</a> <a href="https://t.co/JfxQHGlxgw">https://t.co/JfxQHGlxgw</a></p>&mdash; Arthur Lewbel (@lewbel) <a href="https://twitter.com/lewbel/status/1420725923922468866?ref_src=twsrc%5Etfw">July 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-<br>
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The diff-in-diff literature is plagued with the notion that more controls are always better (as long as the treatment effect has 2 stars). Someone please write a version of this <a href="https://twitter.com/yudapearl?ref_src=twsrc%5Etfw">@yudapearl</a> paper aimed at the assumptions &amp; examples of DiD. <a href="https://twitter.com/hashtag/EconTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#EconTwitter</a> <a href="https://t.co/JfxQHGlxgw">https://t.co/JfxQHGlxgw</a></p>&mdash; Arthur Lewbel (@lewbel) <a href="https://twitter.com/lewbel/status/1420725923922468866?ref_src=twsrc%5Etfw">July 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 

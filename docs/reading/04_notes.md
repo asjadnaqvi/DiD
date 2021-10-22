@@ -39,6 +39,6 @@ Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 These (related) interactive R-Shiny dashboards showcase how TWFE models give the wrong estimates.
 
-[Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts): https://kyle-butts.shinyapps.io/did_twfe/
+[Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts): [https://kyle-butts.shinyapps.io/did_twfe](https://kyle-butts.shinyapps.io/did_twfe)
 
-[Hans Henrik Sievertsen](https://hhsievertsen.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/hhsievertsen): https://hhsievertsen.shinyapps.io/kylebutts_did_eventstudy/
+[Hans Henrik Sievertsen](https://hhsievertsen.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/hhsievertsen): [https://hhsievertsen.shinyapps.io/kylebutts_did_eventstudy](https://hhsievertsen.shinyapps.io/kylebutts_did_eventstudy)
