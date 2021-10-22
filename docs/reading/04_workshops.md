@@ -2,6 +2,7 @@
 layout: default
 title: Workshops and videos
 parent: Resources
+youtubeId: eiffOVbYvNc
 nav_order: 2
 ---
 
@@ -30,7 +31,7 @@ nav_order: 2
 
 Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/metrics52) has a very cool [animated video on DiD here](https://www.youtube.com/watch?v=eiffOVbYvNc).
 
-{% include youtubePlayer.html id=page.eiffOVbYvNc %}
+{% include youtubePlayer.html id=page.youtubeId %}
 
 
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): [CodeChella](https://causalinf.substack.com/p/codechella-announcement) the ultimate DiD event **Workshop 1: Friday July 16th, 2021** and **Workshop 2: Friday July 23, 2021** was live on [Twitch](https://www.twitch.tv/causalinf_did). The videos from the workshop are now on [YouTube](https://www.youtube.com/user/scunning/videos).
