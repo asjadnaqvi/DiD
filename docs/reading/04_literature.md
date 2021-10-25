@@ -62,11 +62,13 @@ Xavier D’Haultfoeuille, Stefan Hoderlein, Yuya Sasaki (2021). [Nonparametric D
 
 Hans Fricke (2017). [Identification based on difference-in-differences approaches with multiple treatments](https://onlinelibrary.wiley.com/doi/abs/10.1111/obes.12178). Oxford Bulletin of Economics and Statistics.
 
-Pamela Jakiela (2021). [Simple Diagnostics for Two-Way Fixed Effects](https://arxiv.org/abs/2103.13229)
-
 [John Gardner](https://jrgcmu.github.io/) (2021). [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf).
 
 [Andrew Goodman-Bacon](http://goodman-bacon.com/) (2021). [Difference-in-differences with variation in treatment timing](https://www.sciencedirect.com/science/article/abs/pii/S0304407621001445). Journal of Econometrics.
+
+Pamela Jakiela (2021). [Simple Diagnostics for Two-Way Fixed Effects](https://arxiv.org/abs/2103.13229)
+
+Michelle Marcus, Pedro H. C. Sant’Anna (2021). [The Role of Parallel Trends in Event Study Settings: An Application to Environmental Economics](https://www.journals.uchicago.edu/doi/10.1086/711509). Journal of the Association of Environmental and Resource Economists.
 
 [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44) (2021). [Pre-test with Caution: Event-study Estimates After Testing for Parallel Trends](https://jonathandroth.github.io/assets/files/roth_pretrends_testing.pdf).
 
