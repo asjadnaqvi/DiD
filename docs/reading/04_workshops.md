@@ -29,9 +29,6 @@ nav_order: 2
 
 ## Past events, reading groups, and videos
 
-Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/metrics52) has a very cool [animated video on DiD here](https://www.youtube.com/watch?v=eiffOVbYvNc).
-
-{% include youtubePlayer.html id=page.youtubeId %}
 
 [Jorge Perez Perez](https://jorgeperezperez.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jorpppp) has a [YouTube series](https://www.youtube.com/playlist?list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx) with his co-authors (see `xtevent` in the Stata section for paper and package) on event studies with the following sequence of videos:
 
@@ -43,10 +40,21 @@ Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 * Jorge Perez Perez: [Performance of Different Estimators](https://www.youtube.com/watch?v=aZCXxwUQH7U&list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx&index=6)
 * Simon Freyaldenhoven: [Heterogeneous Policy Effects](https://www.youtube.com/watch?v=P-nAUIyhujY&list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx&index=7)
 
+<br>
+
+Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/metrics52) has a very cool [animated video on DiD here](https://www.youtube.com/watch?v=eiffOVbYvNc).
+
+{% include youtubePlayer.html id=page.youtubeId %}
+
+<br>
 
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): [CodeChella](https://causalinf.substack.com/p/codechella-announcement) the ultimate DiD event **Workshop 1: Friday July 16th, 2021** and **Workshop 2: Friday July 23, 2021** was live on [Twitch](https://www.twitch.tv/causalinf_did). The videos from the workshop are now on [YouTube](https://www.youtube.com/user/scunning/videos).
 
+<br>
+
 [Chloe East](https://www.chloeneast.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ChloeEast2) organizes an online [DiD reading group](https://www.chloeneast.com/metrics-discussions.html).
+
+<br>
 
 [Taylor J. Wright](https://taylorjwright.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/taylor_wright) organizes an online [DiD reading group](https://taylorjwright.github.io/did-reading-group/). The lectures can be viewed on [YouTube](https://www.youtube.com/channel/UCA7Idy0MfpP-uAjOebsFVuA/videos). Here is a playlist in the order they appear:
 
