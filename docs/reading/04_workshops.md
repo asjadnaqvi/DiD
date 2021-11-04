@@ -33,7 +33,7 @@ Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 {% include youtubePlayer.html id=page.youtubeId %}
 
-[Jorge Perez Perez](https://jorgeperezperez.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jorpppp) has a [YouTube series](https://www.youtube.com/playlist?list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx) with his co-authors (see `xtevent` in Stata section for paper and package) on event studies with the following sequence of videos:
+[Jorge Perez Perez](https://jorgeperezperez.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jorpppp) has a [YouTube series](https://www.youtube.com/playlist?list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx) with his co-authors (see `xtevent` in the Stata section for paper and package) on event studies with the following sequence of videos:
 
 * Jesse Shapiro, Christian Hansen: [Introduction to Linear Panel Event-Study Designs](https://www.youtube.com/watch?v=hOIB3PwntYg&list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx&index=1)
 * Jorge Perez Perez: [Event-Study Plots: Basics](https://www.youtube.com/watch?v=pAOhWWiuhM8&list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx&index=2)
