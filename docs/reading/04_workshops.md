@@ -33,6 +33,16 @@ Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 {% include youtubePlayer.html id=page.youtubeId %}
 
+[Jorge Perez Perez](https://jorgeperezperez.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jorpppp) has a [YouTube series](https://www.youtube.com/playlist?list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx) with his co-authors (see `xtevent` in Stata section for paper and package) on event studies with the following sequence of videos:
+
+* Jesse Shapiro, Christian Hansen: [Introduction to Linear Panel Event-Study Designs](https://www.youtube.com/watch?v=hOIB3PwntYg&list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx&index=1)
+* Jorge Perez Perez: [Event-Study Plots: Basics](https://www.youtube.com/watch?v=pAOhWWiuhM8&list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx&index=2)
+* Simon Freyaldenhoven: [Event-Study Plots: Suggestions](https://www.youtube.com/watch?v=PfMXAC3OGow&list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx&index=3)
+* Simon Freyaldenhoven: [Approaches without Proxies or Instruments](https://www.youtube.com/watch?v=pXJisUpHi7Q&list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx&index=4)
+* Jorge Perez Perez: [Approaches with Proxies or Instrumental Variables](https://www.youtube.com/watch?v=-HvaBoLhIMc&list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx&index=5)
+* Jorge Perez Perez: [Performance of Different Estimators](https://www.youtube.com/watch?v=aZCXxwUQH7U&list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx&index=6)
+* Simon Freyaldenhoven: [Heterogeneous Policy Effects](https://www.youtube.com/watch?v=P-nAUIyhujY&list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx&index=7)
+
 
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): [CodeChella](https://causalinf.substack.com/p/codechella-announcement) the ultimate DiD event **Workshop 1: Friday July 16th, 2021** and **Workshop 2: Friday July 23, 2021** was live on [Twitch](https://www.twitch.tv/causalinf_did). The videos from the workshop are now on [YouTube](https://www.youtube.com/user/scunning/videos).
 

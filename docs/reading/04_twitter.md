@@ -17,6 +17,10 @@ nav_order: 4
 
 <br>
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I recently dug into <a href="https://twitter.com/TymonSloczynski?ref_src=twsrc%5Etfw">@TymonSloczynski</a>&#39;s awesome and mind-bending paper, &quot;Interpreting OLS Estimands When Treatment Effects Are Heterogeneous: Smaller Groups Get Larger Weights<a href="https://t.co/GEaSMYRsNn">https://t.co/GEaSMYRsNn</a><br><br>I had to make some graphs to figure it out and I do love to share a good graph! <a href="https://t.co/T6GWbp9Hoy">pic.twitter.com/T6GWbp9Hoy</a></p>&mdash; Andrew Goodman-Bacon (@agoodmanbacon) <a href="https://twitter.com/agoodmanbacon/status/1455262252441948164?ref_src=twsrc%5Etfw">November 1, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">If you signed up because you were interested in attending one of my online zoom-slack workshops this coming year (see link for info), I just sent an email. If you don’t get one, it may mean the email you sent me was wrong fyi. <a href="https://t.co/bR2hdOTJAK">https://t.co/bR2hdOTJAK</a></p>&mdash; scott cunningham (@causalinf) <a href="https://twitter.com/causalinf/status/1450861835150925833?ref_src=twsrc%5Etfw">October 20, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br>
