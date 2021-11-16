@@ -232,7 +232,7 @@ In the paper, three additional formulas are provided for dealing with the three 
 
 *   Early treatment versus late control ($$ T^e $$ vs $$ C^l $$)
 
-$$  s_{el} = \frac{ ((n_e + n_l)(1 - \bar{D}_l))^2  n_{el} (1 - n_{el}) \frac{\bar{D}_e - \bar{D}_l}{1 - \bar{D}_l} \frac{1 - \bar{D}_e}{1 - \bar{D}_l}  }{\hat{V}^D}  $$
+$$  s_{el} = \frac{((n_e + n_l)(1 - \bar{D}_l))^2  n_{el} (1 - n_{el}) \frac{\bar{D}_e - \bar{D}_l}{1 - \bar{D}_l} \frac{1 - \bar{D}_e}{1 - \bar{D}_l}  }{\hat{V}^D}  $$
 
 
 *   Late treatment versus early control ($$ T^l $$ vs $$ C^e $$)
@@ -314,7 +314,7 @@ So what is happening in this figure? We see that the id=2 variable which was tre
 
  Since we know from above, that the formula for this setting is:
  
- $$  s_{le} = \frac{ ((n_e + n_l)\bar{D}_e))^2  n_{el} (1 - n_{el}) \frac{\bar{D}_l}{\bar{D}_e} \frac{\bar{D}_e - \bar{D}_l}{1 - \bar{D}_e}  }{\hat{V}^D}  $$
+ $$  s_{le} = \frac{ ((n_e + n_l)\bar{D}_e))^2  n_{el} (1 - n_{el}) \frac{\bar{D}_l}{\bar{D}_e} \frac{\bar{D}_e - \bar{D}_l}{\bar{D}_e}  }{\hat{V}^D}  $$
 
 we can define the values manually as follows:
 
