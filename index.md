@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Difference-in-Differences (DiD)
+title: Difference-in-Difference (DiD)
 nav_order: 1
 description: "Welcome to the DiD revolution. Sit back and enjoy the ride."
 image: "/assets/images/DiD.jpg"
