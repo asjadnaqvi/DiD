@@ -2,7 +2,7 @@
 layout: default
 title: Welcome to DiD
 nav_order: 1
-description: "Welcome to the DiD repository"
+description: "Welcome to the DiD revolution. Sit back and enjoy the ride."
 image: "/assets/images/DiD.jpg"
 permalink: /
 ---
