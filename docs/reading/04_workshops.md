@@ -1,13 +1,17 @@
 ---
 layout: default
-title: Workshops and online lectures
+title: Workshops and videos
 parent: Resources
 youtubeId: eiffOVbYvNc
 nav_order: 2
 ---
 
-# Workshops and lectures
+# Workshops and videos
 {: .no_toc }
+
+If you are the listening type, then in this section you will find plenty of resources to help you catch up with the latest in DiD.
+
+
 
 ## Table of contents
 {: .no_toc .text-delta }
@@ -21,9 +25,9 @@ nav_order: 2
 
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf) is now regularly organizing DiD workshops. You can find more information [here](https://causalinf.substack.com/p/upcoming-workshops-on-causal-inference).
 
-[Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs). intermittently offers DiD workshops. Follow his Twitter for announcements.
+[Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs). sometimes offers DiD workshops. Follow his Twitter for announcements.
 
-Prof. Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jmwooldridge) intermittently offers DiD workshops. Follow his Twitter for announcements.
+Prof. Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jmwooldridge) sometimes offers DiD workshops. Follow his Twitter for announcements.
 
 
 
@@ -47,7 +51,7 @@ Prof. Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/si
 
 <br>
 
-Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/metrics52) has a very cool [animated video on DiD here](https://www.youtube.com/watch?v=eiffOVbYvNc).
+Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/metrics52) has an [animated video on DiD here](https://www.youtube.com/watch?v=eiffOVbYvNc).
 
 
 <br>
