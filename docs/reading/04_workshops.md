@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Workshops and videos
+title: Workshops and online lectures
 parent: Resources
 youtubeId: eiffOVbYvNc
 nav_order: 2
@@ -21,16 +21,21 @@ nav_order: 2
 
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf) is now regularly organizing DiD workshops. You can find more information [here](https://causalinf.substack.com/p/upcoming-workshops-on-causal-inference).
 
-[Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs). intermittently offers intensive workshops organized by [Statistical Horizons](https://statisticalhorizons.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/StatHorizons). Check their page for upcoming seminars.
+[Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs). intermittently offers DiD workshops. Follow his Twitter for announcements.
 
-[Stata UK](https://www.stata-uk.com/) sometimes offers DiD workshops usually featuring Prof. Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jmwooldridge). Check their website for more details.
+Prof. Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jmwooldridge) intermittently offers DiD workshops. Follow his Twitter for announcements.
+
+
 
 ---
 
-## Past events, reading groups, and videos
+## Videos and online lectures
 
 
-[Jorge Perez Perez](https://jorgeperezperez.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jorpppp) has a [YouTube series](https://www.youtube.com/playlist?list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx) with his co-authors (see `xtevent` in the Stata section for paper and package) on event studies with the following sequence of videos:
+[Ben Elsner](https://www.benjaminelsner.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ben_elsner) has a [YouTube lecture series](https://www.youtube.com/playlist?list=PLyvUJLHD8IsJCB7ALqwjRG1BjL5JxE__H) on causal inference including the new DiD literature.
+
+
+[Jorge Perez Perez](https://jorgeperezperez.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jorpppp) has a [YouTube lecture series](https://www.youtube.com/playlist?list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx) with his co-authors (see `xtevent` in the Stata section for paper and package) on event studies with the following sequence of videos:
 
 * Jesse Shapiro, Christian Hansen: [Introduction to Linear Panel Event-Study Designs](https://www.youtube.com/watch?v=hOIB3PwntYg&list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx&index=1)
 * Jorge Perez Perez: [Event-Study Plots: Basics](https://www.youtube.com/watch?v=pAOhWWiuhM8&list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx&index=2)
@@ -44,15 +49,16 @@ nav_order: 2
 
 Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/metrics52) has a very cool [animated video on DiD here](https://www.youtube.com/watch?v=eiffOVbYvNc).
 
-{% include youtubePlayer.html id=page.youtubeId %}
+
+<br>
+
+[Paul Goldsmith-Pinkham](https://paulgp.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/paulgp) has a brilliant set of [slides on empirical methods including DiD on GitHub](https://github.com/paulgp/applied-methods-phd). These are also supplemented by his [YouTube lecture series](https://www.youtube.com/playlist?list=PLWWcL1M3lLlojLTSVf2gGYQ_9TlPyPbiJ).
 
 <br>
 
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): [CodeChella](https://causalinf.substack.com/p/codechella-announcement) the ultimate DiD event **Workshop 1: Friday July 16th, 2021** and **Workshop 2: Friday July 23, 2021** was live on [Twitch](https://www.twitch.tv/causalinf_did). The videos from the workshop are now on [YouTube](https://www.youtube.com/user/scunning/videos).
 
-<br>
 
-[Chloe East](https://www.chloeneast.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ChloeEast2) organizes an online [DiD reading group](https://www.chloeneast.com/metrics-discussions.html).
 
 <br>
 
@@ -67,3 +73,7 @@ Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 * John Gardner: [Two-stage differences in differences](https://www.youtube.com/watch?v=6mVfQkmpghY&list=PLVObvb_htcuBt8mV9yNagt7hK9FL5KXeE&index=7). *11 July 2021*.
 * Brantly Callaway: [Difference-in-Differences with a Continuous Treatment](https://www.youtube.com/watch?v=mbEJuCFCgXo&list=PLVObvb_htcuBt8mV9yNagt7hK9FL5KXeE&index=8). *6 August 2021*.
 * Clément de Chaisemartin: [Two-way Fixed Effects Regressions with Several Treatments](https://www.youtube.com/watch?v=UHeJoc27qEM&list=PLVObvb_htcuBt8mV9yNagt7hK9FL5KXeE&index=9). *4 September 2021*.
+
+<br>
+
+[Chloe East](https://www.chloeneast.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ChloeEast2) organizes an online [DiD reading group](https://www.chloeneast.com/metrics-discussions.html).

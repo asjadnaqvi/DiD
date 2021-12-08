@@ -17,7 +17,23 @@ nav_order: 4
 
 <br>
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">You feel a bit lost in the recent whirlwind of TWFE/DID papers? Our new, short survey of this literature may help you! <a href="https://t.co/MX8rVP8lda">https://t.co/MX8rVP8lda</a><br>Here is a short thread on what is/isn&#39;t in the survey 1/n</p>&mdash; Clément de Chaisemartin (@CdeChaisemartin) <a href="https://twitter.com/CdeChaisemartin/status/1468593836976971780?ref_src=twsrc%5Etfw">December 8, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/EconTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#EconTwitter</a> Public Good Alert: I have created an online course in <a href="https://twitter.com/hashtag/causalinference?src=hash&amp;ref_src=twsrc%5Etfw">#causalinference</a> (my 2020 lockdown project). The course is based on Mostly Harmless Econometrics and <a href="https://twitter.com/causalinf?ref_src=twsrc%5Etfw">@causalinf</a> &#39;s Mixtape, and covers basics of canonical research designs (IV, RDD, DiD, SC) 1/2</p>&mdash; Ben Elsner (@ben_elsner) <a href="https://twitter.com/ben_elsner/status/1468144703313006592?ref_src=twsrc%5Etfw">December 7, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I recently dug into <a href="https://twitter.com/TymonSloczynski?ref_src=twsrc%5Etfw">@TymonSloczynski</a>&#39;s awesome and mind-bending paper, &quot;Interpreting OLS Estimands When Treatment Effects Are Heterogeneous: Smaller Groups Get Larger Weights<a href="https://t.co/GEaSMYRsNn">https://t.co/GEaSMYRsNn</a><br><br>I had to make some graphs to figure it out and I do love to share a good graph! <a href="https://t.co/T6GWbp9Hoy">pic.twitter.com/T6GWbp9Hoy</a></p>&mdash; Andrew Goodman-Bacon (@agoodmanbacon) <a href="https://twitter.com/agoodmanbacon/status/1455262252441948164?ref_src=twsrc%5Etfw">November 1, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Time to retweet this again. In the ESTIMATE_DiD folder I&#39;ve posted a video (about 100 minutes) on treatment effect estimation -- as background to the DiD course starting on 12/14. It&#39;s certainly not perfect but hopefully adequate for those wanting a refresher. <a href="https://t.co/Z2oe6s6BKP">https://t.co/Z2oe6s6BKP</a></p>&mdash; Jeffrey Wooldridge (@jmwooldridge) <a href="https://twitter.com/jmwooldridge/status/1467947575139393539?ref_src=twsrc%5Etfw">December 6, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/EconTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#EconTwitter</a> check out the 1st draft of my book <a href="https://twitter.com/hashtag/CausalAnalysis?src=hash&amp;ref_src=twsrc%5Etfw">#CausalAnalysis</a>, covering methods of <a href="https://twitter.com/hashtag/CausalInference?src=hash&amp;ref_src=twsrc%5Etfw">#CausalInference</a>/<a href="https://twitter.com/hashtag/PolicyEvaluation?src=hash&amp;ref_src=twsrc%5Etfw">#PolicyEvaluation</a> (also trends like <a href="https://twitter.com/hashtag/CausalMachineLearning?src=hash&amp;ref_src=twsrc%5Etfw">#CausalMachineLearning</a>) and including practical examples in R (<a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a>) - here&#39;s the link: <a href="https://t.co/b0EpXziovL">https://t.co/b0EpXziovL</a><a href="https://twitter.com/hashtag/EpiTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#EpiTwitter</a> <a href="https://twitter.com/hashtag/CausalTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#CausalTwitter</a></p>&mdash; MartinHuber (@CausalHuber) <a href="https://twitter.com/CausalHuber/status/1463235219167662084?ref_src=twsrc%5Etfw">November 23, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 <br>
 
