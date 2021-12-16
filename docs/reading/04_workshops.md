@@ -36,6 +36,8 @@ Prof. Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/si
 ## Videos and online lectures
 
 
+[YoungStatS DiD workshop recording](https://www.youtube.com/watch?v=I5wt3eE5Q5I) from 15 Dec 2021 featuring a star lineup. If you want to catch up on where the literature stands, this is probably the best video to watch.
+
 [Ben Elsner](https://www.benjaminelsner.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ben_elsner) has a [YouTube lecture series](https://www.youtube.com/playlist?list=PLyvUJLHD8IsJCB7ALqwjRG1BjL5JxE__H) on causal inference including the new DiD literature.
 
 
