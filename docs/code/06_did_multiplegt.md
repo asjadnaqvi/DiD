@@ -91,7 +91,7 @@ For a comprehensive overview of the advanced controls, please see the help file 
 | save_results(*path*) |  |
 
 
-For other stored results see:
+For stored results see:
 
 ```applescript
 ereturn list
@@ -101,21 +101,21 @@ ereturn list
 
 ### A simple example
 
-Let's start by generating a simple data set, following the code from earlier examples:
+Let's start by generating a simple data set:
 
 
 ```applescript
 clear
 local units = 3
 local start = 1
-local end 	= 10
+local end   = 10
 
 local time = `end' - `start' + 1
 local obsv = `units' * `time'
 set obs `obsv'
 
-egen id	   = seq(), b(`time')  
-egen t 	   = seq(), f(`start') t(`end') 	
+egen id	= seq(), b(`time')  
+egen t 	= seq(), f(`start') t(`end') 	
 
 gen D = 0
 replace D = 1 if id==2 & t>=5
@@ -200,8 +200,6 @@ DID estimators of the instantaneous treatment effect, of dynamic treatment effec
 is used, and of placebo tests of the parallel trends assumption if the placebo option is used. The estimators
  are robust to heterogeneous effects, and to dynamic effects if the robust_dynamic option is used.
 
-
-
              |  Estimate         SE      LB CI      UB CI          N  Switchers 
 -------------+------------------------------------------------------------------
     Effect_0 |        21   8.709065   3.930232   38.06977          5          2 
@@ -230,14 +228,6 @@ egen t 	   = seq(), f(`start') t(`end')
 sort  id t
 xtset id t
 
-
-lab var id "Panel variable"
-lab var t  "Time  variable"
-
-
-// generate the intervention time
-
-
 set seed 20211220  // to control the outputs
 
 // gen cohorts
@@ -247,19 +237,17 @@ cap drop cohort
 cap drop effect
 cap drop timing
 
-gen Y 	   = 0					// outcome variable	
-gen D 	   = 0					// intervention variable
-gen cohort = .  				// total treatment variables
-gen effect = .					// treatment effect size
-gen timing = .					// when the treatment happens for each cohort
-
+gen Y 	   = 0		// outcome variable	
+gen D 	   = 0		// intervention variable
+gen cohort = .  	// total treatment variables
+gen effect = .		// treatment effect size
+gen timing = .		// when the treatment happens for each cohort
 
 levelsof id, local(lvls)
 foreach x of local lvls {
 	local chrt = runiformint(0,5)	
 	replace cohort = `chrt' if id==`x'
 }
-
 
 levelsof cohort , local(lvls)  //  if cohort!=0 skip cohort 0 (never treated)
 foreach x of local lvls {
