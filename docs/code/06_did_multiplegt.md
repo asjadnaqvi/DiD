@@ -82,9 +82,10 @@ For a comprehensive overview of the advanced controls, please see the help file 
 | count_switchers_tot |   |
 | discount(*#*) |   |
 
-### Post estimation 
+## Post estimation 
 
 | Option | Description |
+| ----- | ----- |
 | jointtestplacebo |  |
 | graphoptions(*string*) |  |
 | save_results(*path*) |  |
