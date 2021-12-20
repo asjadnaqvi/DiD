@@ -773,15 +773,6 @@ We can see the interplay between the three groups. The Treated versus Never Trea
 
 So how do we correct the $$\hat{\beta}$$? This is where the packages come in. They will be covered separately in other sections.
 
-STAY TUNED! 
 
-
-
-
-
-
-
-
-
-
+*INCOMPLETE*
 
