@@ -24,7 +24,7 @@ The *did_multipegt* command by Chaisemartin and D'Haultfoeuille (henceforth CD) 
 
 The command is very comprehesive, encompassing different estimation techniques derived from various CD papers. While a basic use is provided here, for more advanced applications, a careful reading of the papers a must. Furthermore, since applications are almost non-existent, little can be said on the practicalities of how and when to apply the advance options. Overall, the command is extremely slow. This has to do with the fact that standard errors require bootstrap replications, and adding additional options multiplies the number of estimations, on top of the timing group combinations, that are done in the background.
 
-## Installation and basic options
+## Installation and options
 
 ```applescript
 ssc install did_multiplegt, replace
@@ -52,7 +52,7 @@ where
 | D | treatment dummy variable (=1 if treated) |
 
 
-## The core DiD controls
+### The core DiD controls
 
 | Option | Description |
 | ----- | ----- |
@@ -60,10 +60,10 @@ where
 |   dynamic(*#*) | Number of lags to be estimated |
 |    placebo(*#*) | Number of leads to be estimated |
 | breps(*#*) | Number of bootstrap replications (required for estimating standard errors) |
-| seed(*#*)  | To control the replication of breps |
+| seed(*#*)  | For the replication of breps |
 | cluster(*varname*) | cluster variable at the panel ID or higher level |
 
-## Advance controls
+### Advance controls
 
 For a comprehensive overview of the advanced controls, please see the help file and the related papers.
 
@@ -82,7 +82,7 @@ For a comprehensive overview of the advanced controls, please see the help file 
 | count_switchers_tot |   |
 | discount(*#*) |   |
 
-## Post estimation 
+### Post estimation 
 
 | Option | Description |
 | ----- | ----- |
@@ -97,8 +97,9 @@ For other stored results see:
 ereturn list
 ```
 
+## Examples
 
-## A simple example
+### A simple example
 
 Let's start by generating a simple data set, following the code from earlier examples:
 
@@ -209,7 +210,7 @@ is used, and of placebo tests of the parallel trends assumption if the placebo o
 
 
 
-## A more complicated example
+### A more complicated example
 
 Here we generate an example with continuous interventions:
 
@@ -265,8 +266,7 @@ foreach x of local lvls {
 	
 	local eff = runiformint(2,10)
 		replace effect = `eff' if cohort==`x'
-		
-		
+			
 	local timing = runiformint(`start' + 5,`end' - 5)	
 	replace timing = `timing' if cohort==`x'
 		replace D = 1 if cohort==`x' & t>= `timing' 
@@ -292,8 +292,7 @@ reghdfe Y D, absorb(id t)
 
 which gives us a negative ATT, which is obviously wrong:
 
-```
-
+```xml
 (MWFE estimator converged in 2 iterations)
 
 HDFE Linear regression                            Number of obs   =      1,800
