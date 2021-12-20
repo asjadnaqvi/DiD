@@ -44,59 +44,50 @@ did_multiplegt Y G T D
 
 where 
 
-Y | outcome variable
-G | group variable
-T | time variable 
-D | treatment dummy variable (=1 if treated)
+| Variable | Description |
+| ----- | ----- |
+| Y | outcome variable |
+| G | group variable |
+| T | time variable  |
+| D | treatment dummy variable (=1 if treated) |
 
 
 ## The core DiD controls
 
-robust_dynamic  | If this is not specified, the C&D 2020a estimator is calculated, otherwise the C&D 2020b estimator is used.
-   dynamic(*#*) | Number of lags to be estimated
-   placebo(*#*) | Number of leads to be estimated
-
-
-breps(*#*) | Number of bootstrap replications (required for estimating standard errors)
-seed(*#*)  | To control the replication of breps.
-
-cluster(*varname*) | cluster variable at the panel ID or higher level.
+| Option | Description |
+| ----- | ----- |
+| robust_dynamic  | If this is not specified, the C&D 2020a estimator is calculated, otherwise the C&D 2020b estimator is used |
+|   dynamic(*#*) | Number of lags to be estimated |
+|    placebo(*#*) | Number of leads to be estimated |
+| breps(*#*) | Number of bootstrap replications (required for estimating standard errors) |
+| seed(*#*)  | To control the replication of breps |
+| cluster(*varname*) | cluster variable at the panel ID or higher level |
 
 ## Advance controls
 
 For a comprehensive overview of the advanced controls, please see the help file and the related papers.
 
-average_effect | The average effect of staying treated (robust_dynamic is required).
-
-longdiff_placebo | For testing wehether parallel trends hold over a longer set of leads (robust_dynamic is required)
-
-controls(*varlist*) | Like most of the recent DiD estimators, the use of the controls is a bit complex. See the help file.
-
-trends_nonparam(*varlist*) |
-
-trends_lin(*varlist*) |
-
-recat_treatment(*varlist*) |
-
-threshold_stable_treatment(*#*) |
-
-if_first_diff(*string*) |
-
-count_switchers_contr |
- 
-switchers(*in* or *out*) |
-
-count_switchers_tot |
-
-discount(*#*) |
+| Option | Description |
+| ----- | ----- |
+| average_effect | The average effect of staying treated (robust_dynamic is required) |
+| longdiff_placebo | For testing wehether parallel trends hold over a longer set of leads (robust_dynamic is required) |
+| controls(*varlist*) | Like most of the recent DiD estimators, the use of the controls is a bit complex. See the help file |
+| trends_nonparam(*varlist*) |  |
+| trends_lin(*varlist*) |   |
+| recat_treatment(*varlist*) |   |
+| threshold_stable_treatment(*#*) |   |
+| if_first_diff(*string*) |   |
+| count_switchers_contr |   |
+| switchers(*in* or *out*) |   |
+| count_switchers_tot |   |
+| discount(*#*) |   |
 
 ### Post estimation 
 
-jointtestplacebo |
-
-graphoptions(*string*) |
-
-save_results(*path*) |
+| Option | Description |
+| jointtestplacebo |  |
+| graphoptions(*string*) |  |
+| save_results(*path*) |  |
 
 
 For other stored results see:
