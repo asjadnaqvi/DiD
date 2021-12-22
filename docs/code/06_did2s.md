@@ -1,8 +1,8 @@
 ---
 layout: default
-title: eventstudyinteract
+title: did2s
 parent: Stata code
-nav_order: 7
+nav_order: 8
 mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
