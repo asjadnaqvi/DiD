@@ -20,9 +20,9 @@ image: "../../../assets/images/DiD.png"
 
 ## Introduction
 
-The *did_multipegt* command by Chaisemartin and D'Haultfoeuille (henceforth CD) is probably one of the most flexible DiD estimators currently available. A key reason is that it allows for treatment switching (units can move in and out of treatment status) in addition to time-varying, heterogenous treatment effects.
+The *did_multipegt* command by Chaisemartin and D'Haultfoeuille (henceforth CD) is probably one of the most flexible DiD estimators currently available. A key reason is that it allows for treatment switching (units can move in and out of treatment status) in addition to time-varying, heterogeneous treatment effects.
 
-The command is very comprehesive, encompassing different estimation techniques derived from various CD papers. While a basic use is provided here, for more advanced applications, a careful reading of the papers is highly recommended. Furthermore, since applications are almost non-existent, little can be said on the practicalities of how and when to apply the advance options. Overall, the command is extremely slow. This has to do with the fact that standard errors require bootstrap replications, and adding additional options multiplies the number of estimations going on in the background. While the command is running, there is no display or progress bar so it is hard to track estimation times.
+The command is very comprehensive, encompassing different estimation techniques derived from various CD papers. While a basic use is provided here, for more advanced applications, a careful reading of the papers is highly recommended. Furthermore, since applications are almost non-existent, little can be said on the practicalities of how and when to apply the advance options. Overall, the command is extremely slow. This has to do with the fact that standard errors require bootstrap replications, and adding additional options multiplies the number of estimations going on in the background. While the command is running, there is no display or progress bar so it is hard to track estimation times.
 
 ## Installation and options
 
@@ -56,7 +56,7 @@ where
 
 | Option | Description |
 | ----- | ----- |
-| robust_dynamic  | If this is not specified, the C&D 2020a estimator is calculated, otherwise the C&D 2020b estimator is used |
+| robust_dynamic  | If this is not specified, the CD 2020a estimator is calculated, otherwise the CD 2020b estimator is used |
 |   dynamic(*#*) | Number of lags to be estimated |
 |    placebo(*#*) | Number of leads to be estimated |
 | breps(*#*) | Number of bootstrap replications (required for estimating standard errors) |
@@ -133,7 +133,7 @@ foreach x of local lvls {
 }
 
 
-levelsof cohort , local(lvls)  //  if cohort!=0 skip cohort 0 (never treated)
+levelsof cohort , local(lvls) 
 foreach x of local lvls {
 	
 	local eff = runiformint(2,10)

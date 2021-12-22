@@ -148,7 +148,7 @@ foreach x of local lvls {
 }
 
 
-levelsof cohort , local(lvls)  //  if cohort!=0 skip cohort 0 (never treated)
+levelsof cohort , local(lvls)  
 foreach x of local lvls {
 	
 	local eff = runiformint(2,10)
