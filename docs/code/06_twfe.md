@@ -418,7 +418,7 @@ reghdfe Y D, absorb(id t)
 
 which gives us the same answer of $$ \beta^{TWFE} $$ = 2.91. 
 
-Let's think about this number for a bit. We have two treatments happening at different times with different treatment effects. Therefore the definition of pre and post is not clear anymore. Neither is untreated versus treated. if we look at the interval $$ 5\leq t < 8 $$, only id=2 is changing, and the other two variables are constant. But in the last interval where $$ t \geq 8, then only id=3 is showing a change, while the other two panel variables are constant in this interval (even through id=2 is treated here).
+Let's think about this number for a bit. We have two treatments happening at different times with different treatment effects. Therefore the definition of pre and post is not clear anymore. Neither is untreated versus treated. if we look at the interval $$ 5\leq t < 8 $$, only id=2 is changing, and the other two variables are constant. But in the last interval where $$ t \geq 8 $$, then only id=3 is showing a change, while the other two panel variables are constant in this interval (even through id=2 is treated here).
 
 It is these combinations that are unraveled in the section on [Bacon decomposition](https://asjadnaqvi.github.io/DiD/docs/code/06_bacon/), which is why, it is important understand the decomposition carefully.
 
