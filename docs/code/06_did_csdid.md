@@ -112,7 +112,7 @@ Several post-estimation options are also available: `csdid_estat`, `csdid_stats`
 ## Generate sample data
 
 
-Here we generate a test dataset with heterogeneous interventions:
+Here we generate a test dataset with heterogeneous treatments:
 
 ```applescript
 clear

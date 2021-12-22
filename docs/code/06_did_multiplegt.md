@@ -99,7 +99,7 @@ The stored results can be viewed by typing `ereturn list`.
 ## Generate sample data
 
 
-Here we generate a test dataset with heterogeneous interventions:
+Here we generate a test dataset with heterogeneous treatments:
 
 ```applescript
 clear
