@@ -2,7 +2,7 @@
 layout: default
 title: csdid
 parent: Notes and Stata code
-nav_order: 3
+nav_order: 4
 mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
@@ -37,10 +37,9 @@ Take a look at the help file:
 help csdid
 ```
 
-The main command is as follows:
 
 ```applescript
-csdid Y [ind vars], [ivar(varname)] time(varname) gvar(varname) [options] methods(*SE methods*)
+csdid Y [ind vars], [ivar(varname)] time(varname) gvar(varname) [options]
 ```
 
 where: 
@@ -61,8 +60,8 @@ where:
 | long |  |
 
 
-
-Estimation options:
+### The method options
+The estimator has several methods built-in to estimate the standard errors. These can be specified using the **method(***method name***)** option.
 
 | Option | Description |
 | ----- | ----- |
@@ -74,10 +73,8 @@ Estimation options:
 | rc1  | Repeated cross section estimators   |
 
 
-The estimator has several methods built-in to estimate the standard errors. These can be specified using the **method(** *method name* **)** option.
 
-
-Standard error optionsL
+### The standard error options
 
 | Option | Description |
 | ----- | ----- |
@@ -88,7 +85,7 @@ Standard error optionsL
 |  pointwise  |  Pointwise confidence intervals as opposed to uniform C.I.s   |
 
 
-Aggregation options:
+### Aggregation options
 
 | Option | Description |
 | ----- | ----- |
