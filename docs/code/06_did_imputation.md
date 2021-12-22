@@ -7,7 +7,7 @@ mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
 
-# Bacon decomposition
+# did_imputation (Borusyak, Jaravel, Spiess 2021)
 {: .no_toc }
 
 ## Table of contents

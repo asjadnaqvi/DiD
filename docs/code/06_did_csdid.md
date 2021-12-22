@@ -7,7 +7,7 @@ mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
 
-# Bacon decomposition
+# csdid (Callaway and Sant'Anna 2021)
 {: .no_toc }
 
 ## Table of contents
@@ -20,7 +20,7 @@ image: "../../../assets/images/DiD.png"
 
 ## Introduction
 
-The *csdid* command by Callaway and Sant'Anna (henceforth CS), originally released an [R package](https://bcallaway11.github.io/did/index.html), was coded in Stata by [Fernando Rios-Avila](https://twitter.com/friosavila) who also has a really helpful [page here](https://friosavila.github.io/playingwithstata/index.html).
+The *csdid* command by Callaway and Sant'Anna (henceforth CS), originally released an [R package](https://bcallaway11.github.io/did/index.html), was coded in Stata by [Fernando Rios-Avila](https://twitter.com/friosavila) who also has a really helpful [page here](https://friosavila.github.io/playingwithstata/index.html). The package is based on the [Difference-in-Differences with multiple time periods](https://www.sciencedirect.com/science/article/pii/S0304407620303948) paper
 
 Even though the code has been optimized for Stata, the estimation can be slow. This is because in the background all possible 2x2 combinations are being calculated in what are basically non-linear estimations. Therefore if you have a lot of differential treatment timings, and a lot of different panel ids, then the combinations explode. The R code was recently (Dec 2021) optimized with [significant speed gains](https://twitter.com/pedrohcgs/status/1470526912447528960) and it might be helpful to check if the same optimizations can also be implemented in the Stata program.
 

@@ -10,7 +10,7 @@ image: "../../../assets/images/DiD.jpg"
 
 # Stata code
 
-*This page is under construction and is imcomplete*
+*This page is under construction and is incomplete*
 
 This section aims to cover the Stata estimation commands from various packages.
 

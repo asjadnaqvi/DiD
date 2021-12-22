@@ -7,7 +7,7 @@ mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
 
-# Bacon decomposition
+# eventstudyinteract (Sun and Abraham 2020)
 {: .no_toc }
 
 ## Table of contents
