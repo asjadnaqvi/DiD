@@ -22,7 +22,7 @@ image: "../../../assets/images/DiD.png"
 
 The *eventstudyinteract* command is written by Liyang Sun based on the Sun and Abraham 2020 paper [Estimating Dynamic Treatment Effects in Event Studies with Heterogeneous Treatment Effects](https://www.sciencedirect.com/science/article/pii/S030440762030378X).
 
-The command potentially has some issues. See the code and the graphs below. Some more testing is required. If you have some insights on how to fix this, then please email, or post in the [issues](https://github.com/asjadnaqvi/DiD/issues) section on GitHub.
+The command potentially has some issues. See the code and the graphs below for details. If you have some insights on how to fix this, then please email me, or post in the [issues](https://github.com/asjadnaqvi/DiD/issues) section on GitHub.
 
 ## Installation and options
 
