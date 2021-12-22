@@ -1,7 +1,7 @@
 ---
 layout: default
 title: did_multiplegt
-parent: Notes and Stata code
+parent: Stata code
 nav_order: 3
 mathjax: true
 image: "../../../assets/images/DiD.png"

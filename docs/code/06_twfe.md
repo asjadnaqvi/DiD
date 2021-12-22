@@ -1,7 +1,7 @@
 ---
 layout: default
 title: TWFE
-parent: Notes and Stata code
+parent: Stata code
 nav_order: 1
 mathjax: true
 image: "../../../assets/images/DiD.jpg"
