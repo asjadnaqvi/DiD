@@ -22,6 +22,8 @@ image: "../../../assets/images/DiD.png"
 
 The *csdid* command by Callaway and Sant'Anna (henceforth CS), originally released an [R package](https://bcallaway11.github.io/did/index.html), was coded in Stata by Fernando Rios-Avila who also has a really helpful [page here](https://friosavila.github.io/playingwithstata/index.html). A key reason is that it allows for treatment switching (units can move in and out of treatment status) in addition to time-varying, heterogeneous treatment effects.
 
+Even though the code has been optimized for Stata, the estimation can be slow. This is because in the background all possible 2x2 combinations are being calculated in what are basically non-linear estimations. Therefore if you have a lot of differential treatment timings, and a lot of different panel ids, then the combinations explode. The R code was recently (Dec 2021) optimized with [significant speed gains](https://twitter.com/pedrohcgs/status/1470526912447528960) and it might be helpful to check if the same optimizations can also be implemented in the Stata program.
+
 
 ## Installation and options
 
@@ -29,7 +31,7 @@ The *csdid* command by Callaway and Sant'Anna (henceforth CS), originally releas
 ssc install csdid, replace
 ```
 
-Take a look at the options:
+Take a look at the help file:
 
 ```applescript
 help csdid

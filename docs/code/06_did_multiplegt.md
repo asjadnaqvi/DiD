@@ -30,7 +30,7 @@ The command is very comprehesive, encompassing different estimation techniques d
 ssc install did_multiplegt, replace
 ```
 
-Take a look at the options:
+Take a look at the help file:
 
 ```applescript
 help did_multiplegt
@@ -159,7 +159,7 @@ xtline Y, overlay legend(off)
 <img src="../../../assets/images/test_data.png" height="300">
 
 
-
+## Test the command
 
 Let's try the basic `did_multiplegt` command:
 
