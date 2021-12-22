@@ -17,11 +17,10 @@ This section aims to cover the Stata estimation commands from various packages.
 
 Before we start, you can refer to the following glossary table for symbols:
 
-| Symbol | Meaning | 
+| Symbol | Description | 
 | $$ i $$ | panel id |
 | $$ t $$ | time variable |
 | $$ Y $$ | outcome variable |
-| $$ P $$ | =1 if post treatment period |
 | $$ D $$ | =1 if treated observation |
 | $$ \epsilon $$ | error term |
 
