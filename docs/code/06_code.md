@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Notes and Stata code
+title: Stata code
 nav_order: 6
 permalink: /docs/code
 has_children: true
@@ -8,14 +8,14 @@ mathjax: true
 image: "../../../assets/images/DiD.jpg"
 ---
 
-# Notes and Stata code
+# Stata code
 
-*This page is currently under construction.*
+*This page is under construction and is imcomplete*
 
-This section aims to cover the papers with some discussion of the theory but mostly a deep dive into the Stata code.
+This section aims to cover the Stata estimation commands from various packages.
 
 
-Before we start, I would like to add a glossary, since variable names, and definitions, vary across the papers and it quickly becomes intractable to follow what is going on across the different papers:
+Before we start, you can refer to the following glossary table for symbols:
 
 | Symbol | Meaning | 
 | $$ i $$ | panel id |

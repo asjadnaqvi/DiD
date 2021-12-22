@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Bacon decomposition
-parent: Notes and Stata code
+parent: Stata code
 nav_order: 2
 mathjax: true
 image: "../../../assets/images/DiD.png"

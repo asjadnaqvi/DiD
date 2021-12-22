@@ -1,7 +1,7 @@
 ---
 layout: default
 title: csdid
-parent: Notes and Stata code
+parent: Stata code
 nav_order: 4
 mathjax: true
 image: "../../../assets/images/DiD.png"
