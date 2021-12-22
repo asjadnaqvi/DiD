@@ -20,7 +20,7 @@ image: "../../../assets/images/DiD.png"
 
 ## Introduction
 
-The *did2s* command is written by Kyle Butts based on the Gardner 2021 paper [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf). A detailed description is provided in this [blog post](https://kylebutts.com/blog/posts/2021-05-24-two-stage-difference-in-differences/).
+The *did2s* command is written by [Kyle Butts](https://kylebutts.com/) based on the Gardner 2021 paper [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf). A detailed description is provided in this [blog post](https://kylebutts.com/blog/posts/2021-05-24-two-stage-difference-in-differences/).
 
 ## Installation and options
 
