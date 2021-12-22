@@ -7,7 +7,7 @@ mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
 
-# did_multipegt (Chaisemartin and D'Haultfœuille 2020, 2021)
+# did_multiplegt (Chaisemartin and D'Haultfœuille 2020, 2021)
 {: .no_toc }
 
 ## Table of contents
@@ -20,7 +20,7 @@ image: "../../../assets/images/DiD.png"
 
 ## Introduction
 
-The *did_multipegt* command by Chaisemartin and D'Haultfœuille (henceforth CD) is probably one of the most flexible DiD estimators currently available. A key reason is that it allows for treatment switching (units can move in and out of treatment status) in addition to time-varying, heterogeneous treatment effects.
+The *did_multiplegt* command by Chaisemartin and D'Haultfœuille (henceforth CD) is probably one of the most flexible DiD estimators currently available. A key reason is that it allows for treatment switching (units can move in and out of treatment status) in addition to time-varying, heterogeneous treatment effects.
 
 The command is very comprehensive, encompassing different estimation techniques derived from various CD papers. While a basic use is provided here, for more advanced applications, a careful reading of the help file and the relevant papers is highly recommended. Furthermore, since applications are almost non-existent, little can be said on the practicalities of how and when to apply the advance options.
 
