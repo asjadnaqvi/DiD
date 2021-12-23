@@ -169,7 +169,7 @@ Let's try the basic `did_multiplegt` command:
 did_multiplegt Y id t D, robust_dynamic cluster(id) breps(20)
 ```
 
-and it returns nothing [WHY?, CHECK]. 
+and it returns nothing... [WHY?, CHECK]
 
 Let's try an event study option with 10 leads (refereed to as placebos in the model) and 10 lags:
 

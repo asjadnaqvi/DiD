@@ -176,7 +176,7 @@ xtline Y, overlay legend(off)
 ## Test the command
 
 
-For `csdid` we need the *gvar* variable which has the value of the time value when the first treatment happened for each id, and 0 if the id is not treated at all:
+For `csdid` we need the *gvar* variable which equals the first_treat value for the treated, and 0 for the not treated:
 
 ```
 gen gvar = first_treat
@@ -189,7 +189,7 @@ Let's try the basic `csdid` command:
 csdid Y, ivar(id) time(t) gvar(gvar) notyet
 ```
 
-And a very very long output will show up on the screen! We can now do an event study option with 10 leads and 10 lags:
+And a very very long output will show up on the screen (combination explosion)! We can recover an event study with 10 leads and 10 lags as a post-estimation option:
 
 ```applescript
 estat event, window(-10 10) estore(cs) 
