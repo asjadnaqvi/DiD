@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Readings
+title: Literature
 parent: Resources
 nav_order: 1
 ---
 
-# Reading material
+# Literature
 {: .no_toc }
 
 
@@ -20,13 +20,15 @@ nav_order: 1
 
 ## Books
 
-*The books below are the ones that discuss the new DiD literature. There are of course many other great econometric books!*
+*The books below are the ones that discuss the new DiD literature. There are of course many other great books on causal inference!*
 
 [Martin Huber](https://www.unifr.ch/appecon/en/chair/team/prof/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CausalHuber) (2021). [Causal analysis](https://drive.switch.ch/index.php/s/tNhKQmkGB48bjfz): Impact evaluation and causal machine learning with applications in R.
 
 [Nick Huntington-Klein](https://nickchk.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/nickchk) (2021). [The Effect](https://theeffectbook.net/).
 
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf) (2020). [Causal Inference: The Mix Tape](https://mixtape.scunning.com/).
+
+
 
 ---
 
@@ -45,30 +47,33 @@ Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 [Andrew C. Baker](https://andrewcbaker.netlify.app/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/Andrew___Baker) has notes on [Difference-in-Differences Methodology](https://andrewcbaker.netlify.app/2019/09/25/difference-in-differences-methodology/) with supporting material on [GitHub](https://github.com/andrewchbaker).
 
 
-
----
-
-## Interactive dashboards
-
-These (related) interactive R-Shiny dashboards showcase how TWFE models give the wrong estimates.
-
-[Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts): [https://kyle-butts.shinyapps.io/did_twfe](https://kyle-butts.shinyapps.io/did_twfe)
-
-[Hans Henrik Sievertsen](https://hhsievertsen.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/hhsievertsen): [https://hhsievertsen.shinyapps.io/kylebutts_did_eventstudy](https://hhsievertsen.shinyapps.io/kylebutts_did_eventstudy)
-
 ---
 
 ## Papers
 
+
 *Papers are in alphabetical order by last name. Papers without journals are pre-prints.* 
 
-Dmitry Arkhangelsky, Susan Athey, David A. Hirshberg, Guido W. Imbens, Stefan Wager (2021). [Synthetic Difference in Differences](https://www.aeaweb.org/articles?id=10.1257/aer.20190159). American Economic Review.
+
+### Review papers
+*These papers summarize the state of the literature and are a good starting point:*
+
+
+[Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44), [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs), Alyssa Bilinski [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ambilinski), [John Poe](http://www.johndavidpoe.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/DavidPoe223) (2022). [What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature](https://psantanna.com/files/RSBP_DiD_Review.pdf).
+
+
+[Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin), [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2022). [Two-Way Fixed Effects and Differences-in-Differences with Heterogeneous Treatment Effects: A Survey](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3980758).
+
+
+### Theory papers
+
+[Dmitry Arkhangelsky](https://sites.google.com/view/dmitry-arkhangelsky/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ArkhangelskyD), [Susan Athey](https://athey.people.stanford.edu/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/Susan_Athey), [David A. Hirshberg](https://davidahirshberg.bitbucket.io/), [Guido Imbens](https://www.gsb.stanford.edu/faculty-research/faculty/guido-w-imbens), [Stefan Wager](https://web.stanford.edu/~swager/) (2021). [Synthetic Difference in Differences](https://www.aeaweb.org/articles?id=10.1257/aer.20190159). American Economic Review.
 
 [Dmitry Arkhangelsky](https://sites.google.com/view/dmitry-arkhangelsky/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ArkhangelskyD), [Guido Imbens](https://www.gsb.stanford.edu/faculty-research/faculty/guido-w-imbens), [Lihua Lei](https://lihualei71.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/lihua_lei_stat), [Xiaoman Luo](https://xiaomanluo.github.io/) (2021). [Double-Robust Two-Way-Fixed-Effects Regression For Panel Data](https://arxiv.org/abs/2107.13737).
 
-Susan Athey, Guido Imbens (2006). [Identification and inference in nonlinear difference-indifferences models](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2006.00668.x). Econometrica.
+[Susan Athey](https://athey.people.stanford.edu/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/Susan_Athey), [Guido Imbens](https://www.gsb.stanford.edu/faculty-research/faculty/guido-w-imbens) (2006). [Identification and inference in nonlinear difference-indifferences models](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2006.00668.x). Econometrica.
 
-Andrew Baker, David F. Larcker, Charles C. Y. Wang (2021). [How Much Should We Trust Staggered Difference-In-Differences Estimates?](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794018)
+[Andrew C. Baker](https://andrewcbaker.netlify.app/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/Andrew___Baker), [David F. Larcker](https://www.gsb.stanford.edu/faculty-research/faculty/david-f-larcker), [Charles C. Y. Wang](https://www.hbs.edu/faculty/Pages/profile.aspx?facId=651677) (2021). [How Much Should We Trust Staggered Difference-In-Differences Estimates?](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794018)
 
 [Kirill Borusyak](https://sites.google.com/view/borusyak/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/borusyak), [Xavier Jaravel](https://www.lse.ac.uk/economics/people/faculty/xavier-jaravel) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/XJaravel), [Jann Spiess](https://www.gsb.stanford.edu/faculty-research/faculty/jann-spiess) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jannspiess) (2021). [Revisiting Event Study Designs: Robust and Efficient Estimation](https://www.google.com/url?q=https%3A%2F%2Fwww.dropbox.com%2Fs%2Fy92mmyndlbkufo1%2FDraft_RobustAndEfficient.pdf%3Fraw%3D1&sa=D&sntz=1&usg=AFQjCNGGDRt4xPz3hCXhTWxchHJWh-1m_Q).
 
@@ -76,15 +81,16 @@ Brantly Callaway, Andrew Goodman-Bacon, Pedro H.C. Sant'Anna (2021). [Difference
 
 Brantly Callaway, Pedro H.C. Sant'Anna (2020). [Difference-in-Differences with multiple time periods](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948), Journal of Econometrics.
 
-Clément de Chaisemartin, Xavier D'Haultfoeuille (2018). [Fuzzy differences-in-differences](https://academic.oup.com/restud/article-abstract/85/2/999/4096388). The Review of Economic Studies.
+[Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin), [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2018). [Fuzzy differences-in-differences](https://academic.oup.com/restud/article-abstract/85/2/999/4096388). The Review of Economic Studies.
 
-Clément de Chaisemartin, Xavier D'Haultfoeuille (2020). [Two-Way Fixed Effects Estimators with Heterogeneous Treatment Effects](https://www.aeaweb.org/articles?id=10.1257/aer.20181169). American Economic Review.
+[Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin), [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2020). [Two-Way Fixed Effects Estimators with Heterogeneous Treatment Effects](https://www.aeaweb.org/articles?id=10.1257/aer.20181169). American Economic Review.
 
-Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Two-way fixed effects regressions with several treatments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3751060).
+[Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin), [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2021). [Two-way fixed effects regressions with several treatments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3751060).
 
-Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Difference-in-Differences Estimators of Inter-temporal Treatment Effects](https://arxiv.org/abs/2007.04267).
+[Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin), [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2021). [Difference-in-Differences Estimators of Inter-temporal Treatment Effects](https://arxiv.org/abs/2007.04267).
 
-Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Two-Way Fixed Effects and Differences-in-Differences with Heterogeneous Treatment Effects: A Survey](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3980758).
+[Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin), [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2021). [Two-Way Fixed Effects and Differences-in-Differences with Heterogeneous Treatment Effects: A Survey](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3980758).
+
 
 Xavier D’Haultfoeuille, Stefan Hoderlein, Yuya Sasaki (2013). [Nonlinear difference-indifferences in repeated cross sections with continuous treatments](https://www.econstor.eu/bitstream/10419/97404/1/766176037.pdf).
 
@@ -108,6 +114,19 @@ Michelle Marcus, Pedro H. C. Sant’Anna (2021). [The Role of Parallel Trends in
 
 [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44), [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) (2021). [Efficient Estimation for Staggered Rollout Designs](https://arxiv.org/pdf/2102.01291.pdf).
 
+
 [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs), [Jun Zhao](https://www.junbeanzhao.com/) (2020). [Doubly robust difference-in-differences estimators](https://www.sciencedirect.com/science/article/abs/pii/S0304407620301901), Journal of Econometrics.
 
 [Liyang Sun](http://economics.mit.edu/grad/lsun20), [Sarah Abraham](https://www.cornerstone.com/Staff/Sarah-Abraham#) (2020). [Estimating dynamic treatment effects in event studies with heterogeneous treatment effects](https://www.sciencedirect.com/science/article/abs/pii/S030440762030378X). Journal of Econometrics.
+
+
+
+---
+
+## Interactive dashboards
+
+These (related) interactive R-Shiny dashboards show how TWFE models give the wrong estimates.
+
+[Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts): [https://kyle-butts.shinyapps.io/did_twfe](https://kyle-butts.shinyapps.io/did_twfe)
+
+[Hans Henrik Sievertsen](https://hhsievertsen.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/hhsievertsen): [https://hhsievertsen.shinyapps.io/kylebutts_did_eventstudy](https://hhsievertsen.shinyapps.io/kylebutts_did_eventstudy)
