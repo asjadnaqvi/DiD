@@ -91,12 +91,9 @@ Brantly Callaway, Pedro H.C. Sant'Anna (2020). [Difference-in-Differences with m
 
 [Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin), [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2021). [Two-Way Fixed Effects and Differences-in-Differences with Heterogeneous Treatment Effects: A Survey](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3980758).
 
-
 Xavier D’Haultfoeuille, Stefan Hoderlein, Yuya Sasaki (2013). [Nonlinear difference-indifferences in repeated cross sections with continuous treatments](https://www.econstor.eu/bitstream/10419/97404/1/766176037.pdf).
 
 Xavier D’Haultfoeuille, Stefan Hoderlein, Yuya Sasaki (2021). [Nonparametric Difference-in-Differences in Repeated Cross-Sections with Continuous Treatments](https://arxiv.org/abs/2104.14458).
-
-[Bruno Ferman](https://sites.google.com/site/brunoferman/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/bruno_ferman), Cristine Pinto (2021). [Synthetic Controls with Imperfect Pre-Treatment Fit](https://qeconomics.org/ojs/forth/1596/1596-3.pdf). Quantitative Economics.
 
 [Simon Freyaldenhoven](https://simonfreyaldenhoven.github.io/), [Christian Hansen](https://www.chicagobooth.edu/faculty/directory/h/christian-b-hansen), [Jesse M. Shapiro](https://www.brown.edu/Research/Shapiro/) (2019). [Pre-event Trends in the Panel Event-Study Design](https://www.aeaweb.org/articles?id=10.1257/aer.20180609). American Economic Review.
 
@@ -113,7 +110,6 @@ Michelle Marcus, Pedro H. C. Sant’Anna (2021). [The Role of Parallel Trends in
 [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44) (2021). [Pre-test with Caution: Event-study Estimates After Testing for Parallel Trends](https://jonathandroth.github.io/assets/files/roth_pretrends_testing.pdf).
 
 [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44), [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) (2021). [Efficient Estimation for Staggered Rollout Designs](https://arxiv.org/pdf/2102.01291.pdf).
-
 
 [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs), [Jun Zhao](https://www.junbeanzhao.com/) (2020). [Doubly robust difference-in-differences estimators](https://www.sciencedirect.com/science/article/abs/pii/S0304407620301901), Journal of Econometrics.
 
