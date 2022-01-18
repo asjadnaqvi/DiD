@@ -91,6 +91,8 @@ Brantly Callaway, Pedro H.C. Sant'Anna (2020). [Difference-in-Differences with m
 
 [Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin), [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2021). [Two-Way Fixed Effects and Differences-in-Differences with Heterogeneous Treatment Effects: A Survey](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3980758).
 
+Clément de Chaisemartin, Xavier d'Haultfoeuille, Félix Pasquier, Gonzalo Vazquez-Bare (2022). [Difference-in-Differences Estimators for Treatments Continuously Distributed at Every Period](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4011782).
+
 Xavier D’Haultfoeuille, Stefan Hoderlein, Yuya Sasaki (2013). [Nonlinear difference-indifferences in repeated cross sections with continuous treatments](https://www.econstor.eu/bitstream/10419/97404/1/766176037.pdf).
 
 Xavier D’Haultfoeuille, Stefan Hoderlein, Yuya Sasaki (2021). [Nonparametric Difference-in-Differences in Repeated Cross-Sections with Continuous Treatments](https://arxiv.org/abs/2104.14458).
