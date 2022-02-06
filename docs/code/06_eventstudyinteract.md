@@ -26,6 +26,8 @@ The command potentially has some issues. See the code and the graphs below for d
 
 ## Installation and options
 
+Install the command from SSC:
+
 ```applescript
 ssc install eventstudyinteract, replace
 ```

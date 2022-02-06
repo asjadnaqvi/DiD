@@ -26,17 +26,10 @@ The command is currently under active development so options might change around
 
 ## Installation and options
 
-The command is not currently on SSC but it is searchable:
+Install the command from SSC:
 
 ```applescript
-search stackedev, all
-```
-
-and then:
-
-```
-net describe stackedev, from(http://fmwww.bc.edu/RePEc/bocode/s)
-net install stackedev.pkg
+ssc install stackedev, replace
 ```
 
 Take a look at the help file:
