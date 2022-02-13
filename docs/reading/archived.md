@@ -97,3 +97,32 @@
 <br>
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Applied economists be like <a href="https://t.co/VvrR0kecOE">pic.twitter.com/VvrR0kecOE</a></p>&mdash; Khoa Vu (@KhoaVuUmn) <a href="https://twitter.com/KhoaVuUmn/status/1445595873858101253?ref_src=twsrc%5Etfw">October 6, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">More diff-in-diff news, anyone?<br><br>You know two-way FE regressions can have negative weights with staggered rollout<br><br>Perhaps you&#39;ve heard the same can happen with simultaneous treatment but extra controls<br><br>But it is also possible without controls, just when the panel is incompete!</p>&mdash; Kirill Borusyak (@borusyak) <a href="https://twitter.com/borusyak/status/1490727079729668104?ref_src=twsrc%5Etfw">February 7, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">You feel a bit lost in the recent whirlwind of TWFE/DID papers? Our new, short survey of this literature may help you! <a href="https://t.co/MX8rVP8lda">https://t.co/MX8rVP8lda</a><br>Here is a short thread on what is/isn&#39;t in the survey 1/n</p>&mdash; Clément de Chaisemartin (@CdeChaisemartin) <a href="https://twitter.com/CdeChaisemartin/status/1468593836976971780?ref_src=twsrc%5Etfw">December 8, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I recently dug into <a href="https://twitter.com/TymonSloczynski?ref_src=twsrc%5Etfw">@TymonSloczynski</a>&#39;s awesome and mind-bending paper, &quot;Interpreting OLS Estimands When Treatment Effects Are Heterogeneous: Smaller Groups Get Larger Weights<a href="https://t.co/GEaSMYRsNn">https://t.co/GEaSMYRsNn</a><br><br>I had to make some graphs to figure it out and I do love to share a good graph! <a href="https://t.co/T6GWbp9Hoy">pic.twitter.com/T6GWbp9Hoy</a></p>&mdash; Andrew Goodman-Bacon (@agoodmanbacon) <a href="https://twitter.com/agoodmanbacon/status/1455262252441948164?ref_src=twsrc%5Etfw">November 1, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">(Conditional) parallel trend = (mean-)ignorability on level growth of baseline potential outcomes<br><br>A useful shortcut to memorize modern DiD estimators (OR by Heckman et al &#39;97, IPW by Abadie &#39;05, DR by <a href="https://twitter.com/pedrohcgs?ref_src=twsrc%5Etfw">@pedrohcgs</a>&amp;Zhao &#39;20), given the familiarity to cross-sectional ATT estimators</p>&mdash; Lihua Lei (@lihua_lei_stat) <a href="https://twitter.com/lihua_lei_stat/status/1432112250349780999?ref_src=twsrc%5Etfw">August 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<br>
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Navigating the DiD revolution from one applied researcher&#39;s perspective. <br><br>A LONG 🧵 on what I&#39;ve learned &amp; what I&#39;m still trying to figure out. Advice/insights welcome!<br><br>My <a href="https://twitter.com/michaelpollan?ref_src=twsrc%5Etfw">@michaelpollan</a> 🥦🍅🥕🫑 inspired TL;DR take:<br><br>&quot;Apply DiD in context, not every 2x2, mostly event studies&quot; <a href="https://t.co/CWmwyo1Btp">pic.twitter.com/CWmwyo1Btp</a></p>&mdash; Matthew A. Kraft (@MatthewAKraft) <a href="https://twitter.com/MatthewAKraft/status/1408147332164640769?ref_src=twsrc%5Etfw">June 24, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+<br>
+
+<br>
+
+
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">🚨Hello <a href="https://twitter.com/hashtag/EconTwitter?src=hash&amp;ref_src=twsrc%5Etfw">#EconTwitter</a>! I am very happy that my paper with Brantly Callaway, &quot;Difference-in-Differences with multiple time periods&quot;, is now forthcoming at the Journal of Econometrics. <a href="https://t.co/zoNxNY9ugq">https://t.co/zoNxNY9ugq</a><br><br>What are the main take aways? I will ask my daughter to help me out.<br><br>1/n <a href="https://t.co/DNj3Cpxxlu">pic.twitter.com/DNj3Cpxxlu</a></p>&mdash; Pedro H. C. Sant&#39;Anna (@pedrohcgs) <a href="https://twitter.com/pedrohcgs/status/1340006487456964608?ref_src=twsrc%5Etfw">December 18, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
