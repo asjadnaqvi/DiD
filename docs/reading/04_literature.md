@@ -34,6 +34,13 @@ nav_order: 1
 
 ## Blogs and notes
 
+The World Bank's [Development Impact](https://blogs.worldbank.org/impactevaluations) blog has several entries on the developments in DiD:
+*   24 Jan 2022: [Explaining why we should believe your DiD assumptions](https://blogs.worldbank.org/impactevaluations/explaining-why-we-should-believe-your-did-assumptions)
+*   10 Jan 2022: [A new synthesis and key lessons from the recent difference-in-differences literature](https://blogs.worldbank.org/impactevaluations/new-synthesis-and-key-lessons-recent-difference-differences-literature)
+*   04 Nov 2021: [DiD you see Beta? Beta who? Part 2](https://blogs.worldbank.org/impactevaluations/did-you-see-beta-beta-who-part-2)
+*   02 Nov 2021: [DiD you see Beta? Beta who? Part 1](https://blogs.worldbank.org/impactevaluations/did-you-see-beta-beta-who-part-1)
+*   30 Sep 2019: [What Are We Estimating When We Estimate Difference-in-Differences?](https://blogs.worldbank.org/impactevaluations/what-are-we-estimating-when-we-estimate-difference-differences) 
+
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): Scott's [Substack](https://causalinf.substack.com/) is the goto place for an easy-to-digest explanation of the latest metric-heavy DiD papers.
 
 An [Introduction to DiD with Multiple Time Periods](https://cran.r-project.org/web/packages/did/vignettes/multi-period-did.html) by [Brantly Callaway](https://bcallaway11.github.io/) and [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs).
@@ -68,6 +75,8 @@ Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 
 ### Theory papers
+
+Carolina Caetano, Brantly Callaway, Stroud Payne, Hugo Sant'Anna Rodrigues (2022). [Difference in Differences with Time-Varying Covariates](https://arxiv.org/abs/2202.02903)
 
 [Dmitry Arkhangelsky](https://sites.google.com/view/dmitry-arkhangelsky/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ArkhangelskyD), [Susan Athey](https://athey.people.stanford.edu/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/Susan_Athey), [David A. Hirshberg](https://davidahirshberg.bitbucket.io/), [Guido Imbens](https://www.gsb.stanford.edu/faculty-research/faculty/guido-w-imbens), [Stefan Wager](https://web.stanford.edu/~swager/) (2021). [Synthetic Difference in Differences](https://www.aeaweb.org/articles?id=10.1257/aer.20190159). American Economic Review.
 
