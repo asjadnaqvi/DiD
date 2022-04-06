@@ -165,13 +165,13 @@ which generates a bunch of graphs based on Figure 1 in [Arkhangelsky et. al. 202
 
 Graphs that start with *g1_* show the id-specific differences between treatment and control and are drawn for the year of the "first_treatment". 
 
-<img src="../../../assets/images/sdid_g1_24.png" height="200"><img src="../../../assets/images/sdid_g1_34.png" height="200"><img src="../../../assets/images/sdid_g1_38.png" height="200"><img src="../../../assets/images/sdid_g1_56.png" height="200">
+<img src="../../../assets/images/sdid_g1_24.png" height="100"><img src="../../../assets/images/sdid_g1_34.png" height="100"><img src="../../../assets/images/sdid_g1_38.png" height="100"><img src="../../../assets/images/sdid_g1_56.png" height="100">
 
 It does not apply to our example, but the dots sizes can vary based on the weight size, where groups with zero weights are given an x symbol.
 
 The next set of graphs start with *g2_* and represent the synthetic DiD graphs (DiD + synthetic control) also split by the year of the first treatment:
 
-<img src="../../../assets/images/sdid_g2_24.png" height="200"><img src="../../../assets/images/sdid_g2_34.png" height="200"><img src="../../../assets/images/sdid_g2_38.png" height="200"><img src="../../../assets/images/sdid_g2_56.png" height="200">
+<img src="../../../assets/images/sdid_g2_24.png" height="100"><img src="../../../assets/images/sdid_g2_34.png" height="100"><img src="../../../assets/images/sdid_g2_38.png" height="100"><img src="../../../assets/images/sdid_g2_56.png" height="100">
 
 The weights used to average pre-treatment periods are shown as area fills at the bottom of the figures.
 
