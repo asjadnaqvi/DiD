@@ -147,11 +147,13 @@ Let's look at the information that is stored:
 ereturn list
 ```
 
-The key matrix of interest is `e(summdd)`, which gives us the table above:
+The key matrix of interest is `e(summdd)`: 
 
 ```applescript
-mat li mat li e(sumdd)
+mat li e(sumdd)
 ```
+
+which gives us the following:
 
 
 ```bpf
@@ -162,13 +164,13 @@ Late_v_Early            4    .13636363
 Never_v_ti~g    2.9333333    .68181818
 ```
 
-From this matrix we can recover the $$ beta$ $ as follows:
+From this matrix we can recover the $$ \beta $$:
 
 ```applescript
 di e(sumdd)[1,1]*e(sumdd)[1,2] + e(sumdd)[2,1]*e(sumdd)[2,2] + e(sumdd)[3,1]*e(sumdd)[3,2]
 ```
 
-we recover the original TWFE $$ \beta $$ estimate of 2.91. This table basically summarizies the contribution of Bacon decomposition, which is estimating the relative weight on each group on the overall $$ \hat{\beta} $$. 
+which gives us the original value of $$ \beta $$ = 2.91, as a weighted sum of the different 2x2 combinations of early, late, and never treated groups. This breakdown is essentially the core point of the Bacon Decomposition.
 
 ---
 
