@@ -2,6 +2,7 @@
 layout: default
 title: Workshops and videos
 parent: Resources
+image: "../../../assets/images/DiD.png"
 youtubeId: eiffOVbYvNc
 nav_order: 2
 ---
@@ -23,11 +24,11 @@ If you are the listening type, then in this section you will find plenty of reso
 
 ## Events and Workshops
 
-[Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf) is now regularly organizing DiD workshops. You can find more information [here](https://causalinf.substack.com/p/upcoming-workshops-on-causal-inference).
+[Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf) is now regularly organizing DiD workshops. You can find more information on [Mixtape Sessions](https://github.com/Mixtape-Sessions).
 
-[Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs). sometimes offers DiD workshops. Follow his Twitter for announcements.
+[Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs). sometimes offers DiD workshops. Follow his Twitter for announcements or visit [Causal Solutions](https://causal-solutions.com/).
 
-Prof. Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jmwooldridge) sometimes offers DiD workshops. Follow his Twitter for announcements.
+Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jmwooldridge) sometimes offers DiD workshops. Follow his Twitter for announcements.
 
 
 
@@ -54,7 +55,6 @@ Prof. Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/si
 <br>
 
 Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/metrics52) has an [animated video on DiD here](https://www.youtube.com/watch?v=eiffOVbYvNc).
-
 
 <br>
 

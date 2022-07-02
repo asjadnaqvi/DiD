@@ -2,6 +2,7 @@
 layout: default
 title: Twitter threads
 parent: Resources
+image: "../../../assets/images/DiD.png"
 nav_order: 3
 ---
 
@@ -9,6 +10,9 @@ nav_order: 3
 # Twitter threads
 
 Some interesting Twitter threads chronologically sorted and in no particular order of importance. Sometimes, really important exchanges take place online that provide great insights. These views are of course subject to change or become formalized later in journal articles etc. So go through these with caution or just take them as archives of the DiD development on Twitter:
+
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I don’t really get why year FEs don’t mess with DiD estimation when post is year based, anyone have a good explanation?</p>&mdash; Katie Gutiérrez 🏳️‍🌈 (@katie_mo_) <a href="https://twitter.com/katie_mo_/status/1542646346913484800?ref_src=twsrc%5Etfw">June 30, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 <br>

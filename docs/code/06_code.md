@@ -5,7 +5,7 @@ nav_order: 6
 permalink: /docs/code
 has_children: true
 mathjax: true
-image: "../../../assets/images/DiD.jpg"
+image: "../../../assets/images/DiD.png"
 ---
 
 # Stata code

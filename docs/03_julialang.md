@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Julia packages
+image: "../../../assets/images/DiD.png"
 nav_order: 4
 ---
 

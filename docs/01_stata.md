@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Stata packages
+image: "../../../assets/images/DiD.png"
 nav_order: 2
 ---
 

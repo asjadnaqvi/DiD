@@ -4,7 +4,7 @@ title: TWFE
 parent: Stata code
 nav_order: 1
 mathjax: true
-image: "../../../assets/images/DiD.jpg"
+image: "../../../assets/images/DiD.png"
 ---
 
 # The Twoway Fixed Effects (TWFE) model

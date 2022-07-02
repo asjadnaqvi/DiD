@@ -2,6 +2,7 @@
 layout: default
 title: Literature
 parent: Resources
+image: "../../../assets/images/DiD.png"
 nav_order: 1
 ---
 
@@ -73,6 +74,14 @@ Carolina Caetano, Brantly Callaway, Stroud Payne, Hugo Sant'Anna Rodrigues (2022
 
 Clément de Chaisemartin, Xavier d'Haultfoeuille, Félix Pasquier, Gonzalo Vazquez-Bare (2022). [Difference-in-Differences Estimators for Treatments Continuously Distributed at Every Period](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4011782).
 
+
+Paul Goldsmith-Pinkham, Peter Hull & Michal Kolesár (2022). [Contamination Bias in Linear Regressions](https://www.nber.org/papers/w30108)
+
+Nandita Mitra, Jason Roy, Dylan Small (2022). [The Future of Causal Inference](https://academic.oup.com/aje/advance-article-abstract/doi/10.1093/aje/kwac108/6618833). American Journal of Epidemiology.
+
+Anna Wysocki, Katherine Lawson, Mijke Rhemtulla (2022). [Statistical Control Requires Causal Justification](https://journals.sagepub.com/doi/10.1177/25152459221095823). Advances in Methods and Practices in Psychological Science.
+
+Susanne Dandl, Torsten Hothorn, Heidi Seibold, Erik Sverdrup, Stefan Wager, Achim Zeileis (2022). [What Makes Forest-Based Heterogeneous Treatment Effect Estimators Work?](https://arxiv.org/abs/2206.10323)
  
 ### 2021
 
@@ -95,6 +104,8 @@ Brantly Callaway, Andrew Goodman-Bacon, Pedro H.C. Sant'Anna (2021). [Difference
 [Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin), [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2021). [Two-Way Fixed Effects and Differences-in-Differences with Heterogeneous Treatment Effects: A Survey](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3980758).
 
 Xavier D’Haultfoeuille, Stefan Hoderlein, Yuya Sasaki (2021). [Nonparametric Difference-in-Differences in Repeated Cross-Sections with Continuous Treatments](https://arxiv.org/abs/2104.14458).
+
+Bruno Ferman, Cristine Pinto (2021). [Synthetic Controls With Imperfect Pretreatment Fit](https://qeconomics.org/ojs/index.php/qe/article/view/1599). Quantitative Economics.
 
 [John Gardner](https://jrgcmu.github.io/) (2021). [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf).
 
@@ -123,6 +134,8 @@ Tymon Słoczyński (2020). [Interpreting OLS Estimands When Treatment Effects Ar
 [Liyang Sun](http://economics.mit.edu/grad/lsun20), [Sarah Abraham](https://www.cornerstone.com/Staff/Sarah-Abraham#) (2020). [Estimating dynamic treatment effects in event studies with heterogeneous treatment effects](https://www.sciencedirect.com/science/article/abs/pii/S030440762030378X). Journal of Econometrics.
 
 ### 2019 and earlier
+
+Bruno Ferman, Cristine Pinto (2019). [Inference in Differences-in-Differences with Few Treated Groups and Heteroskedasticity](https://direct.mit.edu/rest/article-abstract/101/3/452/58517/Inference-in-Differences-in-Differences-with-Few). The Review of Economics and Statistics.
 
 [Simon Freyaldenhoven](https://simonfreyaldenhoven.github.io/), [Christian Hansen](https://www.chicagobooth.edu/faculty/directory/h/christian-b-hansen), [Jesse M. Shapiro](https://www.brown.edu/Research/Shapiro/) (2019). [Pre-event Trends in the Panel Event-Study Design](https://www.aeaweb.org/articles?id=10.1257/aer.20180609). American Economic Review.
 
