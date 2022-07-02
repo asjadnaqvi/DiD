@@ -131,7 +131,6 @@ reghdfe Y L_* F_*, absorb(id t) cluster(i)
 
 estimates store twfe 
 
-
 *************
 *** csdid ***
 *************
@@ -139,7 +138,6 @@ estimates store twfe
 csdid Y, ivar(id) time(t) gvar(gvar) notyet
 
 estat event, window(-10 10) estore(csdd) 
-
 
 ***********************
 *** did_imputation  ***
@@ -182,7 +180,7 @@ matrix did2s_v = e(V)
 
 gen no_treat = first_treat==.			
 
-	// leads
+	*** leads ****
 	cap drop F_*
 	forval x = 1/10 {  
 		gen     F_`x' = rel_time == -`x'
@@ -190,7 +188,7 @@ gen no_treat = first_treat==.
 	}
 
 	
-	//lags
+	*** lags ****
 	cap drop L_*
 	forval x = 0/10 {
 		gen     L_`x' = rel_time ==  `x'
@@ -200,7 +198,6 @@ gen no_treat = first_treat==.
 	ren F_1 ref  // reference year
 	
 stackedev Y F_* L_* ref, cohort(first_treat) time(t) never_treat(no_treat) unit_fe(id) clust_unit(id)
-	
 	
 matrix stackedev_b = e(b)
 matrix stackedev_v = e(V)	
@@ -214,11 +211,11 @@ Here we also make use of the colorpalettes package (`ssc install palettes, repla
 ```applescript
 colorpalette tableau, nograph	
 
-event_plot 	  twfe	csdd 	didimp 	didmgt_b#didmgt_v  evtstint_b#evtstint_v  did2s_b#did2s_v   stackedev_b#stackedev_v	, 	///
-	stub_lag( L_# 	Tp# 	tau# 	Effect_#           L_#                    L_#               L_# ) 		///
-	stub_lead(F_# 	Tm# 	pre# 	Placebo_#          F_#                    F_#               F_# )		///
-		together perturb(-0.30(0.10)0.30) trimlead(5) noautolegend 									///
-		plottype(scatter) ciplottype(rspike)  														///
+event_plot 	  twfe	csdd 	didimp 	didmgt_b#didmgt_v  evtstint_b#evtstint_v  did2s_b#did2s_v   stackedev_b#stackedev_v,  ///
+	stub_lag( L_# 	Tp# 	tau# 	Effect_#           L_#                    L_#               L_# )                     ///
+	stub_lead(F_# 	Tm# 	pre# 	Placebo_#          F_#                    F_#               F_# )                     ///
+		together perturb(-0.30(0.10)0.30) trimlead(5) noautolegend                                                        ///
+		plottype(scatter) ciplottype(rspike)                                                                              ///
 			lag_opt1(msymbol(+)    mlwidth(0.3) color(black))       lag_ci_opt1(color(black)	 lw(0.1)) 	///
 			lag_opt2(msymbol(lgx)  mlwidth(0.3) color("`r(p1)'")) 	lag_ci_opt2(color("`r(p1)'") lw(0.1)) 	///
 			lag_opt3(msymbol(Dh)   mlwidth(0.3) color("`r(p2)'")) 	lag_ci_opt3(color("`r(p2)'") lw(0.1)) 	///
@@ -226,10 +223,10 @@ event_plot 	  twfe	csdd 	didimp 	didmgt_b#didmgt_v  evtstint_b#evtstint_v  did2s
 			lag_opt5(msymbol(Sh)   mlwidth(0.3) color("`r(p4)'")) 	lag_ci_opt5(color("`r(p4)'") lw(0.1)) 	///
 			lag_opt6(msymbol(Oh)   mlwidth(0.3) color("`r(p5)'")) 	lag_ci_opt6(color("`r(p5)'") lw(0.1)) 	///	 
 			lag_opt7(msymbol(V)    mlwidth(0.3) color("`r(p6)'")) 	lag_ci_opt7(color("`r(p6)'") lw(0.1)) 	///		
-					graph_opt(												///
-							title("DiD estimates") 						///
-							xtitle("") 									///
-							ytitle("Average effect") xlabel(-5(1)10)	///
+					graph_opt(                                       ///
+							title("DiD estimates")                   ///
+							xtitle("")                               ///
+							ytitle("Average effect") xlabel(-5(1)10) ///
 							legend(order(1 "TWFE" 3 "csdid (CS 2020)" 5 "did_imputation (BJS 2021)" 7 "did_multiplegt (CD 2020)"  9 "eventstudyinteract (SA 2020)" 11 "did2s (G 2021)" 13 "stackedev (CDLZ 2019)" ) pos(6) rows(2) region(style(none))) 	///
 							xline(-0.5, lc(gs8) lp(dash)) ///
 							yline(   0, lc(gs8) lp(dash)) ///
