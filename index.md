@@ -7,7 +7,6 @@ image: "/assets/images/DiD.jpg"
 permalink: /
 ---
 
-<--- img src="./assets/images/DiD_banner.jpg" --->
 
 # Welcome!
 
