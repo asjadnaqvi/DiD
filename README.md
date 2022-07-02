@@ -3,6 +3,8 @@
 
 # DiD literature
 
+*Last updated: July 2022*
+
 ## :dart: NOTE
 
 The contents of this page are now on a dedicated website:
