@@ -42,11 +42,11 @@ The World Bank's [Development Impact](https://blogs.worldbank.org/impactevaluati
 *   02 Nov 2021: [DiD you see Beta? Beta who? Part 1](https://blogs.worldbank.org/impactevaluations/did-you-see-beta-beta-who-part-1)
 *   30 Sep 2019: [What Are We Estimating When We Estimate Difference-in-Differences?](https://blogs.worldbank.org/impactevaluations/what-are-we-estimating-when-we-estimate-difference-differences) 
 
-[Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): Scott's [Substack](https://causalinf.substack.com/) is the goto place for an easy-to-digest explanation of the latest metric-heavy DiD papers.
+[Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): Scott's [Substack](https://causalinf.substack.com/) has some entries on DiD papers.
 
 An [Introduction to DiD with Multiple Time Periods](https://cran.r-project.org/web/packages/did/vignettes/multi-period-did.html) by [Brantly Callaway](https://bcallaway11.github.io/) and [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs).
 
-Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jmwooldridge) has made several notes on DiD which are shared on his [Dropbox](https://www.dropbox.com/sh/zj91darudf2fica/AADj_jaf5ZuS1muobgsnxS6Za?dl=0) including Stata dofiles.
+Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jmwooldridge) has several notes on DiD which are shared on his [Dropbox](https://www.dropbox.com/sh/zj91darudf2fica/AADj_jaf5ZuS1muobgsnxS6Za?dl=0) including Stata dofiles.
 
 [Fernando Rios-Avila](https://friosavila.github.io/playingwithstata/index.html) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/friosavila) has a great explainer for the Callaway and Sant'Anna (2020) CS-DID logic on his [blog](https://friosavila.github.io/playingwithstata/main_csdid.html).
 
@@ -70,18 +70,21 @@ Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 Carolina Caetano, Brantly Callaway, Stroud Payne, Hugo Sant'Anna Rodrigues (2022). [Difference in Differences with Time-Varying Covariates](https://arxiv.org/abs/2202.02903)
 
-[Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44), [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs), Alyssa Bilinski [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ambilinski), [John Poe](http://www.johndavidpoe.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/DavidPoe223) (2022). [What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature](https://psantanna.com/files/RSBP_DiD_Review.pdf). <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
-
 Clément de Chaisemartin, Xavier d'Haultfoeuille, Félix Pasquier, Gonzalo Vazquez-Bare (2022). [Difference-in-Differences Estimators for Treatments Continuously Distributed at Every Period](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4011782).
 
+Susanne Dandl, Torsten Hothorn, Heidi Seibold, Erik Sverdrup, Stefan Wager, Achim Zeileis (2022). [What Makes Forest-Based Heterogeneous Treatment Effect Estimators Work?](https://arxiv.org/abs/2206.10323)
+
+Arindrajit Dube, Daniele Girardi, Oscar Jorda, Alan M. Taylor (2022). [A Local Projections Approach to Difference-in-Differences Event Studies](https://conference.nber.org/conf_papers/f172417.pdf)
 
 Paul Goldsmith-Pinkham, Peter Hull & Michal Kolesár (2022). [Contamination Bias in Linear Regressions](https://www.nber.org/papers/w30108)
 
 Nandita Mitra, Jason Roy, Dylan Small (2022). [The Future of Causal Inference](https://academic.oup.com/aje/advance-article-abstract/doi/10.1093/aje/kwac108/6618833). American Journal of Epidemiology.
 
+[Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44), [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs), Alyssa Bilinski [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ambilinski), [John Poe](http://www.johndavidpoe.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/DavidPoe223) (2022). [What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature](https://psantanna.com/files/RSBP_DiD_Review.pdf). <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
+
 Anna Wysocki, Katherine Lawson, Mijke Rhemtulla (2022). [Statistical Control Requires Causal Justification](https://journals.sagepub.com/doi/10.1177/25152459221095823). Advances in Methods and Practices in Psychological Science.
 
-Susanne Dandl, Torsten Hothorn, Heidi Seibold, Erik Sverdrup, Stefan Wager, Achim Zeileis (2022). [What Makes Forest-Based Heterogeneous Treatment Effect Estimators Work?](https://arxiv.org/abs/2206.10323)
+
  
 ### 2021
 
@@ -123,7 +126,6 @@ Michelle Marcus, Pedro H. C. Sant’Anna (2021). [The Role of Parallel Trends in
 ### 2020
 
 Brantly Callaway, Pedro H.C. Sant'Anna (2020). [Difference-in-Differences with multiple time periods](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948), Journal of Econometrics.
-
 
 [Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin), [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2020). [Two-Way Fixed Effects Estimators with Heterogeneous Treatment Effects](https://www.aeaweb.org/articles?id=10.1257/aer.20181169). American Economic Review.
 
