@@ -94,3 +94,5 @@ xyplot(y ~ time,
 ```
 
 <img src="../../../assets/images/test_data_R.png" height="300">
+
+{: .fs-6 .fw-300 }
