@@ -223,15 +223,9 @@ event_plot 	  twfe	csdd 	bjs 	dcdh_b#dcdh_v 	sa_b#sa_v 	stackedev_b#stackedev_v	
 
 which gives us this figure:
 
-
-<img src="../../../assets/images/allestimators.png" height="300">
-
-
-
-
-You can also try different seeds, different cohorts, and different treatment timings and magnitudes and check how the graphs vary. If we throw out the wrong estimators, we can see the results of the remaining packages as follows:
-
 <img src="../../../assets/images/allestimators2.png" height="300">
+
+
 
 
 
