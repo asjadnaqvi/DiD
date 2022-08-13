@@ -26,31 +26,27 @@ This example follows the [five estimators](https://github.com/borusyak/did_imput
 
 ```applescript
 clear
-clear matrix
-set scheme white_tableau
-
 
 local units = 30
 local start = 1
-local end   = 60
+local end 	= 100
 
 local time = `end' - `start' + 1
 local obsv = `units' * `time'
 set obs `obsv'
 
-egen id = seq(), b(`time')  
-egen t  = seq(), f(`start') t(`end') 	
+egen id	   = seq(), b(`time')  
+egen time  = seq(), f(`start') t(`end') 	
 
 sort  id t
 xtset id t
 
-
-gen Y           = 0   // outcome variable	
-gen D           = 0   // intervention variable
-gen cohort      = .   // treatment cohort
-gen effect      = .   // treatment effect size
-gen first_treat = .   // when the treatment happens for each cohort
-gen rel_time	= .   // time - first_treat
+gen Y 	   		= 0		// outcome variable	
+gen D 	   		= 0		// intervention variable
+gen cohort      = .  	// treatment cohort
+gen effect      = .		// treatment effect size
+gen first_treat = .		// when the treatment happens for each cohort
+gen rel_time	= .     // time - first_treat
 
 
 set seed 20211222
@@ -59,7 +55,7 @@ set seed 20211222
 // determine the number of cohorts and assign them to IDs
 levelsof id, local(lvls)
 foreach x of local lvls {
-	local chrt = runiformint(0,5)	// change cohorts here (0 = no treatment cohort)
+	local chrt = runiformint(0,2)	
 	replace cohort = `chrt' if id==`x'
 }
 
@@ -71,42 +67,52 @@ foreach x of local lvls {
 	local eff = runiformint(2,10)
 		replace effect = `eff' if cohort==`x'
 			
-	local timing = runiformint(`start',`end' + 20)	// increase the end value to ensure a no treatment cohort
+	local timing = runiformint(`start' + 5,`end' + 100)	// 
 	replace first_treat = `timing' if cohort==`x'
 	replace first_treat = . if first_treat > `end'
 		replace D = 1 if cohort==`x' & t>= `timing' 
 }
 
 
-
 replace rel_time = t - first_treat   // relative time
-replace Y = id + t + cond(D==1, effect * rel_time, 0) + rnormal()  // treatment effect
+replace Y = cond(D==1, effect, 0) + (rnormal() / 2)  // treatment effect  // id + t +   * rel_time
+
 
 
 // derive the various variables for various estimators
+
+	gen never_treat = first_treat==.  // never treated group
+
+	sum first_treat
+	gen last_cohort = first_treat==r(max) // last treated 
+
+	gen gvar = first_treat
+	recode gvar (. = 0)   
+
 	
-	*** leads ****
+	summ rel_time
+	local relmin = abs(r(min))
+	local relmax = abs(r(max))
+
+	// leads
 	cap drop F_*
-	forval x = 2/10 {  
-		gen F_`x' = rel_time == -`x'
+	forval x = 1/`relmin' {  // drop the first lead
+		gen     F_`x' = rel_time == -`x'
+		replace F_`x' = 0 if never_treat==1
 	}
 
 	
-	**** lags ****
-	
+	//lags
 	cap drop L_*
-	forval x = 0/10 {
-		gen L_`x' = rel_time ==  `x'
+	forval x = 0/`relmax' {
+		gen     L_`x' = rel_time ==  `x'
+		replace L_`x' = 0 if no_treat==1
 	}
 	
+	ren F_1 ref  // reference year
+	
 
-gen never_treat = first_treat==.  // never treated group
-
-sum first_treat
-gen last_cohort = first_treat==r(max) // last treated 
-
-gen gvar = first_treat
-recode gvar (. = 0)     
+  
 ```
 
 This gives us the same graph we have been using for all our examples:
@@ -178,24 +184,6 @@ matrix did2s_v = e(V)
 *** stackedev  ***
 ******************
 
-gen no_treat = first_treat==.			
-
-	*** leads ****
-	cap drop F_*
-	forval x = 1/10 {  
-		gen     F_`x' = rel_time == -`x'
-		replace F_`x' = 0 if no_treat==1
-	}
-
-	
-	*** lags ****
-	cap drop L_*
-	forval x = 0/10 {
-		gen     L_`x' = rel_time ==  `x'
-		replace L_`x' = 0 if no_treat==1
-	}
-	
-	ren F_1 ref  // reference year
 	
 stackedev Y F_* L_* ref, cohort(first_treat) time(t) never_treat(no_treat) unit_fe(id) clust_unit(id)
 	
@@ -211,19 +199,19 @@ Here we also make use of the colorpalettes package (`ssc install palettes, repla
 ```applescript
 colorpalette tableau, nograph	
 
-event_plot 	  twfe	csdd 	didimp 	didmgt_b#didmgt_v  evtstint_b#evtstint_v  did2s_b#did2s_v   stackedev_b#stackedev_v,  ///
-	stub_lag( L_# 	Tp# 	tau# 	Effect_#           L_#                    L_#               L_# )                     ///
-	stub_lead(F_# 	Tm# 	pre# 	Placebo_#          F_#                    F_#               F_# )                     ///
-		together perturb(-0.30(0.10)0.30) trimlead(5) noautolegend                                                        ///
-		plottype(scatter) ciplottype(rspike)                                                                              ///
-			lag_opt1(msymbol(+)    mlwidth(0.3) color(black))       lag_ci_opt1(color(black)	 lw(0.1)) 	///
-			lag_opt2(msymbol(lgx)  mlwidth(0.3) color("`r(p1)'")) 	lag_ci_opt2(color("`r(p1)'") lw(0.1)) 	///
-			lag_opt3(msymbol(Dh)   mlwidth(0.3) color("`r(p2)'")) 	lag_ci_opt3(color("`r(p2)'") lw(0.1)) 	///
-			lag_opt4(msymbol(Th)   mlwidth(0.3) color("`r(p3)'")) 	lag_ci_opt4(color("`r(p3)'") lw(0.1)) 	///
-			lag_opt5(msymbol(Sh)   mlwidth(0.3) color("`r(p4)'")) 	lag_ci_opt5(color("`r(p4)'") lw(0.1)) 	///
-			lag_opt6(msymbol(Oh)   mlwidth(0.3) color("`r(p5)'")) 	lag_ci_opt6(color("`r(p5)'") lw(0.1)) 	///	 
-			lag_opt7(msymbol(V)    mlwidth(0.3) color("`r(p6)'")) 	lag_ci_opt7(color("`r(p6)'") lw(0.1)) 	///		
-					graph_opt(                                       ///
+event_plot 	  twfe	csdd 	bjs 	dcdh_b#dcdh_v 	sa_b#sa_v 	stackedev_b#stackedev_v	did2s_b#did2s_v, 	///
+	stub_lag( L_# 	Tp# 	tau# 	Effect_#  		L_#			L_#  					L_# 		) 		///
+	stub_lead(F_# 	Tm# 	pre# 	Placebo_#   	F_#			F_# 					F_# 		)		///
+		together perturb(-0.30(0.10)0.30) trimlead(10) trimlag(10) noautolegend 									///
+		plottype(scatter) ciplottype(rspike)  														///
+			lag_opt1(msymbol(+)   msize(1.2) mlwidth(0.3) color(black)) 		lag_ci_opt1(color(black)	 lw(0.1)) 	///
+			lag_opt2(msymbol(lgx) msize(1.2) mlwidth(0.3) color("`r(p1)'")) 	lag_ci_opt2(color("`r(p1)'") lw(0.1)) 	///
+			lag_opt3(msymbol(Dh)  msize(1.2) mlwidth(0.3) color("`r(p2)'")) 	lag_ci_opt3(color("`r(p2)'") lw(0.1)) 	///
+			lag_opt4(msymbol(Th)  msize(1.2) mlwidth(0.3) color("`r(p3)'")) 	lag_ci_opt4(color("`r(p3)'") lw(0.1)) 	///
+			lag_opt5(msymbol(Sh)  msize(1.2) mlwidth(0.3) color("`r(p4)'")) 	lag_ci_opt5(color("`r(p4)'") lw(0.1)) 	///
+			lag_opt6(msymbol(Oh)  msize(1.2) mlwidth(0.3) color("`r(p5)'")) 	lag_ci_opt6(color("`r(p5)'") lw(0.1)) 	///	 
+			lag_opt7(msymbol(V)   msize(1.2) mlwidth(0.3) color("`r(p6)'")) 	lag_ci_opt7(color("`r(p6)'") lw(0.1)) 	///		
+					graph_opt(	                                   ///
 							title("DiD estimates")                   ///
 							xtitle("")                               ///
 							ytitle("Average effect") xlabel(-5(1)10) ///
@@ -239,8 +227,6 @@ which gives us this figure:
 <img src="../../../assets/images/allestimators.png" height="300">
 
 
-
-The graph above has some interesting elements. First the TWFE model is clearly wrong. But so are `eventstudyinteract` and `stackedev`. All the other estimators give us estimates that are roughly close to the true values (*to be added*). So why do the two packages end up like this? I have no idea! I tested for a bunch of different options but the results stay roughly the same. Three reasons could be: (a) the estimation itself is not fully correcting for heterogenous treatments, (b) the coding of the command is not correctly capuring heterogenous treatments, and (c) I just have the code wrongly specified. Please send corrections or suggestions if you have solutions to the above issues. 
 
 
 You can also try different seeds, different cohorts, and different treatment timings and magnitudes and check how the graphs vary. If we throw out the wrong estimators, we can see the results of the remaining packages as follows:

@@ -17,11 +17,10 @@ nav_order: 1
 1. TOC
 {:toc}
 
+
 ---
 
 ## Books
-
-*The books below are the ones that discuss the new DiD literature. There are of course many other great books on causal inference!*
 
 [Martin Huber](https://www.unifr.ch/appecon/en/chair/team/prof/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CausalHuber) (2021). [Causal analysis](https://drive.switch.ch/index.php/s/tNhKQmkGB48bjfz): Impact evaluation and causal machine learning with applications in R.
 
@@ -29,11 +28,12 @@ nav_order: 1
 
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf) (2020). [Causal Inference: The Mix Tape](https://mixtape.scunning.com/).
 
-
-
 ---
 
 ## Blogs and notes
+
+
+[Sylvain Chabé-Ferret](https://sites.google.com/site/sylvainchabeferret/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/SylvainCF): [Statistical Tools for Causal Inference Chapter 4: Difference-in-Differences](https://chabefer.github.io/STCI/NE.html#difference-in-differences).
 
 The World Bank's [Development Impact](https://blogs.worldbank.org/impactevaluations) blog has several entries on DiD:
 *   24 Jan 2022: [Explaining why we should believe your DiD assumptions](https://blogs.worldbank.org/impactevaluations/explaining-why-we-should-believe-your-did-assumptions)
@@ -42,7 +42,7 @@ The World Bank's [Development Impact](https://blogs.worldbank.org/impactevaluati
 *   02 Nov 2021: [DiD you see Beta? Beta who? Part 1](https://blogs.worldbank.org/impactevaluations/did-you-see-beta-beta-who-part-1)
 *   30 Sep 2019: [What Are We Estimating When We Estimate Difference-in-Differences?](https://blogs.worldbank.org/impactevaluations/what-are-we-estimating-when-we-estimate-difference-differences) 
 
-[Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): Scott's [Substack](https://causalinf.substack.com/) has some entries on DiD papers.
+[Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): Scott's [Substack](https://causalinf.substack.com/) has entries on DiD papers.
 
 An [Introduction to DiD with Multiple Time Periods](https://cran.r-project.org/web/packages/did/vignettes/multi-period-did.html) by [Brantly Callaway](https://bcallaway11.github.io/) and [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs).
 
@@ -59,12 +59,11 @@ Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 ## Papers
 
-
 *Papers are sorted by year and last name. Papers marked with a <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/> are review papers and are a good starting points. Papers without journals are pre-prints.* 
 
 
-
 ### 2022
+
 
 [Andrew C. Baker](https://andrewcbaker.netlify.app/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/Andrew___Baker), [David F. Larcker](https://www.gsb.stanford.edu/faculty-research/faculty/david-f-larcker), [Charles C. Y. Wang](https://www.hbs.edu/faculty/Pages/profile.aspx?facId=651677) (2022). [How Much Should We Trust Staggered Difference-In-Differences Estimates?](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794018) Journal of Financial Economics. <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
 
@@ -76,11 +75,15 @@ Susanne Dandl, Torsten Hothorn, Heidi Seibold, Erik Sverdrup, Stefan Wager, Achi
 
 Arindrajit Dube, Daniele Girardi, Oscar Jorda, Alan M. Taylor (2022). [A Local Projections Approach to Difference-in-Differences Event Studies](https://conference.nber.org/conf_papers/f172417.pdf)
 
+Dalia Ghanem, Pedro Sant'Anna, Kaspar Wüthrich (2022). [Selection and parallel trends](https://arxiv.org/abs/2203.09001).
+
 Paul Goldsmith-Pinkham, Peter Hull & Michal Kolesár (2022). [Contamination Bias in Linear Regressions](https://www.nber.org/papers/w30108)
 
 Nandita Mitra, Jason Roy, Dylan Small (2022). [The Future of Causal Inference](https://academic.oup.com/aje/advance-article-abstract/doi/10.1093/aje/kwac108/6618833). American Journal of Epidemiology.
 
 [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44), [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs), Alyssa Bilinski [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ambilinski), [John Poe](http://www.johndavidpoe.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/DavidPoe223) (2022). [What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature](https://psantanna.com/files/RSBP_DiD_Review.pdf). <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
+
+Pedro Picchetti, Cristine Pinto (2022). [Marginal Treatment Effects in Difference-in-Differences](https://www.dropbox.com/s/wegkelwx665bh8o/MTE%20in%20DiD.pdf?dl=0)
 
 Anna Wysocki, Katherine Lawson, Mijke Rhemtulla (2022). [Statistical Control Requires Causal Justification](https://journals.sagepub.com/doi/10.1177/25152459221095823). Advances in Methods and Practices in Psychological Science.
 
