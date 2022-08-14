@@ -62,7 +62,7 @@ Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 ---
 
-## Events and Workshops
+## Events and workshops
 
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf) is now regularly organizing DiD workshops. You can find more information on [Mixtape Sessions](https://github.com/Mixtape-Sessions).
 
@@ -76,8 +76,7 @@ Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 ## Videos and online lectures
 
 
-
-[Nick Huntington-Klein](https://nickchk.com/)[<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/nickchk) has series of short videos on DiD literature on [YouTube](https://www.youtube.com/watch?v=yQXqdmenc6M&list=PLcTBLulJV_AK1hKtnO0-kYrU0D09K-kj8) as part of [The Effect](https://www.theeffectbook.net/) book series.
+[Nick Huntington-Klein](https://nickchk.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/nickchk) has series of short videos on DiD literature on [YouTube](https://www.youtube.com/watch?v=yQXqdmenc6M&list=PLcTBLulJV_AK1hKtnO0-kYrU0D09K-kj8) as part of [The Effect](https://www.theeffectbook.net/) book series.
 
 [Ben Elsner](https://www.benjaminelsner.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ben_elsner) has a [YouTube lecture series](https://www.youtube.com/playlist?list=PLyvUJLHD8IsJCB7ALqwjRG1BjL5JxE__H) on causal inference including the new DiD literature.
 
