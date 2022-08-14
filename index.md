@@ -30,7 +30,7 @@ Recent innovations like the [Bacon decomposition](https://asjadnaqvi.github.io/D
 
 This is a working document. If you want to report errors or contribute, just [open an issue](https://github.com/AsjadNaqvi/DiD/issues), or [start a discussion](https://github.com/asjadnaqvi/DiD/discussions), or e-mail me at asjadnaqvi@gmail.com. Since paths and links are also subject to change, please report them to keep this repository as up-to-date as possible.
 
-I am slowly starting to build a Stata code repository here. This is to help me (and you) navigate the literature and figure out the code structure for different packages. If you can improve these, then please open a pull request (PR).If you use this repository and find it helpful, acknowledgements will be highly appreciated!
+I am slowly starting to build a Stata code repository here. This is to help me (and you) navigate the literature and figure out the code structure for different packages. If you can improve these, then please open a pull request (PR). If you use this repository and find it helpful, acknowledgements will be highly appreciated!
 
 
 
