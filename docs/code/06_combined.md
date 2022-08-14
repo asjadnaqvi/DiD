@@ -106,7 +106,7 @@ replace Y = cond(D==1, effect, 0) + (rnormal() / 2)  // treatment effect  // id 
 	cap drop L_*
 	forval x = 0/`relmax' {
 		gen     L_`x' = rel_time ==  `x'
-		replace L_`x' = 0 if no_treat==1
+		replace L_`x' = 0 if never_treat==1
 	}
 	
 	ren F_1 ref  // reference year
@@ -185,7 +185,7 @@ matrix did2s_v = e(V)
 ******************
 
 	
-stackedev Y F_* L_* ref, cohort(first_treat) time(t) never_treat(no_treat) unit_fe(id) clust_unit(id)
+stackedev Y F_* L_* ref, cohort(first_treat) time(t) never_treat(never_treat) unit_fe(id) clust_unit(id)
 	
 matrix stackedev_b = e(b)
 matrix stackedev_v = e(V)	
