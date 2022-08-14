@@ -11,13 +11,16 @@ permalink: /docs/resources
 {: .no_toc }
 
 This section contains a miscellaneous collection of lecture notes, videos, papers, workshops, etc. Please feel free to suggest additional references.
-{: .fs-6 .fw-300 }
 
-## Table of contents
-{: .no_toc .text-delta }
 
-1. TOC
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+- TOC
 {:toc}
+</details>
 
 ---
 
