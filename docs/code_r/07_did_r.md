@@ -71,7 +71,7 @@ cs = att_gt(
     tname         = "time",
     idname        = "id",
     gname         = "first_treat",
-    control_group = "notyettreated",
+    control_group = "notyettreated",#  Too few groups for "nevertreated" default
     clustervars   = "id", 
     data          = dat
     )
