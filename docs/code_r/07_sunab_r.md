@@ -2,7 +2,7 @@
 layout: default
 title: sunab
 parent: R code
-nav_order: 2
+nav_order: 6
 mathjax: true
 image: "../../../assets/images/DiD.png"
 ---

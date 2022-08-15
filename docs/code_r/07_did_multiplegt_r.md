@@ -2,7 +2,7 @@
 layout: default
 title: did_multiplegt
 parent: R code
-nav_order: 3
+nav_order: 4
 mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
