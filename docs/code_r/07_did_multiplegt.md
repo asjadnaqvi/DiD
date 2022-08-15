@@ -246,3 +246,5 @@ tidy_dCDH20 |>
 ```
 
 <img src="../../../assets/images/did_multiplegt_R_ggplot2.png" height="300">
+
+_TO-DO: Check integration/complementarity with `TwoWayFEWeights`._
