@@ -47,7 +47,7 @@ The package can be installed from CRAN.
 
 ```r
 install.packages("DIDmultiplegt") # Install (only need to run once or when updating)
-library(DIDmultiplegt)            # Load the package into memory (required each new session)
+library("DIDmultiplegt")          # Load the package into memory (required each new session)
 ```
 
 The main workhorse function of the package is `did_multiplegt()`, which in its 
@@ -97,6 +97,12 @@ Or, in graph form.
 
 
 ## Test the package
+
+Remember to load the package (if you haven't already).
+
+```r
+library(DIDmultiplegt)
+```
 
 Let's try the basic `did_multiplegt()` command:
 
