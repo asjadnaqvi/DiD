@@ -79,18 +79,22 @@ bundled with the base R installation.
 ```r
 library(lattice)
 # Some (optional!) plot theme settings
-trellis.par.set(list(axis.line      = list(col = NA),
-                     reference.line = list(col = "gray85", lty = 3),
-                     superpose.line = list(col = hcl.colors(imax, "SunsetDark")),
-                     par.xlab.text  = list(fontfamily = "ArialNarrow"),
-                     par.ylab.text  = list(fontfamily = "ArialNarrow"),
-                     axis.text      = list(fontfamily = "ArialNarrow")))
+trellis.par.set(list(
+  axis.line      = list(col = NA),
+  reference.line = list(col = "gray85", lty = 3),
+  superpose.line = list(col = hcl.colors(imax, "SunsetDark")),
+  par.xlab.text  = list(fontfamily = "ArialNarrow"),
+  par.ylab.text  = list(fontfamily = "ArialNarrow"),
+  axis.text      = list(fontfamily = "ArialNarrow")
+  ))
 
-xyplot(y ~ time,  
-       groups = id,
-       type = c("l", "g"),
-       ylab = "Y", xlab = "Time variable",
-       data = dat)
+xyplot(
+  y ~ time,  
+  groups = id,
+  type = c("l", "g"),
+  ylab = "Y", xlab = "Time variable",
+  data = dat
+  )
 ```
 
 <img src="../../../assets/images/test_data_R.png" height="300">

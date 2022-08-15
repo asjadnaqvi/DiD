@@ -76,7 +76,6 @@ helpfile (`?did_multiplegt`) for more detailed information.
 
 ## Dataset
 
-
 To demonstrate the package in action, we'll use the fake dataset that we 
 [created earlier]({{ "/07_code_r#data-generation" | relative_url }}). Here's a 
 reminder of what the data look like.
@@ -102,7 +101,7 @@ Or, in graph form.
 Let's try the basic `did_multiplegt()` command:
 
 ```r
-did_multiplegt(dat, "y", "id", "time", "treat")
+did_multiplegt(df = dat, Y = "y", G = "id", T = "time", D = "treat")
 #> $effect
 #>  treatment 
 #> -0.4571712 
@@ -128,12 +127,14 @@ take _significantly_ longer to estimate. (Over 6 minutes on my laptop, despite
 invoking parallelization to use all 12 available threads.)
 
 ```r
-mod_dCDH20 = did_multiplegt(dat, 'y', 'id', 'time', 'treat', 
-                            dynamic   = 10,   # no. of post-treatment periods 
-                            placebo   = 10,   # no. of pre-treatment periods
-                            brep      = 20,   # no. of bootstraps (required for SEs)
-                            cluster   = 'id', # variable to cluster SEs on
-                            parallel  = TRUE) # run the bootstraps in parallel
+mod_dCDH20 = did_multiplegt(
+  dat, 'y', 'id', 'time', 'treat', # original regression params
+  dynamic   = 10,                  # no. of post-treatment periods
+  placebo   = 10,                  # no. of pre-treatment periods
+  brep      = 20,                  # no. of bootstraps (required for SEs)
+  cluster   = 'id',                # variable to cluster SEs on
+  parallel  = TRUE                 # run the bootstraps in parallel
+  )
 ```
 Running the above command will automically yield the following event study plot.
 
