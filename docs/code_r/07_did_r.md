@@ -121,7 +121,7 @@ cs_es
 #' Estimation Method:  Doubly Robust
 
 ```r
-ggdid(cs_es)
+ggdid(cs_es, title = "(cs)did")
 ```
 
-<img src="../../../assets/images/csdid_R_ggplot2.png" height="300">
+<img src="../../../assets/images/csdid_R.png" height="300">
