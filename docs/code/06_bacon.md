@@ -515,7 +515,7 @@ lab var t  "Time  variable"
 
 ```
 
-Here we have 30 units ($$i$$) and 60 time periods ($$t$$). You can increase these to which ever mangnitude. We will also do this later for testing.
+Here we have 30 units ($$i$$) and 60 time periods ($$t$$). You can increase these to which ever magnitude. We will also do this later for testing.
 
 We can also fix the seed in case you want replicate exactly what we have here:
 
