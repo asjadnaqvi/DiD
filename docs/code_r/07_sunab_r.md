@@ -20,9 +20,11 @@ image: "../../../assets/images/DiD.png"
 
 ## Introduction
 
-Among (many) other things, Laurent Berge's **fixest** package supports the
-estimation procedure described by the Sun and Abraham 2020 paper [Estimating
-Dynamic Treatment Effects in Event Studies with Heterogeneous Treatment
+Among (many) other things, 
+[Laurent Bergé's](https://sites.google.com/site/laurentrberge/)
+[**fixest**](https://lrberge.github.io/fixest/) package supports the estimation
+procedure described by the Sun and Abraham 2020 paper [Estimating Dynamic
+Treatment Effects in Event Studies with Heterogeneous Treatment
 Effects](https://www.sciencedirect.com/science/article/pii/S030440762030378X)
 (hereafter SA20).  The key function is **`sunab()`**, which provides equivalent
 functionality to the `eventstudyinteract` Stata command. However, it requires
