@@ -18,11 +18,20 @@ image: "../../../assets/images/DiD.png"
 
 ---
 
-_TO-DO: Add text._
-
 ## Introduction
 
-_INCOMPLETE_
+Among (many) other things, Laurent Berge's **fixest** package supports the
+estimation procedure described by the Sun and Abraham 2020 paper [Estimating
+Dynamic Treatment Effects in Event Studies with Heterogeneous Treatment
+Effects](https://www.sciencedirect.com/science/article/pii/S030440762030378X)
+(hereafter SA20).  The key function is **`sunab()`**, which provides equivalent
+functionality to the `eventstudyinteract` Stata command. However, it requires
+less manual tuning (e.g., leads and lags are detected automatically) and it 
+integrates natively with **fixest's** other facilities (e.g. graphing and
+tabling). As one would expect of **fixest**, estimation is also very fast---you
+will likely find it to be the fastest option among all of the specialist DiD
+libraries that we cover here. These features combine to make it an attractive
+and natural option for staggered DiD settings.
 
 ## Installation and options
 
@@ -33,7 +42,31 @@ install.packages("fixest") # Install (only need to run once or when updating)
 library("fixest")          # Load the package into memory (required each new session)
 ```
 
-_INCOMPLETE_
+The key function for implementing the SA20 aggregation procedure is `sunab()`.
+This serves as an internal argument for the `fixest::feols()` function that
+many users will be familiar with for estimating (high-dimensional fixed-effect)
+regressions. The most basic form is thus:
+
+```r
+feols(y ~ sunab(cohort, period) | id + period, data, ...)
+```
+
+where
+
+| Variable | Description |
+| ----- | ----- |
+| y | outcome variable |
+| cohort | variable describing a common treatment period (e.g., `year_treated`) |
+| period | time variable  |
+| id | panel id |
+| ... | Additional arguments |
+
+All of the regular `feols()` functionality and post-estimation options can be
+layered on top of the basic case above. For example, users can add covariates, 
+change the default cohort reference (here: the never-treated), etc. It's even
+possible to integrate `sunab()` into **fixest's** nonlinear model estimators
+like `feglm()` and `fepois()`, although I don't believe these have good 
+theoretical support. See the helpfile (`?sunab`) for more detailed information.
 
 ## Dataset
 
@@ -56,7 +89,6 @@ Or, in graph form.
 
 <img src="../../../assets/images/test_data_R.png" height="300">
 
-
 ## Test the package
 
 Remember to load the package (if you haven't already).
@@ -65,12 +97,19 @@ Remember to load the package (if you haven't already).
 library(fixest)
 ```
 
+Let's try the basic `sunab()` function (as integrated inside `feols()`). Note 
+that we don't have any covariates, although these would be trivial to add to the
+model formula. Similarly, we'll explicitly cluster the standard errors by
+individual ID, although this is redundant since **fixest** automatically
+clusters by the first variable in the fixed-effect slot. This next code chunk
+should complete almost instaneously.
+
 ```r
-sa = feols(
+sa20 = feols(
     y ~ sunab(first_treat, rel_time) | id + time, 
-    data = dat
+    data = dat, vcov = ~id
     )
-sa
+sa20
 #' OLS estimation, Dep. Var.: y
 #' Observations: 1,800 
 #' Fixed-effects: id: 30,  time: 60
@@ -91,15 +130,29 @@ sa
 #'                  Within R2: 0.999686
 ```
 
+Being a **fixest** model, all of the usual methods apply to our `sa20` object.
+For example, we can export the regression table to LaTeX with
+[`etable()`](https://lrberge.github.io/fixest/reference/etable.html), or
+visualize the event-study with
+[`iplot()`](https://lrberge.github.io/fixest/reference/coefplot.html#iplot-1).
+Here I'll do the latter, using a bit of regex to drop leads and lags with 2
+digits (i.e., dropping everything greater than 9 periods away from treatment).
+This isn't strictly necessary, but will sharpen up our focus on the periods
+around the treatment date.
+
 ```r
-# iplot(sa) # Vanilla option is fine, but we can tweak a bit...
-sa |>
+# iplot(sa20)
+# Vanilla option (above) is fine, but we can tweak a bit...
+sa20 |>
   iplot(
     main     = "fixest::sunab",
     xlab     = "Time to treatment",
-    drop     = "[[:digit:]]{2}",    # Drop leads/lags greater than |9|
+    drop     = "[[:digit:]]{2}",    # Limit lead and lag periods to -9:9
     ref.line = 1
     )
 ```
+
+P.S. For those of you that would prefer a ggplot2 version of the above (base R)
+plot, check out [**ggiplot**](http://grantmcdermott.com/ggiplot).
 
 <img src="../../../assets/images/sunab_R.png" height="300">
