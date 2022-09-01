@@ -18,11 +18,33 @@ image: "../../../assets/images/DiD.png"
 
 ---
 
-_TO-DO: Add text._
-
 ## Introduction
 
-_INCOMPLETE_
+The [**did**](https://bcallaway11.github.io/did/) R package was developed by 
+[Brantly Callaway](https://bcallaway11.github.io/) and 
+[Pedro Sant'Anna](https://pedrohcgs.github.io/) to accompany their 2021 paper
+[Difference-in-Differences with multiple time periods](https://www.sciencedirect.com/science/article/pii/S0304407620303948) (henceforth CS21).
+
+CS21 provides an extremely flexible framework for estimating DiD-style
+regressions and can yield valid estimands in cases where other packages/routines
+struggle.  At the heart of CS21&mdash;and thus the **did** package&mdash;is a
+fully saturated set of group (i.e., cohort) x time interactions. The idea is to
+estimate each of these interactions relative to a valid control group (by
+default, the never-treated units) and thus yield individual average treatment
+effects (ATTs).  We can then aggregate these individual ATTs along different
+dimensions to yield "summary" results of interest. For example, we can aggregate
+dynamically (i.e., over time periods) to get the equivalent event-study
+coefficients.
+
+If this level of generality and flexibility sounds like it requires a lot of
+work, that's because it does. **did** does a great deal under the hood and I
+haven't even talked about the way it computes the individual ATTs. (_TL;DR_ it
+uses a "doubly-robust" approach by default, since CS21 proves the equivalence
+conditions for estimating by regression or inverse probability weighting.) But
+the package is very user-friendly and suprisingly nimble. A lot of work has gone
+into making estimation fast, with 
+[considerable speed gains](https://twitter.com/pedrohcgs/status/1470526912447528960) 
+unlocked through C++ optimization.
 
 ## Installation and options
 
@@ -33,7 +55,51 @@ install.packages("did") # Install (only need to run once or when updating)
 library("did")          # Load the package into memory (required each new session)
 ```
 
-_INCOMPLETE_
+The typical workflow for **did** involves two consecutive function calls:
+
+    1. Estimate and save a model of the individual (group x time) ATTs using [`agg_gt()`](https://bcallaway11.github.io/did/reference/att_gt.html).
+    2. Aggregate the ATTs along the dimension of interest using [`aggte()`](https://bcallaway11.github.io/did/reference/aggte.html). For example, we can use `aggte(..., type = "dynamic")` to aggregate ATTs along the relative time dimension and thus obtain an event study.
+
+Let's quickly take a look at the main arguments for these two functions:
+
+```r
+att_gt(yname, tname, idname, gname, xformla, data, ...)
+```
+
+where
+
+| Variable | Description |
+| ----- | ----- |
+| yname | outcome variable (character) |
+| tname | time variable (character) |
+| idname | panel id variable (character) |
+| gname | group or cohort variable defining a common first period (character) |
+| xformla | addtional control variables (formula, optional) |
+| data | dataset |
+| ... | Additional arguments (estimation method, DiD control group, etc.) |
+
+
+```r
+aggte(model, type, ...)
+```
+
+where
+
+| Variable | Description |
+| ----- | ----- |
+| model | model object resulting from the `att_gt()` call above |
+| type | type of aggregation to compute, e.g. "group" or "dynamic" (character) |
+| ... | Additional arguments (clustering, bootsrapping, etc.) |
+
+Again, **did** is extremely flexible and allows for a ton of additional
+arguments beyond those presented here, including everything from treatment
+anticipation to clustered or bootstrapped SEs. See the relevant helpfiles 
+([`?att_gt`](https://bcallaway11.github.io/did/reference/att_gt.html) and
+[`?aggte`](https://bcallaway11.github.io/did/reference/aggte.html)) 
+for more information. Lastly, the **did** website contains a 
+[series of extremely helpful user guides](https://bcallaway11.github.io/did/articles/index.html) 
+(i.e., vignettes) that not only demonstrate how to use the package, but also
+help users to think through the issues of DiD estimation more generally.
 
 ## Dataset
 
@@ -65,23 +131,58 @@ Remember to load the package (if you haven't already).
 library(did)
 ```
 
+Okay, let's run the first of our two complementary functions, `att_gt()`, to get
+the (group x time) ATTs. The below function call should be pretty
+self-explanatory and only takes a second or two to run. But I do want to
+highlight the fact that we specify `control_group = "notyettreated"` (rather
+than the "nevertreated" default). This is just an artefact of our simulated
+dataset, which doesn't provide enough never-treated units for the underlying
+CS21 estimation procedure. If you omitted this argument (as I did originally),
+then the functional will return a helpful prompt to fix the problem.
+
 ```r
-cs = att_gt(
+cs21 = att_gt(
     yname         = "y",
     tname         = "time",
     idname        = "id",
     gname         = "first_treat",
-    control_group = "notyettreated",#  Too few groups for "nevertreated" default
+  # xformla       = NULL,            # No additional controls in this dataset 
+    control_group = "notyettreated", # Too few groups for "nevertreated" default
     clustervars   = "id", 
     data          = dat
     )
+cs21
+
+#' Call:
+#' att_gt(yname = "y", tname = "time", idname = "id", gname = "first_treat", 
+#'     data = dat, control_group = "notyettreated", clustervars = "id")
+#' 
+#' Reference: Callaway, Brantly and Pedro H.C. Sant'Anna.  "Difference-in-
+#' Differences with Multiple Time Periods." Journal of Econometrics, Vol. 225, 
+#' No. 2, pp. 200-230, 2021. <https://doi.org/10.1016/j.jeconom.2020.12.001>, 
+#' <https://arxiv.org/abs/1803.09015> 
+#' 
+#' Group-Time Average Treatment Effects:
+#'  Group Time ATT(g,t) Std. Error [95% Simult.  Conf. Band]  
+#'     12    2   0.3932     0.6474       -1.4985      2.2849  
+#'     12    3  -0.9038     0.7147       -2.9919      1.1844  
+#'     12    4   0.6265     0.5265       -0.9118      2.1648  
+#'     12    5   0.7449     0.5280       -0.7979      2.2876  
+#'     12    6  -1.4944     0.5348       -3.0571      0.0683
+#' <TRUNCATED>
 ```
 
+With our ATTs in hand, we can now proceed to our second function, `aggte()`,
+to compute the aggregate quantities of interest. In this case, I'll specify
+"dynamic" aggregation to get an event-study (i.e., ATTs aggregated across
+relative time-to-treatment periods). I'll also limit the study extent around 
+the treatment date to 10 leads and 10 lags.
+
 ```r
-cs_es = aggte(cs, type = "dynamic", min_e = -10, max_e = 10)
-cs_es
+cs21_es = aggte(cs21, type = "dynamic", min_e = -10, max_e = 10)
+cs21_es
 #' Call:
-#' aggte(MP = cs, type = "dynamic", min_e = -10, max_e = 10)
+#' aggte(MP = cs21, type = "dynamic", min_e = -10, max_e = 10)
 #' 
 #' Reference: Callaway, Brantly and Pedro H.C. Sant'Anna.  "Difference-in-Differences with Multiple Time Periods." Journal of Econometrics, Vol. 225, No. 2, pp. 200-230, 2021. <https://doi.org/10.1016/j.jeconom.2020.12.001>, <https://arxiv.org/abs/1803.09015> 
 #' 
@@ -120,8 +221,14 @@ cs_es
 #' Control Group:  Not Yet Treated,  Anticipation Periods:  0
 #' Estimation Method:  Doubly Robust
 
+A final cherry on the top for **did** is that it provides a full set of methods
+for post-estimation tidying and visualization. (Looking at you,
+**DIDmultiplegt**.) Here's a quick example using the latter, using the
+[`ggdid()`](https://bcallaway11.github.io/did/reference/ggdid.MP.html) function
+to produce an event-study plot.
+
 ```r
-ggdid(cs_es, title = "(cs)did")
+ggdid(cs21_es, title = "(cs)did")
 ```
 
 <img src="../../../assets/images/csdid_R.png" height="300">
