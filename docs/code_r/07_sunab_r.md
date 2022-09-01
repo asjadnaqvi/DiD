@@ -26,7 +26,9 @@ Among (many) other things,
 procedure described by the Sun and Abraham 2020 paper [Estimating Dynamic
 Treatment Effects in Event Studies with Heterogeneous Treatment
 Effects](https://www.sciencedirect.com/science/article/pii/S030440762030378X)
-(hereafter SA20).  The key function is **`sunab()`**, which provides equivalent
+(hereafter SA20).  The key function is 
+**[`sunab()`](https://lrberge.github.io/fixest/reference/sunab.html)**,
+which provides equivalent
 functionality to the `eventstudyinteract` Stata command. However, it requires
 less manual tuning (e.g., leads and lags are detected automatically) and it 
 integrates natively with **fixest's** other facilities (e.g. graphing and
