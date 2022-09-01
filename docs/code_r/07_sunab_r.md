@@ -68,7 +68,10 @@ layered on top of the basic case above. For example, users can add covariates,
 change the default cohort reference (here: the never-treated), etc. It's even
 possible to integrate `sunab()` into **fixest's** nonlinear model estimators
 like `feglm()` and `fepois()`, although I don't believe these have good 
-theoretical support. See the helpfile (`?sunab`) for more detailed information.
+theoretical support. See the helpfile
+([`?sunab`](https://lrberge.github.io/fixest/reference/sunab.html))
+for more detailed information, as well as the
+[introductory vignette](https://lrberge.github.io/fixest/articles/fixest_walkthrough.html#staggered-difference-in-differences-sun-and-abraham-2020).
 
 ## Dataset
 
