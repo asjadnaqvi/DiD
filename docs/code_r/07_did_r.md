@@ -220,6 +220,7 @@ cs21_es
 #' 
 #' Control Group:  Not Yet Treated,  Anticipation Periods:  0
 #' Estimation Method:  Doubly Robust
+```
 
 A final cherry on the top for **did** is that it provides a full set of methods
 for post-estimation tidying and visualization. (Looking at you,
