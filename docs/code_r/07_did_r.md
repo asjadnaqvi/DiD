@@ -55,10 +55,10 @@ install.packages("did") # Install (only need to run once or when updating)
 library("did")          # Load the package into memory (required each new session)
 ```
 
-The typical workflow for **did** involves two consecutive function calls:
+The typical workflow for **did** involves two consecutive function calls.
 
-1. Estimate and save a model of the individual (group x time) ATTs using [`agg_gt()`](https://bcallaway11.github.io/did/reference/att_gt.html).
-2. Aggregate the ATTs along the dimension of interest using [`aggte()`](https://bcallaway11.github.io/did/reference/aggte.html). For example, we can use `aggte(..., type = "dynamic")` to aggregate ATTs along the relative time dimension and thus obtain an event study.
+1. **[`agg_gt()`](https://bcallaway11.github.io/did/reference/att_gt.html)**: Estimate the individual (group x time) ATTs.
+2. **[`aggte()`](https://bcallaway11.github.io/did/reference/aggte.html)**: Aggregate the ATTs along the dimension of interest. For example, we can use `aggte(..., type = "dynamic")` to aggregate ATTs along the relative time dimension and thus obtain an event study.
 
 Let's quickly take a look at the main arguments for these two functions:
 
@@ -78,6 +78,7 @@ where
 | data | dataset |
 | ... | Additional arguments (estimation method, DiD control group, etc.) |
 
+and
 
 ```r
 aggte(model, type, ...)

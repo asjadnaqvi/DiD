@@ -27,9 +27,10 @@ Before we start, you can refer to the following glossary table for symbols:
 
 All of the R code in this section will make use of the same fake dataset, which
 we generate below. This dataset will closely mimic the equivalent dataset used
-in the Stata examples, but won't be exactly the same because of different random
-seeds. So you shouldn't expect the same results when comparing examples across
-the two languages on this website (unless you explicitly use the same dataset).
+in the [Stata examples]({{ "/docs/code" | relative_url }}). But it won't be 
+_exactly_ the same because of different random seeds (**important!**). This means 
+that you shouldn't expect the same results when comparing the R and Stata examples
+on this website. (Unless, of course, you explicitly use the same dataset.)
 
 ```r
 set.seed(123456L)
@@ -97,11 +98,12 @@ xyplot(
   )
 ```
 
-<img src="../../assets/images/test_data_R.png" height="300">
+<img src="../../../assets/images/test_data_R.png" height="300">
 
-With our dataset in hand, please feel free to click on the individual pages
-in the Table of Contents below. Each of these explores a specific R package 
+With our dataset in hand, please click through to the individual pages
+in the **Table of Contents** below. Each of these explores a specific R package 
 in more detail, by walking you through an implementation example using our
-test dataset.
+test dataset. I plan to add more packages as time allows, but please feel 
+free to contribute yourself via a PR. 
 
 {: .fs-6 .fw-300 }
