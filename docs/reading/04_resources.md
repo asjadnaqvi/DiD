@@ -180,6 +180,10 @@ Bruno Ferman, Cristine Pinto (2021). [Synthetic Controls With Imperfect Pretreat
 
 Pamela Jakiela (2021). [Simple Diagnostics for Two-Way Fixed Effects](https://arxiv.org/abs/2103.13229)
 
+Kosuke Imai, In Song Kim, Erik Wang (2021). [Matching Methods for Causal Inference with Time-Series Cross-Sectional Data](https://imai.fas.harvard.edu/research/files/tscs.pdf).
+
+Kosuke Imai, In Song Kim (2021). [On the Use of Two-way Fixed Effects Regression Models for Causal Inference with Panel Data](https://imai.fas.harvard.edu/research/files/FEmatch-twoway.pdf). Political Analysis.
+
 Michelle Marcus, Pedro H. C. Sant’Anna (2021). [The Role of Parallel Trends in Event Study Settings: An Application to Environmental Economics](https://www.journals.uchicago.edu/doi/10.1086/711509). Journal of the Association of Environmental and Resource Economists.
 
 [Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44) (2021). [Pre-test with Caution: Event-study Estimates After Testing for Parallel Trends](https://jonathandroth.github.io/assets/files/roth_pretrends_testing.pdf).
