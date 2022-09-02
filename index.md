@@ -28,13 +28,9 @@ Recent innovations like the [Bacon decomposition](https://asjadnaqvi.github.io/D
 
 ## Misc info
 
-This is a working document. If you want to report errors or contribute, just [open an issue](https://github.com/AsjadNaqvi/DiD/issues), or [start a discussion](https://github.com/asjadnaqvi/DiD/discussions), or e-mail me at asjadnaqvi@gmail.com. 
+The aim of the code repository is to help readers navigate the code structure, and syntax usage for different packages. Therefore, this repository is periodically updated. If you want to report errors and/or contribute, then please [open an issue](https://github.com/AsjadNaqvi/DiD/issues), or [start a discussion](https://github.com/asjadnaqvi/DiD/discussions), or e-mail me at asjadnaqvi@gmail.com. 
 
-I update the `Stata` code every 3 months or so. [@grantmcdermott](https://github.com/grantmcdermott) is now maintaining the `R` code base. If anyone can help contribute code for `Python` or `Julia`, then please reach out!
+I update the [Stata code](https://asjadnaqvi.github.io/DiD/docs/code) every 3 months or so. [@grantmcdermott](https://github.com/grantmcdermott) maintains the [R code](https://asjadnaqvi.github.io/DiD/docs/code_r). Please reach out if you can help contribute code for *Python* or *Julia*.
 
-
-The of the code repository is to help the readers navigate the code structure, and syntax usage for different packages. If you use this repository and find it helpful, acknowledgements and/or citations will be highly appreciated. 
-
-
-
+If you use this repository and find it helpful, acknowledgements and/or citations will be highly appreciated. 
 
