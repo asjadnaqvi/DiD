@@ -99,4 +99,9 @@ xyplot(
 
 <img src="../../assets/images/test_data_R.png" height="300">
 
+With our dataset in hand, please feel free to click on the individual pages
+in the Table of Contents below. Each of these explores a specific R package 
+in more detail, by walking you through an implementation example using our
+test dataset.
+
 {: .fs-6 .fw-300 }

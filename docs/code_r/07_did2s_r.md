@@ -86,7 +86,7 @@ this directly with an example below. But you can take a look at the helpfile
 ## Dataset
 
 To demonstrate the package in action, we'll use the fake dataset that we 
-[created earlier]({{ "/docs/07_code_r#data-generation" | relative_url }}). Here's a 
+[created earlier]({{ "/docs/code_r#data-generation" | relative_url }}). Here's a 
 reminder of what the data look like.
 
 ```r
