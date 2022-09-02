@@ -28,7 +28,7 @@ For the code base, the following are responsible:
 `R`: [@grantmcdermott](https://github.com/grantmcdermott)
 
 
-Please open an issue if you find errors, or have suggestions for enchancements.
+Please open an [issue](https://github.com/asjadnaqvi/DiD/issues) if you find errors, or have suggestions for enchancements.
 
 If you can do the same with `Python` or `Julia`, then please reach out. I would like to enchance these sections. 
 
