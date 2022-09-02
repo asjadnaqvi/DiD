@@ -18,6 +18,18 @@ This repository tracks the recent developments in the Difference-in-Difference (
 
 This is a working document. If you want to report errors or contribute, just [open an issue](https://github.com/AsjadNaqvi/DiD/issues), or [start a discussion](https://github.com/asjadnaqvi/DiD/discussions), or e-mail at asjadnaqvi@gmail.com. Since paths and links are also subject to change, please report them to keep this repository as up-to-date as possible.
 
-I will slowly build up this website with some Stata code. This is to help me (and you) navigate the literature and figure out the code structure for different packages.
+
+## Code base
+
+For the code base, the following are responsible:
+
+`Stata`: @asjadnaqvi
+
+`R`: @grantmcdermott
+
+
+If you can do the same with `Python` or `Julia`, then please reach out. 
+
+Please open an issue if you find errors, or have suggestions for enchancements.
 
 
