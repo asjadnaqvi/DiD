@@ -78,7 +78,7 @@ for more detailed information, as well as the
 ## Dataset
 
 To demonstrate the package in action, we'll use the fake dataset that we 
-[created earlier]({{ "/07_code_r#data-generation" | relative_url }}). Here's a 
+[created earlier]({{ "/docs/07_code_r#data-generation" | relative_url }}). Here's a 
 reminder of what the data look like.
 
 ```r
@@ -159,7 +159,7 @@ sa20 |>
     )
 ```
 
+<img src="../../../assets/images/sunab_R.png" height="300">
+
 P.S. For those of you that would prefer a ggplot2 version of the above (base R)
 plot, check out [**ggiplot**](http://grantmcdermott.com/ggiplot).
-
-<img src="../../../assets/images/sunab_R.png" height="300">

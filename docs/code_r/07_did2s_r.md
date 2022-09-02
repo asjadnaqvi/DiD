@@ -86,7 +86,7 @@ this directly with an example below. But you can take a look at the helpfile
 ## Dataset
 
 To demonstrate the package in action, we'll use the fake dataset that we 
-[created earlier]({{ "/07_code_r#data-generation" | relative_url }}). Here's a 
+[created earlier]({{ "/docs/07_code_r#data-generation" | relative_url }}). Here's a 
 reminder of what the data look like.
 
 ```r
@@ -207,7 +207,7 @@ es_mod |>
   )
 ```
 
+<img src="../../../assets/images/did2s_R.png" height="300">
+
 P.S. For those of you that would prefer a ggplot2 version of the above (base R)
 plot, check out [**ggiplot**](http://grantmcdermott.com/ggiplot).
-
-<img src="../../../assets/images/did2s_R.png" height="300">
