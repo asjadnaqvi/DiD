@@ -150,7 +150,7 @@ Pedro Picchetti, Cristine Pinto (2022). [Marginal Treatment Effects in Differenc
 Anna Wysocki, Katherine Lawson, Mijke Rhemtulla (2022). [Statistical Control Requires Causal Justification](https://journals.sagepub.com/doi/10.1177/25152459221095823). Advances in Methods and Practices in Psychological Science.
 
 
- ### 2021
+### 2021
 
 [Dmitry Arkhangelsky](https://sites.google.com/view/dmitry-arkhangelsky/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ArkhangelskyD), [Susan Athey](https://athey.people.stanford.edu/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/Susan_Athey), [David A. Hirshberg](https://davidahirshberg.bitbucket.io/), [Guido Imbens](https://www.gsb.stanford.edu/faculty-research/faculty/guido-w-imbens), [Stefan Wager](https://web.stanford.edu/~swager/) (2021). [Synthetic Difference in Differences](https://www.aeaweb.org/articles?id=10.1257/aer.20190159). American Economic Review.
 
