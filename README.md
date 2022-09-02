@@ -23,13 +23,12 @@ This is a working document. If you want to report errors or contribute, just [op
 
 For the code base, the following are responsible:
 
-`Stata`: @asjadnaqvi
+`Stata`: [@asjadnaqvi](https://github.com/asjadnaqvi)
 
-`R`: @grantmcdermott
+`R`: [@grantmcdermott](https://github.com/grantmcdermott)
 
-
-If you can do the same with `Python` or `Julia`, then please reach out. 
 
 Please open an issue if you find errors, or have suggestions for enchancements.
 
+If you can do the same with `Python` or `Julia`, then please reach out. I would like to enchance these sections. 
 
