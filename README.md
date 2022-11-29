@@ -3,7 +3,7 @@
 
 # DiD literature
 
-*Last updated: September 2022*
+*Last updated: November 2022*
 
 ## :dart: NOTE
 
