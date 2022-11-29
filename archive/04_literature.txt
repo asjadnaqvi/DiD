@@ -64,8 +64,13 @@ Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 ### 2022
 
+Dalia Ghanem, Pedro H. C. Sant'Anna, Kaspar Wüthrich (2022). [Selection and parallel trends](https://arxiv.org/abs/2203.09001).
 
-[Andrew C. Baker](https://andrewcbaker.netlify.app/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/Andrew___Baker), [David F. Larcker](https://www.gsb.stanford.edu/faculty-research/faculty/david-f-larcker), [Charles C. Y. Wang](https://www.hbs.edu/faculty/Pages/profile.aspx?facId=651677) (2022). [How Much Should We Trust Staggered Difference-In-Differences Estimates?](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794018) Journal of Financial Economics. <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
+[Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44), [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) (2022). [When Is Parallel Trends Sensitive to Functional Form?](https://arxiv.org/pdf/2010.04814.pdf).
+
+[Andrew Baker](https://andrewcbaker.netlify.app/), Jonah B. Gelbach (2022). [Machine Learning and Predicted Returns for Event Studies in Securities Litigation](https://andrewcbaker.netlify.app/publication/baker_gelbach_jlfa/Baker_Gelbach_JLFA.pdf).
+
+[Andrew Baker](https://andrewcbaker.netlify.app/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/Andrew___Baker), [David F. Larcker](https://www.gsb.stanford.edu/faculty-research/faculty/david-f-larcker), [Charles C. Y. Wang](https://www.hbs.edu/faculty/Pages/profile.aspx?facId=651677) (2022). [How Much Should We Trust Staggered Difference-In-Differences Estimates?](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794018) Journal of Financial Economics. <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
 
 Carolina Caetano, Brantly Callaway, Stroud Payne, Hugo Sant'Anna Rodrigues (2022). [Difference in Differences with Time-Varying Covariates](https://arxiv.org/abs/2202.02903)
 
@@ -77,7 +82,7 @@ Arindrajit Dube, Daniele Girardi, Oscar Jorda, Alan M. Taylor (2022). [A Local P
 
 Dalia Ghanem, Pedro Sant'Anna, Kaspar Wüthrich (2022). [Selection and parallel trends](https://arxiv.org/abs/2203.09001).
 
-Paul Goldsmith-Pinkham, Peter Hull & Michal Kolesár (2022). [Contamination Bias in Linear Regressions](https://www.nber.org/papers/w30108)
+Paul Goldsmith-Pinkham, Peter Hull, Michal Kolesár (2022). [Contamination Bias in Linear Regressions](https://www.nber.org/papers/w30108)
 
 Nandita Mitra, Jason Roy, Dylan Small (2022). [The Future of Causal Inference](https://academic.oup.com/aje/advance-article-abstract/doi/10.1093/aje/kwac108/6618833). American Journal of Epidemiology.
 

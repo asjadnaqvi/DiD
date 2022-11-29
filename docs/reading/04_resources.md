@@ -36,6 +36,7 @@ This section contains a miscellaneous collection of lecture notes, videos, paper
 
 ## Blogs and notes
 
+[Kyle Butts](https://www.kylebutts.com/). [Personal blog with DiD entries](https://www.kylebutts.com/blog/).
 
 [Sylvain Chabé-Ferret](https://sites.google.com/site/sylvainchabeferret/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/SylvainCF): [Statistical Tools for Causal Inference Chapter 4: Difference-in-Differences](https://chabefer.github.io/STCI/NE.html#difference-in-differences).
 
@@ -75,11 +76,11 @@ Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 ## Videos and online lectures
 
+[Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/). [Triple Differences Research Designs at Causal Solutions](https://www.youtube.com/watch?v=LTuBEwASEJQ).
 
 [Nick Huntington-Klein](https://nickchk.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/nickchk) has series of short videos on DiD literature on [YouTube](https://www.youtube.com/watch?v=yQXqdmenc6M&list=PLcTBLulJV_AK1hKtnO0-kYrU0D09K-kj8) as part of [The Effect](https://www.theeffectbook.net/) book series.
 
 [Ben Elsner](https://www.benjaminelsner.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ben_elsner) has a [YouTube lecture series](https://www.youtube.com/playlist?list=PLyvUJLHD8IsJCB7ALqwjRG1BjL5JxE__H) on causal inference including the new DiD literature.
-
 
 [Jorge Perez Perez](https://jorgeperezperez.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jorpppp) has a [YouTube lecture series](https://www.youtube.com/playlist?list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx) with his co-authors (see `xtevent` in the Stata section for paper and package) on event studies with the following sequence of videos:
 
@@ -91,14 +92,11 @@ Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 * Jorge Perez Perez: [Performance of Different Estimators](https://www.youtube.com/watch?v=aZCXxwUQH7U&list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx&index=6)
 * Simon Freyaldenhoven: [Heterogeneous Policy Effects](https://www.youtube.com/watch?v=P-nAUIyhujY&list=PLg-LvQ_7SfMD9d8kbSd_Ig_HB-5h6HCTx&index=7)
 
-
 Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/metrics52) has an [animated video on DiD here](https://www.youtube.com/watch?v=eiffOVbYvNc).
 
 [Paul Goldsmith-Pinkham](https://paulgp.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/paulgp) has a brilliant set of [slides on empirical methods including DiD on GitHub](https://github.com/paulgp/applied-methods-phd). These are also supplemented by his [YouTube lecture series](https://www.youtube.com/playlist?list=PLWWcL1M3lLlojLTSVf2gGYQ_9TlPyPbiJ).
 
-
-[Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): [CodeChella](https://causalinf.substack.com/p/codechella-announcement), one of the first DiD workshops in July 2021. The recording of the workshop are available on [YouTube](https://www.youtube.com/user/scunning/videos).
-
+[Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf): [CodeChella](https://causalinf.substack.com/p/codechella-announcement), one of the first DiD workshops, in July 2021. The recordings from the workshop are available at [YouTube](https://www.youtube.com/user/scunning/videos).
 
 [Taylor J. Wright](https://taylorjwright.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/taylor_wright) organized an online [DiD reading group](https://taylorjwright.github.io/did-reading-group/) in the summer of 2021. The lectures can be viewed on [YouTube](https://www.youtube.com/channel/UCA7Idy0MfpP-uAjOebsFVuA/videos). Here is a playlist in the order they appear:
 
@@ -126,6 +124,17 @@ Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 ### 2022
 
+[Pedro Picchetti](https://twitter.com/PicchettiPedro), Cristine Pinto (2022). [Marginal Treatment Effects in Difference-in-Differences](https://www.dropbox.com/s/wegkelwx665bh8o/MTE%20in%20DiD.pdf?dl=0)
+
+Yuya Sasaki, Takuya Ura (2022). [Estimation and Inference for Moments of Ratios with Robustness against Large Trimming Bias](https://www.cambridge.org/core/journals/econometric-theory/article/abs/estimation-and-inference-for-moments-of-ratios-with-robustness-against-large-trimming-bias/6505FD01751EE01FEFFD34071C873FB6)
+
+Dalia Ghanem, Pedro H. C. Sant'Anna, Kaspar Wüthrich (2022). [Selection and parallel trends](https://arxiv.org/abs/2203.09001).
+
+P Rosenbaum, D Rubin (2022). [Propensity scores in the design of observational studies for causal effects](https://academic.oup.com/biomet/advance-article-abstract/doi/10.1093/biomet/asac054/6726181). Biometrika.
+
+[Jonathan Roth](https://jonathandroth.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/jondr44), [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/pedrohcgs) (2022). [When Is Parallel Trends Sensitive to Functional Form?](https://arxiv.org/pdf/2010.04814.pdf).
+
+[Andrew Baker](https://andrewcbaker.netlify.app/), Jonah B. Gelbach (2022). [Machine Learning and Predicted Returns for Event Studies in Securities Litigation](https://andrewcbaker.netlify.app/publication/baker_gelbach_jlfa/Baker_Gelbach_JLFA.pdf).
 
 [Andrew C. Baker](https://andrewcbaker.netlify.app/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/Andrew___Baker), [David F. Larcker](https://www.gsb.stanford.edu/faculty-research/faculty/david-f-larcker), [Charles C. Y. Wang](https://www.hbs.edu/faculty/Pages/profile.aspx?facId=651677) (2022). [How Much Should We Trust Staggered Difference-In-Differences Estimates?](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794018) Journal of Financial Economics. <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
 
