@@ -27,7 +27,7 @@ This section contains a miscellaneous collection of lecture notes, videos, paper
 ## Books
 Free online resources
 
-[Miguel Hernan](https://www.hsph.harvard.edu/miguel-hernan/) and [Jamie Robins](https://www.hsph.harvard.edu/james-robins/). [Causal Inference: What If](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/).
+[Miguel Hernan](https://www.hsph.harvard.edu/miguel-hernan/) and [Jamie Robins](https://www.hsph.harvard.edu/james-robins/) (2022). [Causal Inference: What If](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/).
 
 [Martin Huber](https://www.unifr.ch/appecon/en/chair/team/prof/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CausalHuber) (2021). [Causal analysis](https://drive.switch.ch/index.php/s/tNhKQmkGB48bjfz): Impact evaluation and causal machine learning with applications in R.
 
