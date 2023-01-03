@@ -130,7 +130,7 @@ Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 ## Papers
 
-*Papers are sorted by year and last name. Papers marked with a <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/> are review papers and are a good starting points. Papers without journals are pre-prints.* 
+*Papers are sorted by year and last name. Papers marked with a <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/> are review papers and are a good starting point. Papers without journals are pre-prints.* 
 
 
 ### 2022
