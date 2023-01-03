@@ -25,6 +25,9 @@ This section contains a miscellaneous collection of lecture notes, videos, paper
 ---
 
 ## Books
+Free online resources
+
+[Miguel Hernan](https://www.hsph.harvard.edu/miguel-hernan/) and [Jamie Robins](https://www.hsph.harvard.edu/james-robins/). [Causal Inference: What If](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/).
 
 [Martin Huber](https://www.unifr.ch/appecon/en/chair/team/prof/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CausalHuber) (2021). [Causal analysis](https://drive.switch.ch/index.php/s/tNhKQmkGB48bjfz): Impact evaluation and causal machine learning with applications in R.
 
@@ -39,6 +42,8 @@ This section contains a miscellaneous collection of lecture notes, videos, paper
 [Kyle Butts](https://www.kylebutts.com/). [Personal blog with DiD entries](https://www.kylebutts.com/blog/).
 
 [Sylvain Chabé-Ferret](https://sites.google.com/site/sylvainchabeferret/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/SylvainCF): [Statistical Tools for Causal Inference Chapter 4: Difference-in-Differences](https://chabefer.github.io/STCI/NE.html#difference-in-differences).
+
+[Matheus Facure](https://matheusfacure.github.io/). [Causal Inference for The Brave and True](https://matheusfacure.github.io/python-causality-handbook/landing-page.html) 
 
 [Davis Schönholzer](https://www.davidschonholzer.com/) has a series of lectures on DiD [here](https://www.davidschonholzer.com/teaching.html).
 
@@ -76,7 +81,11 @@ Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 ## Videos and online lectures
 
+[Yiqing Xu](https://yiqingxu.org/) has a series of lecture on his [YouTube](https://www.youtube.com/@xuyiqing) channel.
+
 [Pedro H.C. Sant'Anna](https://pedrohcgs.github.io/). [Triple Differences Research Designs at Causal Solutions](https://www.youtube.com/watch?v=LTuBEwASEJQ).
+
+[Brady Neal](https://www.bradyneal.com/aboutme). [A brief introduction to causal inference](https://www.youtube.com/watch?v=DXBPtpBhGqo).
 
 [Nick Huntington-Klein](https://nickchk.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/nickchk) has series of short videos on DiD literature on [YouTube](https://www.youtube.com/watch?v=yQXqdmenc6M&list=PLcTBLulJV_AK1hKtnO0-kYrU0D09K-kj8) as part of [The Effect](https://www.theeffectbook.net/) book series.
 
@@ -236,8 +245,6 @@ These (related) interactive R-Shiny dashboards show how TWFE models give the wro
 [Kyle Butts](https://kylebutts.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/kylefbutts): [https://kyle-butts.shinyapps.io/did_twfe](https://kyle-butts.shinyapps.io/did_twfe)
 
 [Hans Henrik Sievertsen](https://hhsievertsen.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/hhsievertsen): [https://hhsievertsen.shinyapps.io/kylebutts_did_eventstudy](https://hhsievertsen.shinyapps.io/kylebutts_did_eventstudy)
-
-
 
 
 
