@@ -39,6 +39,8 @@ Free online resources
 
 ## Blogs and notes
 
+[Matteo Courthoud](https://matteocourthoud.github.io/). [Medium blog on Causal inference](https://medium.com/@matteo.courthoud)
+
 [Kyle Butts](https://www.kylebutts.com/). [Personal blog with DiD entries](https://www.kylebutts.com/blog/).
 
 [Sylvain Chabé-Ferret](https://sites.google.com/site/sylvainchabeferret/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/SylvainCF): [Statistical Tools for Causal Inference Chapter 4: Difference-in-Differences](https://chabefer.github.io/STCI/NE.html#difference-in-differences).
