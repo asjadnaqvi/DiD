@@ -25,15 +25,15 @@ This section contains a miscellaneous collection of lecture notes, videos, paper
 ---
 
 ## Books
-Free online resources
+Free online books that you can also buy. Note that books might be removed or links might change. Please report these!
 
 [Miguel Hernan](https://www.hsph.harvard.edu/miguel-hernan/) and [Jamie Robins](https://www.hsph.harvard.edu/james-robins/) (2022). [Causal Inference: What If](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/).
-
-[Martin Huber](https://www.unifr.ch/appecon/en/chair/team/prof/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CausalHuber) (2021). [Causal analysis](https://drive.switch.ch/index.php/s/tNhKQmkGB48bjfz): Impact evaluation and causal machine learning with applications in R.
 
 [Nick Huntington-Klein](https://nickchk.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/nickchk) (2021). [The Effect](https://theeffectbook.net/).
 
 [Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/causalinf) (2020). [Causal Inference: The Mix Tape](https://mixtape.scunning.com/).
+
+
 
 ---
 
@@ -82,6 +82,13 @@ Jeffrey Wooldridge [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 ---
 
 ## Videos and online lectures
+
+
+[Jonas Peters[(http://web.math.ku.dk/~peters/) has a four part lecture series on YouTube:
+* [Lecture 1](https://www.youtube.com/watch?v=zvrcyqcN9Wo)
+* [Lecture 2](https://www.youtube.com/watch?v=bHOGP5o3Vu0)
+* [Lecture 3](https://www.youtube.com/watch?v=Jp4UcgpVA2I)
+* [Lecture 4](https://www.youtube.com/watch?v=ytnr_2dyyMU)
 
 [Yiqing Xu](https://yiqingxu.org/) has a series of lecture on his [YouTube](https://www.youtube.com/@xuyiqing) channel.
 
@@ -132,6 +139,14 @@ Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 *Papers are sorted by year and last name. Papers marked with a <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/> are review papers and are a good starting point. Papers without journals are pre-prints.* 
 
+
+### 2023
+
+Alisa Tazhitdinova, Gonzalo Vazquez-Bare (2023). [Difference-in-Differences with Unequal Baseline Treatment Status](https://www.nber.org/papers/w31063).
+
+Andrew Gelman, Jessica Hullman, Lauren Kennedy (2023). [Causal quartets: Different ways to attain the same average treatment effect](http://www.stat.columbia.edu/~gelman/research/unpublished/causal_quartets.pdf)
+
+Ashesh Rambachan, Jonathan Roth (2023). [A More Credible Approach to Parallel Trends](https://academic.oup.com/restud/advance-article-abstract/doi/10.1093/restud/rdad018/7039335). The Review of Economic Studies.
 
 ### 2022
 
