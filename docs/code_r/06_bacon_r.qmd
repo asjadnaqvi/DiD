@@ -1,0 +1,407 @@
+---
+layout: default
+title: Bacon decomposition
+parent: R code
+nav_order: 2
+mathjax: true
+image: "../../../assets/images/DiD.png"
+---
+
+# Goodman-Bacon decomposition
+{: .no_toc }
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
+
+---
+
+This section will walk you through the basic logic of Andrew Goodman-Bacon's
+TWFE decomposition. It draws upon his 2021 _Journal of Econometrics paper_,  
+[Difference-in-differences with variation in treatment timing](https://www.sciencedirect.com/science/article/pii/S0304407621001445).
+
+We'll make use of the following R packages.
+
+```{r}
+# install.packages(c("ggplot2", "fixest", "bacondecomp"))
+library(ggplot2)
+library(fixest)
+library(bacondecomp)
+
+# Optional: custom ggplot2 theme
+theme_set(
+    theme_linedraw() +
+    theme(
+        panel.grid.minor = element_line(linetype = 3, linewidth = 0.1),
+        panel.grid.major = element_line(linetype = 3, linewidth = 0.1)
+    )
+)
+```
+
+## What is the Goodman-Bacon decomposition?
+
+As discussed at the end of the TWFE section, the introduction of differential
+treatment timing makes it hard to draw a bright line between _pre_ and _post_
+treatment periods. Let's continue with the same dataset that we were using in
+the final example from that section.
+
+```{r}
+dat4 = data.frame(
+    id = rep(1:3, times = 10),
+    tt = rep(1:10, each = 3)
+    ) |>
+    within({
+        D = (id == 2 & tt >= 5) | (id == 3 & tt >= 8)
+        btrue = ifelse(D & id == 3, 4, ifelse(D & id == 2, 2, 0))
+        y = id + 1 * tt + btrue * D
+    })
+```
+
+In plot form:
+
+```{r}
+ggplot(dat4, aes(x = tt, y = y, col = factor(id))) +
+    geom_point() + geom_line() +
+    geom_vline(xintercept = c(4.5, 7.5), lty = 2) +
+    scale_x_continuous(breaks = scales::pretty_breaks()) +
+    labs(x = "Time variable", y = "Outcome variable", col = "ID")
+```
+
+Here we see that our simulation includes two distinct treatment periods. The
+first treatment occurs to period 5, where id=2's trendline jumps by 2 units. The
+second treatment occurs in  period 8, where id=3's trendline jumps by 4 units.
+In contrast, id=1 remains untreated for the duration of the experiment.
+
+Stepping back, it's not immediately clear how to calculate the ATT. For example,
+how should the late treated unit (id=3) regard the early treated unit (id=2)?
+Can the latter be used as control group for the former? After all, they didn't
+receive treatment at the same time... but, on the other hand, id=2's path was
+already altered by the initial treatment wave.
+
+To unravel this conundrum, let's start by estimating a simple TWFE model.
+
+```{r}
+feols(y ~ D | id + tt, dat4)
+```
+
+What does the resulting coefficient estimate of $$ \hat{\beta} $$ = 2.91 
+represent? The short answer is that it comprises a _weighted average_ of four
+distinct 2x2 groups (or comparisons): 
+
+1. **treated** vs **untreated**
+	1.1 _early treated ($$ T^e $$)_ vs _untreated ($$ U $$)_
+	1.2 _late treated ($$ T^l $$)_ vs _untreated ($$ U $$)_
+2. **differentially treated**
+	2.1. _early treated ($$ T^e $$)_ vs _late control ($$ C^l $$)_
+	2.2. _late treated ($$ T^l $$)_ vs _early control ($$ C^e $$)_
+
+We can visualize these four comparison sets as follows:
+
+```{r}
+rbind(
+	dat4 |> subset(id %in% c(1,2)) |> transform(role = ifelse(id==2, "Treatment", "Control"), comp = "1.1. Early vs Untreated"),
+	dat4 |> subset(id %in% c(1,3)) |> transform(role = ifelse(id==3, "Treatment", "Control"), comp = "1.2. Late vs Untreated"),
+	dat4 |> subset(id %in% c(2,3) & tt<8) |> transform(role = ifelse(id==2, "Treatment", "Control"), comp = "2.1. Early vs Untreated"),
+	dat4 |> subset(id %in% c(2:3) & tt>4) |> transform(role = ifelse(id==3, "Treatment", "Control"), comp = "2.2. Late vs Untreated")
+) |>
+	ggplot(aes(tt, y, group = id, col = factor(id), lty = role)) +
+	geom_point() + geom_line() + 
+	facet_wrap(~comp) +
+	scale_x_continuous(breaks = scales::pretty_breaks()) +
+	scale_linetype_manual(values = c("Control" = 5, "Treatment" = 1)) +
+	labs(x = "Time variable", y = "Ouroleome variable", col = "ID", lty = "Role")
+```
+
+In other words, the panel IDs are split into different timing cohorts based on
+when the first treatment takes place and where it lies in relation to the
+treatment of other panel IDs. The more panel IDs and differential treatment
+timings there are, the more the combinations of the above groups.
+
+The Goodman-Bacon decomposition isolates each of these 2x2 comparisons and
+assigns them a weight, based on their relative coverage in the data (i.e., how
+long each comparison lasts relative to the overall timespan, and how many units
+were involved).
+
+To implement the Goodman-Bacon decomposition in R, we need simply call the
+`bacon()` function from the **bacondecomp** package. An introductory vignette to
+package is available
+[here](https://cran.r-project.org/web/packages/bacondecomp/vignettes/bacon.html),
+although the arguments are pretty self-explanatory. Let's see what it yields
+for our present problem:
+
+```{r}
+(bgd = bacon(y ~ D, dat4, id_var = "id", time_var = "tt"))
+```
+
+Here we get our weights and the 2x2 $$ \beta $$ for each group. The table tells us that ($$ T $$ vs $$ U $$), which is the sum of the late and early treated versus never treated, has the largest weight, followed by early vs late treated, and lastly, late vs early treated.
+
+Importantly, note that the weighted mean of these estimates is exactly the same
+as our earlier (naive) TWFE coefficient estimate. Again, this shouldn't be
+surprising, since the whole point of the Bacon-Goodman exercise is to decompose
+the makeup of that estimate and thus highlight potential sources of bias.
+
+```{r}
+(bgd_wm = weighted.mean(bgd$estimate, bgd$weight))
+```
+
+We can easily plot this result to visualize how the different components are
+affecting the overall estimate.
+
+```{r}
+ggplot(bgd, aes(x = weight, y = estimate, shape = type, col = type)) +
+  geom_hline(yintercept = bgd_wm, lty  = 2) +
+  geom_point(size = 3) +
+  labs(
+	x = "Weight", y = "Estimate", shape = "Type", col = "Type",
+	title = "Bacon-Goodman decomposition example",
+	caption = "Note: The horizontal dotted line depicts the full TWFE estimate."
+	)
+```
+
+<!-- <img src="../../../assets/images/bacon1.png" height="300"> -->
+
+The figure shows four points for the four groups in our example.
+
+- _Earlier vs Later Treated_ (red circle).
+- _Later vs Earlier Treated_ (green triangle).
+- _Treated vs Untreated_ (two blue squares; one for the earlier treated group and another for the later treated group).
+
+Finally, Note that the estimate values of 2 and 4 coincide with the treatment
+effects that were encoded into our simulation. Specifically, unit id=2 increases
+by 2 and unit id=3 increases by 4 over the untreated unit id=1.
+
+---
+
+## So where do TWFE regressions go wrong?
+
+Up 'til now, we have looked at examples, where we have a discrete jump in the treatment. In our very simple example, we ran some regressions to estimate treatment effects on afew observations that we could also recovery manually. We also went through the Bacon decomposition which told us how the $$\hat{\beta}$$ coefficient is a weighted sum of various 2x2 treated and untreated groups.
+
+But where does the TWFE model go wrong? Here we need to change the treatment effects a bit. Rather than discrete jumps, we allow treatments to take place across cohorts of units at some point in time and we let th treatment effects gradually increase over time.
+
+Rather than using our simple example, let's scale up the problem set a bit by adding multiple panel ids.
+
+```applescript
+clear
+local units = 30
+local start = 1
+local end   = 60
+
+local time = `end' - `start' + 1
+local obsv = `units' * `time'
+set obs `obsv'
+
+egen id	   = seq(), b(`time')  
+egen t 	   = seq(), f(`start') t(`end') 	
+
+sort  id t
+xtset id t
+
+lab var id "Panel variable"
+lab var t  "Time  variable"
+
+```
+
+Here we have 30 units ($$i$$) and 60 time periods ($$t$$). You can increase these to which ever magnitude. We will also do this later for testing.
+
+We can also fix the seed in case you want replicate exactly what we have here:
+
+```applescript
+set seed 13082021
+```
+
+You can of course don't need to do this but it helps some people following the code and the scripts. We will remove this later for testing as well.
+
+Let's now generate some dummy variables:
+
+```applescript
+cap drop Y
+cap drop D
+cap drop cohort
+cap drop effect
+cap drop timing
+
+gen Y 	   = 0		// outcome variable	
+gen D 	   = 0		// intervention variable
+gen cohort = .  	// total treatment variables
+gen effect = .		// treatment effect size
+gen timing = .		// when the treatment happens for each cohort
+```
+
+First we need to define the cohorts. These are groups of $$i$$s that get treatment at the same time. Think, for example, US states where some states are given treatment simultaneously, then another cohort and so on.
+
+What we do here, is that we randomly assign a cohort. We can have as many cohorts (< $$i$$) as we want. But we add a cohort=0, that we will later use as the cohort that is never treated (we won't do this now). Let's say we want to generate five cohorts:
+
+```applescript
+levelsof id, local(lvls)
+foreach x of local lvls {
+	local chrt = runiformint(0,5)	
+	replace cohort = `chrt' if id==`x'
+}
+```
+
+Now we need to define two things for each cohort: (a), what is the treatment "effect" size, and (b), when the treatment happens, or the "timing" variable.
+
+Let's automate this:
+
+```applescript
+levelsof cohort , local(lvls)  //  let all cohorts be treated for now
+foreach x of local lvls {
+	
+	// (a) effect
+	
+	local eff = runiformint(2,10)
+		replace effect = `eff' if cohort==`x'
+		
+	// (b) timing	
+	
+	local timing = runiformint(`start' + 5,`end' - 5)	
+	replace timing = `timing' if cohort==`x'
+		replace D = 1 if cohort==`x' & t>= `timing' 
+}
+```
+
+Here we generate a effect size for each cohort as a random integer between 2 and 10. Could be any number range which can also be on the continuous range.
+
+The timing for each cohort is also randomly generated in the interval t=5 and t=55. This is just to make sure treatment cohorts are not very dominant, only exist for a couple of periods.
+
+Last step, generate the outcome effects:
+
+```applescript
+replace Y = id + t + cond(D==1, effect * (t - timing), 0)
+```
+
+Let's graph it and see what the data looks like:
+
+```applescript
+levelsof cohort
+local items = `r(r)'
+
+local lines
+levelsof id
+
+forval x = 1/`r(r)' {
+	
+	qui summ cohort if id==`x'
+	local color = `r(mean)' + 1
+	colorpalette tableau, nograph
+		
+	local lines `lines' (line Y t if id==`x', lc("`r(p`color')'") lw(vthin))	||
+}
+
+twoway ///
+	`lines'	///
+		,	legend(off)
+```
+
+which gives us:
+
+<img src="../../../assets/images/TWFE_bashing1.png" height="300">
+
+Each cohort is given a different color. This is passed on to the line graph via the `colorpalette` package. 
+
+In the figure we see that the green cohort gets treated early and contains a lot of ids. Orange is next but has few ids. Simiarly red and purple at the last ones to get treated. Regardless of being treated later or earlier, the effect of the treatment is positive. But what happens, when we run a TWFE regression?
+
+```applescript
+xtreg Y i.t D, fe
+```
+
+Check the D coefficient. It is negative! We can also run it as follows using the `reghdfe` package:
+
+```applescript
+reghdfe Y D, absorb(id t)  
+```
+
+I have pasted the `reghdfe` regression output below (`xtreg` output was too large):
+
+```bpf
+HDFE Linear regression                            Number of obs   =      1,800
+Absorbing 2 HDFE groups                           F(   1,   1710) =      59.04
+                                                  Prob > F        =     0.0000
+                                                  R-squared       =     0.8359
+                                                  Adj R-squared   =     0.8273
+                                                  Within R-sq.    =     0.0334
+                                                  Root MSE        =    39.7334
+
+------------------------------------------------------------------------------
+           Y | Coefficient  Std. err.      t    P>|t|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+           D |  -25.93176   3.374793    -7.68   0.000    -32.55092    -19.3126
+       _cons |   114.9349   1.997427    57.54   0.000     111.0172    118.8525
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+          id |        30           0          30     |
+           t |        60           1          59     |
+-----------------------------------------------------+
+```
+
+This is obviously wrong since we know for sure that the treatments are positive. So what is going on? Let's check using the Bacon decomposition:
+
+
+```applescript
+bacondecomp Y D, ddetail
+```
+
+which gives us this graph:
+
+<img src="../../../assets/images/TWFE_bashing2.png" height="300">
+
+and spits out this table:
+
+```bpf
+Computing decomposition across 6 timing groups
+------------------------------------------------------------------------------
+           Y | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+-------------+----------------------------------------------------------------
+           D |  -25.93176   3.374793    -7.68   0.000    -32.54623   -19.31729
+------------------------------------------------------------------------------
+
+Bacon Decomposition
+
++---------------------------------------------------+
+|                      |         Beta   TotalWeight |
+|----------------------+----------------------------|
+|         Early_v_Late |           51   .0123657302 |
+|         Late_v_Early |         -127   .0741943846 |
+|         Early_v_Late |           75   .0357232214 |
+|         Late_v_Early |       -121.5   .1667083601 |
+|         Early_v_Late |            7   .0146556807 |
+|         Late_v_Early |          4.5   .0170982933 |
+|         Early_v_Late |           84   .0332042752 |
+|         Late_v_Early |          -78   .1383511554 |
+|         Early_v_Late |           10   .0167929674 |
+|         Late_v_Early |           48   .0174926737 |
+|         Early_v_Late |            3   .0122130672 |
+|         Late_v_Early |           42   .0095414589 |
+|         Early_v_Late |          132   .0412191018 |
+|         Late_v_Early |         -134   .0618286496 |
+|         Early_v_Late |           26   .0329752828 |
+|         Late_v_Early |           -8   .0123657302 |
+|         Early_v_Late |           27   .0618795396 |
+|         Late_v_Early |          -14   .0174036209 |
+|         Early_v_Late |         52.5   .0474952625 |
+|         Late_v_Early |        -59.5   .0122130672 |
+|         Early_v_Late |  60.01138465   .1642784771 |
++---------------------------------------------------+
+```
+
+The table gives us the estimation of each 2x2 combination and its relative weight in the overall beta. Since we do not have a never treated group, we get a series of "early versus late" or "later versus early" comparisons for all the combinations. In the output above we can observe that Late versus Early treatment groups are pulling the average down into the negative zone. For example, the fourth value of -121.5 has a weight of 16% that is clearly diluting the overall estimation of beta.
+
+
+It is this decomposition and the negative weights that form the basis for the estimators in the new DiD packages that are discussed in sections below.
+
+
+
+
+
+
+
+
+
+
+ -->
