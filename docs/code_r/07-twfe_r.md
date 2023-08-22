@@ -11,12 +11,12 @@ image: "../../../assets/images/DiD.png"
 {: .no_toc }
 
 ## Table of contents
-
 {: .no_toc .text-delta }
 
-1.  TOC {:toc}
+1. TOC
+{:toc}
 
-------------------------------------------------------------------------
+---
 
 ## The classic 2x2 DiD or the Twoway Fixed Effects Model (TWFE)
 
@@ -427,4 +427,4 @@ interval (even through id=2 has already been treated!)
 
 Fully disentangling these combinations will take some more careful work,
 which why we defer to the next section on [Bacon
-decomposition](https://asjadnaqvi.github.io/DiD/docs/code_r/07_bacon/).
+decomposition](https://asjadnaqvi.github.io/DiD/docs/code_r/06_bacon_r/).
