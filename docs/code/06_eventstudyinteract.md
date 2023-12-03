@@ -28,19 +28,19 @@ The command potentially has some issues. See the code and the graphs below for d
 
 Install the command from SSC:
 
-```applescript
+```stata
 ssc install eventstudyinteract, replace
 ```
 
 Take a look at the help file:
 
-```applescript
+```stata
 help eventstudyinteract
 ```
 
 The core syntax is as follows:
 
-```applescript
+```stata
 eventstudyinteract Y *lags* *leads*, vce(cluster *var*) absorb(*i* *t*) cohort(first_treat) control_cohort(*variable*)
 ```
 
@@ -57,12 +57,6 @@ where:
 | control_cohort(*var*) | The variable here is either never treated observations, or last treated cohorts  |
 
 
-### The options
-
-| Option | Description |
-
-
-*INCOMPLETE*
 
 
 ## Generate sample data
@@ -70,7 +64,7 @@ where:
 
 Here we generate a test dataset with heterogeneous treatments:
 
-```applescript
+```stata
 clear
 
 local units = 30
@@ -123,7 +117,7 @@ replace Y = id + t + cond(D==1, effect * rel_time, 0) + rnormal()
 Generate the graph:
 
 
-```applescript
+```stata
 xtline Y, overlay legend(off)
 ```
 
@@ -134,7 +128,7 @@ xtline Y, overlay legend(off)
 
 For `eventstudyinteract` we need to generate 10 leads and lags and drop the first lead:
 
-```applescript
+```stata
 summ rel_time
 local relmin = abs(r(min))
 local relmax = abs(r(max))
@@ -166,14 +160,14 @@ gen last_cohort = first_treat==r(max) // dummy for the latest- or never-treated 
 
 Let's try the basic `eventstudyinteract` command the never_treated as the `control_cohort`:
 
-```applescript
+```stata
 eventstudyinteract Y L_* F_*, vce(cluster id) absorb(id t) cohort(first_treat) control_cohort(never_treat)
 ```
 
 
 which will show this output:
 
-```xml
+```stata
 IW estimates for dynamic effects                        Number of obs =  1,800
 Absorbing 2 HDFE groups                                 F(236, 29)    =      .
                                                         Prob > F      =      .
@@ -283,7 +277,7 @@ Absorbing 2 HDFE groups                                 F(236, 29)    =      .
 In order to plot the estimates we can use the `event_plot` (`ssc install event_plot, replace`) command where we restrict the figure to 10 leads and lags: 
 
 
-```applescript
+```stata
 	event_plot e(b_iw)#e(V_iw), default_look graph_opt(xtitle("Periods since the event") ytitle("Average effect") xlabel(-10(1)10) ///
 		title("eventstudyinteract")) stub_lag(L_#) stub_lead(F_#) trimlag(10) trimlead(10) together
 ```
@@ -292,4 +286,3 @@ And we get:
 
 <img src="../../../assets/images/eventstudyinteract_1.png" height="300">
 
-*INCOMPLETE*

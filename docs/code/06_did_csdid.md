@@ -27,18 +27,18 @@ Even though the code has been optimized for Stata, the estimation can be slow. T
 
 ## Installation and options
 
-```applescript
+```stata
 ssc install csdid, replace
 ```
 
 Take a look at the help file:
 
-```applescript
+```stata
 help csdid
 ```
 
 
-```applescript
+```stata
 csdid Y [ind vars], [ivar(varname)] time(varname) gvar(varname) [options]
 ```
 
@@ -114,7 +114,7 @@ Several post-estimation options are also available: `csdid_estat`, `csdid_stats`
 
 Here we generate a test dataset with heterogeneous treatments:
 
-```applescript
+```stata
 clear
 
 local units = 30
@@ -167,7 +167,7 @@ replace Y = id + t + cond(D==1, effect * rel_time, 0) + rnormal()
 Generate the graph:
 
 
-```applescript
+```stata
 xtline Y, overlay legend(off)
 ```
 
@@ -185,19 +185,19 @@ recode gvar (. = 0)
 
 Let's try the basic `csdid` command:
 
-```applescript
+```stata
 csdid Y, ivar(id) time(t) gvar(gvar) notyet
 ```
 
 And a very very long output will show up on the screen (combination explosion)! We can recover an event study with 10 leads and 10 lags as a post-estimation option:
 
-```applescript
+```stata
 estat event, window(-10 10) estore(cs) 
 ```
 
 which will show this output:
 
-```xml
+```stata
 ATT by Periods Before and After treatment
 Event Study:Dynamic effects
 ------------------------------------------------------------------------------
@@ -230,7 +230,7 @@ Event Study:Dynamic effects
 In order to plot the estimates we can use the `event_plot` (`ssc install event_plot, replace`) command as follows: 
 
 
-```applescript
+```stata
 event_plot cs, default_look graph_opt(xtitle("Periods since the event") ytitle("Average effect") ///
 	title("csdid") xlabel(-10(1)10)) stub_lag(Tp#) stub_lead(Tm#) together	 
 ```

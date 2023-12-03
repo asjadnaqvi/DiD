@@ -28,11 +28,11 @@ image: "../../../assets/images/DiD.png"
 
 As discussed in the last example of the TWFE section, if we have different treatment timings with different treatment effects, it is not so obvious what pre and post are. Let us state this example again:
 
-```applescript
+```stata
 clear
 local units = 3
 local start = 1
-local end	= 10
+local end   = 10
 
 local time = `end' - `start' + 1
 local obsv = `units' * `time'
@@ -62,7 +62,7 @@ lab var Y "Outcome variable"
 
 If we plot this:
 
-```applescript
+```stata
 twoway ///
 	(connected Y t if id==1) ///
 	(connected Y t if id==2) ///
@@ -80,7 +80,7 @@ we get:
 
 In the figure we can see that treatments occurs at two different points. The treatment to id=2 happens at $$ t $$=5, while the treatment to id=3 happens at $$ t $$=8. When the second treatment takes place, id=2 is already treated and is basically constant. So for id=3, id=2 is also part of the pre-treatment group especially if we just consider the time range $$ 5 \leq t \leq 10 $$. It is also not clear what the ATT in this case should be from just looking at the figure since we can no longer average out the treatment sizes as was the case with simpler examples discussed in section TWFE section. In order to recover this, we can run a simple specification:
 
-```applescript
+```stata
 xtreg Y D i.t, fe 
 reghdfe Y D, absorb(id t)   // alternative specification
 ```
@@ -107,7 +107,7 @@ Each set of values is essentially a basic 2x2 TWFE model, from which we recover 
 We go back to these later. But first, let's see what the `bacondecomp` command gives us: 
 
 
-```applescript
+```stata
 bacondecomp Y D, ddetail
 ```
 
@@ -119,7 +119,7 @@ The figure shows four points for the three groups in our example. The treated ve
 
 The figure above is summarized in this table that also pops up in the output window in Stata:
 
-```bpf
+```stata
 Computing decomposition across 3 timing groups
 including a never-treated group
 ------------------------------------------------------------------------------
@@ -143,20 +143,20 @@ Here we get our weights and the 2x2 $$ \beta $$ for each group. The table tells 
 
 Let's look at the information that is stored:
 
-```applescript
+```stata
 ereturn list
 ```
 
 The key matrix of interest is `e(summdd)`: 
 
-```applescript
+```stata
 mat li e(sumdd)
 ```
 
 which gives us the following:
 
 
-```bpf
+```stata
 e(sumdd)[3,2]
                      Beta  TotalWeight
 Early_v_Late            2    .18181818
@@ -166,7 +166,7 @@ Never_v_ti~g    2.9333333    .68181818
 
 From this matrix we can recover the $$ \beta $$:
 
-```applescript
+```stata
 di e(sumdd)[1,1]*e(sumdd)[1,2] + e(sumdd)[2,1]*e(sumdd)[2,2] + e(sumdd)[3,1]*e(sumdd)[3,2]
 ```
 
@@ -244,7 +244,7 @@ where $$ D $$ = 1 if treated, $$ \bar{D}_i $$ is the average of $$ D $$ for each
 We can also recover $$ \hat{V}^D $$ as follows in Stata:
 
 
-```applescript
+```stata
  xtreg D i.t , fe 
  
  cap drop Dtilde
@@ -317,7 +317,7 @@ Let's start with the manual recovery process.
 
 In order to visualize late treated versus early control, we generate the following control and draw the graph:
 
-```applescript
+```stata
 cap drop tle
 gen tle = .
 replace tle = 0 if t>=5
@@ -347,7 +347,7 @@ So what is happening in this figure? We see that the id=2 variable which was tre
 
 we can define the values manually as follows:
 
-```applescript
+```stata
 scalar De  = 6/10  // share of early treated in all sample
 scalar Dl  = 3/10  // share of late treated in all sample
 scalar nl = 1/3    // relative group size of late
@@ -357,7 +357,7 @@ scalar nel = 3/6   // share of treatment periods in group sample
 
 where the last scalar `nel` is the share of treatment which is 3 periods in the total group time horizon of 6 time periods. Here we can recover the weights as follows:
 
-```applescript
+```stata
 display "weight_le = " (((ne + nl) * (De))^2 * nel * (1 - nel) * (Dl / De) * ((De - Dl)/(De)) ) / VD
 ```
 
@@ -365,7 +365,7 @@ which gives us a value of 0.136.
 
 Since we already have the sample defined, we can also recover the 2x2 TWFE parameter:
 
-```applescript
+```stata
 xtreg Y D i.tle if (id==2 | id==3), fe robust
 ```
 
@@ -378,7 +378,7 @@ Compare these values to the `bacondecomp` table shown above and you will that th
 
 Now let's flip this situation. Where we take the late treated variable as the control for the early treated group. 
 
-```applescript
+```stata
 twoway ///
 	(line Y t if id==1, lc(gs12)) ///
 	(line Y t if id==2, lc(gs12)) ///
@@ -398,7 +398,7 @@ From the figure, we can see that this falls in this range:
 
 and we recover the weights for the share:
 
-```applescript
+```stata
 scalar De  = 6/10  // share of late treated in all sample
 scalar Dl  = 3/10  // share of early treated in all sample
 
@@ -422,7 +422,7 @@ which gives us a value of 0.182 and a $$ \beta $$coefficient of 2. Again this va
 Next we compare the two treated groups (early and late) with the not treated group:
 
 
-```applescript
+```stata
 cap drop ten
 gen ten = .
 replace ten = 0 if id==1 
@@ -460,14 +460,14 @@ twoway ///
 
 We can recover the coefficients as follows:
 
-```applescript
+```stata
 xtreg Y D i.t if (id==1 | id==2), fe robust		// early
 xtreg Y D i.t if (id==1 | id==3), fe robust		// late
 ```
 
 which gives us 2 and 4 for early and late respectively. And we get the shares as follows:
 
-```applescript
+```stata
 scalar Dl  = 3/10  // share of late treated in all sample
 scalar De  = 6/10  // share of early treated in all sample
 
@@ -494,7 +494,7 @@ But where does the TWFE model go wrong? Here we need to change the treatment eff
 
 Rather than using our simple example, let's scale up the problem set a bit by adding multiple panel ids.
 
-```applescript
+```stata
 clear
 local units = 30
 local start = 1
@@ -519,7 +519,7 @@ Here we have 30 units ($$i$$) and 60 time periods ($$t$$). You can increase thes
 
 We can also fix the seed in case you want replicate exactly what we have here:
 
-```applescript
+```stata
 set seed 13082021
 ```
 
@@ -527,7 +527,7 @@ You can of course don't need to do this but it helps some people following the c
 
 Let's now generate some dummy variables:
 
-```applescript
+```stata
 cap drop Y
 cap drop D
 cap drop cohort
@@ -545,7 +545,7 @@ First we need to define the cohorts. These are groups of $$i$$s that get treatme
 
 What we do here, is that we randomly assign a cohort. We can have as many cohorts (< $$i$$) as we want. But we add a cohort=0, that we will later use as the cohort that is never treated (we won't do this now). Let's say we want to generate five cohorts:
 
-```applescript
+```stata
 levelsof id, local(lvls)
 foreach x of local lvls {
 	local chrt = runiformint(0,5)	
@@ -557,7 +557,7 @@ Now we need to define two things for each cohort: (a), what is the treatment "ef
 
 Let's automate this:
 
-```applescript
+```stata
 levelsof cohort , local(lvls)  //  let all cohorts be treated for now
 foreach x of local lvls {
 	
@@ -580,13 +580,13 @@ The timing for each cohort is also randomly generated in the interval t=5 and t=
 
 Last step, generate the outcome effects:
 
-```applescript
+```stata
 replace Y = id + t + cond(D==1, effect * (t - timing), 0)
 ```
 
 Let's graph it and see what the data looks like:
 
-```applescript
+```stata
 levelsof cohort
 local items = `r(r)'
 
@@ -603,8 +603,7 @@ forval x = 1/`r(r)' {
 }
 
 twoway ///
-	`lines'	///
-		,	legend(off)
+	`lines', legend(off)
 ```
 
 which gives us:
@@ -615,19 +614,19 @@ Each cohort is given a different color. This is passed on to the line graph via 
 
 In the figure we see that the green cohort gets treated early and contains a lot of ids. Orange is next but has few ids. Simiarly red and purple at the last ones to get treated. Regardless of being treated later or earlier, the effect of the treatment is positive. But what happens, when we run a TWFE regression?
 
-```applescript
+```stata
 xtreg Y i.t D, fe
 ```
 
 Check the D coefficient. It is negative! We can also run it as follows using the `reghdfe` package:
 
-```applescript
+```stata
 reghdfe Y D, absorb(id t)  
 ```
 
 I have pasted the `reghdfe` regression output below (`xtreg` output was too large):
 
-```bpf
+```stata
 HDFE Linear regression                            Number of obs   =      1,800
 Absorbing 2 HDFE groups                           F(   1,   1710) =      59.04
                                                   Prob > F        =     0.0000
@@ -655,7 +654,7 @@ Absorbed degrees of freedom:
 This is obviously wrong since we know for sure that the treatments are positive. So what is going on? Let's check using the Bacon decomposition:
 
 
-```applescript
+```stata
 bacondecomp Y D, ddetail
 ```
 
@@ -665,7 +664,7 @@ which gives us this graph:
 
 and spits out this table:
 
-```bpf
+```stata
 Computing decomposition across 6 timing groups
 ------------------------------------------------------------------------------
            Y | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]

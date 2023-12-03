@@ -24,19 +24,19 @@ The *did2s* command is written by [Kyle Butts](https://kylebutts.com/) based on 
 
 ## Installation and options
 
-```applescript
+```stata
 ssc install did2s, replace
 ```
 
 Take a look at the help file:
 
-```applescript
+```stata
 help did2s
 ```
 
 The core syntax is as follows:
 
-```applescript
+```stata
 did2s Y, first_stage(i t) second_stage(*leads* *lags*) treat_var(*D*) cluster(*var*)
 ```
 
@@ -53,12 +53,6 @@ where:
 | cluster(*var*)  |  Cluster variable is panel id or higher aggregation unit  |
 
 
-### The options
-
-| Option | Description |
-
-
-*INCOMPLETE*
 
 
 ## Generate sample data
@@ -66,7 +60,7 @@ where:
 
 Here we generate a test dataset with heterogeneous treatments:
 
-```applescript
+```stata
 clear
 
 local units = 30
@@ -119,7 +113,7 @@ replace Y = id + t + cond(D==1, effect * rel_time, 0) + rnormal()
 Generate the graph:
 
 
-```applescript
+```stata
 xtline Y, overlay legend(off)
 ```
 
@@ -130,7 +124,7 @@ xtline Y, overlay legend(off)
 
 For `did2s` we need to generate 10 leads and lags and drop the first lead:
 
-```applescript
+```stata
 	// leads
 	cap drop F_*
 	forval x = 2/10 {  // drop the first lead
@@ -146,19 +140,16 @@ For `did2s` we need to generate 10 leads and lags and drop the first lead:
 
 ```
 
-
-
-
 Let's try the basic `did2s` command:
 
-```applescript
+```stata
 did2s Y, first_stage(id t) second_stage(F_* L_*) treatment(D) cluster(id)
 ```
 
 
 which will show this output:
 
-```xml
+```stata
                                      (Std. err. adjusted for clustering on id)
 ------------------------------------------------------------------------------
              | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
@@ -190,7 +181,7 @@ which will show this output:
 In order to plot the estimates we can use the `event_plot` (`ssc install event_plot, replace`) command as follows: 
 
 
-```applescript
+```stata
 	event_plot, default_look graph_opt(xtitle("Periods since the event") ytitle("Average effect") xlabel(-10(1)10) ///
 		title("did2s")) stub_lag(L_#) stub_lead(F_#) together
 ```
@@ -199,7 +190,4 @@ And we get:
 
 <img src="../../../assets/images/did2s_1.png" height="300">
 
-
-
-*INCOMPLETE*
 

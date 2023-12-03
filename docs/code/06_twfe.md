@@ -100,7 +100,7 @@ $$ y_{it} = \alpha_{i} + \alpha_t + \beta^{TWFE} D_{it} + \epsilon_{it} $$
 
 Let us generate a simple 2x2 example in Stata. First step define the panel structure. Since it is a 2x2, we just need two units and two time periods:
 
-```applescript
+```stata
 clear
 local units = 2
 local start = 1
@@ -122,7 +122,7 @@ lab var t  "Time  variable"
 
 Next we define the treatment group and a generic TWFE model without adding any variation or error terms:
 
-```applescript
+```stata
 gen D = id==2 & t==2
 
 gen btrue = cond(D==1, 2, 0) 		
@@ -131,7 +131,7 @@ gen btrue = cond(D==1, 2, 0)
 
 According to the last line, the treatment effect should have an impact of 3 units on Y in the post group. We can check this by plotting the data:
 
-```applescript
+```stata
 lab de prepost 1 "Pre" 2 "Post"
 lab val t prepost
 
@@ -152,14 +152,14 @@ where we can see that the difference between the blue and the orange line is 3 i
 
 We can also recover this from a simple panel regression:
 
-```applescript
+```stata
 xtset id t
 xtreg Y D t, fe
 ```
 
 In the regression, you will see that the coefficient of D, $$ \beta^{TWFE} $$ = 2, as expected. An alternative way of doing this is to use the `reghdfe` package, which we will also call in later examples:
 
-```
+```stata
 reghdfe Y D, absorb(id t)
 ```
 
@@ -171,7 +171,7 @@ which again gives us the same result for the D coefficient.
 
 Now that we are comfortable with the 2x2 example, let's add more time periods. How about 10 per unit:
 
-```applescript
+```stata
 clear
 local units = 2
 local start = 1
@@ -193,7 +193,7 @@ lab var t  "Time  variable"
 
 And we just do a simple treatment where id=2 increases by 3 units at time period 5 and stays there:
 
-```applescript
+```stata
 gen D = id==2 & t>=5
 lab var D "Treated"
 
@@ -209,7 +209,7 @@ We can also visualize this as follows:
 
 and we can also run the Stata code:
 
-```applescript
+```stata
 xtreg Y D t, fe
 reghdfe Y D, absorb(id t)   
 ```
@@ -223,7 +223,7 @@ The `xtreg` option shows that $$ t $$ on average increases by 1 unit, which is w
 Let's start with a very case where we have one control group, two treatment groups. The two T groups recieve treatment at the same time but with treatment intensities:
 
 
-```applescript
+```stata
 clear
 local units = 3
 local start = 1
@@ -257,7 +257,7 @@ lab var Y "Outcome variable"
 
 and plot it:
 
-```applescript
+```stata
 twoway ///
 	(connected Y t if id==1) ///
 	(connected Y t if id==2) ///
@@ -274,13 +274,13 @@ from which we get:
 
 Here we can see that the post treatement has an average effect of 2 on id=2 and 4 on id=3. This implies that the ATT equals $$ \beta^{TWFE} $$=3, which we can also check by recovering the coefficients:
 
-```r
+```stata
 xtreg Y D t, fe 
 ```
 
 While it is easy to check here the average treatment effect, since they are no time or panel fixed effects, we can basically visually see how the outcomes are changing. But if we add controls, it gets a bit more complicated. Let's just generate the code in one go:
 
-```applescript
+```stata
 clear
 local units = 3
 local start = 1
@@ -325,7 +325,7 @@ twoway ///
 
 From the earlier example, we know that the ATT equals $$ \beta^{TWFE} $$=3, but from the graphs we can cannot see this so clearly. This is because we need to get rid of panel and id time trends. While we can also do this partialling out by hand (but we won't), we can use our regression specification:
 
-```applescript
+```stata
 xtreg Y D t, fe 
 ```
 
@@ -333,7 +333,7 @@ which gives the ATT=3, which is the average of the two treatment variables.
 
 Here, I would like to add that parallel trend assumptions are controlled for in the above regression specification. If these are not accounted for, then we basically end up with the wrong ATTs. We can see the D coefficients in the follow regressions:
 
-```applescript
+```stata
 reg Y D				// not controlling for any effects
 reg Y D i.t			// only time fixed effects
 reg Y D i.id		// only panel fixed effects
@@ -346,7 +346,7 @@ reg Y D i.t i.id	// panel and time fixed effects (correct!)
 
 Now let's move on to the final part: treatments with differential timings. Here we again generate a dummy dataset but get rid of panel and time fixed effects for now. As we have seen above, the regressions isolate the panel fixed effects and we recover the coefficient of interest $$ \beta^{TWFE} $$.
 
-```applescript
+```stata
 clear
 local units = 3
 local start = 1
@@ -400,7 +400,7 @@ Unlike the previous examples, were we could derive the ATT, just by looking at t
 
 We can do these regressions to see the outcomes:
 
-```applescript
+```stata
 reg Y D				// not controlling for any effects
 reg Y D i.t			// only time fixed effects
 reg Y D i.id		// only panel fixed effects
@@ -411,7 +411,7 @@ The last regression gives us the correct ATT which is $$ \beta^{TWFE} $$ = 2.91.
 
 We can also recover this using the standard commands:
 
-```applescript
+```stata
 xtreg Y D i.t, fe 
 reghdfe Y D, absorb(id t)   
 ```

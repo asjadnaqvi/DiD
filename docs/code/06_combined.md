@@ -2,7 +2,7 @@
 layout: default
 title: All estimators
 parent: Stata code
-nav_order: 10
+nav_order: 20
 mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
@@ -32,7 +32,7 @@ This example follows the [five estimators](https://github.com/borusyak/did_imput
 
 Packages get updated once in a while. It is also good to check for updates once in a while! 
 
-```applescript
+```stata
 // supporting packages
 ssc install schemepack, replace
 ssc install avar, replace 
@@ -56,7 +56,7 @@ The `schemepack` package installs Stata graph schemes. You can `set scheme white
 
 ## Step 1: Create all the variables for all the DiD packages
 
-```applescript
+```stata
 clear all
 
 local units = 30
@@ -147,7 +147,7 @@ recode gvar (. = 0)
 
 This gives us the same graph we have been using for all our examples:
 
-```applescript
+```stata
 xtline Y, overlay legend(off)
 ```
 
@@ -158,7 +158,7 @@ xtline Y, overlay legend(off)
 
 
 
-```applescript
+```stata
 ************
 *** TWFE ***
 ************
@@ -226,7 +226,7 @@ matrix stackedev_v = e(V)
 
 Here we also make use of the colorpalettes package (`ssc install palettes, replace` and `ssc install colrspace, replace`) to control the color.
 
-```applescript
+```stata
 colorpalette tableau, nograph	
 
 event_plot    twfe	csdd    didimp  dcdh_b#dcdh_v   sa_b#sa_v   stackedev_b#stackedev_v did2s_b#did2s_v, 	///

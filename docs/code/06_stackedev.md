@@ -28,21 +28,17 @@ The command is currently under active development so options might change around
 
 Install the command from SSC:
 
-```applescript
+```stata
 ssc install stackedev, replace
 ```
 
 Take a look at the help file:
 
-```applescript
+```stata
 help stackedev
 ```
 
-The core syntax is as follows:
 
-```applescript
-stackedev Y F* L* , cohort(first_treat) time(t) never_treat(no_treat) unit_fe(i) clust_unit(i)
-```
 
 where: 
 
@@ -57,12 +53,7 @@ where:
 | no_treat  |  Dummy = 1 if unit is never treated  |
 
 
-### The options
 
-| Option | Description |
-
-
-*INCOMPLETE*
 
 
 ## Generate sample data
@@ -70,7 +61,7 @@ where:
 
 Here we generate a test dataset with heterogeneous treatments:
 
-```applescript
+```stata
 clear
 
 local units = 30
@@ -123,7 +114,7 @@ replace Y = id + t + cond(D==1, effect * rel_time, 0) + rnormal()
 Generate the graph:
 
 
-```applescript
+```stata
 xtline Y, overlay legend(off)
 ```
 
@@ -134,7 +125,7 @@ xtline Y, overlay legend(off)
 
 For `stackedev` we need to generate the `no_treat` variable and 10 leads and lags:
 
-```applescript
+```stata
 gen no_treat = first_treat==.			
 
 summ rel_time
@@ -164,14 +155,14 @@ ren F_1 ref  //base year
 
 Let's run the basic `stackedev` command:
 
-```applescript
+```stata
 stackedev Y F_* L_* ref, cohort(first_treat) time(t) never_treat(no_treat) unit_fe(id) clust_unit(id)
 ```
 
 
 which will show this output:
 
-```xml
+```stata
 
 **** Building Stack 24 ****
 **** Building Stack 34 ****
@@ -305,7 +296,7 @@ Absorbed degrees of freedom:
 In order to plot the estimates we can use the `event_plot` (`ssc install event_plot, replace`) command where we restrict the figure to 10 leads and lags: 
 
 
-```applescript
+```stata
 	event_plot, default_look graph_opt(xtitle("Periods since the event") ytitle("Average effect") xlabel(-10(1)10) ///
 		title("stackedev")) stub_lag(L_#) stub_lead(F_#) trimlag(10) trimlead(10) together 
 ```

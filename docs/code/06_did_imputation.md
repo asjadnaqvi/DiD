@@ -27,37 +27,16 @@ The *did_imputation* command is written by Kirill Borusyak, Xavier Jaravel, and 
 
 ## Installation and options
 
-```applescript
+```stata
 ssc install did_imputation, replace
 ```
 
 Take a look at the help file:
 
-```applescript
+```stata
 help did_imputation
 ```
 
-
-```applescript
-did_imputation Y i t first_treat
-```
-
-where: 
-
-| Variable | Description |
-| ----- | ----- |
-| Y | outcome variable |
-| i | panel id |
-| t | time variable  |
-| first_treat | timing of first treatment (missing for untreated groups) |
-
-
-### The options
-
-| Option | Description |
-
-
-*INCOMPLETE*
 
 
 ## Generate sample data
@@ -65,12 +44,12 @@ where:
 
 Here we generate a test dataset with heterogeneous treatments:
 
-```applescript
+```stata
 clear
 
 local units = 30
 local start = 1
-local end 	= 60
+local end   = 60
 
 local time = `end' - `start' + 1
 local obsv = `units' * `time'
@@ -118,7 +97,7 @@ replace Y = id + t + cond(D==1, effect * rel_time, 0) + rnormal()
 Generate the graph:
 
 
-```applescript
+```stata
 xtline Y, overlay legend(off)
 ```
 
@@ -128,14 +107,14 @@ xtline Y, overlay legend(off)
 
 Let's try the basic `did_imputation` command with 10 leads and lags
 
-```applescript
+```stata
 did_imputation Y i t first_treat, horizons(0/10) pretrend(10)
 ```
 
 
 which will show this output:
 
-```xml
+```stata
 WARNING: suppressing the following coefficients from estimation because of insufficient effective sample size: tau0 tau1 tau2 tau3 tau4 tau5 tau6 tau7 tau8 tau9 tau10. To report them nevertheless, set the minn option to a smaller number or 0, but keep in mind that the estimates may be unreliable and their SE may be downward biased.
 
                                                          Number of obs = 1,438
@@ -170,7 +149,7 @@ Here we can see that estimation does not compute the lags. This is just to illus
 
 In order to correctly recover the values, we have to use the `minn(0)` option, which reduces the threshold for calculating the estimates based on to treated groups to zero (default is 30).
 
-```applescript
+```stata
 did_imputation Y i t first_treat, horizons(0/10) pretrend(10) minn(0)
 ```
 
@@ -212,7 +191,7 @@ which gives us:
 In order to plot the estimates we can use the `event_plot` (`ssc install event_plot, replace`) command as follows: 
 
 
-```applescript
+```stata
 event_plot cs, default_look graph_opt(xtitle("Periods since the event") ytitle("Average effect") ///
 	title("csdid") xlabel(-10(1)10)) stub_lag(Tp#) stub_lead(Tm#) together	 
 ```
@@ -222,5 +201,4 @@ And we get:
 <img src="../../../assets/images/did_imputation_1.png" height="300">
 
 
-*INCOMPLETE*
 

@@ -20,7 +20,7 @@ image: "../../../assets/images/DiD.png"
 
 ## Introduction
 
-The *did_multiplegt* command by Chaisemartin and D'Haultfœuille (henceforth CD) is probably one of the most flexible DiD estimators currently available. A key reason is that it allows for treatment switching (units can move in and out of treatment status) in addition to time-varying, heterogeneous treatment effects.
+The *did_multiplegt* command by Chaisemartin and D'Haultfœuille (CD) is probably one of the most flexible DiD estimators currently available. A key reason is that it allows for treatment switching (units can move in and out of treatment status) in addition to time-varying, heterogeneous treatment effects.
 
 The command is very comprehensive, encompassing different estimation techniques derived from various CD papers. While a basic use is provided here, for more advanced applications, a careful reading of the help file and the relevant papers is highly recommended. Furthermore, since applications are almost non-existent, little can be said on the practicalities of how and when to apply the advance options.
 
@@ -28,19 +28,19 @@ Overall, the command is extremely slow. This has to do with the fact that calcul
 
 ## Installation and options
 
-```applescript
+```stata
 ssc install did_multiplegt, replace
 ```
 
 Take a look at the help file:
 
-```applescript
+```stata
 help did_multiplegt
 ```
 
 The main command is as follows:
 
-```applescript
+```stata
 did_multiplegt Y G T D
 ```
 
@@ -101,7 +101,7 @@ The stored results can be viewed by typing `ereturn list`.
 
 Here we generate a test dataset with heterogeneous treatments:
 
-```applescript
+```stata
 clear
 
 local units = 30
@@ -154,7 +154,7 @@ replace Y = id + t + cond(D==1, effect * rel_time, 0) + rnormal()
 Generate the graph:
 
 
-```applescript
+```stata
 xtline Y, overlay legend(off)
 ```
 
@@ -165,7 +165,7 @@ xtline Y, overlay legend(off)
 
 Let's try the basic `did_multiplegt` command:
 
-```applescript
+```stata
 did_multiplegt Y id t D, robust_dynamic cluster(id) breps(20)
 ```
 
@@ -173,13 +173,13 @@ and it returns nothing... [WHY?, CHECK]
 
 Let's try an event study option with 10 leads (refereed to as placebos in the model) and 10 lags:
 
-```applescript
+```stata
 did_multiplegt Y id t D, robust_dynamic dynamic(10) placebo(10) breps(20) cluster(id)
 ```
 
 and we get this output:
 
-```xml
+```stata
 DID estimators of the instantaneous treatment effect, of dynamic treatment effects if the dynamic 
 option is used, and of placebo tests of the parallel trends assumption if the placebo option 
 is used. The estimators are robust to heterogeneous effects, and to dynamic effects if the 
@@ -217,7 +217,7 @@ while dynamic effects estimators are long-difference DIDs, so they are not reall
 Even though we are warned in the output above that we should not compare the event study estimates, we can still plot these using the `event_plot` (`ssc install event_plot, replace`) command as follows: 
 
 
-```applescript
+```stata
 event_plot e(estimates)#e(variances), default_look ///
 	graph_opt(xtitle("Periods since the event") ytitle("Average causal effect") ///
 	title("did_multiplegt") xlabel(-10(1)10)) stub_lag(Effect_#) stub_lead(Placebo_#) together
@@ -227,6 +227,4 @@ and we get this figure:
 
 <img src="../../../assets/images/cd_3.png" height="300">
 
-
-*INCOMPLETE*
 
