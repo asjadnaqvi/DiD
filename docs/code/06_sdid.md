@@ -36,14 +36,6 @@ help sdid
 
 
 
-### The options
-
-| Option | Description |
-
-
-*INCOMPLETE*
-
-
 ## Generate sample data
 
 

@@ -38,27 +38,6 @@ help csdid
 ```
 
 
-```stata
-csdid Y [ind vars], [ivar(varname)] time(varname) gvar(varname) [options]
-```
-
-where: 
-
-| Variable | Description |
-| ----- | ----- |
-| Y | outcome variable |
-| ivar | panel id |
-| time | time variable  |
-| gvar | timing of first treatment (0 for untreated groups) |
-
-
-### The options
-
-| Option | Description |
-| ----- | ----- |
-| notyet  | Use the not-treated groups as control |
-| long |  |
-
 
 ## Generate sample data
 
