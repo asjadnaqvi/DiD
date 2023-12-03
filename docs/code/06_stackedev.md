@@ -314,5 +314,3 @@ And we get:
 
 <img src="../../../assets/images/stackedev_1.png" height="300">
 
-
-*INCOMPLETE*
