@@ -1,13 +1,13 @@
 ---
 layout: default
-title: fect
+title: xtevent
 parent: Stata code
 nav_order: 12
 mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
 
-# wooldid
+# xtevent
 {: .no_toc }
 
 ## Table of contents

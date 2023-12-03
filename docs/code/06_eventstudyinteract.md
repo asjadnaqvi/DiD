@@ -38,27 +38,6 @@ Take a look at the help file:
 help eventstudyinteract
 ```
 
-The core syntax is as follows:
-
-```stata
-eventstudyinteract Y *lags* *leads*, vce(cluster *var*) absorb(*i* *t*) cohort(first_treat) control_cohort(*variable*)
-```
-
-where: 
-
-| Variable | Description |
-| ----- | ----- |
-| Y | outcome variable |
-| i | panel id |
-| t | time variable  |
-| *lags* | manually generated lag variables  |
-| *leads* | manually generated lead variables  |
-| first_treat | timing of first treatment (missing for untreated groups) |
-| control_cohort(*var*) | The variable here is either never treated observations, or last treated cohorts  |
-
-
-
-
 ## Generate sample data
 
 

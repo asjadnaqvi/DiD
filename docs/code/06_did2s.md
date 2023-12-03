@@ -34,26 +34,6 @@ Take a look at the help file:
 help did2s
 ```
 
-The core syntax is as follows:
-
-```stata
-did2s Y, first_stage(i t) second_stage(*leads* *lags*) treat_var(*D*) cluster(*var*)
-```
-
-where: 
-
-| Variable | Description |
-| ----- | ----- |
-| Y | outcome variable |
-| i | panel id |
-| t | time variable  |
-| *lags* | manually generated lag variables  |
-| *leads* | manually generated lead variables  |
-| D | Dummy variable which =1 if treated |
-| cluster(*var*)  |  Cluster variable is panel id or higher aggregation unit  |
-
-
-
 
 ## Generate sample data
 

@@ -7,7 +7,7 @@ mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
 
-# wooldid
+# lpdid
 {: .no_toc }
 
 ## Table of contents

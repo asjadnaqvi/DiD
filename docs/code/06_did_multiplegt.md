@@ -38,20 +38,7 @@ Take a look at the help file:
 help did_multiplegt
 ```
 
-The main command is as follows:
 
-```stata
-did_multiplegt Y G T D
-```
-
-where 
-
-| Variable | Description |
-| ----- | ----- |
-| Y | outcome variable |
-| G | group variable |
-| T | time variable  |
-| D | treatment dummy variable (=1 if treated) |
 
 
 ### The standard options

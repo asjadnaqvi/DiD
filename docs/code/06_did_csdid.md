@@ -60,55 +60,6 @@ where:
 | long |  |
 
 
-### The method options
-The estimator has several methods built-in to estimate the standard errors. These can be specified using the **method(***method name***)** option.
-
-| Option | Description |
-| ----- | ----- |
-| drimp | Inverse probability tilting plus weighted least squares. The default option based on Sant’Anna and Zhao (2020)  |
-| dripw  | Doubly robust inverse probability weighting (IPW). Based on Sant’Anna and Zhao (2020)    |
-| reg  |  OLS  |
-| stdipw  | IPW with stabilized weights    |
-| ipw  | IPW based on Abadie (2005)   |
-| rc1  | Repeated cross section estimators   |
-
-
-
-### The standard error options
-
-| Option | Description |
-| ----- | ----- |
-|  wboot  | wild boostrap options (see help file for details)    |
-|  rseed(#)  | control the seeding for the bootstraps    |
-|  cluster(*var*)  |  cluster standard errors   |
-|  level(#)  |  If confidence intervals other than 95% are required   |
-|  pointwise  |  Pointwise confidence intervals as opposed to uniform C.I.s   |
-
-
-### Aggregation options
-
-| Option | Description |
-| ----- | ----- |
-| simple | overall ATT	 |
-| group |  ATT by groups	|
-| calendar | ATT by time periods	 |
-| event | event study specification	  |
-| agg(*agg type*) | Different aggregation types (see help file)	 |
-
-### Post estimation 
-
-The following options are available within the command line:
-
-| Option | Description |
-| ----- | ----- |
-| saverif() | Save the RIFs in a file	 |
-| simple | overall ATT	 |
-
-The stored results can be viewed by typing `ereturn list`.
-
-Several post-estimation options are also available: `csdid_estat`, `csdid_stats`, and `csdid_plot`.
-
-
 ## Generate sample data
 
 
@@ -119,7 +70,7 @@ clear
 
 local units = 30
 local start = 1
-local end 	= 60
+local end   = 60
 
 local time = `end' - `start' + 1
 local obsv = `units' * `time'
@@ -178,7 +129,7 @@ xtline Y, overlay legend(off)
 
 For `csdid` we need the *gvar* variable which equals the first_treat value for the treated, and 0 for the not treated:
 
-```
+```stata
 gen gvar = first_treat
 recode gvar (. = 0)
 ```
@@ -239,6 +190,4 @@ And we get this figure:
 
 <img src="../../../assets/images/csdid_1.png" height="300">
 
-
-*INCOMPLETE*
 

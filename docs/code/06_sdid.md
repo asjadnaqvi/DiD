@@ -24,31 +24,16 @@ The *sdid* command is written by [Damian Clarke](https://www.damianclarke.net/) 
 
 ## Installation and options
 
-```applescript
+```stata
 ssc install sdid, replace
 ```
 
 Take a look at the help file:
 
-```applescript
+```stata
 help sdid
 ```
 
-The minimum core syntax is as follows:
-
-```applescript
-sdid Y i t D, vce(method) 
-```
-
-where: 
-
-| Variable | Description |
-| ----- | ----- |
-| Y | outcome variable |
-| i | panel id |
-| t | time variable  |
-| D | Dummy variable which =1 if treated |
-| vce(*method*)  |  method = bootstrap, jackknife, placebo |
 
 
 ### The options
@@ -64,12 +49,12 @@ where:
 
 Here we generate a test dataset with heterogeneous treatments:
 
-```applescript
+```stata
 clear
 
 local units = 30
 local start = 1
-local end 	= 60
+local end   = 60
 
 local time = `end' - `start' + 1
 local obsv = `units' * `time'
@@ -136,8 +121,7 @@ sdid Y id year D, vce(bootstrap) seed(1000)
 Since we are using bootstrapped standard errors, we fix the seed for replicability. We get this output:
 
 
-```xml
-
+```stata
 Bootstrap replications (50). This may take some time.
 ----+--- 1 ---+--- 2 ---+--- 3 ---+--- 4 ---+--- 5
 ..................................................     50
@@ -148,10 +132,11 @@ Synthetic Difference-in-Differences Estimator
 -----------------------------------------------------------------------------
            Y |     ATT     Std. Err.     t      P>|t|    [95% Conf. Interval]
 -------------+---------------------------------------------------------------
-   treatment | 131.07490    8.42889    15.55    0.000   114.55458   147.59522
+           D | 131.07490    8.42889    15.55    0.000   114.55458   147.59522
 -----------------------------------------------------------------------------
 95% CIs and p-values are based on Large-Sample approximations.
 Refer to Arkhangelsky et al., (2020) for theoretical derivations.
+
 ```
 
 The command also has a built in graph option:
@@ -160,22 +145,11 @@ The command also has a built in graph option:
 sdid Y id year D, vce(bootstrap) seed(1000) graph
 ```
 
-which generates a bunch of graphs based on Figure 1 in [Arkhangelsky et. al. 2021](https://www.aeaweb.org/articles?id=10.1257/aer.20190159).
 
-
-Graphs that start with *g1_* show the id-specific differences between treatment and control and are drawn for the year of the "first_treatment". 
-
-<img src="../../../assets/images/sdid_g1_24.png" height="100"><img src="../../../assets/images/sdid_g1_34.png" height="100"><img src="../../../assets/images/sdid_g1_38.png" height="100"><img src="../../../assets/images/sdid_g1_56.png" height="100">
-
-It does not apply to our example, but the dots sizes can vary based on the weight size, where groups with zero weights are given an x symbol.
-
-The next set of graphs start with *g2_* and represent the synthetic DiD graphs (DiD + synthetic control) also split by the year of the first treatment:
+The command saves a set of graphs with prefix `g2_` that represent synthetic DiD graphs split by the year of the first treatment:
 
 <img src="../../../assets/images/sdid_g2_24.png" height="100"><img src="../../../assets/images/sdid_g2_34.png" height="100"><img src="../../../assets/images/sdid_g2_38.png" height="100"><img src="../../../assets/images/sdid_g2_56.png" height="100">
 
 The weights used to average pre-treatment periods are shown as area fills at the bottom of the figures.
 
-
-
-*INCOMPLETE*
 

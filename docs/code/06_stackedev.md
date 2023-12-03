@@ -40,21 +40,6 @@ help stackedev
 
 
 
-where: 
-
-| Variable | Description |
-| ----- | ----- |
-| Y | outcome variable |
-| i | panel id |
-| t | time variable  |
-| *lags* | manually generated lag variables  |
-| *leads* | manually generated lead variables  |
-| first_treat | Year of first treatment |
-| no_treat  |  Dummy = 1 if unit is never treated  |
-
-
-
-
 
 ## Generate sample data
 

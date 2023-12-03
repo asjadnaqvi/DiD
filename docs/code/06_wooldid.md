@@ -46,7 +46,7 @@ clear
 
 local units = 30
 local start = 1
-local end 	= 60
+local end   = 60
 
 local time = `end' - `start' + 1
 local obsv = `units' * `time'
