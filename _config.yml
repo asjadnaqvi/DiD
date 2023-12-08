@@ -33,7 +33,36 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 # Change to dark mode here: color_scheme: dark
 
 permalink: pretty
-exclude: ["README.md", "Gemfile"]
+
+exclude:
+ # from https://github.com/jekyll/jekyll/blob/master/lib/site_template/_config.yml:
+   - .sass-cache/
+   - .jekyll-cache/
+   - gemfiles/
+   - Gemfile
+   - Gemfile.lock
+   - node_modules/
+   - vendor/bundle/
+   - vendor/cache/
+   - vendor/gems/
+   - vendor/ruby/
+ # specific to the theme website:
+   - bin/
+   - lib/
+   - "*.gemspec"
+   - "*.gem"
+   - LICENSE.txt
+   - package.json
+   - package-lock.json
+   - Rakefile
+   - README.md
+   - CODE_OF_CONDUCT.md
+   - docker-compose.yml
+   - Dockerfile
+ # theme test code
+   - fixtures/
+
+
 include: ["docs"]
 
 
@@ -81,6 +110,8 @@ search:
 # Plug-ins
 plugins:
   - jekyll-seo-tag
+  - jekyll-github-metadata
+  - jekyll-include-cache
 
 
 
