@@ -210,4 +210,4 @@ es_mod |>
 <img src="../../../assets/images/did2s_R.png" height="300">
 
 P.S. For those of you that would prefer a ggplot2 version of the above (base R)
-plot, check out [**ggiplot**](http://grantmcdermott.com/ggiplot).
+plot, check out [**ggfixest**](https://grantmcdermott.com/ggfixest/).
