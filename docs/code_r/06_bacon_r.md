@@ -7,17 +7,16 @@ mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
 
-Goodman-Bacon decomposition
-
+# Goodman-Bacon decomposition
 {: .no_toc }
 
 ## Table of contents
-
 {: .no_toc .text-delta }
 
-1.  TOC {:toc}
+1. TOC
+{:toc}
 
-------------------------------------------------------------------------
+---
 
 This section will walk you through the basic logic of Andrew
 Goodman-Bacon’s TWFE decomposition. It draws upon his 2021 *Journal of
@@ -105,16 +104,16 @@ feols(y ~ D | id + tt, dat4)
     RMSE: 0.35505     Adj. R2: 0.986455
                     Within R2: 0.831169
 
-What does the resulting coefficient estimate of $\hat{\beta}=2.91$
+What does the resulting coefficient estimate of $$\hat{\beta}=2.91$$
 represent? The short answer is that it comprises a *weighted average* of
 four distinct 2x2 groups (or comparisons):
 
 1.  **treated** vs **untreated**
-    1)  *early treated ($T^e$)* vs *untreated ($U$)*
-    2)  *late treated ($T^l$)* vs *untreated ($U$)*
+    1)  *early treated ($$T^e$$)* vs *untreated ($$U$$)*
+    2)  *late treated ($$T^l$$)* vs *untreated ($$U$$)*
 2.  **differentially treated**
-    1)  *early treated ($T^e$)* vs *late control ($C^l$)*
-    2)  *late treated ($T^l$)* vs *early control ($C^e$)*
+    1)  *early treated ($$T^e$$)* vs *late control ($$C^l$$)*
+    2)  *late treated ($$T^l$$)* vs *early control ($$C^e$$)*
 
 We can visualize these four comparison sets as follows:
 
@@ -163,8 +162,8 @@ yields for our present problem:
     6       8         5        4 0.1363636 Later vs Earlier Treated
     8       5         8        2 0.1818182 Earlier vs Later Treated
 
-Here we get our weights and the 2x2 $\beta$ for each group. The table
-tells us that ($T$ vs $U$), which is the sum of the late and early
+Here we get our weights and the 2x2 $$\beta$$ for each group. The table
+tells us that ($$T$$ vs $$U$$), which is the sum of the late and early
 treated versus never treated, has the largest weight, followed by early
 vs late treated, and lastly, late vs early treated.
 
