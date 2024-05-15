@@ -15,7 +15,7 @@ image: "../../../assets/images/DiD.png"
 
 To estimate event-study/dynamic effects, we strongly recommend using the <ins>much faster</ins> [did_multiplegt_dyn](https://asjadnaqvi.github.io/DiD/docs/code/06_16_did_multiplegt_dyn.md) command. 
 
-In addition to that, did_multiplegt_dyn offers more options than did_multiplegt:
+In addition to that, did_multiplegt_dyn offers more options than did_multiplegt, among which:
 + **normalized**: estimation of the normalized dynamic effects (de Chaisemartin & D'Haultfoeuille, 2024);
 + **predict_het**: built-in treatment effect heterogeneity analysis;
 + **design** and **date_first_switch**: post-estimation options to analyze the design and timing of the treatment;

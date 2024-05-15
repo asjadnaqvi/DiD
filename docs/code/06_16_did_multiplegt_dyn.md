@@ -98,8 +98,16 @@ The development of this package was funded by the European Union (ERC, REALLYCRE
 
 ```
 
-If the **graph_off** option is not specified, the command always returns an event-study graph:
+If the **graph_off** option is not specified, the command always returns by default an event-study graph:
 
 <img src="../../../assets/images/did_multiplegt_dyn_stata.png" height="300">
 
+It is also possible to use `event_plot` to produce the event-study graph:
 
+```stata
+event_plot e(estimates)#e(variances), default_look ///
+	graph_opt(xtitle("Periods since the event") ytitle("Average causal effect") ///
+	title("did_multiplegt_dyn") xlabel(-10(1)10)) stub_lag(Effect_#) stub_lead(Placebo_#) together
+```
+
+<img src="../../../assets/images/did_multiplegt_dyn_stata_ep.png" height="300">
