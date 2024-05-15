@@ -10,6 +10,12 @@ image: "../../../assets/images/DiD.png"
 # did_multiplegt (Chaisemartin and D'Haultfœuille 2020, 2021)
 {: .no_toc }
 
+## Note
+{: .no_toc}
+
+To estimate event-study/dynamic effects, we strongly recommend using the <ins>much faster</ins> [did_multiplegt_dyn](https://asjadnaqvi.github.io/DiD/docs/code/06_16_did_multiplegt_dyn.md) command. In addition to that, did_multiplegt_dyn offers more options than did_multiplegt.
+
+
 ## Table of contents
 {: .no_toc .text-delta }
 
@@ -17,8 +23,6 @@ image: "../../../assets/images/DiD.png"
 {:toc}
 
 ---
-
-
 
 ## Installation and options
 
@@ -31,9 +35,6 @@ Take a look at the help file:
 ```stata
 help did_multiplegt
 ```
-
-
-
 
 ## Test the command
 
