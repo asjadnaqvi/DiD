@@ -76,7 +76,7 @@ twoway ///
 
 we get:
 
-<img src="../../../assets/images/twfe5.png" height="300">
+<img src="../../../assets/images/twfe5.png" width="100%">
 
 In the figure we can see that treatments occurs at two different points. The treatment to id=2 happens at $$ t $$=5, while the treatment to id=3 happens at $$ t $$=8. When the second treatment takes place, id=2 is already treated and is basically constant. So for id=3, id=2 is also part of the pre-treatment group especially if we just consider the time range $$ 5 \leq t \leq 10 $$. It is also not clear what the ATT in this case should be from just looking at the figure since we can no longer average out the treatment sizes as was the case with simpler examples discussed in section TWFE section. In order to recover this, we can run a simple specification:
 
@@ -113,7 +113,7 @@ bacondecomp Y D, ddetail
 
 In the absence of controls, this is the only option we can use for running `bacondecomp`. At the end of the command, we get this figure:
 
-<img src="../../../assets/images/bacon1.png" height="300">
+<img src="../../../assets/images/bacon1.png" width="100%">
 
 The figure shows four points for the three groups in our example. The treated versus never treated ($$ T $$ vs $$ U $$) are triangles. Since we have an early treated (id=2) and a late treated (id=3) panel variable, the y-axis gives us beta values of 2 and 4 respectively. These values are also obvious from the simple plot of the panel variables where id=2 increases by 2 and id=3 increases by 4 over the not treated id=1. The crosses represent the late treatment versus early control ($$ T^l $$ vs $$ C^e $$), and early treatment versus late control ($$ T^e $$ vs $$ C^l $$) groups. Since these also have values of 2 and 4, their $$ \hat{\beta} $$ values on the y-axis are the same. The x-axis gives us the weights of each parameter which we will come to later. 
 
@@ -316,7 +316,7 @@ $$  \hat{\beta^{DD}} = \sum_j{s_{jU} \hat{\beta}_{jU}} + \sum_{e \neq U}{\sum_{l
 Next step, we need to define all the new symbols. But before we do that, we need to get the logic straight. And for this, we start with the original visual:
 
 
-<img src="../../../assets/images/twfe5.png" height="300">
+<img src="../../../assets/images/twfe5.png" width="100%">
 
 
 Here we can see that the never treat group, $$ U $$, which is id=1, runs for 10 periods and gets treatment in zero periods. The early treated group (id=2), $$ T^e $$, runs for six periods starting at 5 and ending at 10, while the late treated group (id=3), $$ T^l $$ runs for 3 periods from 8 till 10. These numbers tell us how many time periods a group stays treated. The share of these values out of the total observations $$ T $$ gives us $$ D^e = 6/10 $$ and $$ De = 3/10 $$ values. This tells us how much weight each panel group exerts in the total observations. A group that stays treated for longer will (and should) have a larger influence on the ATT.
@@ -334,7 +334,7 @@ From the share formulas above, we can see that it is all about accouting for all
 
 ---
 
-## Manual recovery of weights [this needs double checking]
+## Manual recovery of weights
 
 Let's start with the manual recovery process. 
 
@@ -362,7 +362,7 @@ twoway ///
 
 and we get this figure:
 
-<img src="../../../assets/images/bacon2.png" height="300">
+<img src="../../../assets/images/bacon2.png" width="100%">
 
 So what is happening in this figure? We see that the id=2 variable which was treated earlier is flat, while the id=3 variable gets a treatment. Here we are saying that rather than calculate the TWFE estimator over the whole sample, we generate it for just id=3 and use id=2 as the control since it is stable in the $$ t $$ = 5 to 10 interval.
 
@@ -419,7 +419,7 @@ twoway ///
 
 From the figure, we can see that this falls in this range:
 
-<img src="../../../assets/images/bacon3.png" height="300">
+<img src="../../../assets/images/bacon3.png" width="100%">
 
 and we recover the weights for the share:
 
@@ -479,7 +479,7 @@ twoway ///
 		legend(order(4 "Late treated" 5 "Never treated"))
 ```
 
-<img src="../../../assets/images/bacon4.png" height="100"><img src="../../../assets/images/bacon5.png" height="100">
+<img src="../../../assets/images/bacon4.png" width="48%"><img src="../../../assets/images/bacon5.png" width="48%">
 
 We can recover the coefficients as follows:
 
@@ -658,7 +658,7 @@ twoway ///
 
 which gives us:
 
-<img src="../../../assets/images/TWFE_bashing1.png" height="300">
+<img src="../../../assets/images/TWFE_bashing1.png" width="100%">
 
 Each cohort is given a different color. This is passed on to the line graph via the `colorpalette` package. 
 
@@ -677,6 +677,8 @@ reghdfe Y D, absorb(id t)
 I have pasted the `reghdfe` regression output below (`xtreg` output was too large):
 
 ```stata
+(MWFE estimator converged in 2 iterations)
+
 HDFE Linear regression                            Number of obs   =      1,800
 Absorbing 2 HDFE groups                           F(   1,   1710) =      59.04
                                                   Prob > F        =     0.0000
@@ -699,6 +701,7 @@ Absorbed degrees of freedom:
           id |        30           0          30     |
            t |        60           1          59     |
 -----------------------------------------------------+
+
 ```
 
 This is obviously wrong since we know for sure that the treatments are positive. So what is going on? Let's check using the Bacon decomposition:
@@ -710,18 +713,16 @@ bacondecomp Y D, ddetail
 
 which gives us this graph:
 
-<img src="../../../assets/images/TWFE_bashing2.png" height="300">
+<img src="../../../assets/images/TWFE_bashing2.png" width="100%">
 
-and spits out this table:
+with details provided in the following output:
 
 ```stata
-
-Computing decomposition across 3 timing groups
-including a never-treated group
+Computing decomposition across 6 timing groups
 ------------------------------------------------------------------------------
-           y | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+           Y | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
 -------------+----------------------------------------------------------------
-           d |   2.909091   .3179908     9.15   0.000      2.28584    3.532341
+           D |  -25.93176   3.374793    -7.68   0.000    -32.54623   -19.31729
 ------------------------------------------------------------------------------
 
 Bacon Decomposition
@@ -729,11 +730,28 @@ Bacon Decomposition
 +---------------------------------------------------+
 |                      |         Beta   TotalWeight |
 |----------------------+----------------------------|
-|         Early_v_Late |            2   .1818181841 |
-|         Late_v_Early |            4   .1363636317 |
-|       Never_v_timing |  2.933333323   .6818181841 |
+|         Early_v_Late |           51   .0123657302 |
+|         Late_v_Early |         -127   .0741943846 |
+|         Early_v_Late |           75   .0357232214 |
+|         Late_v_Early |       -121.5   .1667083601 |
+|         Early_v_Late |            7   .0146556807 |
+|         Late_v_Early |          4.5   .0170982933 |
+|         Early_v_Late |           84   .0332042752 |
+|         Late_v_Early |          -78   .1383511554 |
+|         Early_v_Late |           10   .0167929674 |
+|         Late_v_Early |           48   .0174926737 |
+|         Early_v_Late |            3   .0122130672 |
+|         Late_v_Early |           42   .0095414589 |
+|         Early_v_Late |          132   .0412191018 |
+|         Late_v_Early |         -134   .0618286496 |
+|         Early_v_Late |           26   .0329752828 |
+|         Late_v_Early |           -8   .0123657302 |
+|         Early_v_Late |           27   .0618795396 |
+|         Late_v_Early |          -14   .0174036209 |
+|         Early_v_Late |         52.5   .0474952625 |
+|         Late_v_Early |        -59.5   .0122130672 |
+|         Early_v_Late |  60.01138465   .1642784771 |
 +---------------------------------------------------+
-
 ```
 
 
