@@ -17,8 +17,8 @@ image: "../../../assets/images/DiD.png"
 {:toc}
 
 
-*This section is incomplete. It still needs refining/corrections in some parts.*
-*Last updated: 07 Jun 2022*
+*This section has been updated and considerably improved thanks to [Daniel Sebastian Tello Trillo](https://sebastiantellotrillo.com/).*
+*Last updated: 16 May 2024*
 
 ---
 
@@ -150,7 +150,7 @@ ereturn list
 The key matrix of interest is `e(summdd)`: 
 
 ```stata
-mat li e(sumdd)
+mat list e(sumdd)
 ```
 
 which gives us the following:
@@ -167,10 +167,10 @@ Never_v_ti~g    2.9333333    .68181818
 From this matrix we can recover the $$ \beta $$:
 
 ```stata
-di e(sumdd)[1,1]*e(sumdd)[1,2] + e(sumdd)[2,1]*e(sumdd)[2,2] + e(sumdd)[3,1]*e(sumdd)[3,2]
+display e(sumdd)[1,1]*e(sumdd)[1,2] + e(sumdd)[2,1]*e(sumdd)[2,2] + e(sumdd)[3,1]*e(sumdd)[3,2]
 ```
 
-which gives us the original value of $$ \beta $$ = 2.91, as a weighted sum of the different 2x2 combinations of early, late, and never treated groups. This breakdown is essentially the core point of the Bacon Decomposition.
+which gives us the original value of $$ \beta $$ = 2.909, as a weighted sum of the different 2x2 combinations of early, late, and never treated groups. This breakdown is essentially the core point of the Bacon Decomposition.
 
 ---
 
@@ -202,7 +202,21 @@ $$ \bar{\bar{D}} = \frac{\sum_i{\sum_t{D_{it}}}}{NT}  $$
 
 which is just the mean of all the observations. This specification is used to demean variables (to incorporate fixed effects). If we do demean or center the data, we can also recover the panel estimates using the standard `reg` command in Stata. In terms of syntax, this implies that, `xtreg y i.t, fe` is equivalent to `reg tildey` [check] (see Greene or Wooldridge). 
 
-So if we go to the $$ \hat{\beta}^{DD} $$ equation, $$ \hat{V}^D $$ is essentially the variance of $$ D_{it} $$. For our basic example, we can calculate it manually:
+So if we go to the $$ \hat{\beta}^{DD} $$ equation, $$ \hat{V}^D $$ is essentially the variance of $$ D_{it} $$. For our basic example, we can calculate the means manually (in double precision!):
+
+```stata
+egen double d_barbar=mean(D)
+
+bysort id: egen double d_meani=mean(D)
+
+bysort t: egen double d_meant=mean(D)
+
+gen double d_tilde=(d-d_meani)-(d_meant-d_barbar)
+
+gen double d_tilde_sq=d_tilde^2
+
+```
+
 
 | $$ i $$ | $$ t $$ | $$ y $$ | $$ D $$ | $$ \bar{D}_i $$ | $$ \bar{D}_t $$ | $$ \bar{\bar{D}} $$ | $$ \tilde{D}_{it} $$ | $$ \tilde{D}^2_{it} $$ |
 | - | - | - | - | -| - | - | - | - |
@@ -253,6 +267,17 @@ We can also recover $$ \hat{V}^D $$ as follows in Stata:
  sum Dtilde
  scalar VD = (( r(N) - 1) / r(N) ) * r(Var) 
 ```
+
+or manually using the standard variance/covariance method:
+
+```stata
+gen double numerator_1=y*d_tilde
+egen double numerator=mean(numerator_1)
+egen double denominator=mean(d_tilde_square)
+
+sum denominator 
+```
+
 
 where we can view the value by typing `display VD`. Here we should get 0.0733 as expected.
 
@@ -416,8 +441,6 @@ which gives us a value of 0.182 and a $$ \beta $$coefficient of 2. Again this va
 
 ** Treated versus not treated **  
 
-(fix this section. There is an error in the weights calculation.)
-
 
 Next we compare the two treated groups (early and late) with the not treated group:
 
@@ -482,7 +505,34 @@ display "weight_eU = " ((ne + nU)^2 * (neU * (1 - neU)) * (De * (1 - De))) / VD
 display "weight_lU = " ((nl + nU)^2 * (nlU * (1 - nlU)) * (Dl * (1 - Dl))) / VD
 ```
 
-where the shares equal 0.349 and 0.267 respectively. If we add these up, they come out to 0.616. This number is not exactly the same number shown in the `bacondecomp` table *(double check the formula and fix this)*, but here we can see that this group has the highest weight as expected.
+where the shares equal 0.3636 and 0.31818 respectively. If we add these up, they come out to 0.68181. This number is not exactly the same number shown in the `bacondecomp` table, but here we can see that this group has the highest weight as expected.
+
+
+We can also recover the respective betas as follows
+
+
+```stata
+// Early vs Never 
+xtreg Y D i.t if (id==1 | id==2), fe robust		
+	
+// Late vs Never
+xtreg Y D i.t if (id==1 | id==3), fe robust	
+```
+
+We can also check manually the weighted average of the beta coefficients and compare it with the regression coefficient:
+
+
+```stata
+
+// manual
+display 4*.31818182 + 2*.36363636 + 2*.18181818 + 4*.13636364
+
+// regression
+reghdfe Y D, absorb(id t)
+```
+
+and we get the same estimate of 2.909.
+
 
 ---
 
@@ -665,11 +715,13 @@ which gives us this graph:
 and spits out this table:
 
 ```stata
-Computing decomposition across 6 timing groups
+
+Computing decomposition across 3 timing groups
+including a never-treated group
 ------------------------------------------------------------------------------
-           Y | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
+           y | Coefficient  Std. err.      z    P>|z|     [95% conf. interval]
 -------------+----------------------------------------------------------------
-           D |  -25.93176   3.374793    -7.68   0.000    -32.54623   -19.31729
+           d |   2.909091   .3179908     9.15   0.000      2.28584    3.532341
 ------------------------------------------------------------------------------
 
 Bacon Decomposition
@@ -677,31 +729,13 @@ Bacon Decomposition
 +---------------------------------------------------+
 |                      |         Beta   TotalWeight |
 |----------------------+----------------------------|
-|         Early_v_Late |           51   .0123657302 |
-|         Late_v_Early |         -127   .0741943846 |
-|         Early_v_Late |           75   .0357232214 |
-|         Late_v_Early |       -121.5   .1667083601 |
-|         Early_v_Late |            7   .0146556807 |
-|         Late_v_Early |          4.5   .0170982933 |
-|         Early_v_Late |           84   .0332042752 |
-|         Late_v_Early |          -78   .1383511554 |
-|         Early_v_Late |           10   .0167929674 |
-|         Late_v_Early |           48   .0174926737 |
-|         Early_v_Late |            3   .0122130672 |
-|         Late_v_Early |           42   .0095414589 |
-|         Early_v_Late |          132   .0412191018 |
-|         Late_v_Early |         -134   .0618286496 |
-|         Early_v_Late |           26   .0329752828 |
-|         Late_v_Early |           -8   .0123657302 |
-|         Early_v_Late |           27   .0618795396 |
-|         Late_v_Early |          -14   .0174036209 |
-|         Early_v_Late |         52.5   .0474952625 |
-|         Late_v_Early |        -59.5   .0122130672 |
-|         Early_v_Late |  60.01138465   .1642784771 |
+|         Early_v_Late |            2   .1818181841 |
+|         Late_v_Early |            4   .1363636317 |
+|       Never_v_timing |  2.933333323   .6818181841 |
 +---------------------------------------------------+
+
 ```
 
-The table gives us the estimation of each 2x2 combination and its relative weight in the overall beta. Since we do not have a never treated group, we get a series of "early versus late" or "later versus early" comparisons for all the combinations. In the output above we can observe that Late versus Early treatment groups are pulling the average down into the negative zone. For example, the fourth value of -121.5 has a weight of 16% that is clearly diluting the overall estimation of beta.
 
 
 It is this decomposition and the negative weights that form the basis for the estimators in the new DiD packages that are discussed in sections below.
