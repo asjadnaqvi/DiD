@@ -62,13 +62,10 @@ to overcome this issue in the examples that follow.
 
 ## Installation and options
 
-The package has been archived on CRAN
-([details](https://www.stats.ox.ac.uk/pub/bdr/noSuggests/DIDmultiplegt.out)),
-but can still be installed from GitHub.
+The package can be installed from CRAN
 
 ```r
-# install.packages("remotes")
-remotes::install_github("shuo-zhang-ucsb/did_multiplegt") # Install (only need to run once or when updating)
+install.packages("DIDmultiplegt") # Install (only need to run once or when updating)
 library("DIDmultiplegt") # Load the package into memory (required each new session)
 ```
 
