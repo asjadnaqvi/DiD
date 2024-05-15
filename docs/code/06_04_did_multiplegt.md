@@ -13,8 +13,18 @@ image: "../../../assets/images/DiD.png"
 ## Note
 {: .no_toc}
 
-To estimate event-study/dynamic effects, we strongly recommend using the <ins>much faster</ins> [did_multiplegt_dyn](https://asjadnaqvi.github.io/DiD/docs/code/06_16_did_multiplegt_dyn.md) command. In addition to that, did_multiplegt_dyn offers more options than did_multiplegt.
+To estimate event-study/dynamic effects, we strongly recommend using the <ins>much faster</ins> [did_multiplegt_dyn](https://asjadnaqvi.github.io/DiD/docs/code/06_16_did_multiplegt_dyn.md) command. 
 
+In addition to that, did_multiplegt_dyn offers more options than did_multiplegt:
++ **normalized**: estimation of the normalized dynamic effects (de Chaisemartin & D'Haultfoeuille, 2024);
++ **predict_het**: built-in treatment effect heterogeneity analysis;
++ **design** and **date_first_switch**: post-estimation options to analyze the design and timing of the treatment;
++ **by** and **by_path**: estimating dynamic effects within levels of a group-level variable or within treatment paths;
++ **trends_lin**: built-in group-specific linear trends.
+
+Lastly, as of the last release, did_multiplegt_dyn also includes two user-requested features:
++ **only_never_switchers**: restricting the estimators from de Chaisemartin & D'Haultfoeuille (2024) to only compare switchers and never-switchers;
++ integration with **esttab**: here a quick [tutorial](https://github.com/chaisemartinPackages/did_multiplegt_dyn/blob/main/vignettes/vignette_2.md).
 
 ## Table of contents
 {: .no_toc .text-delta }
