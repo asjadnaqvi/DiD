@@ -30,9 +30,9 @@ that can increase or decrease multiple times, even if lagged treatments affect
 the outcome, and if the current and lagged treatments have heterogeneous effects, 
 across space and/or over time.
 
-Unlike **DIDmultiplegt**, dCDH24 <ins>does not rely anymore on bootstrap</ins> replications 
+Unlike **DIDmultiplegt**, dCDH24 <ins>does not rely on bootstrap</ins> replications 
 for the computation of standard errors. By default, the command computes analytical 
-standard errors, which dramatically cuts short the running time. Another difference with 
+standard errors, which dramatically reduces the running time. Another difference with 
 its predecessor lies in the improved integration with the R language. The command now
 provides custom methods for `summary` and `print`. Since the output is a nested list
 with `did_multiplegt_dyn` class, the command allows for further method dispatch. 
@@ -194,7 +194,7 @@ mod_dCDH24 = did_multiplegt_dyn(
 Notice that the standard error on the first effect does not change with respect to the 
 previous example. This is due to the fact that the standard errors computed
 by the program are already clustered at the group level by default. 
-The output displays the point estimate, standard error, confidence 
+The output displays the point estimates, standard errors, confidence 
 intervals and sample sizes for dynamic effects, placebos and the average total effect
 (per unit of treatment). By default, the `print` and `summary` display also include
 the p-value from a joint significance test of the placebos and the average number
@@ -231,6 +231,7 @@ from the `ggplot2` library to add layers of customization. For instance,
 we can recreate the style of (cs)`did` plots with only a few lines of code:
 
 ```r
+# A graph example to convince skeptical did users
 library(ggplot2) # Load the ggplot2 library
 plt <- mod_dCDH24$plot # Assign the plot to new object (to avoid writing its full path every time)
 
