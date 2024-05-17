@@ -137,7 +137,11 @@ Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 ## Papers
 
-*Papers are sorted by year and last name. Papers marked with a <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/> are review papers and are a good starting point. Papers without journals are pre-prints.* 
+*Papers are sorted by year and last name. Papers marked with the <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/> symbol are review papers and can be considered as essential readings. Please note that this section is not updated frequently and paper links might be outdated.* 
+
+
+### 2024
+Jonathan Roth (2024). [Interpreting Event-Studies from Recent Difference-in-Differences Methods](https://arxiv.org/abs/2401.12309). <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
 
 ### 2024
 

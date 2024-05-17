@@ -17,8 +17,9 @@ image: "../../../assets/images/DiD.png"
 {:toc}
 
 
-*This section is incomplete. It still needs refining/corrections in some parts.*
-*Last updated: 07 Jun 2022*
+*This section has been updated and considerably improved thanks to [Daniel Sebastian Tello Trillo](https://sebastiantellotrillo.com/).*
+
+*Last updated: 16 May 2024*
 
 ---
 
@@ -76,7 +77,7 @@ twoway ///
 
 we get:
 
-<img src="../../../assets/images/twfe5.png" height="300">
+<img src="../../../assets/images/twfe5.png" width="100%">
 
 In the figure we can see that treatments occurs at two different points. The treatment to id=2 happens at $$ t $$=5, while the treatment to id=3 happens at $$ t $$=8. When the second treatment takes place, id=2 is already treated and is basically constant. So for id=3, id=2 is also part of the pre-treatment group especially if we just consider the time range $$ 5 \leq t \leq 10 $$. It is also not clear what the ATT in this case should be from just looking at the figure since we can no longer average out the treatment sizes as was the case with simpler examples discussed in section TWFE section. In order to recover this, we can run a simple specification:
 
@@ -113,11 +114,11 @@ bacondecomp Y D, ddetail
 
 In the absence of controls, this is the only option we can use for running `bacondecomp`. At the end of the command, we get this figure:
 
-<img src="../../../assets/images/bacon1.png" height="300">
+<img src="../../../assets/images/bacon1.png" width="100%">
 
-The figure shows four points for the three groups in our example. The treated versus never treated ($$ T $$ vs $$ U $$) are triangles. Since we have an early treated (id=2) and a late treated (id=3) panel variable, the y-axis gives us beta values of 2 and 4 respectively. These values are also obvious from the simple plot of the panel variables where id=2 increases by 2 and id=3 increases by 4 over the not treated id=1. The crosses represent the late treatment versus early control ($$ T^l $$ vs $$ C^e $$), and early treatment versus late control ($$ T^e $$ vs $$ C^l $$) groups. Since these also have values of 2 and 4, their $$ \hat{\beta} $$ values on the y-axis are the same. The x-axis gives us the weights of each parameter which we will come to later. 
+The figure shows four points for the three groups in our example. The treated versus never treated ($$ T $$ vs $$ U $$) is shown as a triangle. Crosses represent late versus early treated ($$ T^l $$ vs $$ T^e $$) combinations. The hollow circle represents the timing groups or early versus late treatment groups ($$ T^e $$ vs $$ T^l $$). 
 
-The figure above is summarized in this table that also pops up in the output window in Stata:
+The figure information is displayed in a table output:
 
 ```stata
 Computing decomposition across 3 timing groups
@@ -137,6 +138,7 @@ Bacon Decomposition
 |         Late_v_Early |            4   .1363636317 |
 |       Never_v_timing |  2.933333323   .6818181841 |
 +---------------------------------------------------+
+
 ```
 
 Here we get our weights and the 2x2 $$ \beta $$ for each group. The table tells us that ($$ T $$ vs $$ U $$), which is the sum of the late and early treated versus never treated, has the largest weight, followed by early vs late treated, and lastly, late vs early treated.
@@ -150,7 +152,7 @@ ereturn list
 The key matrix of interest is `e(summdd)`: 
 
 ```stata
-mat li e(sumdd)
+mat list e(sumdd)
 ```
 
 which gives us the following:
@@ -167,10 +169,10 @@ Never_v_ti~g    2.9333333    .68181818
 From this matrix we can recover the $$ \beta $$:
 
 ```stata
-di e(sumdd)[1,1]*e(sumdd)[1,2] + e(sumdd)[2,1]*e(sumdd)[2,2] + e(sumdd)[3,1]*e(sumdd)[3,2]
+display e(sumdd)[1,1]*e(sumdd)[1,2] + e(sumdd)[2,1]*e(sumdd)[2,2] + e(sumdd)[3,1]*e(sumdd)[3,2]
 ```
 
-which gives us the original value of $$ \beta $$ = 2.91, as a weighted sum of the different 2x2 combinations of early, late, and never treated groups. This breakdown is essentially the core point of the Bacon Decomposition.
+which gives us the original value of $$ \beta $$ = 2.909, as a weighted sum of the different 2x2 combinations of early, late, and never treated groups. This breakdown is essentially the core point of the Bacon Decomposition.
 
 ---
 
@@ -202,7 +204,21 @@ $$ \bar{\bar{D}} = \frac{\sum_i{\sum_t{D_{it}}}}{NT}  $$
 
 which is just the mean of all the observations. This specification is used to demean variables (to incorporate fixed effects). If we do demean or center the data, we can also recover the panel estimates using the standard `reg` command in Stata. In terms of syntax, this implies that, `xtreg y i.t, fe` is equivalent to `reg tildey` [check] (see Greene or Wooldridge). 
 
-So if we go to the $$ \hat{\beta}^{DD} $$ equation, $$ \hat{V}^D $$ is essentially the variance of $$ D_{it} $$. For our basic example, we can calculate it manually:
+So if we go to the $$ \hat{\beta}^{DD} $$ equation, $$ \hat{V}^D $$ is essentially the variance of $$ D_{it} $$. For our basic example, we can calculate the means manually (in double precision!):
+
+```stata
+egen double d_barbar=mean(D)
+
+bysort id: egen double d_meani=mean(D)
+
+bysort t: egen double d_meant=mean(D)
+
+gen double d_tilde=(d-d_meani)-(d_meant-d_barbar)
+
+gen double d_tilde_sq=d_tilde^2
+
+```
+
 
 | $$ i $$ | $$ t $$ | $$ y $$ | $$ D $$ | $$ \bar{D}_i $$ | $$ \bar{D}_t $$ | $$ \bar{\bar{D}} $$ | $$ \tilde{D}_{it} $$ | $$ \tilde{D}^2_{it} $$ |
 | - | - | - | - | -| - | - | - | - |
@@ -254,6 +270,17 @@ We can also recover $$ \hat{V}^D $$ as follows in Stata:
  scalar VD = (( r(N) - 1) / r(N) ) * r(Var) 
 ```
 
+or manually using the standard variance/covariance method:
+
+```stata
+gen double numerator_1=y*d_tilde
+egen double numerator=mean(numerator_1)
+egen double denominator=mean(d_tilde_square)
+
+sum denominator 
+```
+
+
 where we can view the value by typing `display VD`. Here we should get 0.0733 as expected.
 
 In the paper, three additional formulas are provided for dealing with the three groups in our example. These are defined as follows in Equation 10:
@@ -291,7 +318,7 @@ $$  \hat{\beta^{DD}} = \sum_j{s_{jU} \hat{\beta}_{jU}} + \sum_{e \neq U}{\sum_{l
 Next step, we need to define all the new symbols. But before we do that, we need to get the logic straight. And for this, we start with the original visual:
 
 
-<img src="../../../assets/images/twfe5.png" height="300">
+<img src="../../../assets/images/twfe5.png" width="100%">
 
 
 Here we can see that the never treat group, $$ U $$, which is id=1, runs for 10 periods and gets treatment in zero periods. The early treated group (id=2), $$ T^e $$, runs for six periods starting at 5 and ending at 10, while the late treated group (id=3), $$ T^l $$ runs for 3 periods from 8 till 10. These numbers tell us how many time periods a group stays treated. The share of these values out of the total observations $$ T $$ gives us $$ D^e = 6/10 $$ and $$ De = 3/10 $$ values. This tells us how much weight each panel group exerts in the total observations. A group that stays treated for longer will (and should) have a larger influence on the ATT.
@@ -309,7 +336,7 @@ From the share formulas above, we can see that it is all about accouting for all
 
 ---
 
-## Manual recovery of weights [this needs double checking]
+## Manual recovery of weights
 
 Let's start with the manual recovery process. 
 
@@ -337,7 +364,7 @@ twoway ///
 
 and we get this figure:
 
-<img src="../../../assets/images/bacon2.png" height="300">
+<img src="../../../assets/images/bacon2.png" width="100%">
 
 So what is happening in this figure? We see that the id=2 variable which was treated earlier is flat, while the id=3 variable gets a treatment. Here we are saying that rather than calculate the TWFE estimator over the whole sample, we generate it for just id=3 and use id=2 as the control since it is stable in the $$ t $$ = 5 to 10 interval.
 
@@ -394,7 +421,7 @@ twoway ///
 
 From the figure, we can see that this falls in this range:
 
-<img src="../../../assets/images/bacon3.png" height="300">
+<img src="../../../assets/images/bacon3.png" width="100%">
 
 and we recover the weights for the share:
 
@@ -415,8 +442,6 @@ which gives us a value of 0.182 and a $$ \beta $$coefficient of 2. Again this va
 
 
 ** Treated versus not treated **  
-
-(fix this section. There is an error in the weights calculation.)
 
 
 Next we compare the two treated groups (early and late) with the not treated group:
@@ -456,7 +481,7 @@ twoway ///
 		legend(order(4 "Late treated" 5 "Never treated"))
 ```
 
-<img src="../../../assets/images/bacon4.png" height="100"><img src="../../../assets/images/bacon5.png" height="100">
+<img src="../../../assets/images/bacon4.png" width="48%"><img src="../../../assets/images/bacon5.png" width="48%">
 
 We can recover the coefficients as follows:
 
@@ -482,7 +507,34 @@ display "weight_eU = " ((ne + nU)^2 * (neU * (1 - neU)) * (De * (1 - De))) / VD
 display "weight_lU = " ((nl + nU)^2 * (nlU * (1 - nlU)) * (Dl * (1 - Dl))) / VD
 ```
 
-where the shares equal 0.349 and 0.267 respectively. If we add these up, they come out to 0.616. This number is not exactly the same number shown in the `bacondecomp` table *(double check the formula and fix this)*, but here we can see that this group has the highest weight as expected.
+where the shares equal 0.3636 and 0.31818 respectively. If we add these up, they come out to 0.68181. This number is not exactly the same number shown in the `bacondecomp` table, but here we can see that this group has the highest weight as expected.
+
+
+We can also recover the respective betas as follows
+
+
+```stata
+// Early vs Never 
+xtreg Y D i.t if (id==1 | id==2), fe robust		
+	
+// Late vs Never
+xtreg Y D i.t if (id==1 | id==3), fe robust	
+```
+
+We can also check manually the weighted average of the beta coefficients and compare it with the regression coefficient:
+
+
+```stata
+
+// manual
+display 4*.31818182 + 2*.36363636 + 2*.18181818 + 4*.13636364
+
+// regression
+reghdfe Y D, absorb(id t)
+```
+
+and we get the same estimate of 2.909.
+
 
 ---
 
@@ -608,7 +660,7 @@ twoway ///
 
 which gives us:
 
-<img src="../../../assets/images/TWFE_bashing1.png" height="300">
+<img src="../../../assets/images/TWFE_bashing1.png" width="100%">
 
 Each cohort is given a different color. This is passed on to the line graph via the `colorpalette` package. 
 
@@ -627,6 +679,8 @@ reghdfe Y D, absorb(id t)
 I have pasted the `reghdfe` regression output below (`xtreg` output was too large):
 
 ```stata
+(MWFE estimator converged in 2 iterations)
+
 HDFE Linear regression                            Number of obs   =      1,800
 Absorbing 2 HDFE groups                           F(   1,   1710) =      59.04
                                                   Prob > F        =     0.0000
@@ -649,6 +703,7 @@ Absorbed degrees of freedom:
           id |        30           0          30     |
            t |        60           1          59     |
 -----------------------------------------------------+
+
 ```
 
 This is obviously wrong since we know for sure that the treatments are positive. So what is going on? Let's check using the Bacon decomposition:
@@ -660,9 +715,9 @@ bacondecomp Y D, ddetail
 
 which gives us this graph:
 
-<img src="../../../assets/images/TWFE_bashing2.png" height="300">
+<img src="../../../assets/images/TWFE_bashing2.png" width="100%">
 
-and spits out this table:
+with details provided in the following output:
 
 ```stata
 Computing decomposition across 6 timing groups
@@ -701,7 +756,6 @@ Bacon Decomposition
 +---------------------------------------------------+
 ```
 
-The table gives us the estimation of each 2x2 combination and its relative weight in the overall beta. Since we do not have a never treated group, we get a series of "early versus late" or "later versus early" comparisons for all the combinations. In the output above we can observe that Late versus Early treatment groups are pulling the average down into the negative zone. For example, the fourth value of -121.5 has a weight of 16% that is clearly diluting the overall estimation of beta.
 
 
 It is this decomposition and the negative weights that form the basis for the estimators in the new DiD packages that are discussed in sections below.
