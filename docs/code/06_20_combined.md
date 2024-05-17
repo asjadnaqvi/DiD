@@ -17,7 +17,7 @@ image: "../../../assets/images/DiD.png"
 {:toc}
 
 
-*Last updated: 29 Nov 2022*
+*(Last updated: 29 Nov 2022)*
 
 ---
 
@@ -26,6 +26,8 @@ image: "../../../assets/images/DiD.png"
 
 This example follows the [five estimators](https://github.com/borusyak/did_imputation/blob/main/five_estimators_example.png) code that utilizes the `event_plot` command. In this example, we will use the same code structure we have been using in the individual sections above. So let's get started.
 
+
+Please note that the estimators are not truely substitutable except in certain circumstances. Please read the assumptions of each estimator carefully before plotting them in one graph. A good starting point to understanding the differences between estimators is [Roth 2024](https://arxiv.org/abs/2401.12309). 
 
 
 ## Step 0: Get all the packages

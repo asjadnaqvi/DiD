@@ -18,6 +18,7 @@ image: "../../../assets/images/DiD.png"
 
 
 *This section has been updated and considerably improved thanks to [Daniel Sebastian Tello Trillo](https://sebastiantellotrillo.com/).*
+
 *Last updated: 16 May 2024*
 
 ---
