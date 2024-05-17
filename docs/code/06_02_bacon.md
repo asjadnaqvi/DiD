@@ -116,9 +116,9 @@ In the absence of controls, this is the only option we can use for running `baco
 
 <img src="../../../assets/images/bacon1.png" width="100%">
 
-The figure shows four points for the three groups in our example. The treated versus never treated ($$ T $$ vs $$ U $$) are triangles. Since we have an early treated (id=2) and a late treated (id=3) panel variable, the y-axis gives us beta values of 2 and 4 respectively. These values are also obvious from the simple plot of the panel variables where id=2 increases by 2 and id=3 increases by 4 over the not treated id=1. The crosses represent the late treatment versus early control ($$ T^l $$ vs $$ C^e $$), and early treatment versus late control ($$ T^e $$ vs $$ C^l $$) groups. Since these also have values of 2 and 4, their $$ \hat{\beta} $$ values on the y-axis are the same. The x-axis gives us the weights of each parameter which we will come to later. 
+The figure shows four points for the three groups in our example. The treated versus never treated ($$ T $$ vs $$ U $$) is shown as a triangle. Crosses represent late versus early treated ($$ T^l $$ vs $$ T^e $$) combinations. The hollow circle represents the timing groups or early versus late treatment groups ($$ T^e $$ vs $$ T^l $$). 
 
-The figure above is summarized in this table that also pops up in the output window in Stata:
+The figure information is displayed in a table output:
 
 ```stata
 Computing decomposition across 3 timing groups
@@ -138,6 +138,7 @@ Bacon Decomposition
 |         Late_v_Early |            4   .1363636317 |
 |       Never_v_timing |  2.933333323   .6818181841 |
 +---------------------------------------------------+
+
 ```
 
 Here we get our weights and the 2x2 $$ \beta $$ for each group. The table tells us that ($$ T $$ vs $$ U $$), which is the sum of the late and early treated versus never treated, has the largest weight, followed by early vs late treated, and lastly, late vs early treated.
