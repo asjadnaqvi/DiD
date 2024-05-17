@@ -11,6 +11,7 @@ nav_order: 2
 
 Packages are sorted in alphabetical order by name. Some package paths have been split across lines but adding spaces to keep table formatting intact. Just make sure they are in one line with spaces removed when copying them in Stata. To install packages from GitHub, get the `github` package: `net install github, from("https://haghish.github.io/github/")`. Documentation of Stata packages is usually done on internal help files. Some packages do have dedicated websites, PDFs, or GitHub repositories that are identified in the website column. Also check the equivalent [R packages](https://asjadnaqvi.github.io/DiD/docs/02_R/) package that also lists dedicated pages.
 
+
 | Name | Installation | Package by | Reference paper(s) |
 | --- | --- | --- |   --- |
 | bacondecomp | `ssc install bacondecomp, replace`  |   [Andrew Goodman-Bacon](http://goodman-bacon.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/agoodmanbacon) <br> [Thomas Goldring](https://tgoldring.com/) <br> Austin Nichols [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/AustnNchols) |   [Goodman-Bacon (2021)](https://www.sciencedirect.com/science/article/abs/pii/S0304407621001445) |

@@ -27,6 +27,8 @@ This section contains a miscellaneous collection of lecture notes, videos, paper
 ## Books
 Free online books that you can also buy. Note that books might be removed or links might change. Please report these!
 
+[Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin) and [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2024). [Credible Answers to Hard Questions:  Differences-in-Differences for Natural Experiments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4487202). Working textbook under contract with Princeton University Press.
+
 [Miguel Hernan](https://www.hsph.harvard.edu/miguel-hernan/) and [Jamie Robins](https://www.hsph.harvard.edu/james-robins/) (2022). [Causal Inference: What If](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/).
 
 [Nick Huntington-Klein](https://nickchk.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/nickchk) (2021). [The Effect](https://theeffectbook.net/).
@@ -131,8 +133,6 @@ Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 
 [Chloe East](https://www.chloeneast.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/ChloeEast2) in 2021 organized an online [DiD reading group](https://www.chloeneast.com/metrics-discussions.html).
 
-
-
 ---
 
 ## Papers
@@ -143,6 +143,9 @@ Josh Angrist (MIT) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-i
 ### 2024
 Jonathan Roth (2024). [Interpreting Event-Studies from Recent Difference-in-Differences Methods](https://arxiv.org/abs/2401.12309). <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
 
+### 2024
+
+[Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin), [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2024). [Difference-in-Differences Estimators of Intertemporal Treatment Effects](https://doi.org/10.1162/rest_a_01414). The Review of Economics and Statistics.
 
 ### 2023
 
@@ -204,8 +207,6 @@ Brantly Callaway, Andrew Goodman-Bacon, Pedro H.C. Sant'Anna (2021). [Difference
 [Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin), [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2021). [Two-Way Fixed Effects and Differences-in-Differences with Heterogeneous Treatment Effects: A Survey](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3980758). <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
 
 [Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin), [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2021). [Two-way fixed effects regressions with several treatments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3751060).
-
-[Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin), [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2021). [Difference-in-Differences Estimators of Inter-temporal Treatment Effects](https://arxiv.org/abs/2007.04267).
 
 [Clément de Chaisemartin](https://sites.google.com/site/clementdechaisemartin/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/twitter.svg" />](https://twitter.com/CdeChaisemartin), [Xavier D'Haultfoeuille](https://faculty.crest.fr/xdhaultfoeuille/) (2021). [Two-Way Fixed Effects and Differences-in-Differences with Heterogeneous Treatment Effects: A Survey](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3980758).
 

@@ -10,6 +10,25 @@ image: "../../../assets/images/DiD.png"
 # did_multiplegt (Chaisemartin and D'Haultfœuille 2020, 2021)
 {: .no_toc }
 
+## Note
+{: .no_toc}
+
+To estimate event-study/dynamic effects, we strongly recommend using the <ins>much faster</ins> [did_multiplegt_dyn](https://asjadnaqvi.github.io/DiD/docs/code_r/07_did_multiplegt_dyn.md) command. 
+
+In addition to that, did_multiplegt_dyn offers more options than did_multiplegt, among which:
++ **normalized**: estimation of the normalized dynamic effects (de Chaisemartin & D'Haultfoeuille, 2024);
++ **predict_het**: built-in treatment effect heterogeneity analysis;
++ **design** and **date_first_switch**: post-estimation options to analyze the design and timing of the treatment;
++ **by** and **by_path**: estimating dynamic effects within levels of a group-level variable or within treatment paths;
++ **trends_lin**: built-in group-specific linear trends.
+
+Lastly, as of the last release, did_multiplegt_dyn also includes several user-requested features:
++ **only_never_switchers**: restricting the estimators from de Chaisemartin & D'Haultfoeuille (2024) to only compare switchers and never-switchers;
++ the output of did_multiplegt_dyn can be assigned (ex: `did <- did_multiplegt_dyn(df, Y, G, T, D)`) as a list with **did_multiplegt_dyn** class;
++ custom class allows for built-in customized **print()** and **summary()** methods;
++ the displayed output can be retrieved in full from the assigned object by simply browsing the list;
++ integration with **ggplot2**: the assigned output will always contain a **ggplot** object for the event-study graph.
+
 ## Table of contents
 {: .no_toc .text-delta }
 
@@ -43,13 +62,10 @@ to overcome this issue in the examples that follow.
 
 ## Installation and options
 
-The package has been archived on CRAN
-([details](https://www.stats.ox.ac.uk/pub/bdr/noSuggests/DIDmultiplegt.out)),
-but can still be installed from GitHub.
+The package can be installed from CRAN
 
 ```r
-# install.packages("remotes")
-remotes::install_github("shuo-zhang-ucsb/did_multiplegt") # Install (only need to run once or when updating)
+install.packages("DIDmultiplegt") # Install (only need to run once or when updating)
 library("DIDmultiplegt") # Load the package into memory (required each new session)
 ```
 
