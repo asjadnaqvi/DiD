@@ -7,7 +7,7 @@ mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
 
-# did_multiplegt (Chaisemartin and D'Haultfœuille 2020, 2021)
+# did_multiplegt_dyn (Chaisemartin and D'Haultfœuille 2024)
 {: .no_toc }
 
 ## Table of contents
