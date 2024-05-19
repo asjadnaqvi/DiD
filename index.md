@@ -23,7 +23,7 @@ At the heart of this new DiD literature is the premise that the classic Two-way 
 
 While these methods are definite improvement over classic TWFE methods, what requires a deeper dive, is a solid understanding of which methods and/or packages works best for specific problems. Hopefully, more will be written on comparing the utility of each estimation technique by those who know this stuff better. Currently in 2024, while packages are still rolling out, we are also observing more applications and discussions that can help us understand the nuances across various DiD innovations. 
 
-Several review papers have come out that summarize the state-of-the-field really well. They are a good starting point to familiarize oneself with the methods and are marked in the [literature](https://asjadnaqvi.github.io/DiD/docs/reading/04_resources) section.
+Several review papers have come out that summarize the state-of-the-field really well. They are a good starting point to familiarize oneself with the methods and are marked in the [Resources](https://asjadnaqvi.github.io/DiD/docs/resources) section.
 
 
 ## Misc info
