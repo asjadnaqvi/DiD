@@ -88,7 +88,7 @@ DID estimators of the instantaneous treatment effect, of dynamic treatment effec
   Placebo_10 | -.2936845   .5014765  -1.276578   .6892093         64         19 
 ```
 
-The command also produces by default an event-study graph (unless the **firstdiff_placebo** option is specified):
+The command also produces by default an event-study graph, unless the **firstdiff_placebo** option is specified: in that case, we do not recommend putting together first-difference placebos and long-difference event-study estimates on the same event-study graph.
 
 <img src="../../../assets/images/did_multiplegt_stata.png" height="300">
 
