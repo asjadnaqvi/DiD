@@ -54,48 +54,47 @@ Let's try the basic `did_multiplegt` command:
 
 
 ```stata
-did_multiplegt Y id t D, robust_dynamic dynamic(10) placebo(10) breps(20) cluster(id)
+did_multiplegt Y id t D, robust_dynamic dynamic(10) placebo(10) breps(20) cluster(id) seed(0)
 ```
 
 and we get this output:
 
-```stata
-DID estimators of the instantaneous treatment effect, of dynamic treatment effects if the dynamic 
-option is used, and of placebo tests of the parallel trends assumption if the placebo option 
-is used. The estimators are robust to heterogeneous effects, and to dynamic effects if the 
-robust_dynamic option is used.
+```
+DID estimators of the instantaneous treatment effect, of dynamic treatment effects if the dynamic option is used, 
+and of placebo tests of the parallel trends assumption if the placebo option is used. 
+The estimators are robust to heterogeneous effects, and to dynamic effects if the robust_dynamic option is used.
 
              |  Estimate         SE      LB CI      UB CI          N  Switchers 
--------------+------------------------------------------------------------------
-    Effect_0 | -.0608394   .3699999  -.7860393   .6643604         78         23 
-    Effect_1 |   8.49767   .3811963   7.750525   9.244815         78         23 
-    Effect_2 |  17.64773   .4201394   16.82425    18.4712         78         23 
-    Effect_3 |   25.9377   .5058977   24.94614   26.92925         78         23 
-    Effect_4 |  34.62362   .8107131   33.03462   36.21262         75         23 
-    Effect_5 |  42.85682   1.155268    40.5925   45.12115         64         19 
-    Effect_6 |  51.93103   1.416187    49.1553   54.70676         64         19 
-    Effect_7 |  60.13327   1.799572   56.60611   63.66043         64         19 
-    Effect_8 |  68.82446   1.901396   65.09773    72.5512         64         19 
-    Effect_9 |  77.30792   2.222771   72.95129   81.66455         64         19 
-   Effect_10 |  85.78878   2.535131   80.81992   90.75764         55         19 
-   Placebo_1 | -.1308918   .5886522   -1.28465   1.022866         78         23 
-   Placebo_2 |  .1944381   .4274514  -.6433666   1.032243         78         23 
-   Placebo_3 |  .0639963   .4441797   -.806596   .9345885         78         23 
-   Placebo_4 |  .2572878   .4284934  -.5825592   1.097135         78         23 
-   Placebo_5 |  .0679468   .3048067  -.5294744    .665368         78         23 
-   Placebo_6 |  -.082143   .2507972  -.5737055   .4094195         78         23 
-   Placebo_7 |  -.271289   .3715318  -.9994913   .4569133         78         23 
-   Placebo_8 |  .0338621   .2511709  -.4584328    .526157         78         23 
-   Placebo_9 | -.1010115   .2640631  -.6185751   .4165522         78         23 
-  Placebo_10 |  .3842823   .3026827  -.2089757   .9775403         78         23 
-
-When dynamic effects and first-difference placebos are requested, the command does
-not produce a graph, because placebos estimators are DIDs across consecutive time periods,
-while dynamic effects estimators are long-difference DIDs, so they are not really comparable.
+-------------+-----------------------------------------------------------------
+    Effect_0 | -.0608394   .3777101  -.8011512   .6794724         78         23 
+    Effect_1 |   8.49767    .371304   7.769914   9.225426         78         23 
+    Effect_2 |  17.64773   .4621524   16.74191   18.55355         78         23 
+    Effect_3 |   25.9377   .6017678   24.75823   27.11716         78         23 
+    Effect_4 |  34.62362   .9410695   32.77913   36.46812         75         23 
+    Effect_5 |  42.85682    1.30207   40.30476   45.40888         64         19 
+    Effect_6 |  51.93103   1.587562   48.81941   55.04265         64         19 
+    Effect_7 |  60.13327   1.959996   56.29168   63.97486         64         19 
+    Effect_8 |  68.82446   2.144383   64.62147   73.02745         64         19 
+    Effect_9 |  77.30792    2.51719   72.37423   82.24161         64         19 
+   Effect_10 |  85.78878   2.878414   80.14709   91.43047         55         19 
+     Average |  40.79851   1.198362   38.44972    43.1473        762        229 
+   Placebo_1 |  .1308918   .5623093  -.9712345   1.233018         78         23 
+   Placebo_2 | -.0635463   .3870331  -.8221312   .6950386         78         23 
+   Placebo_3 | -.1275425   .4243438  -.9592563   .7041713         78         23 
+   Placebo_4 | -.3848304   .3591436  -1.088752   .3190911         78         23 
+   Placebo_5 | -.4583827    .294038  -1.034697   .1179317         75         23 
+   Placebo_6 | -.1875761   .3982451  -.9681365   .5929843         64         19 
+   Placebo_7 |  .1194069   .4310281  -.7254083   .9642221         64         19 
+   Placebo_8 |  .0628537   .4707887   -.859892   .9855995         64         19 
+   Placebo_9 | -.1943704   .4800074  -1.135185    .746444         64         19 
+  Placebo_10 | -.2936845   .4425423  -1.161067   .5736984         64         19
 ```
 
-Even though we are warned in the output above that we should not compare the event study estimates, we can still plot these using the `event_plot` (`ssc install event_plot, replace`) command as follows: 
+The command also produces by default an event-study graph, unless the **firstdiff_placebo** option is specified: in that case, we do not recommend putting together first-difference placebos and long-difference event-study estimates on the same event-study graph.
 
+<img src="../../../assets/images/did_multiplegt_stata.png" height="300">
+
+We can also plot the results using the `event_plot` (`ssc install event_plot, replace`) command as follows: 
 
 ```stata
 event_plot e(estimates)#e(variances), default_look ///
@@ -105,6 +104,6 @@ event_plot e(estimates)#e(variances), default_look ///
 
 and we get this figure:
 
-<img src="../../../assets/images/cd_3.png" height="300">
+<img src="../../../assets/images/did_multiplegt_stata_ep.png" height="300">
 
 
