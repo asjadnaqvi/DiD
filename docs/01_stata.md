@@ -9,7 +9,7 @@ nav_order: 2
 
 *(Last updated: August 2024)*
 
-Packages are sorted in alphabetical order. For instructions, the help files of the packages or check dedicated websites, PDFs, or GitHub repositories (if available) that are linked below. See also a list of [R packages](https://asjadnaqvi.github.io/DiD/docs/02_R/).
+Packages are sorted in alphabetical order. For instructions, please see the help files or check their websites linked below. A list of [R packages is given here](https://asjadnaqvi.github.io/DiD/docs/02_R/).
 
 
 
