@@ -9,7 +9,7 @@ nav_order: 2
 
 *(Last updated: August 2024)*
 
-Packages are sorted in alphabetical order. For instructions, please see the help files or check their websites linked below. A list of [R packages is given here](https://asjadnaqvi.github.io/DiD/docs/02_R/).
+Stata packages are listed in alphabetical order. A list of [R packages is given here](https://asjadnaqvi.github.io/DiD/docs/02_R/).
 
 
 
@@ -47,18 +47,14 @@ Packages are sorted in alphabetical order. For instructions, please see the help
 
 ## How to use Stata packages?
 
-For individual packages, check their help files for documentation and examples. I also regularly update the [Stata code](https://asjadnaqvi.github.io/DiD/docs/code) section.
+For individual packages, check their help files and websites linked about for documentation and examples. Some packages are also discussed in the [Stata code](https://asjadnaqvi.github.io/DiD/docs/code) section.
 
-For using and plotting multiple DiD packages in Stata, the `event_plot` command (`ssc install event_plot, replace`) by [Kirill Borusyak](https://sites.google.com/view/borusyak/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/x.svg" />](https://x.com/borusyak) is highly recommended. It estimates and combines results from [five different estimators](https://github.com/borusyak/did_imputation/blob/main/five_estimators_example.png). Example of how to do event study plots using different packages is given in the [five_estimators_example.do](https://github.com/borusyak/did_imputation/blob/main/five_estimators_example.do) dofile on [GitHub](https://github.com/borusyak/did_imputation).
+For using and plotting multiple DiD packages in Stata, the `event_plot` command (`ssc install event_plot, replace`) by [Kirill Borusyak](https://sites.google.com/view/borusyak/home) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/x.svg" />](https://x.com/borusyak) is highly recommended. It can combine results several estimators. See, for example this [five different estimators figure](https://github.com/borusyak/did_imputation/blob/main/five_estimators_example.png) where the code is given in the  [five_estimators_example.do](https://github.com/borusyak/did_imputation/blob/main/five_estimators_example.do) dofile. More information can be found on on Kirill's [GitHub](https://github.com/borusyak/did_imputation). 
 
-Please note that different packages have different assumptions so use this carefully!
-
-
-The `event_plot` usage example has been extended twice:
+The `event_plot` example has been extended twice:
 
 * [David Burgherr](https://www.lse.ac.uk/International-Inequalities/People/David-Burgherr) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/x.svg" />](https://x.com/d_burgherr) has a dofile on [Dropbox](https://www.dropbox.com/s/p5i94ryf4h9o335/five_estimators_example_adapted.do?dl=0).
 
 * [Pietro Santoleri](https://pietrosantoleri.github.io/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/x.svg" />](https://x.com/santpietro) has a dofile on [GitHub](https://github.com/pietrosantoleri/staggered_did) that plots [seven different estimators](https://github.com/pietrosantoleri/staggered_did/blob/main/output/seven_estimators_example_allt.png).
 
-
-[Scott Cunningham](https://www.scunning.com/) [<img width="12px" src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/x.svg" />](https://x.com/causalinf) has sample dofiles as part of the [CodeChella 2021](https://github.com/scunning1975/codechella) DiD event.
+Please note that different packages have different assumptions so use this carefully!
