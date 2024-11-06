@@ -20,7 +20,7 @@ image: "../../../assets/images/DiD.png"
 
 ## Notes
 
-- The *hdidregress* is a native Stata implementation of the Callaway and Sant'Anna (2021).
+- The *hdidregress* is a native Stata implementation of [Callaway and Sant'Anna 2021](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948).
 
 
 ## Installation

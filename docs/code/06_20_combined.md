@@ -94,7 +94,7 @@ estimates store didimp
 *** did_multiplegt  ***
 ***********************
 
-did_multiplegt Y id t D, robust_dynamic dynamic(10) placebo(10) breps(2) cluster(id)
+did_multiplegt_dyn Y id t D, effects(10) placebo(10) cluster(id)
 
 matrix didmgt_b = e(estimates) 
 matrix didmgt_v = e(variances)
@@ -136,9 +136,9 @@ Here we also make use of the colorpalettes package (`ssc install palettes, repla
 ```stata
 colorpalette tableau, nograph	
 
-event_plot    twfe	csdd    didimp  dcdh_b#dcdh_v   sa_b#sa_v   stackedev_b#stackedev_v did2s_b#did2s_v, 	///
-	stub_lag( L_#   Tp#     tau#    Effect_#        L_#         L_#                     L_# 		) 		///
-	stub_lead(F_# 	Tm#     pre#    Placebo_#       F_#         F_#                     F_# 		)		///
+event_plot    twfe	csdd    didimp  dcdh_b#dcdh_v   sa_b#sa_v   stackedev_b#stackedev_v did2s_b#did2s_v , 	///
+	stub_lag( L_#   Tp#     tau#    Effect_#        L_#         L_#                     L_# 			) 		///
+	stub_lead(F_# 	Tm#     pre#    Placebo_#       F_#         F_#                     F_# 			)		///
 		together perturb(-0.30(0.10)0.30) trimlead(20) trimlag(20) noautolegend 									///
 		plottype(scatter) ciplottype(rspike)  																	    ///
 			lag_opt1(msymbol(+)   msize(1.2) mlwidth(0.3) color(black)) 	lag_ci_opt1(color(black)     lw(0.15)) 	///
@@ -160,7 +160,7 @@ event_plot    twfe	csdd    didimp  dcdh_b#dcdh_v   sa_b#sa_v   stackedev_b#stack
 
 which gives us this figure:
 
-<img src="../../../assets/images/allestimators2.png" height="300">
+<img src="../../../assets/images/allestimators2.png" width="100%">
 
 
 
