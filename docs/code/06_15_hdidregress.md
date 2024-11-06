@@ -18,14 +18,14 @@ image: "../../../assets/images/DiD.png"
 
 ---
 
-## Introduction
+## Notes
 
-The *hdidregress* is a native Stata implementation of the Callaway and Sant'Anna (2021) estimators.
-
-## Installation and options
+- The *hdidregress* is a native Stata implementation of the Callaway and Sant'Anna (2021).
 
 
-Take a look at the help file:
+## Installation
+
+Requires Stata v17 or higher. Take a look at the help file:
 
 ```stata
 help hdidregress
@@ -117,13 +117,14 @@ estat atetplot, sci
 ```
 
 
-<img src="../../../assets/images/hdid_aipw1.png" height="300">
+<img src="../../../assets/images/hdid_aipw1.png" width="100%">
 
 
-The command can also produce an event study plot:
+The command's built-in graph option gives us: 
+
 
 ```stata
 estat aggregation, dynamic(-10(1)10) graph
 ```
 
-<img src="../../../assets/images/hdid_aipw2.png" height="300">
+<img src="../../../assets/images/hdid_aipw2.png" width="100%">

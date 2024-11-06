@@ -7,7 +7,7 @@ mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
 
-# did_imputation (Borusyak, Jaravel, Spiess 2021)
+# did_imputation 
 {: .no_toc }
 
 ## Table of contents
@@ -18,14 +18,14 @@ image: "../../../assets/images/DiD.png"
 
 ---
 
-## Introduction
+## Notes
 
-The *did_imputation* command is written by Kirill Borusyak, Xavier Jaravel, and Jann Spiess, based on their paper [Revisiting Event Study Designs: Robust and Efficient Estimation](https://arxiv.org/abs/2108.12419).
+- Based on: Borusyak, Jaravel, Spiess 2021. [Revisiting Event Study Designs: Robust and Efficient Estimation](https://arxiv.org/abs/2108.12419) that was last revised on 16 Jan 2024 (v5).
+- Program version (if available): November 22, 2023
+- Last checked: Nov 2024
 
 
-
-
-## Installation and options
+## Installation
 
 ```stata
 ssc install did_imputation, replace
@@ -77,7 +77,6 @@ which gives us:
         pre9 |   .0285485   .2358903     0.12   0.904    -.4337881     .490885
        pre10 |   .0962904   .2314293     0.42   0.677    -.3573028    .5498836
 ------------------------------------------------------------------------------
-
 ```
 
 
@@ -92,7 +91,7 @@ event_plot, default_look graph_opt(xtitle("Periods since the event") ytitle("Ave
 
 And we get:
 
-<img src="../../../assets/images/did_imputation_1.png" height="300">
+<img src="../../../assets/images/did_imputation_1.png" width="100%">
 
 
 

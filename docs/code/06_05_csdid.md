@@ -7,7 +7,7 @@ mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
 
-# csdid (Callaway and Sant'Anna 2021)
+# csdid
 {: .no_toc }
 
 ## Table of contents
@@ -18,13 +18,13 @@ image: "../../../assets/images/DiD.png"
 
 ---
 
-## Introduction
+## Notes
 
-The *csdid* command by Callaway and Sant'Anna (henceforth CS), originally released an [R package](https://bcallaway11.github.io/did/index.html), was coded in Stata by [Fernando Rios-Avila](https://twitter.com/friosavila) who also has a really helpful [page here](https://friosavila.github.io/playingwithstata/index.html). The package is based on the [Difference-in-Differences with multiple time periods](https://www.sciencedirect.com/science/article/pii/S0304407620303948) paper.
+- Based on: [Callaway and Sant'Anna 2021](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948)
+- Program version (if available): v1.72
+- Last checked: Nov 2024
 
-
-
-## Installation and options
+## Installation
 
 ```stata
 ssc install csdid, replace

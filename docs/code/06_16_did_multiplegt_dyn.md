@@ -7,7 +7,7 @@ mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
 
-# did_multiplegt_dyn (Chaisemartin and D'Haultfœuille 2024)
+# did_multiplegt_dyn 
 {: .no_toc }
 
 ## Table of contents
@@ -18,7 +18,13 @@ image: "../../../assets/images/DiD.png"
 
 ---
 
-## Installation and options
+## Notes
+
+- Based on: Chaisemartin and D'Haultfœuille 2024
+- Program version (if available): -
+- Last checked: Nov 2024
+
+## Installation
 
 ```stata
 ssc install did_multiplegt_dyn, replace
@@ -43,7 +49,7 @@ did_multiplegt_dyn Y id t D, effects(10) placebo(10) cluster(id)
 
 and we get this output:
 
-```
+```stata
 --------------------------------------------------------------------------------
              Estimation of treatment effects: Event-study effects
 --------------------------------------------------------------------------------
@@ -61,6 +67,7 @@ and we get this output:
     Effect_9 |  68.82446   .4118019   68.01735   69.63158         64         19 
    Effect_10 |  77.30792   .4396869   76.44615   78.16969         64         19 
 --------------------------------------------------------------------------------
+Test of joint nullity of the effects : p-value = 0
 
 
 --------------------------------------------------------------------------------
@@ -100,7 +107,7 @@ The development of this package was funded by the European Union (ERC, REALLYCRE
 
 If the **graph_off** option is not specified, the command always returns by default an event-study graph:
 
-<img src="../../../assets/images/did_multiplegt_dyn_stata.png" height="300">
+<img src="../../../assets/images/did_multiplegt_dyn1.png" width="100%">
 
 It is also possible to use `event_plot` to produce the event-study graph:
 
@@ -110,4 +117,4 @@ event_plot e(estimates)#e(variances), default_look ///
 	title("did_multiplegt_dyn") xlabel(-10(1)10)) stub_lag(Effect_#) stub_lead(Placebo_#) together
 ```
 
-<img src="../../../assets/images/did_multiplegt_dyn_stata_ep.png" height="300">
+<img src="../../../assets/images/did_multiplegt_dyn2.png" width="100%">

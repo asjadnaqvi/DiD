@@ -19,6 +19,12 @@ image: "../../../assets/images/DiD.png"
 ---
 
 
+## Notes
+
+- Based on: 
+- Program version (if available): -
+- Last checked: Nov 2024
+
 ## Installation and options
 
 ```stata
@@ -88,10 +94,10 @@ ES_att       |
 ```
 
 
-The command also has a built in graph option which gives us: 
+The command's built-in graph option gives us: 
 
 
-<img src="../../../assets/images/wooldid_1.png" height="300">
+<img src="../../../assets/images/wooldid_1.png" width="100%">
 
 
 

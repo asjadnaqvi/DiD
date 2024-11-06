@@ -18,7 +18,11 @@ image: "../../../assets/images/DiD.png"
 
 ---
 
-## Introduction
+## Notes
+
+- Based on: Dube et. al. (2023). [A Local Projections Approach to Difference-in-Differences](https://www.nber.org/papers/w31184)
+- Program version (if available): -
+- Last checked: Nov 2024
 
 
 
@@ -26,6 +30,8 @@ image: "../../../assets/images/DiD.png"
 
 ```stata
 ssc install lpdid, replace
+
+ssc install reghdfe, replace  // dependency
 ssc install boottest, replace  // dependency
 ssc install egenmore, replace  // dependency
 ```
@@ -88,10 +94,11 @@ LP-DiD Pooled Estimates
 ```
 
 
-The command also has a built in graph option which gives us: 
+The command's built-in graph option gives us: 
 
 
-<img src="../../../assets/images/lpdid_1.png" height="300">
+
+<img src="../../../assets/images/lpdid_1.png" width="100%">
 
 
 
