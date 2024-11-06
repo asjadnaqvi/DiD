@@ -5,7 +5,7 @@ remote_theme: pmarsceill/just-the-docs
 
 
 title: DiD
-description: Follow the latest developments in the DiD literature.
+description: Difference-in-difference package tracker.
 #baseurl: "/DiD" # the subpath of your site, e.g. /blog
 #url: "https://asjadnaqvi.github.io/DiD/" # the base hostname & protocol for your site, e.g. http://example.com
 

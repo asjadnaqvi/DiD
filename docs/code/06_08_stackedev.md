@@ -41,6 +41,12 @@ help stackedev
 
 ## Test the command
 
+Define the reference year:
+
+```stata
+ren F_1 ref  //base year
+	
+```
 
 Let's run the basic `stackedev` command:
 

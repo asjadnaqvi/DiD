@@ -2,7 +2,7 @@
 layout: default
 title: Julia packages
 image: "../../../assets/images/DiD.png"
-nav_order: 4
+nav_order: 5
 ---
 
 # Julia packages
@@ -12,7 +12,8 @@ This is still being updated. See links below for details. There is also a [Julia
 
 | Name | Installation |  Package by | Reference paper |
 | --- | --- | --- |   --- |
-| InteractionWeightedDIDs.jl  | [GitHub](https://github.com/JuliaDiffinDiffs/InteractionWeightedDIDs.jl)   |    |    |
-| SynthControl.jl  | [GitHub](https://github.com/nilshg/SynthControl.jl)   |    |    |
+| DiffinDiffs.jl  | [GitHub](https://github.com/JuliaDiffinDiffs/DiffinDiffs.jl)   | [Junyuan Chen](https://github.com/junyuan-chen)   | Sun and Abraham 2021   |
+| InteractionWeightedDIDs.jl  | [GitHub](https://github.com/JuliaDiffinDiffs/InteractionWeightedDIDs.jl)   | [Junyuan Chen](https://github.com/junyuan-chen)   |  Sun and Abraham 2021  |
+
 
 
