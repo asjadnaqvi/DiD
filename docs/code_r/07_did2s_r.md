@@ -20,12 +20,12 @@ image: "../../../assets/images/DiD.png"
 
 ## Introduction
 
-The [**did2s**](https://kylebutts.com/did2s) R package by [Kyle
+The [**did2s**](https://kylebutts.github.io/did2s) R package by [Kyle
 Butts](https://kylebutts.com/) implements the method proposed by the Gardner
 2021 paper 
 [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf). 
 A detailed description is provided on the **did2s**
-[website](https://kylebutts.com/did2s/articles/Two-Stage-Difference-in-Differences.html).
+[website](https://kylebutts.github.io/did2s/articles/Two-Stage-Difference-in-Differences.html).
 
 The key idea behind **did2s** is pretty simple and is clever implementation of the
 [Frisch-Waugh-Lovell (FWL)](https://towardsdatascience.com/the-fwl-theorem-or-how-to-make-all-regressions-intuitive-59f801eb3299) 
@@ -44,7 +44,7 @@ specifying our models. We'll see some examples of this below.
 
 Before continuing, it is worth noting that the **did2s** package also provides
 convenience functions for 
-[running and visualizing a range of DiD estimators](https://kylebutts.com/did2s/articles/event_study.html)
+[running and visualizing a range of DiD estimators](https://kylebutts.github.io/did2s/articles/event_study.html)
 (i.e., not just the method proposed by Gardner 2021). This makes it a very
 useful package to have in the applied econometrican's R toolkit. We'll save this
 functionality for the "All estimators" section, though. _STILL NEED TO ADD THIS._
@@ -81,7 +81,7 @@ expects some the syntax conventions and shortcuts offered by the latter.  The
 most obvious cases are the use of the `|` fixed-effect slot in `first_stage`
 formula, and the use of `i()` in the `second_stage` formula. We'll illustrate
 this directly with an example below. But you can take a look at the helpfile
-([`?did2s`](https://kylebutts.com/did2s/reference/did2s.html)) for detailed information and additional examples.
+([`?did2s`](https://kylebutts.github.io/did2s/reference/did2s.html)) for detailed information and additional examples.
 
 ## Dataset
 
