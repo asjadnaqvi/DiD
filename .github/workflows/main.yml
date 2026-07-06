@@ -36,23 +36,55 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: _site
 
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url || steps.deployment_retry.outputs.page_url || steps.deployment_retry_2.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Deploy (attempt 1)
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          timeout: "900000"
+          error_count: "30"
+          reporting_interval: "10000"
         continue-on-error: true
+
+      - name: Wait before retry
+        if: steps.deployment.outcome == 'failure'
+        run: sleep 20
 
       - name: Deploy (retry)
         id: deployment_retry
         if: steps.deployment.outcome == 'failure'
         uses: actions/deploy-pages@v4
+        with:
+          timeout: "900000"
+          error_count: "30"
+          reporting_interval: "10000"
+        continue-on-error: true
+
+      - name: Wait before final retry
+        if: steps.deployment_retry.outcome == 'failure'
+        run: sleep 30
+
+      - name: Deploy (final retry)
+        id: deployment_retry_2
+        if: steps.deployment_retry.outcome == 'failure'
+        uses: actions/deploy-pages@v4
+        with:
+          timeout: "900000"
+          error_count: "30"
+          reporting_interval: "10000"
+
+      - name: Fail if deploy did not succeed
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry.outcome == 'failure' && steps.deployment_retry_2.outcome == 'failure'
+        run: |
+          echo "All Pages deploy attempts failed."
+          exit 1
