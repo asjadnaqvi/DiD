@@ -2,7 +2,10 @@
 .Rhistory
 
 
-/code
+/dofiles
 /did_race2
 /old
 /papers
+/Wooldridge DiD
+
+*.do

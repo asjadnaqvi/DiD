@@ -20,9 +20,11 @@ image: "../../../assets/images/DiD.png"
 
 ## Notes
 
-- Based on: Borusyak, Jaravel, Spiess 2021. [Revisiting Event Study Designs: Robust and Efficient Estimation](https://arxiv.org/abs/2108.12419) that was last revised on 16 Jan 2024 (v5).
+- Based on: Borusyak, Jaravel, and Spiess. Imputation-based DiD estimators for staggered adoption.
 - Program version (if available): November 22, 2023
-- Last checked: Nov 2024
+
+- Last checked: 7 Jul 2026
+
 
 
 ## Installation

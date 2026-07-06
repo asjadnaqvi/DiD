@@ -22,7 +22,9 @@ image: "../../../assets/images/DiD.png"
 
 - Based on: Dube et. al. (2023). [A Local Projections Approach to Difference-in-Differences](https://www.nber.org/papers/w31184)
 - Program version (if available): -
-- Last checked: Nov 2024
+
+- Last checked: 7 Jul 2026
+
 
 
 
@@ -58,6 +60,8 @@ lpdid Y, time(t) unit(id) treat(D) pre(10) post(10)
 which will show this output:
 
 ```stata
+lpdid Y, unit(id) time(t) treat(D) pre_window(10) post_window(10)
+
 LP-DiD Event Study Estimates
 
       E-time | Coeffic~t         SE          t      P>|t|  [95% co~.  interval]        obs 
@@ -90,7 +94,6 @@ LP-DiD Pooled Estimates
 -------------+----------------------------------------------------------------------------
          Pre | -.1660366   .2749978        -.6      .5507  -.7284703    .396397        932 
         Post |  43.09124   .9481363      45.45          0   41.15208   45.03039        898 
-
 ```
 
 

@@ -21,7 +21,7 @@ image: "../../../assets/images/DiD.png"
 
 *Last updated: 16 May 2024*
 
----
+
 
 ## What is Bacon decomposition?
 

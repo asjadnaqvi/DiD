@@ -20,9 +20,11 @@ image: "../../../assets/images/DiD.png"
 
 ## Notes
 
-- Based on: Chaisemartin and D'Haultfœuille 2024
+- Based on: Chaisemartin and D'Haultfoeuille (2024).
 - Program version (if available): -
-- Last checked: Nov 2024
+
+- Last checked: 7 Jul 2026
+
 
 ## Installation
 

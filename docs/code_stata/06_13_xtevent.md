@@ -20,10 +20,12 @@ image: "../../../assets/images/DiD.png"
 
 ## Notes
 
-
 - Based on: Freyaldenhoven, Hansen, Shapiro (2019). [Pre-event Trends in the Panel Event-Study Design](https://www.aeaweb.org/articles?id=10.1257/aer.20180609)
+
 - Program version (if available): 3.1.0 July 11, 2024
-- Last checked: Nov 2024
+
+- Last checked: 7 Jul 2026
+
 
 
 
@@ -58,6 +60,16 @@ xtevent Y, pol(D) p(id) t(t) w(9) cohort(gvar) control_cohort(never_treat)
 which shows this output:
 
 ```stata
+You have specified the cohort or the sunabraham option
+Event-time coefficients will be estimated with the Interaction Weighted Estimator of Sun and Abraham (2021)
+
+Warning: Using old syntax for cohort. New syntax for using a cohort variable is cohort(variable varname)
+The old syntax will be deprecated in the next version of xtevent
+
+Warning: Using old syntax for control_cohort. New syntax for using a control cohort variable is
+control_cohort(variable varname)
+The old syntax will be deprecated in the next version of xtevent
+
 Linear regression, absorbing indicators            Number of obs     =   1,363
 Absorbed variable: id                              No. of categories =      30
                                                    F(124, 1209)      =  221.26
