@@ -5,7 +5,7 @@ remote_theme: pmarsceill/just-the-docs
 
 
 title: DiD
-description: Difference-in-difference package tracker.
+description: Difference-in-Differences package tracker.
 #baseurl: "/DiD" # the subpath of your site, e.g. /blog
 #url: "https://asjadnaqvi.github.io/DiD/" # the base hostname & protocol for your site, e.g. http://example.com
 
@@ -16,7 +16,7 @@ back_to_top: true
 back_to_top_text: "Back to top"
 
 # Footer content
-footer_content: "Content by Asjad Naqvi (2020-2024). Distributed under an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
+footer_content: "Content by Asjad Naqvi (2020-2026). Distributed under an <a href=\"https://github.com/pmarsceill/just-the-docs/tree/master/LICENSE.txt\">MIT license.</a>"
 
 # Footer last edited timestamp
 last_edit_timestamp: true 

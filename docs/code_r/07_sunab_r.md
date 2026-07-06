@@ -21,7 +21,7 @@ image: "../../../assets/images/DiD.png"
 ## Introduction
 
 Among (many) other things, 
-[Laurent Bergé's](https://sites.google.com/site/laurentrberge/)
+Laurent Bergé's
 [**fixest**](https://lrberge.github.io/fixest/) package supports the estimation
 procedure described by the Sun and Abraham 2020 paper [Estimating Dynamic
 Treatment Effects in Event Studies with Heterogeneous Treatment
@@ -77,8 +77,8 @@ for more detailed information, as well as the
 
 ## Dataset
 
-To demonstrate the package in action, we'll use the fake dataset that we 
-[created earlier]({{ "/docs/code_r#data-generation" | relative_url }}). Here's a 
+To demonstrate the package in action, we'll use the fake dataset generated in the shared setup block 
+[here]({{ "/docs/code_r#data-generation" | relative_url }}). Here's a 
 reminder of what the data look like.
 
 ```r

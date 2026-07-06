@@ -86,8 +86,8 @@ helpfile (`?did_multiplegt_dyn`) for more detailed information.
 
 ## Dataset
 
-To demonstrate the package in action, we'll use the fake dataset that we 
-[created earlier]({{ "/docs/code_r#data-generation" | relative_url }}). Here's a 
+To demonstrate the package in action, we'll use the fake dataset generated in the shared setup block 
+[here]({{ "/docs/code_r#data-generation" | relative_url }}). Here's a 
 reminder of what the data look like.
 
 ```r

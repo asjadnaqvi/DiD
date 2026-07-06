@@ -21,8 +21,8 @@ image: "../../../assets/images/DiD.png"
 ## Introduction
 
 The [**did**](https://bcallaway11.github.io/did/) R package was developed by 
-[Brantly Callaway](https://bcallaway11.github.io/) and 
-[Pedro Sant'Anna](https://pedrohcgs.github.io/) to accompany their 2021 paper
+Brantly Callaway and 
+Pedro Sant'Anna to accompany their 2021 paper
 [Difference-in-Differences with multiple time periods](https://www.sciencedirect.com/science/article/pii/S0304407620303948) (henceforth CS21).
 
 CS21 provides an extremely flexible framework for estimating DiD-style
@@ -42,9 +42,7 @@ haven't even talked about the way it computes the individual ATTs. (_TL;DR_ it
 uses a "doubly-robust" approach by default, since CS21 proves the equivalence
 conditions for estimating by regression or inverse probability weighting.) But
 the package is very user-friendly and suprisingly nimble. A lot of work has gone
-into making estimation fast, with 
-[considerable speed gains](https://twitter.com/pedrohcgs/status/1470526912447528960) 
-unlocked through C++ optimization.
+into making estimation fast, with considerable speed gains unlocked through C++ optimization.
 
 ## Installation and options
 
@@ -104,8 +102,8 @@ help users to think through the issues of DiD estimation more generally.
 
 ## Dataset
 
-To demonstrate the package in action, we'll use the fake dataset that we 
-[created earlier]({{ "/docs/code_r#data-generation" | relative_url }}). Here's a 
+To demonstrate the package in action, we'll use the fake dataset generated in the shared setup block 
+[here]({{ "/docs/code_r#data-generation" | relative_url }}). Here's a 
 reminder of what the data look like.
 
 ```r

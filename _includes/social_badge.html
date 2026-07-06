@@ -1,0 +1,16 @@
+{% assign platform = include.platform | downcase %}
+{% assign icon_url = '' %}
+
+{% if platform == 'x' or platform == 'twitter' %}
+  {% assign icon_url = 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/x.svg' %}
+{% elsif platform == 'github' %}
+  {% assign icon_url = 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/github.svg' %}
+{% elsif platform == 'linkedin' %}
+  {% assign icon_url = 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linkedin.svg' %}
+{% elsif platform == 'mastodon' %}
+  {% assign icon_url = 'https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/mastodon.svg' %}
+{% endif %}
+
+{% if icon_url != '' %}
+<a href="{{ include.href }}"><img width="{{ include.size | default: 12 }}px" src="{{ icon_url }}" alt="{{ include.label | default: platform }}" /></a>
+{% endif %}

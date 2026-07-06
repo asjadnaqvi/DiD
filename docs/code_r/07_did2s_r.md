@@ -20,8 +20,8 @@ image: "../../../assets/images/DiD.png"
 
 ## Introduction
 
-The [**did2s**](https://kylebutts.github.io/did2s) R package by [Kyle
-Butts](https://kylebutts.com/) implements the method proposed by the Gardner
+The [**did2s**](https://kylebutts.github.io/did2s) R package by Kyle
+Butts implements the method proposed by the Gardner
 2021 paper 
 [Two-stage differences in differences](https://jrgcmu.github.io/2sdd_current.pdf). 
 A detailed description is provided on the **did2s**
@@ -85,8 +85,8 @@ this directly with an example below. But you can take a look at the helpfile
 
 ## Dataset
 
-To demonstrate the package in action, we'll use the fake dataset that we 
-[created earlier]({{ "/docs/code_r#data-generation" | relative_url }}). Here's a 
+To demonstrate the package in action, we'll use the fake dataset generated in the shared setup block 
+[here]({{ "/docs/code_r#data-generation" | relative_url }}). Here's a 
 reminder of what the data look like.
 
 ```r

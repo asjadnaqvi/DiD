@@ -10,9 +10,36 @@ image: "../../../assets/images/DiD.png"
 
 # R code
 
-This section aims to cover the R estimation commands from various packages. 
-Click on the navigation links at the bottom of the page to see detailed 
-implementation code for a specific package.
+This section is the R companion to the DiD methods covered on this site.
+Each page documents one estimator package with a reproducible implementation
+example based on the shared setup data generated below.
+
+## How To Use This Section
+
+1. Start with TWFE and Bacon decomposition to build intuition.
+2. Generate the shared R dataset once from the setup block below.
+3. Run the estimator pages one by one using the same dataset.
+4. Compare results across estimators while keeping assumptions in mind.
+
+## Recommended Start Order
+
+- [TWFE in R]({{ "/docs/code_r/07-twfe_r" | relative_url }})
+- [Bacon decomposition in R]({{ "/docs/code_r/06_bacon_r" | relative_url }})
+- Data generation (included below on this page)
+- [did]({{ "/docs/code_r/07_did_r" | relative_url }})
+- [sunab / fixest]({{ "/docs/code_r/07_sunab_r" | relative_url }})
+- [did2s]({{ "/docs/code_r/07_did2s_r" | relative_url }})
+- [did_multiplegt]({{ "/docs/code_r/07_did_multiplegt_r" | relative_url }})
+- [did_multiplegt_dyn]({{ "/docs/code_r/07_did_multiplegt_dyn_r" | relative_url }})
+
+## Common Workflow Assumptions
+
+- Data are in panel format with `id` and `time` indices.
+- Treatment may be staggered across groups.
+- The shared dataset is synthetic and intended for implementation comparison,
+  not causal interpretation.
+- Package defaults differ, so estimands and inference options should be checked
+  before comparing coefficient values.
 
 Before we start, you can refer to the following glossary table for symbols:
 
@@ -21,13 +48,15 @@ Before we start, you can refer to the following glossary table for symbols:
 | $$ time $$ | time variable |
 | $$ y $$ | outcome variable |
 | $$ treat $$ | =1 if treated observation |
+| $$ first\_treat $$ | first treatment period for a unit |
+| $$ rel\_time $$ | event time relative to first treatment |
 | $$ \epsilon $$ | error term |
 
 ## Data generation
 
 All of the R code in this section will make use of the same fake dataset, which
 we generate below. This dataset will closely mimic the equivalent dataset used
-in the [Stata examples]({{ "/docs/code" | relative_url }}). But it won't be 
+in the [Stata examples]({{ "/docs/code_stata" | relative_url }}). But it won't be
 _exactly_ the same because of different random seeds (**important!**). This means 
 that you shouldn't expect the same results when comparing the R and Stata examples
 on this website. (Unless, of course, you explicitly use the same dataset.)
@@ -99,6 +128,22 @@ xyplot(
 ```
 
 <img src="../../../assets/images/test_data_R.png" height="300">
+
+## R Estimator Pages
+
+- [TWFE in R]({{ "/docs/code_r/07-twfe_r" | relative_url }})
+- [Bacon decomposition in R]({{ "/docs/code_r/06_bacon_r" | relative_url }})
+- [did]({{ "/docs/code_r/07_did_r" | relative_url }})
+- [sunab / fixest]({{ "/docs/code_r/07_sunab_r" | relative_url }})
+- [did2s]({{ "/docs/code_r/07_did2s_r" | relative_url }})
+- [did_multiplegt]({{ "/docs/code_r/07_did_multiplegt_r" | relative_url }})
+- [did_multiplegt_dyn]({{ "/docs/code_r/07_did_multiplegt_dyn_r" | relative_url }})
+
+## Reproducibility Notes
+
+- Record your R and package versions when reproducing outputs.
+- Set random seeds explicitly for comparable runs.
+- If estimators disagree, compare target estimands and sample restrictions first.
 
 With our dataset in hand, please click through to the individual pages
 in the **Table of Contents** below. Each of these explores a specific R package 
