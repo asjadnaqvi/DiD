@@ -3,7 +3,7 @@ clear
 set scheme white_tableau
 
 
-cap cd "D:\Programs\Dropbox\Dropbox\STATA\DiD\replication_example"
+cap cd "D:\Dropbox\STATA - DID\dofiles"
 
 
 **** core 2x2
@@ -314,9 +314,9 @@ reghdfe Y D, absorb(id t)
 
 
 
-/*
 
-bacondecomp Y T, ddetail // stub(temp_)  stub option is not working??
+
+bacondecomp Y D, ddetail stub(temp_)  // stub option is not working??
 
 
 /*

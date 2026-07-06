@@ -100,6 +100,6 @@ reg Y D i.t i.id // panel and time fixed effects
 xtreg Y D i.t, fe
 reghdfe Y D, absorb(id t)  	
 
-*bacondecomp Y D, ddetail
+bacondecomp Y D, ddetail
 
 		
