@@ -6,3 +6,124 @@
     src="{{ site.mathjax.source }}">
   </script>
 {% endif %}
+
+<style>
+/* Cohesive color refresh: keep the original layout, improve contrast and visual hierarchy. */
+:root {
+  --did-bg: #f7f9fc;
+  --did-surface: #ffffff;
+  --did-sidebar: #eef3fb;
+  --did-border: #d9e2f2;
+  --did-text: #1f2937;
+  --did-muted: #5b6474;
+  --did-link: #2f5bd3;
+  --did-link-hover: #1f43a9;
+  --did-accent-soft: #e6edff;
+  --did-code-bg: #eef2ff;
+}
+
+body {
+  background: var(--did-bg);
+  color: var(--did-text);
+}
+
+.side-bar {
+  background: linear-gradient(180deg, #eef3fb 0%, #e8eef9 100%);
+  border-right: 1px solid var(--did-border);
+}
+
+.main {
+  background: var(--did-surface);
+}
+
+.site-title,
+.site-title:visited,
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4 {
+  color: var(--did-text);
+}
+
+.main-content,
+.main-content p,
+.main-content li {
+  color: var(--did-text);
+}
+
+.main-content a,
+.navigation-list-link,
+.aux-nav .aux-nav-list-item a,
+.site-button {
+  color: var(--did-link);
+}
+
+.main-content a:hover,
+.navigation-list-link:hover,
+.aux-nav .aux-nav-list-item a:hover,
+.site-button:hover {
+  color: var(--did-link-hover);
+}
+
+.navigation-list-item .navigation-list-link.active,
+.navigation-list-item .navigation-list-child-list .navigation-list-link.active {
+  background: var(--did-accent-soft);
+  border-radius: 0.3rem;
+}
+
+.search-input {
+  border: 1px solid var(--did-border);
+  background: #fdfefe;
+}
+
+.search-input:focus {
+  border-color: #95a7db;
+  box-shadow: 0 0 0 3px rgba(47, 91, 211, 0.12);
+}
+
+.main-content code {
+  background: var(--did-code-bg);
+  border-color: #d6dcf7;
+}
+
+.main-content table thead th {
+  background: #eef2f9;
+}
+
+.main-content table tbody tr:nth-child(even) {
+  background: #fbfcff;
+}
+
+.main-content blockquote {
+  border-left-color: #9eb2e8;
+  color: var(--did-muted);
+}
+
+/* Improve use of horizontal space on large screens while keeping pages readable. */
+@media (min-width: 66.5rem) {
+  .main-content-wrap {
+    max-width: min(88rem, calc(100vw - 19rem));
+  }
+}
+
+@media (min-width: 90rem) {
+  .side-bar {
+    width: 17rem;
+  }
+
+  .main {
+    margin-left: 17rem;
+  }
+
+  .main-content-wrap {
+    max-width: min(96rem, calc(100vw - 21rem));
+  }
+}
+
+/* Let wide tables use available space and scroll gracefully when needed. */
+.main-content table {
+  width: 100%;
+  display: block;
+  overflow-x: auto;
+}
+</style>

@@ -9,7 +9,7 @@ nav_order: 5
 
 Only dedicated DiD packages are listed below.
 
-| Name | Installation |  Package by | Reference paper |
+| Name | Installation | Package by | Reference paper |
 | --- | --- | --- |   --- |
 | DiffinDiffs.jl | [GitHub](https://github.com/JuliaDiffinDiffs/DiffinDiffs.jl) | Junyuan Chen | Sun and Abraham (2021) |
 | InteractionWeightedDIDs.jl | [GitHub](https://github.com/JuliaDiffinDiffs/InteractionWeightedDIDs.jl) | Junyuan Chen | Sun and Abraham (2021) |

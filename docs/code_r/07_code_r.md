@@ -21,17 +21,6 @@ example based on the shared setup data generated below.
 3. Run the estimator pages one by one using the same dataset.
 4. Compare results across estimators while keeping assumptions in mind.
 
-## Recommended Start Order
-
-- [TWFE in R]({{ "/docs/code_r/07-twfe_r" | relative_url }})
-- [Bacon decomposition in R]({{ "/docs/code_r/06_bacon_r" | relative_url }})
-- Data generation (included below on this page)
-- [did]({{ "/docs/code_r/07_did_r" | relative_url }})
-- [sunab / fixest]({{ "/docs/code_r/07_sunab_r" | relative_url }})
-- [did2s]({{ "/docs/code_r/07_did2s_r" | relative_url }})
-- [did_multiplegt]({{ "/docs/code_r/07_did_multiplegt_r" | relative_url }})
-- [did_multiplegt_dyn]({{ "/docs/code_r/07_did_multiplegt_dyn_r" | relative_url }})
-
 ## Common Workflow Assumptions
 
 - Data are in panel format with `id` and `time` indices.

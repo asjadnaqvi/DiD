@@ -63,13 +63,16 @@ Jonathan Roth (2024). [Interpreting Event-Studies from Recent Difference-in-Diff
 Clément de Chaisemartin, Xavier D'Haultfoeuille (2024). [Difference-in-Differences Estimators of Intertemporal Treatment Effects](https://doi.org/10.1162/rest_a_01414). The Review of Economics and Statistics.
 
 Clément de Chaisemartin, Diego Ciccia, Xavier D'Haultfoeuille, Felix Knau, Mélitine Malézieux, Doulo Sow (2024). [Event-Study Estimators and Variance Estimators Computed by the did_multiplegt_dyn Command](https://drive.google.com/file/d/1NGgScujLCCS4RrwdN-PC1SnVigfBa32h/view).
+
 Clément de Chaisemartin, Xavier D'Haultfoeuille (2024). [Credible Answers to Hard Questions:  Differences-in-Differences for Natural Experiments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4487202). Working textbook under contract with Princeton University Press.
 ### 2023
 
 Nick Huntington-Klein (2021). [The Effect](https://theeffectbook.net/).
 
 Andrew Gelman, Jessica Hullman, Lauren Kennedy (2023). [Causal quartets: Different ways to attain the same average treatment effect](http://www.stat.columbia.edu/~gelman/research/unpublished/causal_quartets.pdf)
+
 Scott Cunningham (2020). [Causal Inference: The Mix Tape](https://mixtape.scunning.com/).
+
 Ashesh Rambachan, Jonathan Roth (2023). [A More Credible Approach to Parallel Trends](https://academic.oup.com/restud/advance-article-abstract/doi/10.1093/restud/rdad018/7039335). The Review of Economic Studies.
 
 ### 2022
@@ -197,6 +200,7 @@ Matheus Facure. [Causal Inference for The Brave and True](https://matheusfacure.
 Davis Schönholzer has a series of lectures on DiD [here](https://www.davidschonholzer.com/teaching.html).
 
 The World Bank's [Development Impact](https://blogs.worldbank.org/impactevaluations) blog has several entries on DiD:
+
 *   24 Jan 2022: [Explaining why we should believe your DiD assumptions](https://blogs.worldbank.org/impactevaluations/explaining-why-we-should-believe-your-did-assumptions)
 *   10 Jan 2022: [A new synthesis and key lessons from the recent difference-in-differences literature](https://blogs.worldbank.org/impactevaluations/new-synthesis-and-key-lessons-recent-difference-differences-literature)
 *   04 Nov 2021: [DiD you see Beta? Beta who? Part 2](https://blogs.worldbank.org/impactevaluations/did-you-see-beta-beta-who-part-2)
