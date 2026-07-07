@@ -9,3 +9,5 @@
 /Wooldridge DiD
 
 *.do
+
+.gitignore
