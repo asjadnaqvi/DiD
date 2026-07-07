@@ -29,10 +29,9 @@
   }
 }
 
-/* Let wide tables use available space and scroll gracefully when needed. */
+/* Preserve native table layout so theme table styling continues to apply. */
 .main-content table {
   width: 100%;
-  display: block;
-  overflow-x: auto;
+  display: table;
 }
 </style>
