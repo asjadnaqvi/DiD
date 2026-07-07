@@ -7,7 +7,7 @@ mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
 
-# did_imputation 
+# did_imputation
 {: .no_toc }
 
 ## Table of contents
@@ -41,7 +41,7 @@ help did_imputation
 
 ## Test the command
 
-Please make sure that you generate the shared setup data using the setup block given [here](https://asjadnaqvi.github.io/DiD/docs/code_stata/) 
+Please make sure that you generate the shared setup data using the setup block given [here](https://asjadnaqvi.github.io/DiD/docs/code_stata/)
 
 Let's try the basic `did_imputation` command with 10 leads and lags:
 
@@ -82,18 +82,31 @@ which gives us:
 ```
 
 
+### Command results
 
-In order to plot the estimates we can use the `event_plot` (`ssc install event_plot, replace`) command as follows: 
+Additional diagnostics show key values:
+
+| Metric | Value |
+| ------ | ----- |
+| Full-sample average effect (`tau`) | 131.3292 |
+| Event-study sample size | 1,438 |
+| On-impact effect (`tau0`) | 0.0787 |
+| First post period (`tau1`) | 8.6372 |
+| Tenth post period (`tau10`) | 85.8314 |
+| Example pretrend term (`pre10`) | 0.0963 |
+
+This pattern is consistent with near-zero pre periods and increasing post-treatment effects.
+
+
+
+In order to plot the estimates we can use the `event_plot` (`ssc install event_plot, replace`) command as follows:
 
 
 ```stata
 event_plot, default_look graph_opt(xtitle("Periods since the event") ytitle("Average effect") ///
-	title("did_imputation") xlabel(-10(1)10)) stub_lag(tau#) stub_lead(pre#) together	 
+	title("did_imputation") xlabel(-10(1)10)) stub_lag(tau#) stub_lead(pre#) together
 ```
 
-And we get:
+And we get this figure:
 
 <img src="../../../assets/images/did_imputation_1.png" width="100%">
-
-
-

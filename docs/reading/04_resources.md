@@ -26,10 +26,15 @@ This section contains a miscellaneous collection of lecture notes, videos, paper
 
 ## Papers
 
-*Papers are sorted by year and last name. Papers marked with the <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/> symbol are review papers and can be considered as essential readings. Please note that this section is not updated frequently and paper links might be outdated.* 
+*Papers are sorted by year and last name.*
+
+The 2026 JEL review, [Difference-in-Differences Designs: A Practitioner’s Guide](https://doi.org/10.1257/jel.20251650), is a strong starting point for the DiD framework. It organizes the literature around 2x2 building blocks, target parameters, weights, covariates, staggered adoption, and presents a "forward-engineering" approach.
+
 
 
 ### 2026
+
+Andrew Baker, Brantly Callaway, Scott Cunningham, Andrew Goodman-Bacon, Pedro Sant'Anna (2026). [Difference-in-Differences Designs: A Practitioner’s Guide](https://doi.org/10.1257/jel.20251650).
 
 Satarupa Bhattacharjee, Bing Li, Lingzhou Xue (2026). [A Test for Treatment Heterogeneity under a Distributional Difference-in-Difference Framework](https://arxiv.org/abs/2606.21840).
 
@@ -48,6 +53,8 @@ Brantly Callaway, Andrew Goodman-Bacon, Pedro H. C. Sant'Anna (2026). [Differenc
 
 Brantly Callaway, Derek Dyal, Pedro H. C. Sant'Anna, Emmanuel S. Tsyawo (2025). [Beyond Parallel Trends: An Identification-Strategy-Robust Approach to Causal Inference with Panel Data](https://arxiv.org/abs/2511.21977).
 
+Clément de Chaisemartin, Bingxue Li, Diego Ciccia, Mélitine Malézieux, Doulo Sow, David Arboleda, Romain Angotti, Xavier d'Haultfoeuille, Felix Knau, Henri Fabre, Anzony Quispe Rojas (2025). [Event-Study Estimators and Variance Estimators Computed by the did_multiplegt_dyn Command](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5337463).
+
 Chencheng Fang, Dominik Liebl (2025). [Making Event Study Plots Honest: A Functional Data Approach to Causal Inference](https://arxiv.org/abs/2512.06804).
 
 Michael Jetsupphasuk, Chenwei Fang, Didong Li, Michael G. Hudgens (2025). [Difference-in-differences with stochastic policy shifts of a continuous treatment](https://arxiv.org/abs/2512.00296).
@@ -62,9 +69,12 @@ Jonathan Roth (2024). [Interpreting Event-Studies from Recent Difference-in-Diff
 
 Clément de Chaisemartin, Xavier D'Haultfoeuille (2024). [Difference-in-Differences Estimators of Intertemporal Treatment Effects](https://doi.org/10.1162/rest_a_01414). The Review of Economics and Statistics.
 
-Clément de Chaisemartin, Diego Ciccia, Xavier D'Haultfoeuille, Felix Knau, Mélitine Malézieux, Doulo Sow (2024). [Event-Study Estimators and Variance Estimators Computed by the did_multiplegt_dyn Command](https://drive.google.com/file/d/1NGgScujLCCS4RrwdN-PC1SnVigfBa32h/view).
+Carolina Caetano, Brantly Callaway (2024). [Difference-in-Differences When Parallel Trends Holds Conditional on Covariates](https://doi.org/10.48550/arXiv.2406.15288). Preprint, arXiv.
+
+Nikolaj A. Harmon (2024). Difference-in-Differences and Efficient Estimation of Treatment Effects. Unpublished.
 
 Clément de Chaisemartin, Xavier D'Haultfoeuille (2024). [Credible Answers to Hard Questions:  Differences-in-Differences for Natural Experiments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4487202). Working textbook under contract with Princeton University Press.
+
 ### 2023
 
 Nick Huntington-Klein (2021). [The Effect](https://theeffectbook.net/).
@@ -106,8 +116,6 @@ Nandita Mitra, Jason Roy, Dylan Small (2022). [The Future of Causal Inference](h
 Jonathan Roth, Pedro H.C. Sant'Anna, Alyssa Bilinski, John Poe (2022). [What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature](https://psantanna.com/files/RSBP_DiD_Review.pdf). <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
 
 Jonathan Roth (2022). [Pretest with Caution: Event-Study Estimates after Testing for Parallel Trends](https://www.aeaweb.org/articles?id=10.1257/aeri.20210236). American Economic Review: Insights.
-
-Anna Wysocki, Katherine Lawson, Mijke Rhemtulla (2022). [Statistical Control Requires Causal Justification](https://journals.sagepub.com/doi/10.1177/25152459221095823). Advances in Methods and Practices in Psychological Science.
 
 
 ### 2021
@@ -173,15 +181,23 @@ Susan Athey, Guido Imbens (2006). [Identification and inference in nonlinear dif
 ---
 
 ## Books
-Free online books that you can also buy. Note that books might be removed or links might change. Please report these!
+Here are some books and book-length resources that are useful for modern DiD work:
 
-Clément de Chaisemartin, Xavier D'Haultfoeuille (2024). [Credible Answers to Hard Questions:  Differences-in-Differences for Natural Experiments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4487202). Working textbook under contract with Princeton University Press.
+Clément de Chaisemartin, Xavier D'Haultfoeuille (2024). [Credible Answers to Hard Questions: Differences-in-Differences for Natural Experiments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4487202). Working textbook under contract with Princeton University Press.
 
-Miguel Hernan, Jamie Robins (2022). [Causal Inference: What If](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/).
+Martin Huber (2023). [Causal Analysis: Impact Evaluation and Causal Machine Learning with Applications in R](https://mitpress.mit.edu/9780262545914/causal-analysis/).
+
+Sylvain Chabé-Ferret (2025). [Statistical Tools for Causal Inference](https://chabefer.github.io/STCI/).
+
+Miguel Hernán, Jamie Robins (2022). [Causal Inference: What If](https://www.hsph.harvard.edu/miguel-hernan/causal-inference-book/).
 
 Nick Huntington-Klein (2021). [The Effect](https://theeffectbook.net/).
 
 Scott Cunningham (2020). [Causal Inference: The Mix Tape](https://mixtape.scunning.com/).
+
+Joshua D. Angrist, Jörn-Steffen Pischke (2014). [Mastering 'Metrics](https://www.masteringmetrics.com/).
+
+Matheus Facure (2023). [Causal Inference for the Brave and True](https://matheusfacure.github.io/python-causality-handbook/landing-page.html).
 
 
 
@@ -193,9 +209,7 @@ Matteo Courthoud. [Medium blog on Causal inference](https://medium.com/@matteo.c
 
 Kyle Butts. [Personal blog with DiD entries](https://www.kylebutts.com/blog/).
 
-Sylvain Chabé-Ferret: [Statistical Tools for Causal Inference Chapter 4: Difference-in-Differences](https://chabefer.github.io/STCI/NE.html#difference-in-differences).
-
-Matheus Facure. [Causal Inference for The Brave and True](https://matheusfacure.github.io/python-causality-handbook/landing-page.html) 
+Matheus Facure. [Causal Inference for The Brave and True](https://matheusfacure.github.io/python-causality-handbook/landing-page.html)
 
 Davis Schönholzer has a series of lectures on DiD [here](https://www.davidschonholzer.com/teaching.html).
 
@@ -205,7 +219,7 @@ The World Bank's [Development Impact](https://blogs.worldbank.org/impactevaluati
 *   10 Jan 2022: [A new synthesis and key lessons from the recent difference-in-differences literature](https://blogs.worldbank.org/impactevaluations/new-synthesis-and-key-lessons-recent-difference-differences-literature)
 *   04 Nov 2021: [DiD you see Beta? Beta who? Part 2](https://blogs.worldbank.org/impactevaluations/did-you-see-beta-beta-who-part-2)
 *   02 Nov 2021: [DiD you see Beta? Beta who? Part 1](https://blogs.worldbank.org/impactevaluations/did-you-see-beta-beta-who-part-1)
-*   30 Sep 2019: [What Are We Estimating When We Estimate Difference-in-Differences?](https://blogs.worldbank.org/impactevaluations/what-are-we-estimating-when-we-estimate-difference-differences) 
+*   30 Sep 2019: [What Are We Estimating When We Estimate Difference-in-Differences?](https://blogs.worldbank.org/impactevaluations/what-are-we-estimating-when-we-estimate-difference-differences)
 
 Scott Cunningham: Scott's [Substack](https://causalinf.substack.com/) has entries on DiD papers.
 
@@ -268,27 +282,3 @@ Taylor J. Wright organized an online [DiD reading group](https://taylorjwright.g
 * John Gardner: [Two-stage differences in differences](https://www.youtube.com/watch?v=6mVfQkmpghY&list=PLVObvb_htcuBt8mV9yNagt7hK9FL5KXeE&index=7). *11 July 2021*.
 * Brantly Callaway: [Difference-in-Differences with a Continuous Treatment](https://www.youtube.com/watch?v=mbEJuCFCgXo&list=PLVObvb_htcuBt8mV9yNagt7hK9FL5KXeE&index=8). *6 August 2021*.
 * Clément de Chaisemartin: [Two-way Fixed Effects Regressions with Several Treatments](https://www.youtube.com/watch?v=UHeJoc27qEM&list=PLVObvb_htcuBt8mV9yNagt7hK9FL5KXeE&index=9). *4 September 2021*.
-
-
-Chloe East in 2021 organized an online [DiD reading group](https://www.chloeneast.com/metrics-discussions.html).
-
----
-
-## Interactive dashboards
-
-These (related) interactive R-Shiny dashboards show how TWFE models give the wrong estimates.
-
-Kyle Butts: [https://kyle-butts.shinyapps.io/did_twfe](https://kyle-butts.shinyapps.io/did_twfe)
-
-Hans Henrik Sievertsen: [https://hhsievertsen.shinyapps.io/kylebutts_did_eventstudy](https://hhsievertsen.shinyapps.io/kylebutts_did_eventstudy)
-
-
-
-
-
-
-
-
-
-
-

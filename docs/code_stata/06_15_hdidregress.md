@@ -77,6 +77,20 @@ Bacon Decomposition
 +---------------------------------------------------+
 ```
 
+### Command results
+
+Additional outputs show the same dataset and workflow:
+
+| Metric | Value |
+| ------ | ----- |
+| `didregress` ATET | 77.5910 |
+| 95% CI | [54.8957, 100.2864] |
+| Treated vs never component | 120.4107 (weight 0.5169) |
+| Earlier vs later component | 88.1972 (weight 0.3332) |
+| Later vs earlier component | -93.6920 (weight 0.1499) |
+
+This decomposition context is useful when comparing TWFE-style averages to heterogeneity-robust estimators.
+
 The command also has a built in graph option:
 
 ```stata
@@ -87,7 +101,7 @@ estat atetplot, sci
 <img src="../../../assets/images/hdid_aipw1.png" width="100%">
 
 
-The command's built-in graph option gives us: 
+The command's built-in graph option gives us:
 
 
 ```stata

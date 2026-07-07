@@ -47,7 +47,7 @@ help xtevent
 
 Let's try the basic command:
 
-Please make sure that you generate the shared setup data using the setup block given [here](https://asjadnaqvi.github.io/DiD/docs/code_stata/) 
+Please make sure that you generate the shared setup data using the setup block given [here](https://asjadnaqvi.github.io/DiD/docs/code_stata/)
 
 
 ```stata
@@ -106,18 +106,31 @@ Absorbed variable: id                              No. of categories =      30
 ```
 
 
+### Command results
+
+Additional diagnostics show key values:
+
+| Metric | Value |
+| ------ | ----- |
+| Estimation sample | 1,363 |
+| First post period (`_k_eq_p1`) | 20.5600 |
+| Mid post period (`_k_eq_p5`) | 44.6460 |
+| Tenth post period (`_k_eq_p10`) | 137.5108 |
+| Example lead (`_k_eq_m2`) | 0.7092 |
+
+
+
 The graph can be generated as follows using `event_plot` command:
 
 
 ```stata
-matrix xt_b = e(b) 
+matrix xt_b = e(b)
 matrix xt_v = e(V)
 
 event_plot xt_b#xt_v, default_look graph_opt(xtitle("Periods since the event") ytitle("Average effect")  ///
 	title("xtevent")) stub_lag(_k_eq_p#) stub_lead(_k_eq_m#) together
 ```
 
+which gives us this figure:
+
 <img src="../../../assets/images/xtevent_1.png" width="100%">
-
-
-

@@ -7,7 +7,7 @@ mathjax: true
 image: "../../../assets/images/DiD.png"
 ---
 
-# staggered 
+# staggered
 {: .no_toc }
 
 ## Table of contents
@@ -40,7 +40,7 @@ help staggered
 
 ## Test the command
 
-Please make sure that you generate the shared setup data using the setup block given [here](https://asjadnaqvi.github.io/DiD/docs/code_stata/) 
+Please make sure that you generate the shared setup data using the setup block given [here](https://asjadnaqvi.github.io/DiD/docs/code_stata/)
 
 Let's try the basic `staggered` command:
 
@@ -84,6 +84,21 @@ Staggered Treatment Effect Estimate                      Number of obs = 1,800
           10 |   63.62182   1.306207    48.71   0.000      61.0617    66.18193
 ------------------------------------------------------------------------------
 ```
+
+### Command results
+
+Additional outputs show:
+
+| Metric | Value |
+| ------ | ----- |
+| Sample size | 1,800 |
+| Event time 0 | -0.0440 |
+| Event time 1 | 7.3576 |
+| Event time 5 | 32.5153 |
+| Event time 10 | 63.6218 |
+| Example lead at -2 | 0.0562 |
+
+These additional diagnostics note that some estimated variances are set to zero and that `e(V)` is diagonal in this implementation.
 
 Graph is generated following the process described [here](https://github.com/mcaceresb/stata-staggered):
 

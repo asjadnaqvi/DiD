@@ -44,7 +44,7 @@ help eventstudyinteract
 
 ## Test the command
 
-Please make sure that you generate the shared setup data using the setup block given [here](https://asjadnaqvi.github.io/DiD/docs/code_stata/) 
+Please make sure that you generate the shared setup data using the setup block given [here](https://asjadnaqvi.github.io/DiD/docs/code_stata/)
 
 
 
@@ -166,7 +166,22 @@ Absorbing 2 HDFE groups                                 F(236, 29)    =      .
 ```
 
 
-In order to plot the estimates we can use the `event_plot` (`ssc install event_plot, replace`) command where we restrict the figure to 10 leads and lags: 
+### Command results
+
+Additional diagnostics show key values:
+
+| Metric | Value |
+| ------ | ----- |
+| Estimation sample (IW) | 1,800 |
+| On-impact effect (`L_0`) | -0.0706 |
+| First post period (`L_1`) | 8.4775 |
+| Tenth post period (`L_10`) | 85.6150 |
+| Example lead (`F_2`) | 0.2679 |
+
+Pre-event coefficients are generally close to zero, while post-event coefficients increase sharply over event time.
+
+
+In order to plot the estimates we can use the `event_plot` (`ssc install event_plot, replace`) command where we restrict the figure to 10 leads and lags:
 
 
 ```stata
@@ -174,7 +189,6 @@ In order to plot the estimates we can use the `event_plot` (`ssc install event_p
 		title("eventstudyinteract")) stub_lag(L_#) stub_lead(F_#) trimlag(10) trimlead(10) together
 ```
 
-And we get:
+And we get this figure:
 
 <img src="../../../assets/images/eventstudyinteract_1.png" width="100%">
-

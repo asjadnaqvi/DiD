@@ -50,7 +50,7 @@ Define the reference year:
 
 ```stata
 ren F_1 ref  //base year
-	
+
 ```
 
 Let's run the basic `stackedev` command:
@@ -192,15 +192,29 @@ Absorbed degrees of freedom:
 ```
 
 
-In order to plot the estimates we can use the `event_plot` (`ssc install event_plot, replace`) command where we restrict the figure to 10 leads and lags: 
+### Command results
+
+Additional diagnostics show key values:
+
+| Metric | Value |
+| ------ | ----- |
+| Estimation sample | 3,060 |
+| On-impact effect (`L_0`) | 0.0100 |
+| First post period (`L_1`) | 8.4530 |
+| Tenth post period (`L_10`) | 84.4423 |
+| Example lead (`F_17`) | -0.7586 |
+
+This run also reports a collinearity note for `ref`, which is expected because that period is the omitted baseline.
+
+
+In order to plot the estimates we can use the `event_plot` (`ssc install event_plot, replace`) command where we restrict the figure to 10 leads and lags:
 
 
 ```stata
 	event_plot, default_look graph_opt(xtitle("Periods since the event") ytitle("Average effect") xlabel(-10(1)10) ///
-		title("stackedev")) stub_lag(L_#) stub_lead(F_#) trimlag(10) trimlead(10) together 
+		title("stackedev")) stub_lag(L_#) stub_lead(F_#) trimlag(10) trimlead(10) together
 ```
 
 And we get:
 
 <img src="../../../assets/images/stackedev_1.png" width="100%">
-

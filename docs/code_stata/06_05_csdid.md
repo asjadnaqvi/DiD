@@ -42,7 +42,7 @@ help csdid
 ## Test the command
 
 
-Please make sure that you generate the shared setup data using the setup block given [here](https://asjadnaqvi.github.io/DiD/docs/code_stata/) 
+Please make sure that you generate the shared setup data using the setup block given [here](https://asjadnaqvi.github.io/DiD/docs/code_stata/)
 
 For `csdid` we need the *gvar* variable which equals the first_treat value for the treated, and 0 for the not treated:
 
@@ -354,16 +354,28 @@ Event Study:Dynamic effects
 ------------------------------------------------------------------------------
 ```
 
-In order to plot the estimates we can use the `event_plot` (`ssc install event_plot, replace`) command as follows: 
+
+### Command results
+
+The full `csdid` output is very long because it reports group-time effects for each cohort. Additional outputs show a few checkpoints:
+
+| Checkpoint | Estimate | Notes |
+| ---------- | -------- | ----- |
+| Observations | 1,800 | Full sample in the run |
+| g24, first reported post effect (`t_23_25`) | 9.6646 | Large and significant |
+| g24, later post effect (`t_23_30`) | 60.1293 | Dynamic effects accumulate |
+| g24, pre period (`t_21_22`) | 0.1606 | Close to zero |
+
+These checkpoints line up with the simulated design where treatment effects grow with event time.
+
+In order to plot the estimates we can use the `event_plot` (`ssc install event_plot, replace`) command as follows:
 
 
 ```stata
 event_plot cs, default_look graph_opt(xtitle("Periods since the event") ytitle("Average effect") ///
-	title("csdid") xlabel(-10(1)10)) stub_lag(Tp#) stub_lead(Tm#) together	 
+	title("csdid") xlabel(-10(1)10)) stub_lag(Tp#) stub_lead(Tm#) together
 ```
 
 And we get this figure:
 
 <img src="../../../assets/images/csdid_1.png" height="300">
-
-
