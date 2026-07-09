@@ -97,7 +97,7 @@ Jonathan Roth, Pedro H.C. Sant'Anna (2022). [When Is Parallel Trends Sensitive t
 
 Andrew Baker, Jonah B. Gelbach (2022). [Machine Learning and Predicted Returns for Event Studies in Securities Litigation](https://andrewcbaker.netlify.app/publication/baker_gelbach_jlfa/Baker_Gelbach_JLFA.pdf).
 
-Andrew C. Baker, David F. Larcker, Charles C. Y. Wang (2022). [How Much Should We Trust Staggered Difference-In-Differences Estimates?](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794018) Journal of Financial Economics. <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
+Andrew C. Baker, David F. Larcker, Charles C. Y. Wang (2022). [How Much Should We Trust Staggered Difference-In-Differences Estimates?](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3794018) Journal of Financial Economics.
 
 Carolina Caetano, Brantly Callaway, Stroud Payne, Hugo Sant'Anna Rodrigues (2022). [Difference in Differences with Time-Varying Covariates](https://arxiv.org/abs/2202.02903)
 
@@ -113,7 +113,7 @@ Pedro Picchetti, Cristine Pinto (2022). [Marginal Treatment Effects in Differenc
 
 Nandita Mitra, Jason Roy, Dylan Small (2022). [The Future of Causal Inference](https://academic.oup.com/aje/advance-article-abstract/doi/10.1093/aje/kwac108/6618833). American Journal of Epidemiology.
 
-Jonathan Roth, Pedro H.C. Sant'Anna, Alyssa Bilinski, John Poe (2022). [What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature](https://psantanna.com/files/RSBP_DiD_Review.pdf). <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
+Jonathan Roth, Pedro H.C. Sant'Anna, Alyssa Bilinski, John Poe (2022). [What's Trending in Difference-in-Differences? A Synthesis of the Recent Econometrics Literature](https://psantanna.com/files/RSBP_DiD_Review.pdf).
 
 Jonathan Roth (2022). [Pretest with Caution: Event-Study Estimates after Testing for Parallel Trends](https://www.aeaweb.org/articles?id=10.1257/aeri.20210236). American Economic Review: Insights.
 
@@ -128,7 +128,7 @@ Eli Ben-Michael, Avi Feller, Jesse Rothstein (2021). [Synthetic Controls with St
 
 Kirill Borusyak, Xavier Jaravel, Jann Spiess (2021). [Revisiting Event Study Designs: Robust and Efficient Estimation](https://arxiv.org/abs/2108.12419).
 
-Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Two-Way Fixed Effects and Differences-in-Differences with Heterogeneous Treatment Effects: A Survey](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3980758). <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
+Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Two-Way Fixed Effects and Differences-in-Differences with Heterogeneous Treatment Effects: A Survey](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3980758).
 
 Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Two-way fixed effects regressions with several treatments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3751060).
 
@@ -200,10 +200,23 @@ Joshua D. Angrist, Jörn-Steffen Pischke (2014). [Mastering 'Metrics](https://ww
 Matheus Facure (2023). [Causal Inference for the Brave and True](https://matheusfacure.github.io/python-causality-handbook/landing-page.html).
 
 
-
 ---
 
 ## Blogs and notes
+
+The blogs are sort of listed in terms of relevance. At least the first five entries can be considered as recommendations:
+
+Scott Cunningham's [Scott's Mixtape Substack](https://causalinf.substack.com/) is probably the best place on the internet for current discussions on DiD innovations. 
+
+Beatriz Gietner's [DiD Digest](https://substack.com/@diddigest) has some really amazing in depth entries on the mechanisms behind recent DiD innovations.
+
+Pedro Sant'Anna has shared a comprehensive list of [DiD resources](https://psantanna.com/did-resources/) on his personal website.
+
+Jonathan Roth has shared a comprehensive list of [DiD resources](https://www.jonathandroth.com/did-resources/) on his personal website.
+
+Christine Cai has a [working document](https://christinecai.github.io/PublicGoods/applied_micro_methods.pdf) which lists recent papers using different methods including DiDs.
+
+Carlos Mendez has a post on [DiD in R](https://carlos-mendez.org/post/r_did/).
 
 Matteo Courthoud. [Medium blog on Causal inference](https://medium.com/@matteo.courthoud)
 
@@ -221,7 +234,6 @@ The World Bank's [Development Impact](https://blogs.worldbank.org/impactevaluati
 *   02 Nov 2021: [DiD you see Beta? Beta who? Part 1](https://blogs.worldbank.org/impactevaluations/did-you-see-beta-beta-who-part-1)
 *   30 Sep 2019: [What Are We Estimating When We Estimate Difference-in-Differences?](https://blogs.worldbank.org/impactevaluations/what-are-we-estimating-when-we-estimate-difference-differences)
 
-Scott Cunningham: Scott's [Substack](https://causalinf.substack.com/) has entries on DiD papers.
 
 An [Introduction to DiD with Multiple Time Periods](https://cran.r-project.org/web/packages/did/vignettes/multi-period-did.html) by Brantly Callaway, Pedro H.C. Sant'Anna.
 
@@ -229,7 +241,6 @@ Jeffrey Wooldridge has several notes on DiD which are shared on his [Dropbox](ht
 
 Fernando Rios-Avila has a great explainer for the Callaway and Sant'Anna (2020) CS-DID logic on his [blog](https://friosavila.github.io/playingwithstata/main_csdid.html).
 
-Christine Cai has a [working document](https://christinecai.github.io/PublicGoods/applied_micro_methods.pdf) which lists recent papers using different methods including DiDs.
 
 Andrew C. Baker has notes on [Difference-in-Differences Methodology](https://andrewcbaker.netlify.app/2019/09/25/difference-in-differences-methodology/) with supporting material on [GitHub](https://github.com/andrewchbaker).
 
