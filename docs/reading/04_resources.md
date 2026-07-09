@@ -26,9 +26,9 @@ This section contains a miscellaneous collection of lecture notes, videos, paper
 
 ## Papers
 
-*Papers are sorted by year and last name.*
-
 The 2026 JEL review, [Difference-in-Differences Designs: A Practitioner’s Guide](https://doi.org/10.1257/jel.20251650), is a strong starting point for the DiD framework. It organizes the literature around 2x2 building blocks, target parameters, weights, covariates, staggered adoption, and presents a "forward-engineering" approach.
+
+*The papers are listed in no particular order:*
 
 
 
@@ -38,6 +38,8 @@ Andrew Baker, Brantly Callaway, Scott Cunningham, Andrew Goodman-Bacon, Pedro Sa
 
 Satarupa Bhattacharjee, Bing Li, Lingzhou Xue (2026). [A Test for Treatment Heterogeneity under a Distributional Difference-in-Difference Framework](https://arxiv.org/abs/2606.21840).
 
+Brantly Callaway, Andrew Goodman-Bacon, Pedro H. C. Sant'Anna (2026). [Difference-in-differences with a Continuous Treatment](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4716682).
+
 Yuhao Deng, Haoyu Wei, Zhongzhe Ouyang (2026). [Difference-in-differences with a mediator](https://arxiv.org/abs/2604.24049).
 
 Isaac Gerber (2026). [Design-Based Variance Estimation for Modern Heterogeneity-Robust Difference-in-Differences Estimators](https://arxiv.org/abs/2605.04124).
@@ -46,7 +48,8 @@ Jonas Skjold Raaschou-Pedersen (2026). [Doubly Robust Instrumented Difference-in
 
 Hayato Tagawa (2026). [Identification and Estimation of Staggered Difference-in-Differences with Network Spillovers](https://arxiv.org/abs/2605.15119).
 
-Brantly Callaway, Andrew Goodman-Bacon, Pedro H. C. Sant'Anna (2026). [Difference-in-differences with a Continuous Treatment](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4716682).
+Pedro H. C. Sant'Anna, Yifan Xu (2026). [Difference-in-Differences with compositional changes](https://www.sciencedirect.com/science/article/abs/pii/S0304407625002003). Journal of Econometrics.
+
 
 
 ### 2025
@@ -63,8 +66,18 @@ Daisuke Kurisu, Yuta Okamoto, Taisuke Otsu (2025). [Difference-in-Differences wi
 
 Fabrizia Mealli, Javier Viviens (2025). [Difference-in-Differences in the Presence of Unknown Interference](https://arxiv.org/abs/2512.21176). [SSRN version](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4284811).
 
+Arindrajit Dube, Daniele Girardi, Òscar Jordà, Alan M. Taylor (2025). [A Local Projections Approach to Difference-in-Differences Event Studies](https://onlinelibrary.wiley.com/doi/10.1002/jae.70000). Journal of Applied Econometrics.
+
+Hugo Faletto (2025). [Fused Extended Two-Way Fixed Effects for Difference-in-Differences with Staggered Adoptions](https://arxiv.org/abs/2312.05985). Working paper.
+
+John Gardner, Neil Thakral, Linh Tô, Luther Yap (2025). [Two-Stage Differences-in-Differences](https://lutheryap.github.io/files/2sdd.pdf). Working paper.
+
+Jeffrey M. Wooldridge (2025). [Two-Way Fixed Effects, the Two-Way Mundlak Regression, and Difference-in-Differences Estimators](https://link.springer.com/article/10.1007/s00181-025-02807-z). Empirical Economics.
+
+Dalia Ghanem, Pedro H. C. Sant'Anna, Kaspar Wüthrich (2025). [Selection and Parallel Trends](https://arxiv.org/abs/2203.09001). Working paper.
 
 ### 2024
+
 Jonathan Roth (2024). [Interpreting Event-Studies from Recent Difference-in-Differences Methods](https://arxiv.org/abs/2401.12309). <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
 
 Clément de Chaisemartin, Xavier D'Haultfoeuille (2024). [Difference-in-Differences Estimators of Intertemporal Treatment Effects](https://doi.org/10.1162/rest_a_01414). The Review of Economics and Statistics.
@@ -73,23 +86,39 @@ Carolina Caetano, Brantly Callaway (2024). [Difference-in-Differences When Paral
 
 Nikolaj A. Harmon (2024). Difference-in-Differences and Efficient Estimation of Treatment Effects. Unpublished.
 
-Clément de Chaisemartin, Xavier D'Haultfoeuille (2024). [Credible Answers to Hard Questions:  Differences-in-Differences for Natural Experiments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4487202). Working textbook under contract with Princeton University Press.
+Clément de Chaisemartin, Xavier D'Haultfoeuille (2024). [Credible Answers to Hard Questions:  Differences-in-Differences for Natural Experiments](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4487202).
+
+Dmitry Arkhangelsky, Guido W. Imbens (2024). [Causal Models for Longitudinal and Panel Data: A Survey](https://academic.oup.com/ectj). The Econometrics Journal.
+
+Kyle Butts (2024). [Difference-in-Differences Estimation with Spatial Spillovers](https://www.kylebutts.com/files/Spillover.pdf). Working paper.
+
+Brantly Callaway, Andrew Goodman-Bacon, Pedro H. C. Sant'Anna (2024). [Event-Studies with a Continuous Treatment](https://www.aeaweb.org/articles?id=10.1257/pandp.20241047). AEA Papers and Proceedings.
+
+Clément de Chaisemartin, Xavier D'Haultfœuille (2024). [Two-way Fixed Effects and Differences-in-Differences Estimators in Heterogeneous Adoption Designs](https://papers.ssrn.com/). Working paper.
+
+Kirill Borusyak, Xavier Jaravel, Jann Spiess (2024). [Revisiting Event Study Designs: Robust and Efficient Estimation](https://academic.oup.com/restud/article/91/6/3253/7601390). The Review of Economic Studies.
+
+
 
 ### 2023
 
-Nick Huntington-Klein (2021). [The Effect](https://theeffectbook.net/).
-
 Andrew Gelman, Jessica Hullman, Lauren Kennedy (2023). [Causal quartets: Different ways to attain the same average treatment effect](http://www.stat.columbia.edu/~gelman/research/unpublished/causal_quartets.pdf)
 
-Scott Cunningham (2020). [Causal Inference: The Mix Tape](https://mixtape.scunning.com/).
-
 Ashesh Rambachan, Jonathan Roth (2023). [A More Credible Approach to Parallel Trends](https://academic.oup.com/restud/advance-article-abstract/doi/10.1093/restud/rdad018/7039335). The Review of Economic Studies.
+
+Clément de Chaisemartin, Xavier D'Haultfœuille (2023). [Two-Way Fixed Effects and Differences-in-Differences Estimators with Several Treatments](https://www.sciencedirect.com/science/article/abs/pii/S0304407623001963). Journal of Econometrics.
+
+Clément de Chaisemartin, Xavier D'Haultfœuille (2023). [Two-Way Fixed Effects and Differences-in-Differences with Heterogeneous Treatment Effects: A Survey](https://academic.oup.com/ectj/article-abstract/26/3/C1/6604378). The Econometrics Journal.
+
+Jonathan Roth, Pedro H. C. Sant'Anna (2023). [Efficient Estimation for Staggered Rollout Designs](https://www.journals.uchicago.edu/doi/abs/10.1086/726581). Journal of Political Economy Microeconomics.
+
+Kurt Schmidheiny, Sebastian Siegloch (2023). [On Event Studies and Distributed-Lags in Two-Way Fixed Effects Models: Identification, Equivalence, and Generalization](https://onlinelibrary.wiley.com/doi/full/10.1002/jae.2971). Journal of Applied Econometrics.
+
+
 
 ### 2022
 
 Yuya Sasaki, Takuya Ura (2022). [Estimation and Inference for Moments of Ratios with Robustness against Large Trimming Bias](https://www.cambridge.org/core/journals/econometric-theory/article/abs/estimation-and-inference-for-moments-of-ratios-with-robustness-against-large-trimming-bias/6505FD01751EE01FEFFD34071C873FB6)
-
-Dalia Ghanem, Pedro H. C. Sant'Anna, Kaspar Wüthrich (2022). [Selection and parallel trends](https://arxiv.org/abs/2203.09001).
 
 P Rosenbaum, D Rubin (2022). [Propensity scores in the design of observational studies for causal effects](https://academic.oup.com/biomet/advance-article-abstract/doi/10.1093/biomet/asac054/6726181). Biometrika.
 
@@ -105,8 +134,6 @@ Clément de Chaisemartin, Xavier d'Haultfoeuille, Félix Pasquier, Gonzalo Vazqu
 
 Susanne Dandl, Torsten Hothorn, Heidi Seibold, Erik Sverdrup, Stefan Wager, Achim Zeileis (2022). [What Makes Forest-Based Heterogeneous Treatment Effect Estimators Work?](https://arxiv.org/abs/2206.10323)
 
-Arindrajit Dube, Daniele Girardi, Oscar Jorda, Alan M. Taylor (2022). [A Local Projections Approach to Difference-in-Differences Event Studies](https://conference.nber.org/conf_papers/f172417.pdf)
-
 Paul Goldsmith-Pinkham, Peter Hull, Michal Kolesár (2022). [Contamination Bias in Linear Regressions](https://www.nber.org/papers/w30108)
 
 Pedro Picchetti, Cristine Pinto (2022). [Marginal Treatment Effects in Difference-in-Differences](https://www.dropbox.com/s/wegkelwx665bh8o/MTE%20in%20DiD.pdf?dl=0).
@@ -117,6 +144,11 @@ Jonathan Roth, Pedro H.C. Sant'Anna, Alyssa Bilinski, John Poe (2022). [What's T
 
 Jonathan Roth (2022). [Pretest with Caution: Event-Study Estimates after Testing for Parallel Trends](https://www.aeaweb.org/articles?id=10.1257/aeri.20210236). American Economic Review: Insights.
 
+Susan Athey, Guido W. Imbens (2022). [Design-Based Analysis in Difference-In-Differences Settings with Staggered Adoption](https://www.sciencedirect.com/science/article/abs/pii/S0304407621000488). Journal of Econometrics.
+
+Liyang Sun, Jesse M. Shapiro (2022). [Linear Panel Model with Heterogeneous Coefficients and Variation in Exposure](https://doi.org/10.1257/jep.36.4.193). Journal of Economic Perspectives.
+
+
 
 ### 2021
 
@@ -125,8 +157,6 @@ Dmitry Arkhangelsky, Susan Athey, David A. Hirshberg, Guido Imbens, Stefan Wager
 Dmitry Arkhangelsky, Guido Imbens, Lihua Lei, Xiaoman Luo (2021). [Double-Robust Two-Way-Fixed-Effects Regression For Panel Data](https://arxiv.org/abs/2107.13737).
 
 Eli Ben-Michael, Avi Feller, Jesse Rothstein (2021). [Synthetic Controls with Staggered Adoption](https://arxiv.org/abs/1912.03290).
-
-Kirill Borusyak, Xavier Jaravel, Jann Spiess (2021). [Revisiting Event Study Designs: Robust and Efficient Estimation](https://arxiv.org/abs/2108.12419).
 
 Clément de Chaisemartin, Xavier D'Haultfoeuille (2021). [Two-Way Fixed Effects and Differences-in-Differences with Heterogeneous Treatment Effects: A Survey](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3980758).
 
@@ -149,6 +179,11 @@ Kosuke Imai, In Song Kim (2021). [On the Use of Two-way Fixed Effects Regression
 Michelle Marcus, Pedro H. C. Sant’Anna (2021). [The Role of Parallel Trends in Event Study Settings: An Application to Environmental Economics](https://www.journals.uchicago.edu/doi/10.1086/711509). Journal of the Association of Environmental and Resource Economists.
 
 Jonathan Roth, Pedro H.C. Sant'Anna (2021). [Efficient Estimation for Staggered Rollout Designs](https://arxiv.org/pdf/2102.01291.pdf).
+
+Simon Freyaldenhoven, Christian Hansen, Jorge Pérez Pérez, Jesse M. Shapiro (2021). [Visualization, Identification, and Estimation in the Linear Panel Event-Study Design](https://www.nber.org/papers/w29170). NBER Working Paper.
+
+Michelle Marcus, Pedro H. C. Sant'Anna (2021). [The Role of Parallel Trends in Event Study Settings: An Application to Environmental Economics](https://www.journals.uchicago.edu/doi/10.1086/711509). Journal of the Association of Environmental and Resource Economists.
+
 
 
 ### 2020
@@ -176,6 +211,10 @@ Hans Fricke (2017). [Identification based on difference-in-differences approache
 Xavier D’Haultfoeuille, Stefan Hoderlein, Yuya Sasaki (2013). [Nonlinear difference-indifferences in repeated cross sections with continuous treatments](https://www.econstor.eu/bitstream/10419/97404/1/766176037.pdf).
 
 Susan Athey, Guido Imbens (2006). [Identification and inference in nonlinear difference-indifferences models](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2006.00668.x). Econometrica.
+
+Mike Brewer, Thomas F. Crossley, Robert Joyce (2017). [Inference with Difference-in-Differences Revisited](https://doi.org/10.1515/jem-2016-0008). Journal of Econometric Methods.
+
+Doruk Cengiz, Arindrajit Dube, Attila Lindner, Ben Zipperer (2019). [The Effect of Minimum Wages on Low-Wage Jobs](https://doi.org/10.1093/qje/qjz014). Quarterly Journal of Economics.
 
 
 ---
