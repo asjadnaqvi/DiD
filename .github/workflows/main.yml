@@ -32,6 +32,12 @@ jobs:
           bundle install
           bundle exec jekyll build -d _site
 
+      - name: Check external links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --verbose --no-progress --exclude-mail './_site/**/*.html'
+          fail: true
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 

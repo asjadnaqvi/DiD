@@ -33,7 +33,7 @@ theorem that should be familiar to many readers. In short, we can avoid the
 pathologies of staggered DiD settings by running two regressions (hence the name): 
 
   1. Run a fixed-effects regression (including controls) on our outcome variable using only the untreated/not-yet-treated observations. Residualize the outcomes (i.e., subtract the predicted outcomes from the actual outcomes).
-  2. Regress the residualized outcomes on the treatment dummies (or, time-to-treament dummies for an event study) using all obsevations to get the unbiased treatment effects.
+  2. Regress the residualized outcomes on the treatment dummies (or time-to-treatment dummies for an event study) using all observations to estimate the treatment effects.
 
 A virtue of this two-step procedure is that it is very quick to estimate.
 Underneath the hood, **did2s** calls

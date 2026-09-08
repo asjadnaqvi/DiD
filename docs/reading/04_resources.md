@@ -28,6 +28,8 @@ This section contains a miscellaneous collection of lecture notes, videos, paper
 
 The 2026 JEL review, [Difference-in-Differences Designs: A Practitioner’s Guide](https://doi.org/10.1257/jel.20251650), is a strong starting point for the DiD framework. It organizes the literature around 2x2 building blocks, target parameters, weights, covariates, staggered adoption, and presents a "forward-engineering" approach.
 
+The entries below were checked against publisher, DOI, NBER, or preprint metadata on 08 Sep 2026. Published papers and working papers are labeled where useful.
+
 *The papers are listed in no particular order:*
 
 
@@ -50,6 +52,16 @@ Hayato Tagawa (2026). [Identification and Estimation of Staggered Difference-in-
 
 Pedro H. C. Sant'Anna, Yifan Xu (2026). [Difference-in-Differences with compositional changes](https://www.sciencedirect.com/science/article/abs/pii/S0304407625002003). Journal of Econometrics.
 
+Clément de Chaisemartin, Xavier D'Haultfoeuille (2026). [Difference-in-Differences Estimators of Intertemporal Treatment Effects](https://doi.org/10.1162/rest_a_01414). The Review of Economics and Statistics.
+
+Ruonan Xu (2026). [Difference-in-differences with interference](https://doi.org/10.1016/j.jeconom.2026.106304). Journal of Econometrics.
+
+Mijeong Kim, Mingue Park (2026). [Variance Estimation in Matched Difference-in-Differences Designs](https://doi.org/10.1002/sta4.70173). Stat.
+
+Alyssa Bilinski, Shuo Feng, Laura A. Hatfield (2026). [Estimating Intervention Effects With Difference-in-Differences](https://doi.org/10.1001/jama.2026.12551). JAMA.
+
+Zheng Zhang (2026). [Continuous difference-in-differences with double/debiased machine learning](https://doi.org/10.1093/ectj/utaf024). The Econometrics Journal.
+
 
 
 ### 2025
@@ -64,7 +76,7 @@ Michael Jetsupphasuk, Chenwei Fang, Didong Li, Michael G. Hudgens (2025). [Diffe
 
 Daisuke Kurisu, Yuta Okamoto, Taisuke Otsu (2025). [Difference-in-Differences with Interval Data](https://arxiv.org/abs/2512.08759).
 
-Fabrizia Mealli, Javier Viviens (2025). [Difference-in-Differences in the Presence of Unknown Interference](https://arxiv.org/abs/2512.21176). [SSRN version](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4284811).
+Fabrizia Mealli, Javier Viviens (2025). [Difference-in-Differences in the Presence of Unknown Interference](https://arxiv.org/abs/2512.21176). Preprint, arXiv.
 
 Arindrajit Dube, Daniele Girardi, Òscar Jordà, Alan M. Taylor (2025). [A Local Projections Approach to Difference-in-Differences Event Studies](https://onlinelibrary.wiley.com/doi/10.1002/jae.70000). Journal of Applied Econometrics.
 
@@ -74,13 +86,18 @@ John Gardner, Neil Thakral, Linh Tô, Luther Yap (2025). [Two-Stage Differences-
 
 Jeffrey M. Wooldridge (2025). [Two-Way Fixed Effects, the Two-Way Mundlak Regression, and Difference-in-Differences Estimators](https://link.springer.com/article/10.1007/s00181-025-02807-z). Empirical Economics.
 
+Akanksha Negi, Digvijay S. Negi (2025). [Difference-in-Differences With a Misclassified Treatment](https://doi.org/10.1002/jae.3116). Journal of Applied Econometrics.
+
+Bruce E. Hansen (2025). [Standard Errors for Difference-in-Difference Regression](https://doi.org/10.1002/jae.3110). Journal of Applied Econometrics.
+
+Alberto Abadie, Joshua D. Angrist, Brigham Frandsen, Jörn-Steffen Pischke (2025). [Harvesting Differences-in-Differences and Event-Study Evidence](https://doi.org/10.3386/w34550). NBER Working Paper.
+
+
 Dalia Ghanem, Pedro H. C. Sant'Anna, Kaspar Wüthrich (2025). [Selection and Parallel Trends](https://arxiv.org/abs/2203.09001). Working paper.
 
 ### 2024
 
-Jonathan Roth (2024). [Interpreting Event-Studies from Recent Difference-in-Differences Methods](https://arxiv.org/abs/2401.12309). <img width="20px" src="https://img.icons8.com/color/48/000000/sun--v1.png"/>
-
-Clément de Chaisemartin, Xavier D'Haultfoeuille (2024). [Difference-in-Differences Estimators of Intertemporal Treatment Effects](https://doi.org/10.1162/rest_a_01414). The Review of Economics and Statistics.
+Jonathan Roth (2026 revision, originally 2024). [Interpreting Event-Studies from Recent Difference-in-Differences Methods](https://arxiv.org/abs/2401.12309v2).
 
 Carolina Caetano, Brantly Callaway (2024). [Difference-in-Differences When Parallel Trends Holds Conditional on Covariates](https://doi.org/10.48550/arXiv.2406.15288). Preprint, arXiv.
 

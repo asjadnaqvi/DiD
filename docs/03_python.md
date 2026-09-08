@@ -7,14 +7,16 @@ nav_order: 4
 
 # Python packages
 
-Only dedicated DiD packages are listed below.
+*(Last checked: 08 Sep 2026)*
+
+Only dedicated DiD packages are listed below. Add the package version and Python requirement to reproducible analyses; GitHub activity does not imply a stable release.
 
 
 | Name | Installation | Package by | Reference paper |
 | --- | --- | --- |   --- |
 | csdid | [GitHub](https://github.com/d2cml-ai/csdid) | Alexander Quispe; Alexander Fischer | Callaway and Sant'Anna (2021) |
 | csa-py | [GitHub](https://github.com/jsr-p/csa-py) | Jonas Skjold Raaschou-Pedersen | Callaway and Sant'Anna (2021) |
-| differences | [GitHub](https://github.com/bernardodionisi/differences) | Bernardo Dionisi and contributors | Callaway and Sant'Anna (2021); Rambachan and Roth (2023) |
+| differences (0.3.0) | `pip install differences` (Python >= 3.10) | [PyPI](https://pypi.org/project/differences/) and [documentation](https://bernardodionisi.github.io/differences/latest/) | Bernardo Dionisi and contributors | Callaway and Sant'Anna (2021); Sant'Anna and Zhao (2020); Rambachan and Roth (2023) |
 | diff-diff | [GitHub](https://github.com/igerber/diff-diff) | Isaac Gerber and contributors | Callaway and Sant'Anna (2021); Arkhangelsky et al. (2021) |
 | did-imputation | [GitHub](https://github.com/jsr-p/did-imputation) | Jonas Skjold Raaschou-Pedersen | [Borusyak, Jaravel, Spiess (2024)](https://academic.oup.com/restud/advance-article/doi/10.1093/restud/rdae007/7601390) |
 | did-stepwise | [GitHub](https://github.com/jsr-p/did-stepwise) | Jonas Skjold Raaschou-Pedersen | [Harmon (2024)](https://web.econ.ku.dk/nharmon/docs/harmon2022difference.pdf) |

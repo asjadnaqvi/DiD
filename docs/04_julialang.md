@@ -7,7 +7,14 @@ nav_order: 5
 
 # Julia packages
 
-Only dedicated DiD packages are listed below.
+*(Last checked: 08 Sep 2026)*
+
+Only dedicated DiD packages are listed below. The current JuliaDiffinDiffs suite is installed with:
+
+```julia
+using Pkg
+Pkg.add("DiffinDiffs")
+```
 
 | Name | Installation | Package by | Reference paper |
 | --- | --- | --- |   --- |

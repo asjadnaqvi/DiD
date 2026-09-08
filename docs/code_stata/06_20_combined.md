@@ -51,6 +51,7 @@ ssc install csdid, replace
 ssc install did_imputation, replace
 ssc install eventstudyinteract, replace
 ssc install did_multiplegt, replace
+ssc install did_multiplegt_dyn, replace
 ssc install stackedev, replace
 ssc install did2s, replace
 ```

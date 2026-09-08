@@ -20,12 +20,12 @@ image: "../../../assets/images/DiD.png"
 
 ## Notes
 
-- The *hdidregress* is a native Stata implementation of [Callaway and Sant'Anna 2021](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948).
+- `hdidregress` is a native Stata implementation of [Callaway and Sant'Anna (2021)](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948).
 
 
 ## Installation
 
-Requires Stata v17 or higher. Take a look at the help file:
+Requires Stata 18 or higher. Take a look at the help file:
 
 ```stata
 help hdidregress

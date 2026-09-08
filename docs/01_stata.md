@@ -7,9 +7,9 @@ nav_order: 2
 
 # Stata packages
 
-*(Last updated: July 2026)*
+*(Last checked: 08 Sep 2026)*
 
-Stata packages are listed in alphabetical order. A list of [R packages is given here](https://asjadnaqvi.github.io/DiD/docs/02_R/).
+Stata packages are listed in alphabetical order. Versions and availability can change, so check the linked documentation before reproducing an analysis. A list of [R packages is given here](https://asjadnaqvi.github.io/DiD/docs/02_R/).
 
 
 
@@ -20,7 +20,7 @@ Stata packages are listed in alphabetical order. A list of [R packages is given 
 | [csdid2](https://github.com/friosavila/stpackages/tree/main/csdid2) | [Instructions](https://github.com/friosavila/stpackages/tree/main/csdid2) | Fernando Rios-Avila | [Callaway & Sant'Anna (2020)](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948) |
 | [did2s](https://github.com/kylebutts/did2s_stata) | `ssc install did2s, replace` | Kyle Butts | [Gardner (2022)](https://arxiv.org/abs/2207.05943) |
 | [did_multiplegt](https://github.com/chaisemartinPackages) | `ssc install did_multiplegt, replace` | Clément de Chaisemartin; Xavier D'Haultfoeuille | [de Chaisemartin & D'Haultfoeuille (2020)](https://www.aeaweb.org/articles?id=10.1257/aer.20181169); [de Chaisemartin & D'Haultfoeuille (2021)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3751060) |
-| [did_multiplegt_dyn](https://github.com/chaisemartinPackages) | `ssc install did_multiplegt_dyn, replace` | Clément de Chaisemartin; Diego Ciccia; Xavier D'Haultfoeuille; Felix Knau; Mélitine Malézieux; Doulo Sow | [de Chaisemartin & D'Haultfoeuille (2024a)](https://doi.org/10.1162/rest_a_01414); [de Chaisemartin et al. (2024c)](https://drive.google.com/file/d/1NGgScujLCCS4RrwdN-PC1SnVigfBa32h/view) |
+| [did_multiplegt_dyn](https://github.com/Credible-Answers/did_multiplegt_dyn) | `ssc install did_multiplegt_dyn, replace` | Clément de Chaisemartin; Diego Ciccia; Xavier D'Haultfoeuille; Felix Knau; Mélitine Malézieux; Doulo Sow | [de Chaisemartin & D'Haultfoeuille (2026)](https://doi.org/10.1162/rest_a_01414); [de Chaisemartin et al. (2025)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5337463) |
 | [did_imputation](https://github.com/borusyak/did_imputation) | `ssc install did_imputation, replace` | Kirill Borusyak; Xavier Jaravel; Jann Spiess | [Borusyak, Jaravel, Spiess (2024)](https://academic.oup.com/restud/advance-article/doi/10.1093/restud/rdae007/7601390) |
 | [did_stepwise](https://github.com/nikoharm/did_stepwise) | [Instructions](https://github.com/nikoharm/did_stepwise) | Nikolaj Harmon | [Harmon (2024)](https://web.econ.ku.dk/nharmon/docs/harmon2022difference.pdf) |
 | [drdid](https://friosavila.github.io/playingwithstata/main_drdid.html) | `ssc install drdid, replace` | Fernando Rios-Avila; Pedro H.C. Sant'Anna; Asjad Naqvi | [Sant'Anna & Zhao (2020)](https://www.sciencedirect.com/science/article/abs/pii/S0304407620301901) |
@@ -30,8 +30,8 @@ Stata packages are listed in alphabetical order. A list of [R packages is given 
 | [fect](https://github.com/xuyiqing/fect_stata) | [Instructions](https://github.com/xuyiqing/fect_stata) | Licheng Liu; Ye Wang; Yiqing Xu; Ziyi Liu | [Liu, Wang, Xu (2022)](https://papers.ssrn.com/abstract=3555463) |
 | [flexpaneldid](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3692458) | `ssc install flexpaneldid, replace` | Eva Dettmann; Alexander Giebler; Antje Weyh | [Dettmann, Giebler, Weyh (2020)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3692458) |
 | didregress | Stata 17+ | StataCorp | Canonical 2x2 and repeated cross-section DiD (official Stata implementation) |
-| hdidregress | Stata 18 | StataCorp | [Callaway & Sant'Anna (2020)](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948) |
-| xthdidregress | Stata 18 | StataCorp | Heterogeneous-treatment DiD for panel data (official Stata implementation) |
+| hdidregress | Introduced in Stata 18 | StataCorp | [Callaway & Sant'Anna (2020)](https://www.sciencedirect.com/science/article/abs/pii/S0304407620303948) |
+| xthdidregress | Introduced in Stata 18 | StataCorp | Heterogeneous-treatment DiD for panel data (official Stata implementation) |
 | xtdidregress | Stata 17+ | StataCorp | Canonical panel DiD (official Stata implementation) |
 | [honestdid](https://github.com/mcaceresb/stata-honestdid) | `ssc install honestdid, replace` | Mauricio Caceres Bravo; Jonathan Roth | [Rambachan & Roth (2023)](https://www.restud.com/a-more-credible-approach-to-parallel-trends/) |
 | [jwdid](https://friosavila.github.io/playingwithstata/main_jwdid.html) | `ssc install jwdid, replace` | Fernando Rios-Avila | [Nagengast, Rios-Avila, Yotov (2024)](https://ideas.repec.org/p/ris/drxlwp/2024_005.html), [Wooldridge notes](https://www.dropbox.com/sh/zj91darudf2fica/AADj_jaf5ZuS1muobgsnxS6Za?dl=0) |
