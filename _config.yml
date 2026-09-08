@@ -6,8 +6,8 @@ remote_theme: just-the-docs/just-the-docs
 
 title: DiD
 description: Difference-in-Differences package tracker.
-#baseurl: "/DiD" # the subpath of your site, e.g. /blog
-#url: "https://asjadnaqvi.github.io/DiD/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/DiD" # the subpath of your site
+url: "https://asjadnaqvi.github.io" # the base hostname and protocol for your site
 
 logo: "/assets/images/DiD.png"
 
